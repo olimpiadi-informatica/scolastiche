@@ -1,0 +1,220 @@
+export const variants = [
+    buildVariant(
+        0,
+        labels=[1, 2, 1, 3, 1, 2, 3, 1, 1, 3, 1, 2, 1, 3, 1, 2, 3],
+        good_path='JDEBC',
+        bad_path='GABIE',
+        P='B', Q='J', R='C'
+    ),
+    buildVariant(
+        1,
+        labels=[2, 2, 2, 1, 3, 1, 1, 1, 1, 2, 3, 1, 3, 3, 1, 3, 2],
+        good_path='FEHBC',
+        bad_path='CDEBA',
+        P='A', Q='H', R='B'
+    ),
+    buildVariant(
+        2,
+        labels=[3, 1, 2, 2, 2, 1, 3, 3, 1, 2, 3, 1, 1, 1, 1, 3, 2],
+        good_path='AGFED',
+        bad_path='JCDEH',
+        P='F', Q='D', R='E'
+    )
+]
+
+La città di Remontagna ha $10$ piazze collegate da strade a doppio senso.
+
+Nella figura qui sotto, le piazze sono rappresentate da cerchi.
+A ciascuna piazza è associata una lettera dell'alfabeto da $\textsf{A}$ a $\textsf{J}$, in modo univoco.
+
+Le strade sono di tre tipi:
+
+- _vie_, evidenziate in linea continua rossa nella figura;
+- _viali_, evidenziati in doppia linea verde nella figura;
+- _sentieri_, evidenziati in linea tratteggiata blu nella figura.
+
+![La mappa di Remontagna](city.svg)
+
+1. Quante sono le coppie di piazze **distinte** che sono raggiungibili l'una dall'altra **usando solo vie** (strade in linea continua rossa)?
+Le coppie si intendono **non ordinate**: ad esempio, le coppie $(\textsf{A}, \, \textsf{B})$ e $(\textsf{B}, \, \textsf{A})$ vanno contate una sola volta.
+
+---
+
+{{ans1}}
+
+La risposta è **{{ans1}}**.
+
+Le piazze si possono dividere in gruppi tali che due piazze sono nello stesso gruppo se e solo se si possono raggiungere l'una dall'altra solo attraverso vie.
+(In gergo algoritmico, si dice che la città è un *grafo* e i gruppi di piazze sono *componenti connesse*.)
+In questo caso, ci sono ${num-cc}$ gruppi contenenti, rispettivamente, ${ccs}$ piazze.
+
+Si tratta ora di contare le coppie di piazze che appartengono allo stesso gruppo.
+Se un gruppo contiene $x$ piazze, le possibili coppie in quel gruppo sono $\frac{x \cdot (x - 1)}{2}$:
+infatti, per ogni piazza ci sono $x - 1$ altre piazze con cui si può formare una coppia;
+ma così facendo ogni coppia viene contata due volte, e quindi bisogna dimezzare.
+
+La risposta è quindi ${sum-fracs} = {correct1}$.
+
+![Statistiche risposte]({{stats-0}}.svg)
+
+---
+
+Un _bel percorso_ è un percorso formato da un numero **pari** di strade con la seguente proprietà:
+le prime due strade sono dello stesso tipo; la terza e la quarta strada sono dello stesso tipo;
+e così via, fino alle ultime due strade che sono anch'esse dello stesso tipo.
+Nota che un _bel percorso_ può passare più volte per alcune strade e piazze.
+
+Ad esempio, un bel percorso è $\textsf{{good-path}}$, ovvero quello che parte dalla piazza $\textsf{{X1}}$, passa per le piazze $\textsf{{X2}}$, $\textsf{{X3}}$, $\textsf{{X4}}$ e arriva alla piazza $\textsf{{X5}}$.
+Infatti passa per $4$ strade, delle quali le prime due sono sentieri e le ultime due sono viali.
+
+Al contrario, $\textsf{{bad-path}}$ **non** è un bel percorso, poiché le prime due strade non sono dello stesso tipo.
+
+2. Quante sono le coppie di piazze **distinte** che si possono raggiungere l'una dall'altra attraverso un bel percorso?
+Anche in questo caso, indendiamo le coppie come **non ordinate**.
+Stavolta si possono usare tutti i tipi di strade.
+
+---
+
+{{ans2}}
+
+La risposta è **{{ans2}}**.
+
+Immaginiamo di aggiungere della strade *speciali*.
+Una strada speciale collega due piazze che possono essere raggiunte l'una dall'altra percorrendo **esattamente** due strade normali dello stesso tipo (cioè due vie, due viali o due sentieri).
+Le strade speciali sono mostrate in figura:
+
+![Strade speciali evidenziate sulla mappa](special-roads.svg)
+
+Ad esempio, c'è una strada speciale che collega le piazze $\textsf{{P}}$ e $\textsf{{Q}}$ perché si possono raggiungere l'una dall'altra attraversando due viali (e la piazza $\textsf{{R}}$).
+
+Notiamo che un bel percorso non è altro che un percorso costituito da strade speciali.
+Quindi, il problema a cui ci siamo ridotti è lo stesso della prima parte, dove però consideriamo le strade speciali invece delle vie.
+I gruppi di piazze, in questo caso, sono formati da ${ccs-special}$ piazze, e la risposta è
+${sum-fracs-special} = {correct2}$.
+
+![Statistiche risposte]({{stats-1}}.svg)
+
+---
+
+```py variants
+N = 10
+M = 17
+edges = [
+    [0, 1],
+    [1, 2],
+    [2, 3],
+    [3, 4],
+    [4, 5],
+    [5, 0],
+    [0, 6],
+    [5, 6],
+    [6, 7],
+    [7, 1],
+    [7, 4],
+    [1, 4],
+    [1, 8],
+    [4, 8],
+    [8, 9],
+    [9, 2],
+    [9, 3]
+]
+
+def build_variant(ii, labels, good_path, bad_path, P, Q, R):
+    adj = [[] for _ in range(N)]
+
+    for i in range(M):
+        adj[edges[i][0]].append([edges[i][1], labels[i]])
+        adj[edges[i][1]].append([edges[i][0], labels[i]])
+
+    ans1, ans2 = 0, 0
+    cc = []
+    vis_glob = [False] * N
+
+    for i in range(N):
+        vis = [False] * N
+        vis[i] = True
+        for _ in range(N):
+            for n in range(N):
+                if not vis[n]:
+                    continue
+                for e, w in adj[n]:
+                    if w == 1:
+                        vis[e] = True
+        card = 0
+        for v in vis:
+            card += int(v)
+        ans1 += card - 1
+        if not vis_glob[i]:
+            for j, v in enumerate(vis):
+                if v: vis_glob[j] = True
+            cc.append(card)
+
+    ans1 //= 2
+
+    cc_special = []
+    vis_glob_special = [False] * N
+
+    for i in range(N):
+        vis = [False] * N
+        vis[i] = True
+        for _ in range(3 * N):
+            for n in range(N):
+                if not vis[n]:
+                    continue
+                for e, w in adj[n]:
+                    for ee, ww in adj[e]:
+                        if w == ww:
+                            vis[ee] = True
+        card = 0
+        for v in vis: 
+            card += int(v)
+        ans2 += card - 1
+        if not vis_glob_special[i]:
+            for j, v in enumerate(vis):
+                if v: vis_glob_special[j] = True
+            cc_special.append(card)
+
+    ans2 //= 2
+
+    return dict(
+        asy="""
+int[] labels={
+        """ + ', '.join(str(x) for x in labels) + """
+};
+        """,
+        replacements=dict(
+            text={
+                '{{ans1}}': ans1,
+                '{{ans2}}': ans2
+            },
+            url={
+                '{{stats-0}}': f'{ii}-0',
+                '{{stats-1}}': f'{ii}-1'
+            },
+            math={
+                '{good-path}': good_path,
+                '{bad-path}': bad_path,
+                '{X1}': good_path[0],
+                '{X2}': good_path[1],
+                '{X3}': good_path[2],
+                '{X4}': good_path[3],
+                '{X5}': good_path[4],
+                '{correct1}': ans1,
+                '{correct2}': ans2,
+                '{P}': P, '{Q}': Q, '{R}': R,
+                '{num-cc}': len(cc),
+                '{ccs}': r', \, '.join(map(str, cc)),
+                '{sum-fracs}': ' + '.join(r'\frac{' + f'{x}' + r'\cdot (' + f'{x}' + r' - 1)}{2}' for x in cc),
+                '{ccs-special}': r', \, '.join(map(str, cc_special)),
+                '{sum-fracs-special}':
+                    ' + '.join(r'\frac{' + f'{x}' + r'\cdot (' + f'{x}' + r' - 1)}{2}' for x in cc_special)
+            }
+        )
+    )
+
+
+
+variants = {
+    i: build_variant(i, **data) for i, data in enumerate(variant_inputs)
+}
+```

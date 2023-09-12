@@ -1,0 +1,75 @@
+import _ from "lodash";
+
+export function buildVariant(n, wrong) {
+    console.assert(n.length === 8);
+
+    const exampleSplit = [
+        n.slice(0, 2),
+        n.slice(2, 3),
+        n.slice(3, 6),
+        n.slice(6, 8),
+    ];
+    const exampleSum = _(exampleSplit).map(Number).sum();
+
+    // Solution (sliding window)
+    const windows = _.range(4).map(i => n.slice(i, i+5)).map(Number);
+    const maxPiece = _.max(windows);
+    const maxPieceIdx = _.indexOf(windows, maxPiece);
+    const split = [
+        ...n.slice(0, maxPieceIdx),
+        maxPiece.toString(),
+        ...n.slice(maxPieceIdx+5),
+    ];
+    const maxSum = (
+        _(windows)
+            .map((w, i) => w + (
+                _(n)
+                    .split("")
+                    .filter((d, j) => (j < i || j >= i + 5))
+                    .map(Number)
+                    .sum()
+            ))
+            .max()
+    );
+    const correct = _.sum(maxSum.toString().split("").map(Number));
+    const result = _.sum(split.map(Number));
+
+
+    return {
+        n,
+        exampleSplit,
+        exampleSum,
+        correct,
+        wrong,
+        maxPiece,
+        split,
+        result,
+    };
+}
+
+export const variants = [
+    buildVariant("51498735", [15, 24, 26, 42]),
+    buildVariant("78234159", [12, 28, 39, 44]),
+    buildVariant("52729913", [7, 20, 29, 38]),
+    buildVariant("57123169", [7, 25, 34, 36]),
+];
+
+Sandra prende il numero $\js{n}$, ne spezza le cifre in $4$ parti tutte maggiori di $0$, e calcola la somma dei $4$ numeri ottenuti. Ad esempio, una possibile suddivisione è $\js{exampleSplit[0]} + \js{exampleSplit[1]} + \js{exampleSplit[2]} + \js{exampleSplit[3]} = \js{exampleSum}$.
+
+Sia $x$ la **massima** somma possibile. Qual è la somma delle cifre di $x$?
+
+- [x] $\js{correct}$
+- [ ] $\js{wrong[0]}$
+- [ ] $\js{wrong[1]}$
+- [ ] $\js{wrong[2]}$
+- [ ] $\js{wrong[3]}$
+
+> La risposta è $\js{correct}$.
+> 
+> Affinché la somma sia massima, una delle tre parti in cui viene suddiviso il numero deve avere il numero massimo possibile di cifre (cioè $5$), e le altre tre parti devono essere tutte di una cifra.
+> Ci sono $4$ modi di suddividere il numero in questo modo.
+> Si possono provare tutti, oppure si può ulteriormente osservare che la somma massima $x$ si ottiene quando il pezzo di $5$ cifre ha il valore più alto possibile, che in questo caso è $\js{maxPiece}$.
+> 
+> Dunque $x = \js{split.join(' + ')} = \js{result}$, e la somma delle sue cifre è $\js{correct}$.
+>
+> ![Statistiche risposte]({n}.svg)

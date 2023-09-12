@@ -1,0 +1,56 @@
+import _ from "lodash";
+
+export function buildVariant(n) {
+    const digits = n.toString().split('');
+    const correct = _.sumBy(digits, Number);
+    const wrong = _.range(3, 8);
+    _.pull(wrong, correct);
+
+    const decimal = (
+        digits
+            .map((d, i) => `${d} \\cdot 10^{${digits.length - i - 1}}`)
+            .join(" + ")
+    );
+    const sumDigits = digits.join(" + ");
+
+    return {
+        n,
+        correct,
+        wrong,
+        decimal,
+        sumDigits,
+    };
+}
+
+export const variants = [
+    buildVariant(2012),
+    buildVariant(1112),
+    buildVariant(1023),
+    buildVariant(2211),
+    buildVariant(3013),
+    buildVariant(4120),
+];
+
+Hai a disposizione $\js{n}$ palline da tennis, e vuoi dividerle in gruppi in modo che il numero di palline in ogni gruppo sia una potenza di $10$ (in altre parole, un numero della forma $10^k$ per un qualche $k \geq 0$).
+
+Qual è il numero minimo di gruppi che puoi realizzare utilizzando tutte le palline da tennis?
+
+- [x] $\js{correct}$
+- [ ] $\js{wrong[0]}$
+- [ ] $\js{wrong[1]}$
+- [ ] $\js{wrong[2]}$
+- [ ] $\js{wrong[3]}$
+
+> La risposta è $\js{correct}$.
+> 
+> Il quesito chiede di determinare qual è il minimo numero di potenze di $10$ (eventualmente ripetute) che servono per sommare a $\js{n}$.
+> 
+> La rappresentazione decimale di un numero è un modo di scrivere tale numero come somma di potenze di $10$, ciascuna moltiplicata per la cifra corrispondente.
+> Ad esempio, il numero dato è uguale a $\js{decimal} = \js{n}$.
+> Quindi, sicuramente è sufficiente un numero di addendi pari alla somma delle cifre: $\js{sumDigits} = \js{correct}$.
+> 
+> Per mostrare che non si può fare di meglio, si può ragionare così.
+> Sicuramente non conviene usare più di $9$ potenze di $10$ con lo stesso esponente: infatti, se usassimo almeno $10$ volte l'addendo $10^k$, potremmo sostituirlo con una singola occorrenza di $10^{k + 1}$.
+> D'altra parte, l'unico modo di scrivere un numero come somma di potenze di $10$ moltiplicate per coefficienti **minori o uguali di $9$** è la sua rappresentazione decimale!
+> 
+> ![Statistiche risposte]({n}.svg)
