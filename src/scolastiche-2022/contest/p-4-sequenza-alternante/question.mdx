@@ -1,0 +1,89 @@
+import _ from "lodash";
+
+export function buildVariant(sequence) {
+    const minCorrect = _.max(sequence);
+    let maxCorrect = 0;
+    
+    const alternatedSeq = [];
+    const sortedSeq = _.sortBy([0, ...sequence]);
+
+    let i = 0, j = sortedSeq.length - 1;
+
+    while (i < j) {
+        alternatedSeq.push(sortedSeq[j]);
+        if (i + 1 != j) {
+            alternatedSeq.push(sortedSeq[i + 1]);
+        }
+        maxCorrect += 2 * sortedSeq[j] - sortedSeq[i] - sortedSeq[i + 1];
+        i += 1;
+        j -= 1;
+    }
+
+    const seqSum = _.sum(sequence);
+
+    return {
+        correct: { min: minCorrect, max: maxCorrect },
+        wrong: [
+            { min: 0, max: minCorrect },
+            { min: seqSum, max: maxCorrect },
+            { min: minCorrect, max: seqSum },
+            { min: 0, max: seqSum }
+        ],
+        seq: sequence,
+        sortedSeq: sortedSeq.slice(1),
+        alternatedSeq,
+        sumIncMin: _.zip(sortedSeq.slice(1), sortedSeq.slice(0, -1)).map(([x, y]) => Math.abs(x - y)).join(" + "),
+        sumIncMax: _.zip(alternatedSeq, [0, ...alternatedSeq.slice(0, -1)]).map(([x, y]) => Math.abs(x - y)).join(" + ")
+    };
+
+}
+
+export const variants = [
+  buildVariant([5, 3, 0, 3, 10]),
+  buildVariant([4, 0, 12, 8, 4]),
+  buildVariant([2, 7, 2, 9, 0]),
+  buildVariant([9, 11, 5, 5, 0]),
+  buildVariant([13, 0, 7, 10, 7]),
+];
+
+Considera la seguente funzione, che prende come argomenti un intero **positivo** `n` e un array di interi **non-negativi** `v` di lunghezza `n`, e ritorna un intero:
+
+```srs
+function compute(n: integer, v: integer[]) -> integer
+    variable x: integer
+    x <- 0
+    variable ret: integer
+    ret <- 0
+    for i in [0 ... n) do
+        while x < v[i] do
+            x <- x + 1
+            ret <- ret + 1
+        end while
+        while x > v[i] do
+            x <- x - 1
+            ret <- ret + 1
+        end while
+    end for
+    return ret
+end function
+```
+
+Supponiamo di chiamare `compute(5, v)`, dove `v` è un array di lunghezza $5$ i cui elementi sono, **in qualche ordine**, $\js{seq.join(", \\, ")}$. Quali sono il minimo e il massimo possibile valore di ritorno della funzione?
+
+- [x] $\js{correct.min}$ e $\js{correct.max}$
+- [ ] $\js{wrong[0].min}$ e $\js{wrong[0].max}$
+- [ ] $\js{wrong[1].min}$ e $\js{wrong[1].max}$
+- [ ] $\js{wrong[2].min}$ e $\js{wrong[2].max}$
+- [ ] $\js{wrong[3].min}$ e $\js{wrong[3].max}$
+
+> La risposta è **$\js{correct.min}$ e $\js{correct.max}$**.
+>
+> Cerchiamo di capire cosa fa la funzione. A ogni iterazione del ciclo `for`, la variabile `x` viene incrementata o decrementata di $1$ alla volta finché non diventa uguale a `v[i]`. A ogni incremento/decremento, il valore di `ret` viene incrementato di $1$. Il valore di ritorno è il valore finale di `ret`, cioè il numero totale di volte che viene incrementato.
+>
+> Gli incrementi durante l'iterazione `i` sono esattamente il valore assoluto di `v[i] - v[i - 1]` se `i` è maggiore di $0$, e sono `v[0]` se `i` è uguale a $0$ (dato che `x` parte da $0$). Ad esempio, supponiamo di chiamare la funzione con l'array `[{seq.join(", ")}]`. Durante la prima iterazione, `ret` viene incrementata $\js{seq[0]}$ volte e `x` diventa uguale a $\js{seq[0]}$. Durante la seconda iterazione, `x` diventa uguale a $\js{seq[1]}$ e `ret` viene incrementata $|\js{seq[1]} - \js{seq[0]}| = \js{Math.abs(seq[1] - seq[0])}$ volte. (Le barrette verticali denotano il valore assoluto.) Poi, durante la terza iterazione, `ret` viene incrementata $|\js{seq[2]} - \js{seq[1]}| = \js{Math.abs(seq[2] - seq[1])}$ volte, e così via per altre due iterazioni.
+>
+> Il numero minimo di incrementi si ha quando l'array `v` è ordinato in ordine crescente, ovvero quando coincide con `[{sortedSeq.join(", ")}]`, e vale $\js{sumIncMin} = \js{correct.min}$.
+>
+> Calcolare il massimo è un po' più complicato. Ci si può convincere (ma non lo dimostriamo) che il modo migliore è alternare valori grandi e valori piccoli, partendo da quello massimo: questo produce l'array `[{alternatedSeq.join(", ")}]`, per il quale il numero di incrementi vale $\js{sumIncMax} = \js{correct.max}$.
+>
+> ![Statistiche risposte](<{seq.join("")}.svg>)

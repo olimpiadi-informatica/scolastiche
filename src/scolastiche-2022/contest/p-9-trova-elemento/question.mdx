@@ -1,0 +1,41 @@
+export const variants = [
+  buildVariant(0, [5, 9, 2, 3, 0, 2, 4, 0], [-1, 2, 6, 7]),
+  buildVariant(1, [9, 1, 0, 2, 3, 1, 5, 4], [-1, 0, 2, 5]),
+  buildVariant(2, [0, 7, 1, 6, 2, 2, 6, 3], [-1, 2, 5, 6]),
+  buildVariant(3, [2, 9, 0, 0, 9, 3, 8, 3], [-1, 0, 1, 7]),
+  buildVariant(4, [1, 8, 4, 3, 8, 4, 5, 0], [-1, 1, 3, 5]),
+];
+
+export function buildVariant(x, v, wrong) {
+  const correct = v.indexOf(x);
+  return { x, v, correct, wrong };
+}
+
+Considera la seguente funzione, che prende come argomenti un intero non-negativo `n` e un array di interi `v` di lunghezza `n`, e ritorna un intero.
+
+```srs
+function find(n: integer, v: integer[]) -> integer
+    for i in [0 ... n) do
+        if v[i] == {x} then
+            return i
+        end if
+    end for
+    return -1
+end function
+```
+
+Cosa viene restituito da `find(8, [{v.join(", ")}])`?
+
+- [x] $\js{correct}$
+- [ ] $\js{wrong[0]}$
+- [ ] $\js{wrong[1]}$
+- [ ] $\js{wrong[2]}$
+- [ ] $\js{wrong[3]}$
+
+> La risposta è $\js{correct}$.
+>
+> La funzione `find` trova l'indice del **primo** elemento dell'array `v` uguale a $\js{x}$ (ricordiamo che gli indici partono da $0$), oppure restituisce $-1$ se un tale elemento non esiste.
+>
+> Nell'array dato, il primo elemento uguale a $\js{x}$ è quello che ha indice $\js{correct}$.
+>
+> ![Statistiche risposte]({x}.svg)
