@@ -1,4 +1,4 @@
-# Olimpiadi Italiane di Informatica 2023 -- Selezione scolastica (demo)
+# Olimpiadi Italiane di Informatica 2022/2023 -- Selezione scolastica (demo)
 
 Ciao! Questo è un esempio dimostrativo della prova di selezione scolastica che affronterai il 16 dicembre 2022.
 

@@ -1,4 +1,4 @@
-# Olimpiadi Italiane di Informatica 2023 -- Selezione scolastica
+# Olimpiadi Italiane di Informatica 2022/2023 -- Selezione scolastica
 
 Ciao! Ecco le informazioni essenziali sulla prova che stai per svolgere. Ti consigliamo di leggerle attentamente.
 
