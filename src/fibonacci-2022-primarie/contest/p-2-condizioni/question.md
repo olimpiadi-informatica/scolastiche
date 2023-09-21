@@ -16,9 +16,7 @@ Quali numeri scrive il procedimento?
 - [ ] 4 e 5
 
 > Il procedimento ogni volta scrive il numero più grande tra $a$, $b$ e $c$.
-> 
-> La prima volta che viene eseguito il programma, $a$ è più grande di $b$, si controlla quindi se $a$ è più grande di $c$.
-> Essendo $a$ più grande di $c$, il programma scrive il valore di $a$, che è $7$.
-> 
-> La seconda volta, $a$ è più piccolo di $b$, si controlla quindi se $b$ è più grande di $c$, ma $b$ è più piccolo di $c$.
-> Il programma scrive quindi il valore di $c$, che è $9$.
+>
+> La prima volta che viene eseguito il programma, $a$ è più grande di $b$, si controlla quindi se $a$ è più grande di $c$. Essendo $a$ più grande di $c$, il programma scrive il valore di $a$, che è $7$.
+>
+> La seconda volta, $a$ è più piccolo di $b$, si controlla quindi se $b$ è più grande di $c$, ma $b$ è più piccolo di $c$. Il programma scrive quindi il valore di $c$, che è $9$.

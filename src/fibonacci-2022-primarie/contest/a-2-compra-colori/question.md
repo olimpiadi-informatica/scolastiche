@@ -1,8 +1,6 @@
-Tip-Tap è andato in viaggio alla fattoria di Turing, e vuole riportare tante
-carote ai suoi compagni di fattoria.
+Tip-Tap è andato in viaggio alla fattoria di Turing, e vuole riportare tante carote ai suoi compagni di fattoria.
 
-Nella fattoria di Turing ogni settimana si svolge il Mercato delle Carote, nel quale
-è possibile comprare tante scatole di carote, ognuna al costo di $10$ carote.
+Nella fattoria di Turing ogni settimana si svolge il Mercato delle Carote, nel quale è possibile comprare tante scatole di carote, ognuna al costo di $10$ carote.
 
 Le carote fanno bene alla vista, e Tip-Tap ne mangia così tante che riesce a vedere attraverso le scatole!
 

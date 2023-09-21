@@ -2,10 +2,22 @@
   "name": "scolastiche",
   "version": "1.0.0",
   "license": "MIT",
+  "scripts": {
+    "fmt": "prettier --write ."
+  },
   "dependencies": {
     "@mdx-js/react": "^2.3",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": false,
+    "printWidth": 100,
+    "endOfLine": "lf",
+    "bracketSameLine": true
   }
 }

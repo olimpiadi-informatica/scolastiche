@@ -9,11 +9,9 @@ L'opera di Tip-Tap è formata da due bilance collegate messe così:
 
 ![Bilance doppia](fig2.asy?h=400)
 
-Per completare la sua composizione, Tip-Tap vuole mettere **una sola carota** in ognuno dei tre piatti delle bilance.
-Tip-Tap ha a disposizione esattamente nove carote che pesano: $1$, $3$, $3$, $4$, $4$, $5$, $7$, $8$ e $10$ chilogrammi.
+Per completare la sua composizione, Tip-Tap vuole mettere **una sola carota** in ognuno dei tre piatti delle bilance. Tip-Tap ha a disposizione esattamente nove carote che pesano: $1$, $3$, $3$, $4$, $4$, $5$, $7$, $8$ e $10$ chilogrammi.
 
-Per essere soddisfatto della sua composizione, Tip-Tap vuole che le due bilance siano in equilibrio.
-Quanti chilogrammi deve pesare la carota viola nel piatto di destra?
+Per essere soddisfatto della sua composizione, Tip-Tap vuole che le due bilance siano in equilibrio. Quanti chilogrammi deve pesare la carota viola nel piatto di destra?
 
 - [ ] $3$
 - [ ] $4$
@@ -22,5 +20,5 @@ Quanti chilogrammi deve pesare la carota viola nel piatto di destra?
 - [ ] $10$
 
 > Perché le bilancie siano in equilibrio Tip-Tap ha bisogno di due carote di peso uguale, più un'altra carota di peso doppio. Ci sono solo due coppie di carote di peso uguale: di 3 e 4 chilogrammi. Dato che non ha carote da 6 chilogrammi, l'unico modo di disporre i pesi per far stare in equilibrio le bilance è mettere due carote di peso $4$ nei piatti della bilancia a sinistra e una di peso $8$ nel piatto di destra, come in figura.
-> 
+>
 > ![](fig3.asy)

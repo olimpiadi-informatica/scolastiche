@@ -11,4 +11,5 @@ Qual è il più grande numero che può ottenere in questo modo?
 ?> 29688
 
 > Per ottenere il numero più grande abbiamo bisogno di scegliere da ogni foglietto il suo numero più grande. Un modo per farlo è il seguente:
+>
 > ![Soluzione](fig4.asy)

@@ -13,11 +13,11 @@ Quale o quali tra le seguenti affermazioni sono risposte possibili?
 - [ ] Tutte le risposte sono possibili
 
 > La risposta è **Solo la $1$ e la $3$**.
-> 
+>
 > L'affermazione $1$ può essere detta sia da un cavaliere (nel qual caso sarebbe vera: il cavaliere appartiene al gruppo più numeroso, e quindi ci sono più cavalieri che furfanti), sia da un furfante (nel qual caso sarebbe falsa: il furfante appartiene al gruppo più numeroso, e quindi ci sono più furfanti che cavalieri).
-> 
+>
 > L'affermazione $3$ può essere detta da un furfante: infatti, essendo gli abitanti $999$ (che è un numero dispari), l'affermazione è sicuramente falsa.
-> 
+>
 > L'affermazione $2$ non può essere detta né da un cavaliere, né da un furfante: se venisse detta da un cavaliere, il gruppo più numeroso sarebbe quello dei cavalieri, e l'affermazione sarebbe falsa; se venisse detta da un furfante, il gruppo più numeroso sarebbe quello dei furfanti, e l'affermazione sarebbe vera.
-> 
+>
 > ![Statistiche risposte](default.svg)
