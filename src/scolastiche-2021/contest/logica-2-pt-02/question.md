@@ -13,7 +13,7 @@ Quattro amici giocano da sempre insieme a calcetto, ma solo uno dice la verità.
 - {amici[2]}: Non sono io il più forte di tutti.
 - {amici[3]}: Non sono io il più forte di tutti.
 
-Chi è il più forte di tutti? Rispondi mettendo la cifra (tra 1 e 4) corrispondente al nome del più forte scritto qui sotto.
+Chi è il più forte di tutti?
 
 - [ ] {amici[0]}
 - [ ] {amici[1]}

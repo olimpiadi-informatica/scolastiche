@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <g stroke="#000" stroke-width="2.5">
+  <path d="m50 350 100-100m200 100-100-100m0-100 100-100m-300 0 100 100m0 0v100h100v-100zm-100-100v300h300v-300z" fill="none"/>
+  <circle cx="50" cy="50" r="25" fill="#8bc5ff"/>
+  <circle cx="150" cy="150" r="25" fill="#8bffa1"/>
+  <circle cx="350" cy="50" r="25" fill="#ff8b8b"/>
+  <circle cx="250" cy="150" r="25" fill="#ff8bba"/>
+  <circle cx="50" cy="350" r="25" fill="#ffcc8b"/>
+  <circle cx="150" cy="250" r="25" fill="#eaff8b"/>
+  <circle cx="350" cy="350" r="25" fill="#8bfffb"/>
+  <circle cx="250" cy="250" r="25" fill="#ae8bff"/>
+ </g>
+ <g font-family="DejaVu Sans" font-size="30" font-weight="bold" text-anchor="middle">
+  <text x="49" y="60">1</text>
+  <text x="350" y="61">2</text>
+  <text x="149" y="160">5</text>
+  <text x="249" y="160">6</text>
+  <text x="350" y="360">3</text>
+  <text x="50" y="360">4</text>
+  <text x="250" y="260">7</text>
+  <text x="150" y="260">8</text>
+ </g>
+</svg>

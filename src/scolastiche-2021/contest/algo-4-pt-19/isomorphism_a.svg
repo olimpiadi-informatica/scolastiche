@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="400" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <g stroke="#000" stroke-width="2.5">
+  <path d="m50 250 100-200-100 100m100 0-100 200 100-100m-100 0 100 100m-100-200 100 200m0-100-100-200 100 100m0 200h-100m0-100h100m0-100h-100m0-100h100" fill="none"/>
+  <circle cx="50" cy="50" r="25" fill="#8bc5ff"/>
+  <circle cx="50" cy="150" r="25" fill="#ff8bba"/>
+  <circle cx="50" cy="250" r="25" fill="#eaff8b"/>
+  <circle cx="50" cy="350" r="25" fill="#8bfffb"/>
+  <circle cx="150" cy="50" r="25" fill="#8bffa1"/>
+  <circle cx="150" cy="150" r="25" fill="#ff8b8b"/>
+  <circle cx="150" cy="250" r="25" fill="#ffcc8b"/>
+  <circle cx="150" cy="350" r="25" fill="#ae8bff"/>
+ </g>
+ <g font-family="DejaVu Sans" font-size="30" font-weight="bold" text-anchor="middle">
+  <text x="50" y="58">a</text>
+  <text x="49" y="161">b</text>
+  <text x="50" y="258">c</text>
+  <text x="50" y="361">d</text>
+  <text x="150" y="55">g</text>
+  <text x="149" y="161">h</text>
+  <text x="150" y="261">i</text>
+  <text x="151" y="358">j</text>
+ </g>
+</svg>
