@@ -33,7 +33,7 @@ function print_numbers(n: integer, x: integer)
 end function
 ```
 
-Supponiamo di chiamare `print_numbers(N, 0)`. Quale numero viene stampato in output immediatamente dopo $\js{n}$?
+Supponiamo di chiamare `print_numbers({n}, 0)`. Quale numero viene stampato in output immediatamente dopo $\js{n}$?
 
 - [x] $\js{correct}$
 - [ ] $\js{n}$ è l'ultimo numero stampato

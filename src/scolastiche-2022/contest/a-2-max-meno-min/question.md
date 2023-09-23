@@ -20,14 +20,9 @@ Per ogni $k = 0, \, \dots, \, 1000$, chiamiamo $L_k$ la **massima** lunghezza di
 
 La risposta è **{{ans1}}**.
 
-Per calcolare $L_{{k}}$, possiamo scorrere tutti i possibili intervalli $J$, per ciascuno calcolare $\max(J) - \min(J)$, e considerare solo quelli per cui questo valore non supera ${{k}}$.
-Il valore cercato sarà la massima lunghezza di un intervallo considerato.
+Per calcolare $L_{{k}}$, possiamo scorrere tutti i possibili intervalli $J$, per ciascuno calcolare $\max(J) - \min(J)$, e considerare solo quelli per cui questo valore non supera ${{k}}$. Il valore cercato sarà la massima lunghezza di un intervallo considerato.
 
-Gli intervalli sono, in totale, $12 \cdot 13 = 156$, quindi scorrerli tutti è un processo lento ma fattibile.
-Per velocizzarlo si possono fare osservazioni che riducono di molto il numero di intervalli da considerare.
-Per esempio, possiamo iterare su tutte le **coppie** di numeri della sequenza, diciamo $(x, \, y)$, imponendo che $x$ sia il minimo dell'intervallo e $y$ il massimo.
-Per la maggior parte delle coppie, questo non sarà possibile, perché tra $x$ e $y$ c'è un numero più piccolo di $x$ o più grande di $y$ (come accade per la coppia $({x}, \, {y})$).
-Per le altre coppie, controlliamo se $y - x \le {k}$ e, in quel caso, troviamo la massima lunghezza di un intervallo che contiene $x$ e $y$ e nessun numero minore di $x$ o maggiore di $y$.
+Gli intervalli sono, in totale, $12 \cdot 13 = 156$, quindi scorrerli tutti è un processo lento ma fattibile. Per velocizzarlo si possono fare osservazioni che riducono di molto il numero di intervalli da considerare. Per esempio, possiamo iterare su tutte le **coppie** di numeri della sequenza, diciamo $(x, \, y)$, imponendo che $x$ sia il minimo dell'intervallo e $y$ il massimo. Per la maggior parte delle coppie, questo non sarà possibile, perché tra $x$ e $y$ c'è un numero più piccolo di $x$ o più grande di $y$ (come accade per la coppia $({x}, \, {y})$). Per le altre coppie, controlliamo se $y - x \le {k}$ e, in quel caso, troviamo la massima lunghezza di un intervallo che contiene $x$ e $y$ e nessun numero minore di $x$ o maggiore di $y$.
 
 Qualunque sia la strategia impiegata, alla fine si determina che l'intervallo più lungo che soddisfa la condizione è $J = {J}$, che ha lunghezza ${correct1}$ (e $\max(J) - \min(J) = {max-minus-min}$).
 
@@ -45,15 +40,9 @@ Immagina di scrivere su un foglio i numeri $L_0, \, L_1, \, \dots, \, L_{1000}$.
 
 La risposta è **{{ans2}}**.
 
-Per prima cosa, occorre osservare che la risposta non cambia se ci restringiamo ai $k$ che coincidono **esattamente** con $\max(J) - \min(J)$ per un qualche intervallo $J$.
-Questo perché per tutti gli altri $k$ il valore di $L_k$ è sicuramente uguale a uno dei precedenti.
-Infatti, sia $J$ un intervallo di lunghezza massima tale che $\max(J) - \min(J) \le k$.
-Allora, posto $k' = \max(J) - \min(J)$, si ha $L_k = L_{k'}$.
+Per prima cosa, occorre osservare che la risposta non cambia se ci restringiamo ai $k$ che coincidono **esattamente** con $\max(J) - \min(J)$ per un qualche intervallo $J$. Questo perché per tutti gli altri $k$ il valore di $L_k$ è sicuramente uguale a uno dei precedenti. Infatti, sia $J$ un intervallo di lunghezza massima tale che $\max(J) - \min(J) \le k$. Allora, posto $k' = \max(J) - \min(J)$, si ha $L_k = L_{k'}$.
 
-A questo punto l'idea è simile a quella della parte precedente, ma più raffinata.
-Scorriamo tutti gli intervalli $J$, per ciascuno calcoliamo il numero $k = \max(J) - \min(J)$ e, su un foglio, scriviamo $k$ e la lunghezza di $J$.
-Alla fine, raggruppiamo le coppie con lo stesso $k$, e in ogni gruppo prendiamo il valore massimo della lunghezza dell'intervallo, che coincide con $L_k$.
-La risposta è il numero di valori di $L_k$ distinti tra tutti i gruppi, che risulta essere ${correct2}$.
+A questo punto l'idea è simile a quella della parte precedente, ma più raffinata. Scorriamo tutti gli intervalli $J$, per ciascuno calcoliamo il numero $k = \max(J) - \min(J)$ e, su un foglio, scriviamo $k$ e la lunghezza di $J$. Alla fine, raggruppiamo le coppie con lo stesso $k$, e in ogni gruppo prendiamo il valore massimo della lunghezza dell'intervallo, che coincide con $L_k$. La risposta è il numero di valori di $L_k$ distinti tra tutti i gruppi, che risulta essere ${correct2}$.
 
 Con la stessa strategia di prima si può velocizzare molto il processo di iterazione sugli intervalli.
 
