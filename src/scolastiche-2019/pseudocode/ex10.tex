@@ -1,0 +1,27 @@
+ \begin{algorithmic}[1]
+     \State{\PyAnnotation{\PyName{i}}{integer}}
+     \State{\PyAnnotation{\PyName{j}}{integer}}
+     \State{\PyAnnotation{\PyName{v}}{integer[10]}}
+     \State{\PyAnnotation{\PyName{w}}{integer[14]}}
+     \State{\PyAnnotation{\PyName{c}}{float}}
+     \State{\PyAssign{\PyName{c}}{\PyExpr{\PyNum{0}}}}
+     \State{\PyAssign{\PyName{v}}{\PyExpr{\PyList{\PyNum{1} \PyListSep \PyNum{7} \PyListSep \PyNum{4} \PyListSep \PyNum{9} \PyListSep \PyNum{10} \PyListSep \PyNum{32} \PyListSep \PyNum{56} \PyListSep \PyNum{22} \PyListSep \PyNum{34} \PyListSep \PyNum{6}}}}}
+     \State{\PyAssign{\PyName{w}}{\PyExpr{\PyList{\PyNum{5} \PyListSep \PyNum{65} \PyListSep \PyNum{87} \PyListSep \PyNum{43} \PyListSep \PyNum{32} \PyListSep \PyNum{87} \PyListSep \PyNum{5} \PyListSep \PyNum{3} \PyListSep \PyNum{1} \PyListSep \PyNum{0} \PyListSep \PyNum{8} \PyListSep \PyNum{6} \PyListSep \PyNum{4} \PyListSep \PyNum{2}}}}}
+     \State{\PyAssign{\PyName{i}}{\PyExpr{\PyNum{0}}}}
+     \While{\PyExpr{\PyName{i} \PyLt \PyNum{10}}}
+     \State{\PyAssign{\PyName{j}}{\PyExpr{\PyNum{0}}}}
+     \While{\PyExpr{\PyName{j} \PyLt \PyNum{14}}}
+     \If{\PyExpr{\PySubscript{\PyName{v}}{\PyName{i}} \PyEq \PySubscript{\PyName{w}}{\PyName{j}}}}
+     \State{\PyAssign{\PyName{c}}{\PyExpr{\PyName{c} \PyAdd \PyNum{1}}}}
+     \EndIf%
+     \State{\PyAssign{\PyName{j}}{\PyExpr{\PyName{j} \PyAdd \PyNum{1}}}}
+     \EndWhile%
+     \State{\PyAssign{\PyName{i}}{\PyExpr{\PyName{i} \PyAdd \PyNum{1}}}}
+     \EndWhile%
+     \State{\PyAnnotation{\PyName{p1}}{float}}
+     \State{\PyAnnotation{\PyName{p2}}{float}}
+     \State{\PyAssign{\PyName{p1}}{\PyExpr{\PyName{c} \PyDiv \PyNum{10} \PyMult \PyNum{100}}}}
+     \State{\PyAssign{\PyName{p2}}{\PyExpr{\PyName{c} \PyDiv \PyNum{14} \PyMult \PyNum{100}}}}
+     \State{\tt {\sc scrivi}(``p1 = '', p1, `` p2 = '', p2)}
+ \end{algorithmic}
+ 

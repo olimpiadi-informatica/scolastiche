@@ -1,0 +1,19 @@
+\begin{algorithmic}[1]
+    \Function{rec1}{\PyArgAnnotation{a}{integer}\PyArgSep\PyArgAnnotation{b}{integer}}{ $\rightarrow$ \texttt{integer}}
+    \State{\PyAnnotation{\PyName{c}}{integer}}
+    \State{\PyAssign{\PyName{c}}{\PyExpr{\PyName{a} \PyMult \PyName{b}}}}
+    \If{\PyExpr{\PyName{c} \PyEq \PyNum{0}}}
+    \Return{\PyExpr{\PyNum{0}}}
+    \EndIf%
+    \Return{\PyExpr{\PyCall{rec2}{\PyName{a} \PyCallSep \PyName{c}}}}
+    \EndFunction%
+    \item[]
+    \Function{rec2}{\PyArgAnnotation{a}{integer}\PyArgSep\PyArgAnnotation{b}{integer}}{ $\rightarrow$ \texttt{integer}}
+    \State{\PyAnnotation{\PyName{d}}{integer}}
+    \State{\PyAssign{\PyName{d}}{\PyExpr{\PyName{b} \PySub \PyNum{3} \PyMult \PyName{a}}}}
+    \If{\PyExpr{\PyName{d} \PyMod \PyNum{27} \PyEq \PyNum{0}}}
+    \Return{\PyExpr{\PyNum{0}}}
+    \EndIf%
+    \Return{\PyExpr{\PyCall{rec1}{\PyName{b} \PyCallSep \PyName{d}}}}
+    \EndFunction%      
+\end{algorithmic}

@@ -1,0 +1,25 @@
+\begin{algorithmic}[1]
+    \Function{aut}{\PyArgAnnotation{par1}{integer}\PyArgSep\PyArgAnnotation{par2}{integer}\PyArgSep\PyArgAnnotation{par3}{integer}}{ $\rightarrow$ \texttt{integer}}
+    \If{\PyExpr{\PyName{par1} \PyEq \PyNum{0}}}
+    \If{\PyExpr{\PyName{par2} \PyLt \PyName{par3}}}
+    \Return{\PyExpr{\PyNum{1}}}
+    \Else%
+    \Return{\PyExpr{\PyNum{0}}}
+    \EndIf%
+    \Else%
+    \If{\PyExpr{\PyName{par2} \PyEq \PyNum{0}}}
+    \If{\PyExpr{\PyName{par1} \PyLt \PyName{par3}}}
+    \Return{\PyExpr{\PyNum{1}}}
+    \Else%
+    \Return{\PyExpr{\PyNum{0}}}
+    \EndIf%
+    \Else%
+    \If{\PyExpr{\PyCall{sqrt}{\PyName{par1} \PyMult \PyName{par1} \PyAdd \PyName{par2} \PyMult \PyName{par2}} \PyLt \PyName{par3}}}
+    \Return{\PyExpr{\PyNum{1}}}
+    \Else%
+    \Return{\PyExpr{\PyNum{0}}}
+    \EndIf%
+    \EndIf%
+    \EndIf%
+    \EndFunction%      
+\end{algorithmic}

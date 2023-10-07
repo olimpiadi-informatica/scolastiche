@@ -1,0 +1,29 @@
+\begin{algorithmic}[1]
+    \Procedure{proc}{\PyArgAnnotation{v}{interger[]}\PyArgSep\PyArgAnnotation{n}{integer}}
+    \State{\PyAnnotation{\PyName{i}}{integer}}
+    \State{\PyAnnotation{\PyName{a}}{integer}}
+    \State{\PyAnnotation{\PyName{b}}{float}}
+    \State{\PyAnnotation{\PyName{c}}{float}}
+    \State{\PyAssign{\PyName{i}}{\PyExpr{\PyNum{0}}}}
+    \While{\PyExpr{\PyName{i} \PyLt \PyName{n}}}
+    \State{\PyAssign{\PyName{b}}{\PyExpr{\PySubscript{\PyName{v}}{\PyName{i}}}}}
+    \State{\PyAssign{\PyName{c}}{\PyExpr{\PyNum{0}}}}
+    \While{\PyExpr{\PyName{b} \PyGt \PyNum{1}}}
+    \State{\PyAssign{\PyName{a}}{\PyExpr{\PyNum{1}}}}
+    \While{\PyExpr{\PyName{b} \PyGt \PyName{a}}}
+    \State{\PyAssign{\PyName{a}}{\PyExpr{\PyName{a} \PyMult \PyNum{2}}}}
+    \EndWhile%
+    \If{\PyExpr{\PyName{b} \PyLt \PyName{a}}}
+    \State{\PyAssign{\PyName{b}}{\PyExpr{\PyName{b} \PySub \PyName{a} \PyDiv \PyNum{2}}}}
+    \State{\PyAssign{\PyName{c}}{\PyExpr{\PyName{c} \PyAdd \PyName{a} \PyDiv \PyNum{2}}}}
+    \EndIf%
+    \EndWhile%
+    \If{\PyExpr{\PyName{i} \PyMod \PyNum{2} \PyEq \PyNum{0}}}
+    \State{\PyAssign{\PySubscript{\PyName{v}}{\PyName{i}}}{\PyExpr{\PyName{c}}}}
+    \Else%
+    \State{\PyAssign{\PySubscript{\PyName{v}}{\PyName{i}}}{\PyExpr{\PyName{c} \PyAdd \PyNum{1}}}}
+    \EndIf%
+    \State{\PyAssign{\PyName{i}}{\PyExpr{\PyName{i} \PyAdd \PyNum{1}}}}
+    \EndWhile%
+    \EndProcedure%
+\end{algorithmic}

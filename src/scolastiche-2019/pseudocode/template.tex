@@ -1,0 +1,81 @@
+% Template per le Selezioni Scolastiche delle OII
+
+\documentclass[a4paper]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=0.8in]{geometry} % il minimo sensato è 0.25in vedi qua: https://stackoverflow.com/a/3513476/747654
+\usepackage[italian]{babel}
+\usepackage{graphicx} % per \includegraphics{}
+\usepackage{tabularx} % per tabularx, una versione di tabular che permette di "espandere" la colonna
+\usepackage{textcomp} % per il simbolo \textdegree{}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{etoolbox}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage[section]{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{py2tex}
+
+% \noindent globale
+\setlength\parindent{0pt}
+\setlength\parskip{2pt}
+
+% \myul{}: underline + colore blu
+\newcommand{\myul}[2][black]{\setulcolor{#1}\ul{\textbf{#2}}\setulcolor{black}}
+
+% \cbox{}: un quadratino per scriverci dentro un carattere o per farci sopra una X
+\newcommand\cbox{\fbox{\rule{0.1in}{0pt}\rule[-0.2ex]{0pt}{2ex}}}
+
+% nuovo tipo di colonna per tabularx che "espande" come 'X' ma centra come 'c'
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+% aggiusta leggermente l'altezza delle righe in tabularx (necessario per le \cbox{})
+\setlength{\extrarowheight}{1pt}
+\renewcommand{\arraystretch}{1.1}
+\renewcommand{\tabularxcolumn}[1]{m{#1}}
+
+% nasconde i numeri di pagina
+\pagestyle{empty}
+
+% ambente all'interno del quale non è possible andare a pagina nuova
+\newenvironment{absolutelynopagebreak}
+{\par\nobreak\vfil\penalty0\vfilneg
+\vtop\bgroup}
+{\par\xdef\tpd{\the\prevdepth}\egroup
+\prevdepth=\tpd}
+
+% definisce l'ambiente "esercizio"
+\newcounter{indicedellesercizio}[section]
+\newenvironment{esercizio}[1]{}{}
+
+\newcommand{\rispostaaperta}{}
+\newcommand{\rispostachiusa}[4]{
+\begin{absolutelynopagebreak}
+    \begin{enumerate}
+        \item #1
+        \item #2
+        \item #3
+        \item #4
+    \end{enumerate}
+    \emph{Inserisci nel form il numero della risposta (1, 2, 3 oppure 4).}
+\end{absolutelynopagebreak}
+}
+\newcommand{\sezione}[1]{
+\clearpage
+\begin{center}
+    \Huge #1
+\end{center}
+}
+\newcommand{\sezionelogicomatematica}{\sezione{Esercizi di carattere logico matematico}}
+\newcommand{\sezioneprogrammazione}{\sezione{Esercizi di programmazione}}
+\newcommand{\sezionealgoritmi}{\sezione{Esercizi di carattere algoritmico}}
+
+\begin{document}
+
+\input{ex11.tex}
+
+\end{document}

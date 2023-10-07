@@ -1,0 +1,45 @@
+\begin{algorithmic}[1]
+    \Procedure{stampa}{}
+    \State{\PyAnnotation{\PyName{i}}{integer}}
+    \State{\PyAnnotation{\PyName{j}}{integer}}
+    \State{\PyAnnotation{\PyName{mat}}{char[5][5]}}
+    \State{\PyAssign{\PyName{i}}{\PyExpr{\PyNum{0}}}}
+    \While{\PyExpr{\PyName{i} \PyLt \PyNum{5}}}
+    \State{\PyAssign{\PyName{j}}{\PyExpr{\PyNum{0}}}}
+    \While{\PyExpr{\PyName{j} \PyLt \PyNum{5}}}
+    \State{\PyAssign{\PySubscript{\PySubscript{\PyName{mat}}{\PyName{i}}}{\PyName{j}}}{\PyExpr{\PyNum{0}}}}
+    \State{\PyAssign{\PyName{j}}{\PyExpr{\PyName{j} \PyAdd \PyNum{1}}}}
+    \EndWhile%
+    \State{\PyAssign{\PyName{i}}{\PyExpr{\PyName{i} \PyAdd \PyNum{1}}}}
+    \EndWhile%
+    \State{\PyAssign{\PyName{i}}{\PyExpr{\PyNum{0}}}}
+    \While{\PyExpr{\PyName{i} \PyLt \PyNum{5}}}
+    \State{\PyAssign{\PyName{j}}{\PyExpr{\PyNum{0}}}}
+    \While{\PyExpr{\PyName{j} \PyLt \PyNum{5}}}
+    \If{\PyExpr{\PyName{i} \PyMod \PyNum{2} \PyEq \PyNum{0} \PyAnd \PyName{j} \PyEq \PyNum{2}}}
+    \State{\PyAssign{\PySubscript{\PySubscript{\PyName{mat}}{\PyName{i}}}{\PyName{j}}}{\PyExpr{\PyNum{1}}}}
+    \EndIf%
+    \If{\PyExpr{\PyName{i} \PyMod \PyNum{2} \PyEq \PyNum{1} \PyAnd \PyPar{\PyName{j} \PyEq \PyNum{1} \PyOr \PyName{j} \PyEq \PyNum{3}}}}
+    \State{\PyAssign{\PySubscript{\PySubscript{\PyName{mat}}{\PyName{i}}}{\PyName{j}}}{\PyExpr{\PyNum{1}}}}
+    \EndIf%
+    \State{\PyAssign{\PyName{j}}{\PyExpr{\PyName{j} \PyAdd \PyNum{1}}}}
+    \EndWhile%
+    \State{\PyAssign{\PyName{i}}{\PyExpr{\PyName{i} \PyAdd \PyNum{1}}}}
+    \EndWhile%
+    \State{\PyAssign{\PyName{i}}{\PyExpr{\PyNum{0}}}}
+    \While{\PyExpr{\PyName{i} \PyLt \PyNum{5}}}
+    \State{\PyAssign{\PyName{j}}{\PyExpr{\PyNum{0}}}}
+    \While{\PyExpr{\PyName{j} \PyLt \PyNum{5}}}
+    \If{\PyExpr{\PySubscript{\PySubscript{\PyName{mat}}{\PyName{i}}}{\PyName{j}} \PyEq \PyNum{0}}}
+    \State{\PyExpr{\PyCall{print}{\PyStr{ }}}}
+    \Else%
+    \State{\PyExpr{\PyCall{print}{\PyStr{*}}}}
+    \EndIf%
+    \State{\PyAssign{\PyName{j}}{\PyExpr{\PyName{j} \PyAdd \PyNum{1}}}}
+    \EndWhile%
+    \State{\tt {\sc scrivi}(``\textbackslash n'')}
+
+    \State{\PyAssign{\PyName{i}}{\PyExpr{\PyName{i} \PyAdd \PyNum{1}}}}
+    \EndWhile%
+    \EndProcedure%
+\end{algorithmic}
