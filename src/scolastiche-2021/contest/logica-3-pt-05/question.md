@@ -18,27 +18,33 @@ Siano A, B, C tre variabili booleane, ossia variabili che possono assumere solo 
 
 Si consideri la seguente tabella di verità per le due variabili booleane A e B e l'espressione logica $\lnot A \lor B$:
 
-| A   | B   | $\lnot A  \lor B$ |
-| --- | --- | ----------------- |
-| 0   | 0   | 1                 |
-| 0   | 1   | 1                 |
-| 1   | 0   | 0                 |
-| 1   | 1   | 1                 |
+$$
+\begin{array}{ccc}
+A & B & \lnot A \lor B \\ \hline
+0 & 0 & 1              \\
+0 & 1 & 1              \\
+1 & 0 & 0              \\
+1 & 1 & 1              \\
+\end{array}
+$$
 
 La tabella di verità fornisce, in funzione dei valori di A e B, i valori di verità dell'espressione logica, che possiamo rappresentare con una unica stringa di quattro caratteri zero o uno, in questo caso 1101 (leggendo dall'alto al basso i quattro valori di verità dell'espressione).
 
 Considerate la seguente tabella di verità corrispondente all'espressione logica $\js{espressione}$ definita sulle variabili booleane A, B e C.
 
-| A   | B   | C   | $\js{espressione}$ |
-| --- | --- | --- | ------------------ |
-| 0   | 0   | 0   |                    |
-| 0   | 0   | 1   |                    |
-| 0   | 1   | 0   |                    |
-| 0   | 1   | 1   |                    |
-| 1   | 0   | 0   |                    |
-| 1   | 0   | 1   |                    |
-| 1   | 1   | 0   |                    |
-| 1   | 1   | 1   |                    |
+$$
+\begin{array}{cccc}
+A & B & C & \js{espressione} \\ \hline
+0 & 0 & 0 &                  \\
+0 & 0 & 1 &                  \\
+0 & 1 & 0 &                  \\
+0 & 1 & 1 &                  \\
+1 & 0 & 0 &                  \\
+1 & 0 & 1 &                  \\
+1 & 1 & 0 &                  \\
+1 & 1 & 1 &                  \\
+\end{array}
+$$
 
 Quale è la stringa, di otto caratteri zero o uno, che rappresenta l'espressione logica di questa tabella di verità (sempre leggendo dall'alto al basso)?
 

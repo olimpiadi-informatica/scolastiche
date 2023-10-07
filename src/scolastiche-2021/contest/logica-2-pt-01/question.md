@@ -13,7 +13,12 @@ variants:
 Si consideri la seguente sottrazione, in cui alcune cifre sono state sostituite da $X$ e $Y$ (a lettera uguale corrisponde, naturalmente, cifra uguale):
 
 $$
-\texttt{2XYY} - \texttt{1YX3} = \texttt{\js{res}}
+\begin{array}{rc}
+\texttt{2XYY} & - \\
+\texttt{1YX3} & = \\
+\hline
+\texttt{\js{res}} &
+\end{array}
 $$
 
 Quanto vale la somma di $X$ e $Y$?
