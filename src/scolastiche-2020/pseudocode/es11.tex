@@ -1,0 +1,41 @@
+\begin{algorithmic}[1]
+\State{\PyAnnotation{\PyName{m}}{integer[][][]}}
+\State{\PyAnnotation{\PyName{v}}{integer[]}}
+\State{\PyAnnotation{\PyName{i}}{integer}}
+\State{\PyAnnotation{\PyName{j}}{integer}}
+\State{\PyAnnotation{\PyName{k}}{integer}}
+\State{\PyAnnotation{\PyName{t}}{integer}}
+\State{\PyAssign{\PyName{v}}{\PyExpr{[6, 19, 64, 72, 81]}}}
+\State{\PyAssign{\PyName{i}}{\PyExpr{\PyNum{0}}}}
+\While{\PyExpr{\PyName{i} \PyLt \PyNum{100}}}
+  \State{\PyAssign{\PyName{j}}{\PyExpr{\PyNum{0}}}}
+  \While{\PyExpr{\PyName{j} \PyLt \PyNum{100}}}
+    \State{\PyAssign{\PyName{k}}{\PyExpr{\PyNum{0}}}}
+    \While{\PyExpr{\PyName{k} \PyLt \PyNum{100}}}
+    \If{\PyExpr{\PyName{i} \PyMult \PyName{j} \PyEq \PyName{k}}}
+    \State{\PyAssign{\PySubscript{\PySubscript{\PySubscript{\PyName{m}}{\PyName{i}}}{\PyName{j}}}{\PyName{k}}}{\PyExpr{\PyNum{1}}}}
+    \Else%
+    \State{\PyAssign{\PySubscript{\PySubscript{\PySubscript{\PyName{m}}{\PyName{i}}}{\PyName{j}}}{\PyName{k}}}{\PyExpr{\PyNum{0}}}}
+    \EndIf%
+    \State{\PyAssign{\PyName{k}}{\PyExpr{\PyName{k} \PyAdd \PyNum{1}}}}
+    \EndWhile%
+    \State{\PyAssign{\PyName{j}}{\PyExpr{\PyName{j} \PyAdd \PyNum{1}}}}
+    \EndWhile%
+    \State{\PyAssign{\PyName{i}}{\PyExpr{\PyName{i} \PyAdd \PyNum{1}}}}
+    \EndWhile%
+    \State{\PyAssign{\PyName{k}}{\PyExpr{\PyNum{0}}}}
+    \While{\PyExpr{\PyName{k} \PyLt \PyNum{5}}}
+    \State{\PyAssign{\PyName{t}}{\PyExpr{\PyNum{0}}}}
+    \State{\PyAssign{\PyName{i}}{\PyExpr{\PyNum{0}}}}
+    \While{\PyExpr{\PyName{i} \PyLt \PyNum{100}}}
+    \State{\PyAssign{\PyName{j}}{\PyExpr{\PyNum{0}}}}
+    \While{\PyExpr{\PyName{j} \PyLt \PyNum{100}}}
+    \State{\PyAssign{\PyName{t}}{\PyExpr{\PyName{t} \PyAdd \PySubscript{\PySubscript{\PySubscript{\PyName{m}}{\PyName{i}}}{\PyName{j}}}{\PySubscript{\PyName{v}}{\PyName{k}}}}}}
+    \State{\PyAssign{\PyName{j}}{\PyExpr{\PyName{j} \PyAdd \PyNum{1}}}}
+    \EndWhile%
+    \State{\PyAssign{\PyName{i}}{\PyExpr{\PyName{i} \PyAdd \PyNum{1}}}}
+    \EndWhile%
+    \State{\PyAssign{\PyName{k}}{\PyExpr{\PyName{k} \PyAdd \PyNum{1}}}}
+    \State{\PyExpr{\PyCall{print}{\PyName{t}}}}
+    \EndWhile%
+\end{algorithmic}

@@ -1,0 +1,17 @@
+\begin{algorithmic}[1]
+\Function{f}{\PyArgAnnotation{h}{integer}\PyArgSep\PyArgAnnotation{i}{integer}}{ $\rightarrow$ \texttt{integer}}
+  \If{\PyExpr{\PyName{i} \PyEq \PyNum{0} \PyOr \PyName{i} \PyEq \PyName{h} \PySub \PyNum{1}}}
+    \Return{\PyExpr{\PyNum{1}}}
+  \EndIf%
+  \If{\PyExpr{\PyName{i} \PyLt \PyNum{0} \PyOr \PyName{i} \PyGtE \PyName{h}}}
+    \Return{\PyExpr{\PyNum{0}}}
+  \EndIf%
+  \Return{\PyExpr{\PyCall{f}{\PyName{h} \PySub \PyNum{1} \PyCallSep \PyName{i} \PySub \PyNum{1}} \PyAdd \PyCall{f}{\PyName{h} \PySub \PyNum{1} \PyCallSep \PyName{i}}}}
+\EndFunction%
+\State{\PyAnnotation{\PyName{i}}{integer}}
+\State{\PyAssign{\PyName{i}}{\PyExpr{\PyNum{3}}}}
+\While{\PyExpr{\PyName{i} \PyGt \PyNum{0}}}
+  \State{\PyExpr{\PyCall{print}{\PyCall{f}{\PyNum{4} \PyCallSep \PyName{i}}}}}
+  \State{\PyAssign{\PyName{i}}{\PyExpr{\PyName{i} \PySub \PyNum{1}}}}
+  \EndWhile%
+\end{algorithmic}

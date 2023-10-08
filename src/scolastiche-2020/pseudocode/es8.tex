@@ -1,0 +1,17 @@
+\begin{algorithmic}[1]
+\State{\PyAnnotation{\PyName{i}}{integer}}
+\State{\PyAnnotation{\PyName{v}}{integer[]}}
+\State{\PyAnnotation{\PyName{w}}{integer[]}}
+\State{\PyAssign{\PyName{v}}{\PyExpr{[7, 6, 4, 3, 9, 1, 5, 0, 2, 8]}}}
+\State{\PyAssign{\PyName{w}}{\PyExpr{[0,0,0,0,0,0,0,0,0,0]}}}
+\State{\PyAssign{\PyName{i}}{\PyExpr{\PyNum{0}}}}
+\While{\PyExpr{\PyName{i} \PyLt \PyNum{10}}}
+\State{\PyAssign{\PySubscript{\PyName{w}}{\PySubscript{\PyName{v}}{\PyName{i}}}}{\PyExpr{\PyName{i}}}}
+\State{\PyAssign{\PyName{i}}{\PyExpr{\PyName{i} \PyAdd \PyNum{1}}}}
+\EndWhile%
+\State{\PyAssign{\PyName{i}}{\PyExpr{\PyNum{0}}}}
+\While{\PyExpr{\PyName{i} \PyLt \PyNum{10}}}
+\State{\PyExpr{\PyCall{print}{\PySubscript{\PyName{w}}{\PyName{i}}}}}
+\State{\PyAssign{\PyName{i}}{\PyExpr{\PyName{i} \PyAdd \PyNum{1}}}}
+\EndWhile%
+\end{algorithmic}

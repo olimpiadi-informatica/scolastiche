@@ -1,0 +1,37 @@
+\begin{algorithmic}[1]
+\State{\PyAnnotation{\PyName{i}}{integer}}
+\State{\PyAnnotation{\PyName{j}}{integer}}
+\State{\PyAnnotation{\PyName{k}}{integer}}
+\State{\PyAnnotation{\PyName{l}}{integer}}
+\State{\PyAnnotation{\PyName{s1}}{integer}}
+\State{\PyAnnotation{\PyName{s2}}{integer}}
+\State{\PyAnnotation{\PyName{x}}{integer}}
+\State{\PyAssign{\PyName{x}}{-\PyExpr{\PyName{Infinity}}}}
+\State{\PyAssign{\PyName{i}}{\PyExpr{\PyNum{0}}}}
+\While{\PyExpr{\PyName{i} \PyLt \PyName{n} \PySub \PyNum{1}}}
+  \State{\PyAssign{\PyName{j}}{\PyExpr{\PyName{i} \PyAdd \PyNum{1}}}}
+  \While{\PyExpr{\PyName{j} \PyLt \PyName{n}}}
+    \State{\PyAssign{\PyName{k}}{\PyExpr{\PyName{i} \PyAdd \PyNum{1}}}}
+    \While{\PyExpr{\PyName{k} \PyLt \PyName{j}}}
+      \State{\PyAssign{\PyName{s1}}{\PyExpr{\PyNum{0}}}}
+      \State{\PyAssign{\PyName{s2}}{\PyExpr{\PyNum{0}}}}
+      \State{\PyAssign{\PyName{l}}{\PyExpr{\PyName{i}}}}
+      \While{\PyExpr{\PyName{l} \PyLt \PyName{k}}}
+        \State{\PyAssign{\PyName{s1}}{\PyExpr{\PyName{s1} \PyAdd \PySubscript{\PyName{v}}{\PyName{l}}}}}
+        \State{\PyAssign{\PyName{l}}{\PyExpr{\PyName{l} \PyAdd \PyNum{1}}}}
+      \EndWhile%
+      \While{\PyExpr{\PyName{l} \PyLtE \PyName{j}}}
+        \State{\PyAssign{\PyName{s2}}{\PyExpr{\PyName{s2} \PyAdd \PySubscript{\PyName{v}}{\PyName{l}}}}}
+        \State{\PyAssign{\PyName{l}}{\PyExpr{\PyName{l} \PyAdd \PyNum{1}}}}
+      \EndWhile%
+      \If{\PyExpr{\PyName{s1} \PySub \PyName{s2} \PyGt \PyName{x}}}
+        \State{\PyAssign{\PyName{x}}{\PyExpr{\PyName{s1} \PySub \PyName{s2}}}}
+      \EndIf%
+      \State{\PyAssign{\PyName{k}}{\PyExpr{\PyName{k} \PyAdd \PyNum{1}}}}
+    \EndWhile%
+    \State{\PyAssign{\PyName{j}}{\PyExpr{\PyName{j} \PyAdd \PyNum{1}}}}
+  \EndWhile%
+  \State{\PyAssign{\PyName{i}}{\PyExpr{\PyName{i} \PyAdd \PyNum{1}}}}
+\EndWhile%
+\State{\PyExpr{\PyCall{print}{\PyName{x}}}}
+\end{algorithmic}

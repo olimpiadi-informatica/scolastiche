@@ -1,0 +1,15 @@
+\begin{algorithmic}[1]
+\Function{f}{\PyArgAnnotation{x}{integer}}{ $\rightarrow$ \texttt{integer}}
+  \State{\PyAnnotation{\PyName{i}}{integer}}
+  \State{\PyAssign{\PyName{i}}{\PyExpr{\PyNum{0}}}}
+  \While{\PyExpr{\PyName{x} \PyGt \PyNum{0}}}
+    \If{\PyExpr{\PyName{x} \PyMod \PyNum{3} \PyEq \PyNum{0}}}
+    \State{\PyAssign{\PyName{x}}{\PyExpr{\PyName{x} \PyDiv \PyNum{3}}}}
+    \Else%
+    \State{\PyAssign{\PyName{x}}{\PyExpr{\PyName{x} \PySub \PyNum{1}}}}
+    \EndIf%
+    \State{\PyAssign{\PyName{i}}{\PyExpr{\PyName{i} \PyAdd \PyNum{1}}}}
+    \EndWhile%
+    \Return{\PyExpr{\PyName{i}}}
+    \EndFunction%
+\end{algorithmic}

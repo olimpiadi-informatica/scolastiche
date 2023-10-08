@@ -1,0 +1,16 @@
+\begin{algorithmic}[1]
+\Function{f}{\PyArgAnnotation{x}{integer}}{ $\rightarrow$ \texttt{integer}}
+  \If{\PyExpr{\PyName{x} \PyMod \PyNum{2} \PyEq \PyNum{0}}}
+    \Return{\PyExpr{\PyNum{0}}}
+  \Else%
+  \Return{\PyExpr{\PyNum{1} \PyAdd \PyCall{f}{(\PyName{x} \PySub \PyNum{1}) \PyDiv \PyNum{2}}}}
+  \EndIf%
+  \EndFunction%
+  \Function{g}{\PyArgAnnotation{x}{integer}}{ $\rightarrow$ \texttt{integer}}
+  \If{\PyExpr{\PyName{x} \PyGt \PyNum{350} \PyOr \PyName{x} \PyLtE \PyNum{0}}}
+  \Return{\PyExpr{\PyNum{0}}}
+  \Else%
+  \Return{\PyExpr{\PyCall{max}{\PyCall{f}{\PyName{x}} \PyCallSep \PyCall{g}{\PyName{x} \PyDiv \PyNum{2}}}}}
+  \EndIf%
+  \EndFunction%
+\end{algorithmic}

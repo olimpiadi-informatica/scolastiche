@@ -1,0 +1,14 @@
+\begin{algorithmic}[1]
+\State{\PyAnnotation{\PyName{i}}{integer}}
+\State{\PyAnnotation{\PyName{s}}{integer}}
+\State{\PyAnnotation{\PyName{t}}{integer}}
+\State{\PyAssign{\PyName{i}}{\PyExpr{\PyNum{0}}}}
+\State{\PyAssign{\PyName{s}}{\PyExpr{\PyNum{1}}}}
+\State{\PyAssign{\PyName{t}}{\PyExpr{\PyNum{0}}}}
+\While{\PyExpr{\PyName{i} \PyLt \PyNum{8}}}
+  \State{\PyAssign{\PyName{i}}{\PyExpr{\PyName{i} \PyAdd \PyNum{1}}}}
+  \State{\PyAssign{\PyName{s}}{\PyExpr{\PyName{s} \PyMult \PyNum{2}}}}
+  \State{\PyAssign{\PyName{t}}{\PyExpr{\PyName{t} \PyAdd \PyName{s} \PyAdd \PyName{i}}}}
+  \EndWhile%
+  \State{\PyExpr{\PyCall{print}{\PyName{t}}}}
+\end{algorithmic}
