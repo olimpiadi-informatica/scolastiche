@@ -1,36 +1,4 @@
-import _ from "lodash";
-
-export function buildVariant(n) {
-    const digits = n.toString().split('');
-    const correct = _.sumBy(digits, Number);
-    const wrong = _.range(3, 8);
-    _.pull(wrong, correct);
-
-    const decimal = (
-        digits
-            .map((d, i) => `${d} \\cdot 10^{${digits.length - i - 1}}`)
-            .join(" + ")
-    );
-    const sumDigits = digits.join(" + ");
-
-    return {
-        n,
-        correct,
-        wrong,
-        decimal,
-        sumDigits,
-    };
-
-}
-
-export const variants = [
-  buildVariant(2012),
-  buildVariant(1112),
-  buildVariant(1023),
-  buildVariant(2211),
-  buildVariant(3013),
-  buildVariant(4120),
-];
+import variants from "./variants.py";
 
 Hai a disposizione $\js{n}$ palline da tennis, e vuoi dividerle in gruppi in modo che il numero di palline in ogni gruppo sia una potenza di $10$ (in altre parole, un numero della forma $10^k$ per un qualche $k \geq 0$).
 

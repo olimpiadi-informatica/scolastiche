@@ -1,5 +1,4 @@
 import graph;
-import variant;
 
 unitsize(30);
 defaultpen(fontsize(22));

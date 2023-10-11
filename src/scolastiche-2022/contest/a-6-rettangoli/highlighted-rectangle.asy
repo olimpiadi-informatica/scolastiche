@@ -1,5 +1,4 @@
 import fontsize;
-import variant;
 
 size(10cm);
 defaultpen(fontsize(15));

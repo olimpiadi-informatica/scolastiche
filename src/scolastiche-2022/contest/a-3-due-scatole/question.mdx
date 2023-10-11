@@ -1,28 +1,4 @@
-import _ from "lodash";
-
-export function buildVariant(i, weights) {
-    const sortedWeights = _.sortBy(weights);
-
-    const ans1 = _(sortedWeights).slice(4).sum();
-    const ans2 = 2022 + _(sortedWeights).slice(0, 4).sum() - ans1;
-
-    return {
-        variant: i,
-        weights,
-        w: _.reverse(sortedWeights),
-        ans1,
-        ans2,
-        sumWeights: _.sum(weights),
-        diff: 2 * ans1 - _.sum(weights),
-    };
-
-}
-
-export const variants = [
-  buildVariant(0, [12, 27, 42, 27, 35, 30, 16, 50, 5]),
-  buildVariant(1, [23, 10, 31, 8, 41, 31, 38, 29, 60]),
-  buildVariant(2, [9, 25, 45, 11, 25, 59, 37, 20, 51]),
-];
+import variants from "./variants.py";
 
 Hai comprato $9$ barrette di cioccolato, i cui pesi (in una certa unità di misura) sono i seguenti:
 
@@ -44,7 +20,7 @@ Vuoi distribuire le $10$ barrette in due scatole, in modo che ci siano **esattam
 >
 > La distribuzione più conveniente è allora quella che massimizza il peso nella scatola che non contiene la maxi barretta: in particolare, conviene mettere in tale scatola le $5$ barrette (normali) più pesanti, cioè quelle di pesi $\js{w[0]}$, $\js{w[1]}$, $\js{w[2]}$, $\js{w[3]}$ e $\js{w[4]}$. La loro somma è $\js{ans1}$.
 >
-> ![Statistiche risposte]({variant}-0.svg)
+> ![Statistiche risposte]({i}-0.svg)
 
 ---
 
@@ -62,4 +38,4 @@ Tuttavia, prima di distribuire le barrette ti viene voglia di cioccolato, e deci
 >
 > Pertanto il peso massimo che puoi mangiare è $2022 - \js{diff} = \js{ans2}$.
 >
-> ![Statistiche risposte]({variant}-1.svg)
+> ![Statistiche risposte]({i}-1.svg)

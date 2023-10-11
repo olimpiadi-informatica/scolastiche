@@ -1,0 +1,43 @@
+import variants from "./variants.py";
+
+Considera la seguente sequenza formata da $12$ numeri interi distinti compresi tra $1$ e $1000$:
+
+$$
+\js{numbers.join(", \\; ")}
+$$
+
+Un _intervallo_ è una sequenza di numeri consecutivi nella sequenza data (formata da almeno un numero). Dato un intervallo $J$, indichiamo con $\max(J)$ e $\min(J)$, rispettivamente, il massimo e minimo valore di $J$. Ad esempio, se $J = [\js{numbers.slice(3, 7).join(", \\; ")}]$ (l'intervallo dal quarto al settimo numero) si ha $\max(J) = \js{Math.max(...numbers.slice(3, 7))}$ e $\min(J) = \js{Math.min(...numbers.slice(3, 7))}$.
+
+Per ogni $k = 0, \, \dots, \, 1000$, chiamiamo $L_k$ la **massima** lunghezza di un intervallo $J$ tale che $\max(J) - \min(J) \le k$. Nota che $J$ può essere formato anche da un solo numero, nel qual caso $\max(J) = \min(J)$.
+
+1. Quanto vale $L_{\js{k}}$?
+
+?> {ans1}
+
+> La risposta è **{ans1}**.
+>
+> Per calcolare $L_{\js{k}}$, possiamo scorrere tutti i possibili intervalli $J$, per ciascuno calcolare $\max(J) - \min(J)$, e considerare solo quelli per cui questo valore non supera $\js{k}$. Il valore cercato sarà la massima lunghezza di un intervallo considerato.
+>
+> Gli intervalli sono, in totale, $12 \cdot 13 = 156$, quindi scorrerli tutti è un processo lento ma fattibile. Per velocizzarlo si possono fare osservazioni che riducono di molto il numero di intervalli da considerare. Per esempio, possiamo iterare su tutte le **coppie** di numeri della sequenza, diciamo $(x, \, y)$, imponendo che $x$ sia il minimo dell'intervallo e $y$ il massimo. Per la maggior parte delle coppie, questo non sarà possibile, perché tra $x$ e $y$ c'è un numero più piccolo di $x$ o più grande di $y$ (come accade per la coppia $(\js{numbers[2]}, \, \js{numbers[7]})$). Per le altre coppie, controlliamo se $y - x \le \js{k}$ e, in quel caso, troviamo la massima lunghezza di un intervallo che contiene $x$ e $y$ e nessun numero minore di $x$ o maggiore di $y$.
+>
+> Qualunque sia la strategia impiegata, alla fine si determina che l'intervallo più lungo che soddisfa la condizione è $J = [\js{J.join(", \\; ")}$, che ha lunghezza $\js{ans1}$ (e $\max(J) - \min(J) = \js{Math.max(...J) - Math.min(...J)}$).
+>
+> ![Statistiche risposte]({i}-0.svg)
+
+---
+
+Immagina di scrivere su un foglio i numeri $L_0, \, L_1, \, \dots, \, L_{1000}$.
+
+2. Quanti numeri **distinti** compaiono sul foglio?
+
+?> {ans2}
+
+> La risposta è **{ans2}**.
+>
+> Per prima cosa, occorre osservare che la risposta non cambia se ci restringiamo ai $k$ che coincidono **esattamente** con $\max(J) - \min(J)$ per un qualche intervallo $J$. Questo perché per tutti gli altri $k$ il valore di $L_k$ è sicuramente uguale a uno dei precedenti. Infatti, sia $J$ un intervallo di lunghezza massima tale che $\max(J) - \min(J) \le k$. Allora, posto $k' = \max(J) - \min(J)$, si ha $L_k = L_{k'}$.
+>
+> A questo punto l'idea è simile a quella della parte precedente, ma più raffinata. Scorriamo tutti gli intervalli $J$, per ciascuno calcoliamo il numero $k = \max(J) - \min(J)$ e, su un foglio, scriviamo $k$ e la lunghezza di $J$. Alla fine, raggruppiamo le coppie con lo stesso $k$, e in ogni gruppo prendiamo il valore massimo della lunghezza dell'intervallo, che coincide con $L_k$. La risposta è il numero di valori di $L_k$ distinti tra tutti i gruppi, che risulta essere $\js{ans2}$.
+>
+> Con la stessa strategia di prima si può velocizzare molto il processo di iterazione sugli intervalli.
+>
+> ![Statistiche risposte]({i}-1.svg)
