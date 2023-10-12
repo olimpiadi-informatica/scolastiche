@@ -1,6 +1,6 @@
 Dato il seguente programma:
 
-![](es11.svg?w=488)
+![](es11.svg?s=2)
 
 Si supponga di eseguire `rec1(4, 6)`.
 

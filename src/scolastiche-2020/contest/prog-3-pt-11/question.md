@@ -16,7 +16,7 @@ variants:
 
 Dato il seguente programma:
 
-![](es11-{i}.svg?w=292)
+![](es11-{i}.svg?s=2)
 
 Qual è il **{num}** valore che viene stampato dal programma durante la sua esecuzione?
 

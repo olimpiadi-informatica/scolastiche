@@ -16,7 +16,7 @@ variants:
 
 Date le seguenti funzioni:
 
-![](es10-{bound}.svg?w=344)
+![](es10-{bound}.svg?s=2)
 
 Tenendo conto che la divisione restituisce un risultato intero (quindi, ad esempio, sia $4/2$ che $5/2$ restituiscono $2$), qual è il massimo $x$ tale per cui $\mathrm{G}(x) = \js{val}$?
 

@@ -16,7 +16,7 @@ variants:
 
 Dato il seguente programma:
 
-![](es6-{start}-{iter}.svg?w=206)
+![](es6-{start}-{iter}.svg?s=2)
 
 Cosa viene stampato al termine dell'esecuzione?
 

@@ -8,7 +8,7 @@ $$
 M = [4, \, 3, \, 1, \, 2, \, 5, \, 4, \, 4, \, 6, \, 9, \, 9, \, 10, \, 8, \, 10].
 $$
 
-1. Qual è la massima somma delle altezze ottenibile?
+Qual è la massima somma delle altezze ottenibile?
 
 ?> 65
 
@@ -24,7 +24,7 @@ $$
 
 Aggiungiamo una seconda condizione da rispettare: la differenza tra le altezze di due piattaforme consecutive non può mai essere maggiore di $1$.
 
-1. Qual è la massima somma delle altezze ottenibile con entrambi i vincoli?
+Qual è la massima somma delle altezze ottenibile con entrambi i vincoli?
 
 ?> 59
 

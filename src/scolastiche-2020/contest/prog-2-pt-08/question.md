@@ -12,7 +12,7 @@ variants:
 
 Dato il seguente programma:
 
-![](es8-{i}.svg?w=262)
+![](es8-{i}.svg?s=2)
 
 Qual è il valore dell'ultimo intero che viene stampato durante l'esecuzione di questo programma?
 

@@ -1,6 +1,6 @@
 Marco ha una scacchiera quadrata $8 \times 8$, divisa in $64$ quadratini uguali. Ha anche un tassello a forma di L, formato da tre quadratini uguali delle stesse dimensioni di quelli della scacchiera, come in figura.
 
-![Tassello](tile.asy)
+![Tassello](tile.asy?s=2)
 
 Marco vuole disporre il tassello sulla scacchiera, in modo che copra per intero esattamente tre quadratini di quest'ultima. Nel farlo, può ruotare il tassello come vuole. In quanti modi può disporre il tassello sulla scacchiera? (Due disposizioni si considerano diverse se non coprono le stesse tre caselle.)
 

@@ -16,7 +16,7 @@ variants:
 
 Dato il seguente programma:
 
-![](es9-{i}.svg?w=452)
+![](es9-{i}.svg?s=2)
 
 {domanda}
 

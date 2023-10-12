@@ -16,7 +16,7 @@ variants:
 
 Data la seguente funzione:
 
-![](es7-{base}.svg?w=342)
+![](es7-{base}.svg?s=2)
 
 Qual è il valore minimo da passare ad `f` perché questa ritorni $\js{res}$?
 

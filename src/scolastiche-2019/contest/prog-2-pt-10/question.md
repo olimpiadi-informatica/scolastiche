@@ -1,6 +1,6 @@
 Dato il seguente programma:
 
-![](es10.svg?w=410)
+![](es10.svg?s=2)
 
 Scegliere quella corretta fra le seguenti opzioni:
 

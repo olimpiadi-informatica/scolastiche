@@ -2,15 +2,15 @@ import variants from "./variants.py";
 
 Ti viene data la tabella $8 \times 8$ mostrata sotto, che contiene tutti i numeri interi da $1$ a $64$:
 
-![Tabella 8 per 8 riempita con i numeri da 1 a 64](table.asy?v=variants.py)
+![Tabella 8 per 8 riempita con i numeri da 1 a 64](table.asy?s=1.5&v=variants.py)
 
 Un _rettangolo_ è una sotto-tabella ottenuta intersecando un insieme di righe consecutive e un insieme di colonne consecutive. Nota che anche una singola casella è un rettangolo. Diciamo che un rettangolo è _interessante_ se, detto $N$ il numero di caselle da cui è formato, esso contiene tutti i numeri da $1$ a $N + 1$, **tranne uno**.
 
 Ad esempio, il rettangolo evidenziato nella figura che segue è interessante: esso è formato da $N = 6$ caselle e contiene i numeri $\js{nums}$, ovvero tutti i numeri tra $1$ e $N + 1 = 7$ tranne il $\js{t}$.
 
-![Stessa tabella di prima, in cui è evidenziato un rettangolo 2 per 3](highlighted-rectangle.asy?v=variants.py)
+![Stessa tabella di prima, in cui è evidenziato un rettangolo 2 per 3](highlighted-rectangle.asy?s=1.5&v=variants.py)
 
-1. Quanti sono i rettangoli interessanti formati da **al massimo** $5$ caselle?
+Quanti sono i rettangoli interessanti formati da **al massimo** $5$ caselle?
 
 ?> {ans1}
 
@@ -20,7 +20,7 @@ Ad esempio, il rettangolo evidenziato nella figura che segue è interessante: es
 >
 > I rettangoli interessanti formati da al massimo $5$ caselle sicuramente contengono solo numeri minori o uguali di $6$, e quindi sono interamente contenuti nella regione evidenziata in grigio:
 >
-> ![Tabella con numeri minori o uguali di 6 colorati in grigio](highlighted-small.asy?v=variants.py)
+> ![Tabella con numeri minori o uguali di 6 colorati in grigio](highlighted-small.asy?s=1.5&v=variants.py)
 >
 > Pertanto, possiamo controllare uno per uno tutti questi rettangoli, e per ciascuno determinare se è interessante oppure no. Nota, in particolare, che i rettangoli $1 \times 1$ formati dalla singola casella con il numero $1$ e dalla singola casella con il numero $2$ sono sicuramente interessanti (perché?).
 >
@@ -30,7 +30,7 @@ Ad esempio, il rettangolo evidenziato nella figura che segue è interessante: es
 
 ---
 
-2. Quanti sono i rettangoli interessanti formati da **almeno** $6$ caselle?
+Quanti sono i rettangoli interessanti formati da **almeno** $6$ caselle?
 
 ?> {ans2}
 
@@ -40,7 +40,7 @@ Ad esempio, il rettangolo evidenziato nella figura che segue è interessante: es
 >
 > Ad esempio, i rettangoli formati da $k = \js{k}$ caselle sono contenuti nella regione evidenziata in grigio nella figura qui sotto (costituita da tutti i numeri tra $1$ e $\js{k+1}$), ed è facile notare (a colpo d'occhio) che c'è esattamente un tale rettangolo formato da esattamente $\js{k}$ caselle, quello con il bordo spesso.
 >
-> ![Tabella con numeri da 1 a k+1 colorati in grigio e rettangolo evidenziato con bordo spesso](highlighted-big.asy?v=variants.py)
+> ![Tabella con numeri da 1 a k+1 colorati in grigio e rettangolo evidenziato con bordo spesso](highlighted-big.asy?s=1.5&v=variants.py)
 >
 > (Per molti valori di $k$, ovviamente, non ci sarà nessun rettangolo interessante formato da $k$ caselle.)
 >

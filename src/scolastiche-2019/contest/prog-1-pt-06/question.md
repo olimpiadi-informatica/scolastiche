@@ -1,6 +1,6 @@
 Data la seguente funzione:
 
-![](es6.svg?w=682)
+![](es6.svg?s=2)
 
 Indicare l'affermazione vera tra le seguenti:
 
