@@ -1,6 +1,6 @@
 Considera questo procedimento, rappresentato come diagramma di flusso. Il procedimento si riferisce a tre **variabili** numeriche, rappresentate dalle lettere $a$, $b$ e $c$.
 
-```mermaid Diagramma di flusso
+```mermaid alt=Diagramma%20di%20flusso
 flowchart TD
     Inizio --> B{{a è più grande di b?}}
     B -->|sì| C{{a è più grande di c?}}

@@ -2,7 +2,7 @@ Considera il seguente procedimento, rappresentato come diagramma di flusso.
 
 Il procedimento si riferisce ad un **lista** di numeri $a$, di dimensione rappresentata dalla **variabile** $n$.
 
-```mermaid Diagramma di flusso
+```mermaid alt=Diagramma%20di%20flusso
 flowchart TD
     Inizio --> B[p ← 0]
     B --> C{{p è più grande di n-2?}}
