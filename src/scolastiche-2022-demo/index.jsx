@@ -8,7 +8,7 @@ import "quizms/css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <NoAuth header={Header} duration={{ minutes: 45 }}>
+    <NoAuth header={Header} questionCount={10} duration={45}>
       <Contest />
     </NoAuth>
   </React.StrictMode>,
