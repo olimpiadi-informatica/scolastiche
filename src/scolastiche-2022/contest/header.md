@@ -46,6 +46,6 @@ In particolare, il punteggio massimo ottenibile per un quesito a carattere algor
 
 ## Quesiti di programmazione e pseudocodice
 
-I quesiti di programmazione presentano semplici programmi scritti in _pseudocodice_. Qui sotto puoi trovare un riassunto della sintassi dello pseudocodice, oppure [scarica la guida completa](https://www.olimpiadi-informatica.it/images/Pseudocodice.pdf) in PDF.
+I quesiti di programmazione presentano semplici programmi scritti in _pseudocodice_. Qui sotto puoi trovare un riassunto della sintassi dello pseudocodice, oppure [scarica la guida completa](/Pseudocodice.pdf) in PDF.
 
 ![Riassunto guida pseudocodice](pseudocodice-cheatsheet.svg)
