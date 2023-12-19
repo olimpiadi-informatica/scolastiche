@@ -11,3 +11,10 @@ Alla fine, su che casella si trova?
 - [x] $\js{correct}$
 - [ ] $\js{wrong[2]}$
 - [ ] $\js{wrong[3]}$
+
+> Potremmo contare come avanza il coniglio dopo tutti questi spostamenti, ma sarebbe lungo e noioso!
+>
+> Invece, pensiamo a quanto si sposterà il coniglio in totale: $\js{a[0]} + \js{a[1]} + \js{a[2]} + \js{a[3]} = \js{a[0]+a[1]+a[2]+a[3]}$ caselle.
+> Inoltre, ogni 10 caselle il coniglio torna al punto di partenza! Quindi dopo i primi $\js{a[0]+a[1]+a[2]+a[3]-(a[0]+a[1]+a[2]+a[3])%10}$
+> spostamenti il coniglio sarà di nuovo sulla casella 1, poi farà ancora gli ultimi $\js{(a[0]+a[1]+a[2]+a[3])%10}$ spostamenti e
+> arriverà sulla casella $\js{correct}$.
