@@ -16,3 +16,5 @@ Qual è il minimo numero di euro che Bunny deve spendere per raggiungere il suo 
 > Bunny ha moltissime palline blu: la cosa migliore che può fare per cercare di avere lo stesso numero di palline dei tre colori, è dipingerne circa la metà di verde.
 > A questo Bunny potrebbe avere $10$ palline rosse, $1011$ palline blu e $1012$ palline verdi. Per raggiungere l'obiettivo deve quindi ancora comprare $1$ pallina blu
 > e $1002$ palline rosse, per un totale di $1003$ palline.
+>
+> ![secondarie](2-secondarie.asy)

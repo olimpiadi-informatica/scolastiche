@@ -14,3 +14,5 @@ Quali palloni butta Tip-Tap?
 - [ ] $1$, $4$
 
 > Leggendo i blocchi, vediamo che Tip-Tap butta i palloni da basket se **non sono rossi** (il pallone 4), mentre butta i palloni da calcio se **sono sgonfi** (il pallone 3).
+>
+> ![primarie](7-primarie.asy) ![secondarie](7-secondarie.asy)

@@ -21,3 +21,5 @@ Per risparmiare, Tip-Tap vorrebbe acquistare la bacheca più piccola possibile: 
 > Quindi la cornice più piccola sarà grande $9 \times 10$ cm, per un'area di $90$ cm²! Una possibile disposizione di cartoline in questo caso è questa:
 >
 > ![soluzione](soluzione.asy)
+>
+> ![primarie](3-primarie.asy)

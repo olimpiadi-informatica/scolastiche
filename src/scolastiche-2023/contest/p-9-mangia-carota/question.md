@@ -28,4 +28,5 @@ Quali delle seguenti successioni di azioni consentono a Tip-Tap di raggiungere l
 > ![sbagliato](sbagliato.asy)
 >
 > Non è quindi corretta, mancando un passo tra una porta e l'altra.
-> 
+>
+> ![primarie](8-primarie.asy)

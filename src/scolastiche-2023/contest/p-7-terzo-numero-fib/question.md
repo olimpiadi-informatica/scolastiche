@@ -18,3 +18,5 @@ Qual è il **terzo** numero stampato dal seguente programma?
 > 4. Nella quarta ripetizione (con $i$ che vale $4$), l'unico $j$ che viene stampato è $100 / 4 = 25$, che è quindi il **terzo** numero stampato.
 >
 > Infatti, questo programma stampa i _divisori_ di $100$ in ordine decrescente: $100, 50, 25, 20, 10, 5, 4, 2, 1$!
+>
+> ![secondarie](8-secondarie.asy)

@@ -13,6 +13,8 @@ Qual è la minima altezza di un amico che può rimanere in fila dopo $5$ mosse?
 > Ad ogni mossa, un amico esce dalla fila. Dato che all'inizio ci sono $6$ amici in fila, dopo $5$ mosse ne rimarrà uno soltanto.
 > Allora deve essere l'amico di altezza $6$: essendo il più alto di tutti, non potrò mai farlo uscire dalla fila
 > con nessuna delle mie mosse!
+>
+> ![primarie](5.1-primarie.asy) ![secondarie](4.1-secondarie.asy)
 
 ---
 
@@ -28,3 +30,5 @@ Qual è la minima altezza di un amico che può rimanere in fila dopo $4$ mosse?
 > Invece, l'altro può essere l'amico di altezza $2$, per esempio con questa sequenza di mosse:
 >
 > ![soluzione](soluzione.asy)
+>
+> ![primarie](5.2-primarie.asy) ![secondarie](4.2-secondarie.asy)

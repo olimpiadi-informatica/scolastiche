@@ -27,3 +27,5 @@ Quanti sono i possibili nomi che Tip-Tap può dare alla gara?
 > - $\textsf{IOII}$
 >
 > Dato che i nomi ammissibili sono tutti gli altri, devono essere $16 - 4 = 12$.
+>
+> ![primarie](4-primarie.asy) ![secondarie](3-secondarie.asy)

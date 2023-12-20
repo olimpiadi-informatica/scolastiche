@@ -18,3 +18,5 @@ Riesci a capire quali dei compagni di classe di Tip-Tap si sono scambiati il big
 > Dippy ha la maglietta rossa, ma non può aver scritto il bigliettino, perché nessuno è più alto di lui.
 > 
 > Deve averlo scritto Carol, indirizzandolo a Bunny che è l'unico più alto di lui con la maglietta verde!
+>
+> ![primarie](1-primarie.asy)
