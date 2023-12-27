@@ -1,5 +1,3 @@
-import React from "react";
-
 import { NoAuth } from "quizms/student";
 import "quizms/css";
 
@@ -11,7 +9,8 @@ export const description = "Selezione scolastica delle Olimpiadi di Informatica 
 
 export function App() {
   return (
-    <NoAuth header={Header} questionCount={20} duration={90}>
+    <NoAuth questionCount={20} duration={90}>
+      <Header />
       <Contest />
     </NoAuth>
   );

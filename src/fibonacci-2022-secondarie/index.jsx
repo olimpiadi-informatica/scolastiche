@@ -1,5 +1,3 @@
-import React from "react";
-
 import { NoAuth } from "quizms/student";
 import "quizms/css";
 
@@ -11,7 +9,8 @@ export const description = "Prima fase dei Giochi di Fibonacci per le scuole sec
 
 export function App() {
   return (
-    <NoAuth header={Header} questionCount={8} duration={50}>
+    <NoAuth questionCount={8} duration={50}>
+      <Header />
       <Contest />
     </NoAuth>
   );
