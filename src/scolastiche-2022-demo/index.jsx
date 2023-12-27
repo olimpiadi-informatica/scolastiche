@@ -1,15 +1,18 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+
+import { NoAuth } from "quizms/student";
+import "quizms/css";
 
 import Contest from "./contest/contest.mdx";
 import Header from "./contest/header.md";
-import { NoAuth } from "quizms";
-import "quizms/css";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+export const title = "Demo Scolastiche 2022";
+export const description = "Demo della selezione scolastica delle Olimpiadi di Informatica Italiane"
+
+export function App() {
+  return (
     <NoAuth header={Header} questionCount={10} duration={45}>
       <Contest />
     </NoAuth>
-  </React.StrictMode>,
-);
+  );
+}
