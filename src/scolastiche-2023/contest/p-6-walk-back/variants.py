@@ -14,6 +14,7 @@ def build_variant(a):
     wrong=[n,s,s+n, 10]
 
     return dict(
+        n=n,
         correct=correct,
         wrong=wrong,
         a=a

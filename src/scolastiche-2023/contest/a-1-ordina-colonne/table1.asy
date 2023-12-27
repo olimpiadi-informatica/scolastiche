@@ -18,4 +18,4 @@ void draw_table(int n, int k, int[][] table) {
 }
 
 
-draw_table(N1, K1, table1);
+draw_table(n1, k1, table1);

@@ -87,16 +87,16 @@ def build_variant(table1, table2):
     ]
 
     return dict(
-        N1 = N1,
-        K1 = K1,
+        n1 = N1,
+        k1 = K1,
         table1 = table1,
         ans1 = ans1,
-        N2 = N2,
-        K2 = K2,
+        n2 = N2,
+        k2 = K2,
         table2 = table2,
         ans2 = ans2,
-        Nes = Nes,
-        Kes = Kes,
+        nes = Nes,
+        kes = Kes,
         example = example,
         example_res = example_res
     )

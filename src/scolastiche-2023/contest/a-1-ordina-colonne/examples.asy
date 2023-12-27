@@ -18,5 +18,5 @@ void draw_table(int n, int k, int[][] table, int offset) {
 }
 
 
-draw_table(Nes, Kes, example, 0);
-draw_table(Nes, Kes, example_res, 5);
+draw_table(nes, kes, example, 0);
+draw_table(nes, kes, example_res, 5);
