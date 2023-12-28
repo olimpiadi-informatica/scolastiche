@@ -9,19 +9,19 @@ variants_input = [
 
 
 def build_variant(c, w):
-    possible_correct = ["y[0] <- y[0]",
-                        "y[1] <- y[1]",
-                        "y[2] <- y[2]",
-                        "y[3] <- y[3]"]
+    possible_correct = ["y[0] ← y[0]",
+                        "y[1] ← y[1]",
+                        "y[2] ← y[2]",
+                        "y[3] ← y[3]"]
     
     correct = possible_correct[c]
 
-    possible_wrong = ["x <- x[2]", 
-                      "y <- x",
-                      "x + y[2] <- 2",
-                      "x[0] <- 2 + y",
-                      "y <- x + 2",
-                      "y[0] <- x[0] + 2"]
+    possible_wrong = ["x ← x[2]", 
+                      "y ← x",
+                      "x + y[2] ← 2",
+                      "x[0] ← 2 + y",
+                      "y ← x + 2",
+                      "y[0] ← x[0] + 2"]
     
     wrong=[]   
     for i in w:
