@@ -1,4 +1,4 @@
-import { NoAuth } from "quizms/student";
+import { OlinfoAuth } from "../utils/olinfoAuth";
 import "quizms/css";
 
 import Contest from "./contest/contest.mdx";
@@ -9,9 +9,9 @@ export const description = "Prima fase dei Giochi di Fibonacci per le scuole sec
 
 export function App() {
   return (
-    <NoAuth questionCount={8} duration={50}>
+    <OlinfoAuth questionCount={8} duration={50}>
       <Header />
       <Contest />
-    </NoAuth>
+    </OlinfoAuth>
   );
 }

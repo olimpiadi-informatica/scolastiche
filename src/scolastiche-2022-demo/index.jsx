@@ -1,4 +1,4 @@
-import { NoAuth } from "quizms/student";
+import { OlinfoAuth } from "../utils/olinfoAuth";
 import "quizms/css";
 
 import Contest from "./contest/contest.mdx";
@@ -10,9 +10,9 @@ export const description =
 
 export function App() {
   return (
-    <NoAuth questionCount={10} duration={45}>
+    <OlinfoAuth questionCount={10} duration={45}>
       <Header />
       <Contest />
-    </NoAuth>
+    </OlinfoAuth>
   );
 }
