@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@mdx-js/react": "^2.3",
+    "@olinfo/quizms": "^1.0.0-beta.1",
     "@tailwindcss/typography": "^0.5.10",
     "autoprefixer": "^10.4.16",
     "cookie": "^0.6.0",
