@@ -34,7 +34,3 @@ I quesiti a _domanda aperta numerica_ richiedono come risposta un numero intero 
 I quesiti di programmazione presentano semplici programmi scritti in _pseudocodice_. Qui sotto puoi trovare un riassunto della sintassi dello pseudocodice, oppure [scarica la guida completa](/Pseudocodice.pdf) in PDF.
 
 ![Riassunto guida pseudocodice](pseudocodice-cheatsheet.svg)
-
----
-
-## Prova di esempio
