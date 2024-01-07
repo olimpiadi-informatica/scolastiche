@@ -18,7 +18,6 @@ end function
 
 Supponiamo di chiamare `walk({n}, a, 0, 0)`, dove `a = [{a}]`. Quante volte viene stampata in output la stringa `”back”`?
 
-
 - [x] $\js{correct}$
 - [ ] $\js{wrong[0]}$
 - [ ] $\js{wrong[1]}$

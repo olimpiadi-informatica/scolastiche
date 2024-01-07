@@ -12,6 +12,7 @@ function loop(a: integer, b: integer, c: integer, d: integer) -> integer
   return ans
 end function
 ```
+
 Quale delle seguenti affermazioni è vera?
 
 - [x] `loop(a, b, c, d)` è sempre uguale a `loop(c, d, a, b)`

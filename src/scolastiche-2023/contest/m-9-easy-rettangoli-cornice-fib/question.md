@@ -13,7 +13,7 @@ Per risparmiare, Tip-Tap vorrebbe acquistare la bacheca più piccola possibile: 
 - [ ] $0$
 
 > Per far stare le cartoline nella cornice, a Tip-Tap conviene sovrapporle il più possibile.
-> 
+>
 > La cornice deve però essere abbastanza larga da contenere la larghezza di tutte le cartoline: dato che le cartoline sono larghe $8, 5, 3, 9$ e $4$ cm, la cornice deve essere larga almeno $9$ cm.
 >
 > Inoltre, la cornice deve essere abbastanza alta da contenere l'altezza di tutte le cartoline: dato che le cartoline sono alte $4, 5, 10, 1$ e $6$ cm, la cornice deve essere alta almeno $10$ cm.

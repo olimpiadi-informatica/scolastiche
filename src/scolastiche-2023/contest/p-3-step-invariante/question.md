@@ -20,6 +20,7 @@ function step(a: integer, b: integer) -> integer
   return k
 end function
 ```
+
 Per quale delle seguenti coppie `(a, b)` il valore restituito da `step(a, b)` è {n}?
 
 - [x] $(\js{correct})$

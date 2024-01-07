@@ -7,6 +7,7 @@ Per farlo, segue questo procedimento:
 ![procedimento](code.asy)
 
 Quali palloni butta Tip-Tap?
+
 - [x] $3$, $4$
 - [ ] $1$, $5$
 - [ ] $2$, $3$, $4$

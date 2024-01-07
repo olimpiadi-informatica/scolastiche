@@ -19,6 +19,7 @@ function compute(a: integer[], n: integer) -> integer
   return ans
 end function
 ```
+
 Supponiamo di chiamare `compute(a, {n})`, dove `a = [{a}]`. Qual è il valore restituito dalla funzione?
 
 - [x] $\js{correct}$

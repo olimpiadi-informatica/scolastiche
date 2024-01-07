@@ -17,6 +17,7 @@ function f(n: integer)
   end while
 end function
 ```
+
 Chiamando `f({n})`, quante volte viene stampato il numero che viene stampato più volte?
 
 - [x] {correct}

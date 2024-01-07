@@ -6,7 +6,6 @@ Al negozio di palline, può comprare altre palline rosse e blu (quante ne vuole)
 Alla fine, vorrebbe avere lo stesso numero di palline rosse, blu e verdi. Nota che Bunny **non può buttare** via palline.
 Qual è il minimo numero di euro che Bunny deve spendere per raggiungere il suo obiettivo?
 
-
 - [x] $1003$
 - [ ] $1006$
 - [ ] $1009$

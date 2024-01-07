@@ -23,7 +23,7 @@ Qual è la minima altezza di un amico che può rimanere in fila dopo $4$ mosse?
 ?> {2}
 
 > La risposta corretta è $2$. Infatti, dopo $4$ mosse devono rimanere due amici e uno di loro deve essere l'amico di altezza $6$, per il ragionamento di prima.
-> 
+>
 > L'altro non può essere l'amico di altezza $1$: dovrei far uscire tutti gli altri amici, ma l'amico di altezza $4$
 > non può uscire senza prima far uscire quello di altezza $1$.
 >
