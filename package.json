@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "quizms dev",
-    "fmt": "prettier --write ."
+    "fmt": "prettier --write .",
+    "export": "quizms export --training"
   },
   "dependencies": {
     "@mdx-js/react": "^3.0",
