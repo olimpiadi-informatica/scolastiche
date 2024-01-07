@@ -23,7 +23,7 @@
     "tabWidth": 2,
     "semi": true,
     "singleQuote": false,
-    "printWidth": 100,
+    "printWidth": 120,
     "endOfLine": "lf",
     "bracketSameLine": true
   }

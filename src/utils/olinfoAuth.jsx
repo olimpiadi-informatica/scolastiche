@@ -23,10 +23,7 @@ function OlinfoWrapper({ children }) {
 
   useEffect(() => {
     const information = student.personalInformation;
-    if (
-      olinfoUser &&
-      (olinfoUser.name !== information.name || olinfoUser.surname !== information.surname)
-    ) {
+    if (olinfoUser && (olinfoUser.name !== information.name || olinfoUser.surname !== information.surname)) {
       setStudent({
         ...student,
         personalInformation: { ...information, ...olinfoUser },
