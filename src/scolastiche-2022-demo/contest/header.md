@@ -1,5 +1,3 @@
-# Olimpiadi Italiane di Informatica 2022/2023 -- Selezione scolastica (demo)
-
 Ciao! Questo è un esempio dimostrativo della prova di selezione scolastica che affronterai il 16 dicembre 2022.
 
 Questo esempio contiene _10 domande_ ed è pensato per essere risolto in _45 minuti_ (la prova ufficiale conterrà invece _20 domande_ da svolgere in _90 minuti_).

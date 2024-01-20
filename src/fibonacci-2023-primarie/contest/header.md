@@ -1,7 +1,3 @@
-# Giochi di Fibonacci 2023/2024
-
-**Scuole primarie di primo grado - Prima Fase**
-
 Questa prova contiene _9 domande_ da risolvere in _50 minuti_.
 Le domande sono a **scelta multipla** o a **risposta aperta numerica**, e sono divise in tre parti:
 
