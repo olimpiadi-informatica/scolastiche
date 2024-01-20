@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import cookie from "cookie";
 import { jwtDecode } from "jwt-decode";
 
-import { NoAuth, useStudent } from "quizms/student";
-import "quizms/css";
+import { NoAuth, useStudent } from "@olinfo/quizms/student";
+import "@olinfo/quizms/css";
 
 /** @type {typeof NoAuth} */
 export const OlinfoAuth = ({ children, ...props }) => {
