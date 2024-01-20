@@ -1,4 +1,3 @@
-import "quizms/css";
 
 import { OlinfoAuth } from "../utils/olinfoAuth";
 

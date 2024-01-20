@@ -1,5 +1,4 @@
 import { OlinfoAuth } from "../utils/olinfoAuth";
-import "quizms/css";
 
 import Contest from "./contest/contest.mdx";
 import Header from "./contest/header.md";

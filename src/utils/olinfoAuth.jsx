@@ -1,15 +1,18 @@
 import { useEffect, useState } from "react";
 import cookie from "cookie";
+import { jwtDecode } from "jwt-decode";
 
 import { NoAuth, useStudent } from "quizms/student";
+import "quizms/css";
 
-export function OlinfoAuth({ children, ...props }) {
+/** @type {typeof NoAuth} */
+export const OlinfoAuth = ({ children, ...props }) => {
   return (
     <NoAuth {...props}>
       <OlinfoWrapper>{children}</OlinfoWrapper>
     </NoAuth>
   );
-}
+};
 
 function OlinfoWrapper({ children }) {
   const { student, setStudent } = useStudent();
@@ -41,11 +44,8 @@ async function getUser() {
     throw new Error("Not logged in");
   }
 
-  const [_key, data, _signature] = token.split(".");
-  const base64 = data.replace(/-/g, "+").replace(/_/g, "/");
-  const decodedBase64 = atob(base64);
-  const decoded = JSON.parse(decodedBase64);
-  const username = decoded.username;
+  const data = jwtDecode(token);
+  const username = data.username;
 
   const resp = await fetch("https://training.olinfo.it/api/user", {
     method: "POST",
@@ -55,7 +55,6 @@ async function getUser() {
     body: JSON.stringify({ action: "get", username }),
   });
   const user = await resp.json();
-  console.log("user", user);
 
   return {
     name: user.first_name,
