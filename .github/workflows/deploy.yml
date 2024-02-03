@@ -1,9 +1,6 @@
 name: Deploy
 
-on:
-  push:
-    branches:
-      - main
+on: push
 
 jobs:
   deploy:
@@ -14,21 +11,12 @@ jobs:
         with:
           submodules: 'recursive'
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-      
       - name: Setup package registry
         run: |
-          npm config set @olinfo:registry https://git.olinfo.it/api/packages/bortoz/npm/
-          npm config set -- '//git.olinfo.it/api/packages/bortoz/npm/:_authToken' "${{ secrets.GITEA_TOKEN }}"
-
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
+          echo "//git.olinfo.it/api/packages/bortoz/npm/:_authToken=${{ secrets.GITEA_TOKEN }}" >> .npmrc
 
       - name: Build
-        run: yarn build
+        run: docker run -v .:/scolastiche node:20 /scolastiche/tools/build.sh
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
