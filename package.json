@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@mdx-js/react": "^3.0",
-    "@olinfo/quizms": "^1.0.0-beta.3",
+    "@olinfo/quizms": "^1.0.0-beta.6",
     "@tailwindcss/typography": "^0.5.10",
     "@types/react": "^18",
     "autoprefixer": "^10.4.16",
