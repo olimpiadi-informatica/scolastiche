@@ -7,11 +7,12 @@ flowchart TD
     Inizio --> B[p ← 0]
     B --> C{{p è più grande di n-2?}}
     C -->|sì| H[scrivi 0]
-    C -->|no| D{{la posizione di p in a vale 0?}}
-    D --->|sì| E{{la posizione di p+1 in a vale 1?}}
+    C -->|no| D{{la posizione p in a vale 0?}}
+    D --->|sì| E{{la posizione p+1 in a vale 1?}}
     D -->|no| F[p ← p + 1]
     F --> C
-    E --> G[scrivi 1]
+    E --->|no| H
+    E --->|sì| G[scrivi 1]
     G --> Fine
     H --> Fine
 ```
