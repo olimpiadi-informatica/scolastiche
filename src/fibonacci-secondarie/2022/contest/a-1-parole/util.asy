@@ -1,5 +1,4 @@
 unitsize(1cm);
-settings.outformat = "pdf";
 
 pen border = black + linewidth(2);
 pen focus = red + linewidth(8);

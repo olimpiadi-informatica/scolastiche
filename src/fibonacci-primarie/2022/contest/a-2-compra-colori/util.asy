@@ -1,5 +1,4 @@
 unitsize(1cm);
-settings.outformat = "pdf";
 
 defaultpen(linewidth(1.5));
 

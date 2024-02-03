@@ -1,5 +1,4 @@
 unitsize(1cm);
-settings.outformat = "pdf";
 access "../../asy_libraries/carota.asy" as carota;
 
 pen border = black+2;
