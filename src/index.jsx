@@ -42,7 +42,7 @@ export function App() {
           </li>
         ))}
       </ul>
-      <div className="lg:columns-2 *:inline-block">
+      <div className="lg:columns-2 *:inline-block prose-headings:mt-4">
         {Object.entries(contests).map(([id, { name, editions }]) => (
           <div key={id}>
             <h2>{name}</h2>
