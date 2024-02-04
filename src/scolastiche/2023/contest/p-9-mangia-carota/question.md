@@ -5,9 +5,7 @@ Quali delle seguenti successioni di azioni consentono a Tip-Tap di raggiungere l
 
 ![T_ | _ _ | _C](fig.asy)
 
-![test](opz1.asy)
-![test](opz2.asy)
-![test](opz3.asy)
+![code](code.asy)
 
 - [ ] solo $1$
 - [ ] $2$ e $1$

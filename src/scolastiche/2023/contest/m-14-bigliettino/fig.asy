@@ -11,7 +11,7 @@ element bunny(real height, pen shirt, string name) {
     return column(
         fill_space = 0,
         element(yscale(height)*bunny_monochrome.drawing(1.5, shirt = shirt, scale(2.8)*("\texttt{" + substr(name, 0, 1) + "}"))),
-        element("\phantom{bp}"+name+"\phantom{bp}", 2.7)
+        element(name, 2.7)
     );
 }
 

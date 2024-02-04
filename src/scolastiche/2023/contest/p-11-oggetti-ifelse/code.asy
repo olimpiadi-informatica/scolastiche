@@ -7,23 +7,20 @@ unitsize(1cm);
 ALIGN = (0, 0.5);
 
 element P =
-    nested_blocks(
-        yellow,
+    else_block(
         element("se è da basket:"),
-        nested_blocks(
-            yellow,
+        else_block(
             element("se è rosso:"),
-            block(element("tieni"), orange),
+            instr_block(element("tieni")),
             element("altrimenti:"),
-            block(element("butta"), orange)
+            instr_block(element("butta"))
         ),
         element("altrimenti:"),
-        nested_blocks(
-            yellow,
+        else_block(
             element("se è sgonfio:"),
-            block(element("butta"), orange),
+            instr_block(element("butta")),
             element("altrimenti:"),
-            block(element("tieni"), orange)
+            instr_block(element("tieni"))
         )
     );
 

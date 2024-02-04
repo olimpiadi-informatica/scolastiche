@@ -11,7 +11,7 @@ element option(int i, string text) {
     return row(
         fill_space = 0,
         element(string(i)+":", 3),
-        block(element(text+"\phantom{bp}"), orange)
+        instr_block(element(text))
     );
 }
 

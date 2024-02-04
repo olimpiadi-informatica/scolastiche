@@ -15,4 +15,4 @@ element G = row(padding=3,
     column(padding=0.3, word("IOII"), element("nome non valido", heavyred))
 );
 add(G.drawing());
-draw(shift(14.9,2)*xscale(2.8)*yscale(0.7)*unitcircle, heavyred+5);
+draw(shift(14.9,2.3)*xscale(2.8)*yscale(0.7)*unitcircle, heavyred+5);

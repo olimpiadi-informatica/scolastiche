@@ -10,12 +10,12 @@ ALIGN = (0, 0.5);
 element P =
     block_sequence(
         block_sequence(
-            block(element("avanza\phantom{bp}"), orange),
-            block(element("apri porta"), orange),
-            block(element("avanza\phantom{bp}"), orange),
-            block(element("apri porta"), orange),
-            block(element("avanza\phantom{bp}"), orange),
-            block(element("mangia carota"), orange)
+            instr_block(element("avanza")),
+            instr_block(element("apri porta")),
+            instr_block(element("avanza")),
+            instr_block(element("apri porta")),
+            instr_block(element("avanza")),
+            instr_block(element("mangia carota"))
         )
     );
 
