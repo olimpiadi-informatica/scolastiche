@@ -43,12 +43,12 @@ export default function Visualizer({ variables }) {
             y={0}
           />
         ))}
-        <Sprite src={bunny} alt="Bunny" x={0.5 + hiddenState.pos} y={0.4} />
+        <Sprite src={bunny} alt="Bunny" x={1 + hiddenState.pos} y={1.4} />
         <Sprite
           src={paints[`./asy/paint${Math.min(hiddenState.i + 1, hiddenState.C)}.asy`]}
           alt="Vernice"
           x={0}
-          y={2}
+          y={3}
         />
       </Canvas>
       <Variables variables={{ colori: hiddenState.C, ...blocklyVariables }} />
