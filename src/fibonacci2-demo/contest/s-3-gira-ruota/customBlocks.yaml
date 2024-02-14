@@ -1,0 +1,82 @@
+- type: start
+  message0: inizia qui
+  nextStatement: null
+  colour: 20
+  tooltip: L'esecuzione inizia da qui
+  helpUrl: ""
+  maxInstances: 1
+  js: ""
+
+- type: gira la ruota
+  message0: gira la ruota
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: Gira la ruota di uno spicchio
+  helpUrl: ""
+  js: hiddenState.pos++;
+
+- type: carote vinte
+  message0: premio di %1
+  args0:
+    - type: input_value
+      name: LENGTH
+      value: 0
+      check: Number
+  output: Number
+  colour: 20
+  tooltip: Carote vinte dall'amico numero i
+  helpUrl: ""
+  js:
+    - |-
+      ((function(i) {
+        if (i < 1 || i > hiddenState.N)
+          exit(false, "l'amico " + i + " non esiste");
+        return hiddenState.prizes[(hiddenState.friends[i-1]-hiddenState.pos+hiddenState.S)%hiddenState.S];
+      })(%0))
+    - ORDER_FUNCTION_CALL
+
+- type: N
+  message0: N
+  output: Number
+  colour: 20
+  tooltip: Numero di amici di Tip-Tap
+  helpUrl: ""
+  js:
+    - hiddenState.N
+    - ORDER_MEMBER
+
+- type: C
+  message0: C
+  output: Number
+  colour: 20
+  tooltip: Numero di carote raccolte da Tip-Tap
+  helpUrl: ""
+  js:
+    - hiddenState.C
+    - ORDER_MEMBER
+
+- type: S
+  message0: S
+  output: Number
+  colour: 20
+  tooltip: Numero di spicchi della ruota
+  helpUrl: ""
+  js:
+    - hiddenState.S
+    - ORDER_MEMBER
+
+- type: ferma ruota
+  message0: ferma la ruota
+  previousStatement: null
+  colour: 20
+  tooltip: Ferma la ruota
+  helpUrl: ""
+  js: |
+    var i = hiddenState.good_pos.indexOf(hiddenState.pos);
+    if (i == 0)
+      exit(true, "hai speso meno di " + hiddenState.C + " carote, bravo!");
+    else if (i != -1)
+      exit(false, "potevi far girare meno la ruota");
+    else
+      exit(false, "non hai abbastanza carote per i premi");

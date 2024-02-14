@@ -1,0 +1,84 @@
+- type: start
+  message0: inizia qui
+  nextStatement: null
+  colour: 20
+  tooltip: L'esecuzione inizia da qui
+  helpUrl: ""
+  maxInstances: 1
+  js: ""
+
+- type: colora dalla posizione
+  message0: colora dalla posizione %1
+  args0:
+    - type: input_value
+      name: LENGTH
+      value: 0
+      check: Number
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: Colora il muro dal pannello i-esimo
+  helpUrl: ""
+  js: |-
+    (function(i) {
+      if (i < 1 || i > hiddenState.N)
+        exit(false, "il pannello " + i + " non esiste");
+      hiddenState.pos = i-1;
+      if (hiddenState.i >= hiddenState.C)
+        exit(false, "sono finiti i colori")
+      if (i > hiddenState.N - hiddenState.L[hiddenState.i] + 1)
+        exit(false, "non c'è abbastanza spazio dal pannello " + i);
+      for (var j = 0; j < hiddenState.L[hiddenState.i]; j++)
+        hiddenState.muro[i+j-1] = hiddenState.i+1;
+      hiddenState.i++;
+    })(%0);
+
+- type: pannelli da pitturare
+  message0: pannelli da pitturare
+  output: Number
+  colour: 20
+  tooltip: Numero di pannelli da pitturare
+  helpUrl: ""
+  js:
+    - hiddenState.L[hiddenState.i]
+    - ORDER_MEMBER
+
+- type: N
+  message0: N
+  output: Number
+  colour: 20
+  tooltip: Numero di pannelli nel muro
+  helpUrl: ""
+  js:
+    - hiddenState.N
+    - ORDER_MEMBER
+
+- type: C
+  message0: C
+  output: Number
+  colour: 20
+  tooltip: Numero di colori
+  helpUrl: ""
+  js:
+    - hiddenState.C
+    - ORDER_MEMBER
+
+- type: metti via i pennelli
+  message0: metti via i pennelli
+  previousStatement: null
+  colour: 20
+  tooltip: Metti via i pennelli e termina
+  helpUrl: ""
+  js: |
+    var found = [];
+    for (var i=0; i<=hiddenState.C; ++i)
+      found[i] = 0;
+    for (var i=0; i<hiddenState.N; ++i)
+      found[hiddenState.muro[i]] = 1;
+    var tot = 0;
+    for (var i=1; i<=hiddenState.C; ++i)
+      tot += found[i];
+    if (tot == hiddenState.sol)
+      exit(true, "si vedono tanti colori, bravo!");
+    else
+      exit(false, "si poteva far vedere " + hiddenState.sol + " colori");

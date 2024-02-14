@@ -1,0 +1,70 @@
+- type: start
+  message0: inizia qui
+  nextStatement: null
+  colour: 20
+  tooltip: L'esecuzione inizia da qui
+  helpUrl: ""
+  maxInstances: 1
+  js: ""
+
+- type: avanza
+  message0: avanza
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: Vai avanti
+  helpUrl: ""
+  js: |
+    if(hiddenState.pos < hiddenState.N && hiddenState.door[hiddenState.pos] === 1 && !hiddenState.open[hiddenState.pos]) {
+      exit(false, "non puoi avanzare, c\'è una porta chiusa");
+    }
+    hiddenState.pos += 1;
+    if(hiddenState.pos > hiddenState.N) {
+      exit(false, "hai superato la carota");
+    }
+
+- type: vedi porta chiusa
+  message0: vedi porta chiusa
+  output: Boolean
+  colour: 20
+  tooltip: vedi porta chiusa
+  helpUrl: ""
+  js:
+    - hiddenState.pos < hiddenState.N && hiddenState.door[hiddenState.pos] === 1 && !hiddenState.open[hiddenState.pos]
+    - ORDER_LOGICAL_AND
+
+- type: N
+  message0: N
+  output: Number
+  colour: 20
+  tooltip: distanza iniziale dalla carota
+  helpUrl: ""
+  js:
+    - hiddenState.N
+    - ORDER_MEMBER
+
+- type: apri porta
+  message0: apri porta
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: apri porta
+  helpUrl: ""
+  js: |
+    if(hiddenState.pos == hiddenState.N || hiddenState.door[hiddenState.pos] === 0 || hiddenState.open[hiddenState.pos]) {
+      exit(false, "non ci sono porte da aprire");
+    }
+    hiddenState.open[hiddenState.pos] = true;
+
+- type: mangia carota
+  message0: mangia carota
+  previousStatement: null
+  colour: 20
+  tooltip: mangia carota
+  helpUrl: ""
+  js: |
+    if(hiddenState.pos !== hiddenState.N) {
+      exit(false, "non ci sono carote da mangiare");
+    }
+    hiddenState.eaten = true;
+    exit(true, "hai mangiato la carota, bravo!");

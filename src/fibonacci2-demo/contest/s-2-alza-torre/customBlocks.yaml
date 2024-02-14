@@ -1,0 +1,106 @@
+- type: start
+  message0: inizia qui
+  nextStatement: null
+  colour: 20
+  tooltip: L'esecuzione inizia da qui
+  helpUrl: ""
+  maxInstances: 1
+  js: ""
+
+- type: altezza della scatola
+  message0: altezza della scatola %1
+  args0:
+    - type: input_value
+      name: LENGTH
+      value: 0
+      check: Number
+  output: Number
+  colour: 20
+  tooltip: Altezza della scatola i-esima
+  helpUrl: ""
+  js:
+    - |-
+      ((function(i) {
+        if (i < 1 || i > hiddenState.N)
+          exit(false, "la scatola " + i + " non esiste");
+        hiddenState.pos = i-1;
+        return hiddenState.rot[i-1] ? hiddenState.larghezze[i-1] : hiddenState.altezze[i-1];
+      })(%0))
+    - ORDER_FUNCTION_CALL
+
+- type: larghezza della scatola
+  message0: larghezza della scatola %1
+  args0:
+    - type: input_value
+      name: LENGTH
+      value: 0
+      check: Number
+  output: Number
+  colour: 20
+  tooltip: Larghezza della scatola i-esima
+  helpUrl: ""
+  js:
+    - |-
+      ((function(i) {
+        if (i < 1 || i > hiddenState.N)
+          exit(false, "la scatola " + i + " non esiste");
+        hiddenState.pos = i-1;
+        return hiddenState.rot[i-1] ? hiddenState.altezze[i-1] : hiddenState.larghezze[i-1];
+      })(%0))
+    - ORDER_FUNCTION_CALL
+
+- type: ruota la scatola
+  message0: ruota la scatola %1
+  args0:
+    - type: input_value
+      name: LENGTH
+      value: 0
+      check: Number
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: Ruota la scatola i-esima
+  helpUrl: ""
+  js: |-
+    (function(i) {
+      if (i < 1 || i > hiddenState.N)
+        exit(false, "la scatola " + i + " non esiste");
+      hiddenState.rot[i-1] = !hiddenState.rot[i-1];
+      hiddenState.pos = i-1;
+    })(%0);
+
+- type: N
+  message0: N
+  output: Number
+  colour: 20
+  tooltip: Numero di scatole
+  helpUrl: ""
+  js:
+    - hiddenState.N
+    - ORDER_MEMBER
+
+- type: riporta altezza
+  message0: riporta altezza %1
+  args0:
+    - type: input_value
+      name: LENGTH
+      value: 0
+      check: Number
+  previousStatement: null
+  colour: 20
+  tooltip: Riporta l'altezza della torre e termina
+  helpUrl: ""
+  js: |
+    (function(t) {
+      var sum = 0;
+      for (var i = 0; i < hiddenState.N; i++) {
+        if (hiddenState.larghezze[i] != hiddenState.altezze[i])
+          if (hiddenState.rot[i] != (hiddenState.altezze[i] < hiddenState.larghezze[i]))
+            exit(false, "la scatola " + (i+1) + " non è ruotata bene");
+        sum += hiddenState.altezze[i] > hiddenState.larghezze[i] ? hiddenState.altezze[i] : hiddenState.larghezze[i];
+      }
+      if (sum == t)
+        exit(true, "hai fatto la torre più alta, bravo!");
+      else
+        exit(false, "hai sbagliato a riportare l'altezza");
+    })(%0);
