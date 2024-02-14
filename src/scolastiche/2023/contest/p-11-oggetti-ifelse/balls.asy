@@ -1,6 +1,6 @@
-access "../../asy_library/pictures/basket_ball.asy" as basket_ball;
-access "../../asy_library/pictures/soccer_ball.asy" as soccer_ball;
-access "../../asy_library/structures/layout.asy" as layout;
+access "../../../../asy_library/pictures/basket_ball.asy" as basket_ball;
+access "../../../../asy_library/pictures/soccer_ball.asy" as soccer_ball;
+access "../../../../asy_library/structures/layout.asy" as layout;
 
 unravel layout; // per evitare di scrivere layout.cose tutto il tempo
 

@@ -1,6 +1,6 @@
 unitsize(1cm);
 
-access "../../asy_library/pictures/picture_frame.asy" as picture_frame;
+access "../../../../asy_library/pictures/picture_frame.asy" as picture_frame;
 access "./poster.asy" as poster;
 access "./griglia.asy" as griglia;
 

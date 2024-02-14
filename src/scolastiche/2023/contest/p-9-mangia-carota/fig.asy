@@ -1,9 +1,9 @@
 unitsize(1cm);
 
-access "../../asy_library/pictures/carrot.asy" as carrot;
-access "../../asy_library/pictures/flat_rock.asy" as flat_rock;
-access "../../asy_library/pictures/bunny_polychrome.asy" as bunny_polychrome;
-access "../../asy_library/pictures/vertical_door.asy" as vertical_door;
+access "../../../../asy_library/pictures/carrot.asy" as carrot;
+access "../../../../asy_library/pictures/flat_rock.asy" as flat_rock;
+access "../../../../asy_library/pictures/bunny_polychrome.asy" as bunny_polychrome;
+access "../../../../asy_library/pictures/vertical_door.asy" as vertical_door;
 
 
 add(shift(-0, -2.25)*scale(3.5)*flat_rock.drawing(0.15));

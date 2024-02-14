@@ -1,4 +1,4 @@
-import "../../asy_library/structures/graph.asy" as graph;
+import "../../../../asy_library/structures/graph.asy" as graph;
 
 unitsize(1cm);
 

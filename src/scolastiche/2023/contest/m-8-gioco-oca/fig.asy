@@ -1,4 +1,4 @@
-access "../../asy_library/pictures/bunny_silouhette.asy" as bunny_silouhette;
+access "../../../../asy_library/pictures/bunny_silouhette.asy" as bunny_silouhette;
 
 unitsize(2cm);
 import fontsize;

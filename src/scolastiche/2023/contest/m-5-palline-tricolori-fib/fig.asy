@@ -1,8 +1,8 @@
 unitsize(1cm);
 
-access "../../asy_library/pictures/bunny_polychrome.asy" as bunny_polychrome;
-access "../../asy_library/pictures/paint_bucket.asy" as paint_bucket;
-access "../../asy_library/pictures/spheric_ball.asy" as spheric_ball;
+access "../../../../asy_library/pictures/bunny_polychrome.asy" as bunny_polychrome;
+access "../../../../asy_library/pictures/paint_bucket.asy" as paint_bucket;
+access "../../../../asy_library/pictures/spheric_ball.asy" as spheric_ball;
 
 add(reflect((2, 1), (2, 0))*bunny_polychrome.drawing(1.2, rgb("e2bd98")));
 add(shift(9, -1)*paint_bucket.drawing(0.45, green));

@@ -1,7 +1,7 @@
 unitsize(1cm);
 
-access "../../asy_library/pictures/bunny_monochrome.asy" as bunny_monochrome;
-access "../../asy_library/structures/layout.asy" as layout;
+access "../../../../asy_library/pictures/bunny_monochrome.asy" as bunny_monochrome;
+access "../../../../asy_library/structures/layout.asy" as layout;
 
 unravel layout; // per evitare di scrivere layout.cose tutto il tempo
 
