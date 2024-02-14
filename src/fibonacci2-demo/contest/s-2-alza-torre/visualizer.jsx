@@ -49,7 +49,7 @@ export default function Visualizer({ variables }) {
         {range(state.N).map((i) => {
           const px = 16 - state.larghezze[i] / 2;
           const py = y[i] + (state.rot[i] && (state.larghezze[i] - state.altezze[i]) / 2);
-          const rotation = state.rot[i] ? 90 : 0;
+          const rotation = state.rot[i] ? 0.25 : 0;
           return (
             <Rectangle
               key={i}
