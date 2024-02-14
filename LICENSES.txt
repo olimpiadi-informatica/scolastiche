@@ -138,6 +138,42 @@ SOFTWARE.
 
 ---
 
+Name: zod
+Version: 3.22.4
+License: MIT
+Private: false
+Description: TypeScript-first schema declaration and validation library with static type inference
+Repository: https://github.com/colinhacks/zod
+Homepage: https://zod.dev
+Author: Colin McDonnell <colin@colinhacks.com>
+License Copyright:
+===
+
+MIT License
+
+Copyright (c) 2020 Colin McDonnell
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+---
+
 Name: lodash-es
 Version: 4.17.21
 License: MIT
@@ -423,7 +459,7 @@ SOFTWARE.
 ---
 
 Name: lucide-react
-Version: 0.302.0
+Version: 0.330.0
 License: ISC
 Private: false
 Description: A Lucide icon library package for React applications
@@ -487,20 +523,42 @@ THE SOFTWARE.
 
 ---
 
-Name: pure-rand
-Version: 6.0.4
+Name: zod-validation-error
+Version: 3.0.2
 License: MIT
 Private: false
-Description:  Pure random number generator written in TypeScript
-Repository: git+https://github.com/dubzzz/pure-rand.git
-Homepage: https://github.com/dubzzz/pure-rand#readme
-Author: Nicolas DUBIEN <github@dubien.org>
+Description: Wrap zod validation errors in user-friendly readable messages
+Repository: git://github.com/causaly/zod-validation-error.git
+Author: Causaly Team <front-end@causaly.com> (https://www.causaly.com)
+Contributors:
+  Dimitrios C. Michalakos <dimitris@jmike.gr> (https://github.com/jmike)
+License Copyright:
+===
+
+(The MIT License)
+
+Copyright 2022 Causaly, Inc <front-end@causaly.com>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+---
+
+Name: @olinfo/quizms
+Version: 1.0.0-beta.8
+License: MIT
+Private: false
+Author: Alessandro Bortolin <bortolin.alessandro@outlook.it>
 License Copyright:
 ===
 
 MIT License
 
-Copyright (c) 2018 Nicolas DUBIEN
+Copyright (c) 2022 Alessandro Bortolin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -523,17 +581,20 @@ SOFTWARE.
 
 ---
 
-Name: @olinfo/quizms
-Version: 1.0.0-beta.6
+Name: pure-rand
+Version: 6.0.4
 License: MIT
 Private: false
-Author: Alessandro Bortolin <bortolin.alessandro@outlook.it>
+Description:  Pure random number generator written in TypeScript
+Repository: git+https://github.com/dubzzz/pure-rand.git
+Homepage: https://github.com/dubzzz/pure-rand#readme
+Author: Nicolas DUBIEN <github@dubien.org>
 License Copyright:
 ===
 
 MIT License
 
-Copyright (c) 2022 Alessandro Bortolin
+Copyright (c) 2018 Nicolas DUBIEN
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -591,7 +652,7 @@ SOFTWARE.
 ---
 
 Name: @mdx-js/react
-Version: 3.0.0
+Version: 3.0.1
 License: MIT
 Private: false
 Description: React context for MDX
@@ -629,6 +690,32 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+
+---
+
+Name: file-saver
+Version: 2.0.5
+License: MIT
+Private: false
+Description: An HTML5 saveAs() FileSaver implementation
+Repository: https://github.com/eligrey/FileSaver.js
+Homepage: https://github.com/eligrey/FileSaver.js#readme
+Author: Eli Grey <me@eligrey.com>
+License Copyright:
+===
+
+The MIT License
+
+Copyright © 2016 [Eli Grey][1].
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+  [1]: http://eligrey.com
 
 
 ---
@@ -977,79 +1064,6 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ---
 
-Name: @babel/runtime
-Version: 7.23.9
-License: MIT
-Private: false
-Description: babel's modular runtime helpers
-Repository: https://github.com/babel/babel.git
-Homepage: https://babel.dev/docs/en/next/babel-runtime
-Author: The Babel Team (https://babel.dev/team)
-License Copyright:
-===
-
-MIT License
-
-Copyright (c) 2014-present Sebastian McKenzie and other contributors
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-"Software"), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
----
-
-Name: react-syntax-highlighter
-Version: 15.5.0
-License: MIT
-Private: false
-Description: syntax highlighting component for react with prismjs or highlightjs ast using inline styles
-Repository: git+https://github.com/react-syntax-highlighter/react-syntax-highlighter.git
-Homepage: https://github.com/react-syntax-highlighter/react-syntax-highlighter#readme
-Author: Conor Hastings
-License Copyright:
-===
-
-MIT License
-
-Copyright (c) 2019 Conor Hastings
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-
----
-
 Name: blockly
 Version: 10.3.1
 License: Apache-2.0
@@ -1062,7 +1076,7 @@ Author: Neil Fraser
 ---
 
 Name: @blockly/disable-top-blocks
-Version: 0.4.9
+Version: 0.4.10
 License: Apache-2.0
 Private: false
 Description: A Blockly plugin that shows the 'disable' context menu option only on non-orphan blocks.
