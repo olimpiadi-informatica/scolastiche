@@ -549,7 +549,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ---
 
 Name: @olinfo/quizms
-Version: 1.0.0-beta.8
+Version: 1.0.0-beta.9
 License: MIT
 Private: false
 Author: Alessandro Bortolin <bortolin.alessandro@outlook.it>
