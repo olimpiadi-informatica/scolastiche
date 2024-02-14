@@ -9,8 +9,8 @@ function Sector({ color, from, portion, text }) {
   const deg = 0.5 - portion;
   return (
     <Rectangle
-      x={20}
-      y={40}
+      x={8}
+      y={12}
       width={200}
       height={100}
       rotation={from + portion - 0.25}
@@ -26,11 +26,6 @@ function Sector({ color, from, portion, text }) {
       </div>
     </Rectangle>
   );
-}
-
-function p(deg) {
-  const style = { transform: `translate(78px, 43px) rotate(${deg}deg) translate(115px, 0px)` };
-  return { className: "absolute transition", style };
 }
 
 export default function Visualizer({ variables }) {
@@ -66,9 +61,9 @@ export default function Visualizer({ variables }) {
             key={i}
             src={bunny}
             alt="Amico"
-            y={20}
+            y={4}
             rotation={(0.5 + friends[i]) / S + 0.125}
-            className="origin-[120px_120px]"
+            className="origin-[108px_108px]"
           />
         ))}
       </Canvas>
