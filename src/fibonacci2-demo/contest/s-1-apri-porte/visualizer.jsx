@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { range } from "lodash-es";
 
-import { Canvas, Sprite, Variables } from "../components";
+import { Canvas, Sprite, Variables } from "~/utils/visualizer";
 
 import bunny from "./asy/bunny.asy?w=66";
 import rock from "./asy/rock.asy?w=93";

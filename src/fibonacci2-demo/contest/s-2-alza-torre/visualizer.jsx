@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { range } from "lodash-es";
 
-import { Canvas, Rectangle, Sprite, Variables } from "../components";
+import { Canvas, Rectangle, Sprite, Variables } from "~/utils/visualizer";
 
 import bunny from "./asy/bunny.asy?w=66";
 import stairs from "./asy/stairs.asy?w=80";
