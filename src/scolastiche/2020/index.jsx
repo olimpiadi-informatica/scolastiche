@@ -1,4 +1,4 @@
-import { OlinfoAuth } from "../../utils/olinfo-auth";
+import { OlinfoAuth } from "~/utils/olinfo-auth";
 
 import Contest from "./contest/contest.mdx";
 
