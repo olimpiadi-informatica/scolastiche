@@ -17,17 +17,17 @@ export default function Visualizer({ variables }) {
 
   const colors = [
     "#ffffff",
-    "#dc2626",
-    "#22d3ee",
-    "#22c55e",
-    "#a1a1aa",
-    "#8b5cf6",
-    "#92400e",
-    "#f97316",
-    "#fde047",
-    "#f472b6",
-    "#1d4ed8",
-    "#a3e635",
+    "#0000ff",
+    "#ff0000",
+    "#00ff00",
+    "#ff00ff",
+    "#ffff00",
+    "#00ffff",
+    "#7f7f7f",
+    "#7f0000",
+    "#007f00",
+    "#7f7f00",
+    "#000000",
   ];
 
   return (
