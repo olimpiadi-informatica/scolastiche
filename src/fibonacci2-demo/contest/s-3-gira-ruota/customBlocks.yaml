@@ -30,6 +30,7 @@
   js:
     - |-
       ((function(i) {
+        if (!i) exit(false, "l'argomento del blocco non ha un valore");
         if (i < 1 || i > hiddenState.N)
           exit(false, "l'amico " + i + " non esiste");
         return hiddenState.prizes[(hiddenState.friends[i-1]-hiddenState.pos+hiddenState.S)%hiddenState.S];
