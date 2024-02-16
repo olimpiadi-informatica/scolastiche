@@ -16,11 +16,11 @@ const links = {
 const contests = {
   "fibonacci-primarie": {
     name: "Giochi di Fibonacci - Scuole primarie",
-    editions: [2023, 2022],
+    editions: ["2023 - Prima fase", "2022 - Prima fase"],
   },
   "fibonacci-secondarie": {
     name: "Giochi di Fibonacci - Scuole secondarie",
-    editions: [2023, 2022],
+    editions: ["2023 - Prima fase", "2022 - Prima fase"],
   },
   scolastiche: {
     name: "Selezioni scolastiche delle Olimpiadi Italiane di Informatica",
