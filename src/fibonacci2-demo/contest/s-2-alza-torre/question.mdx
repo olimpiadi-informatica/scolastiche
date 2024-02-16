@@ -4,25 +4,23 @@ import testcases from "./testcases.py";
 import Visualizer from "./visualizer.jsx";
 
 Bunny e i suoi amici stanno cercando gli ovetti di pasqua nascosti in giro per la fattoria Fibonacci!
-Bunny è convinto che ci sia un ovetto nascosto anche sul tetto e in altri punti alti della fattoria,
-quindi ha deciso di costruire una torre che gli consenta di arrivare più in alto possibile.
+Bunny è convinto che ci siano ovetti nascosti anche sui tetti, quindi ha deciso di costruire una
+torre che gli consenta di arrivare più in alto possibile.
 
-Per farlo, ha impilato $N$ scatole rettangolari di varie dimensioni, che ha annotato nelle liste
-$A$ e $L$: nella $i$-esima posizione delle due liste, ci sono i numeri $A_i$ e $L_i$ che rappresentano
-rispettivamente l'altezza e la larghezza della $i$-esima scatola. Bunny sa queste dimensioni,
+Per farlo, ha impilato $N$ scatole rettangolari di varie dimensioni. Bunny può misurare queste dimensioni,
 tramite le operazioni:
 
-- `altezza della scatola i`: il numero $A_i$.
-- `larghezza della scatola i`: il numero $L_i$.
+- `altezza della scatola i`: l'altezza della $i$-esima scatola.
+- `larghezza della scatola i`: la larghezza della $i$-esima scatola.
 
 Tuttavia, Bunny non è convinto di aver realizzato la torre più alta che potrebbe fare. Per aggiustare
 la torre, Bunny può fare la seguente operazione:
 
 - `ruota la scatola i`: ruota di 90 gradi la scatola $i$-esima, scambiando quindi di conseguenza
-  l'altezza e larghezza $A_i$ e $L_i$ all'$i$-esima posizione delle liste $A$ e $L$.
+  la sua altezza con la sua larghezza.
 
-Aiuta Bunny a realizzare la torre più alta! Aiutalo anche a capire se la torre gli basterà per
-raggiungere il tetto, riportando l'altezza totale della torre con l'operazione:
+Aiuta Bunny a realizzare la torre più alta! Aiutalo anche a capire per quali tetti la torre sarà
+abbastanza alta, riportando l'altezza totale della torre con l'operazione:
 
 - `riporta altezza t`: termina il programma riportando il numero $t$ come altezza della torre.
 
