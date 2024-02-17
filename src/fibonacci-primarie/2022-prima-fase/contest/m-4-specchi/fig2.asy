@@ -1,6 +1,6 @@
 include util;
-access "../../asy_libraries/carota.asy" as carota;
-access "../../asy_libraries/bunny_silouhette.asy" as bunny_silouhette;
+access "../../../../asy_library/pictures/carrot.asy" as carota;
+access "../../../../asy_library/pictures/bunny_silouhette.asy" as bunny_silouhette;
 
 int N = 6;
 int M = 6;

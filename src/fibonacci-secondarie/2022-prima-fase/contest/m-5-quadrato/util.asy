@@ -1,6 +1,6 @@
 unitsize(1cm);
 settings.tex = "pdflatex";
-access "../../asy_libraries/stain.asy" as stain;
+access "../../../../asy_library/pictures/stain.asy" as stain;
 
 real GRID_SIZE = 2;
 

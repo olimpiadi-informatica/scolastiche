@@ -1,5 +1,5 @@
 unitsize(1cm);
-access "../../asy_libraries/carota.asy" as carota;
+access "../../../../asy_library/pictures/carrot.asy" as carota;
 
 pen border = black+2;
 pen wood = rgb("#CD9D6F");

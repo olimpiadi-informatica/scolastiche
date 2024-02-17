@@ -1,6 +1,6 @@
 unitsize(1cm);
 settings.tex = "pdflatex";
-access "../../asy_libraries/book.asy" as book;
+access "../../../../asy_library/pictures/book.asy" as book;
 
 real GRID_SIZE = 8;
 real YSTEP = 8*0.14;
