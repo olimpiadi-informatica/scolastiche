@@ -21,7 +21,7 @@
   js:
     - |-
       ((function(i) {
-        if (!i) exit(false, "l'argomento del blocco non ha un valore");
+        if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
         if (i < 1 || i > hiddenState.N)
           exit(false, "la scatola " + i + " non esiste");
         hiddenState.pos = i-1;
@@ -43,7 +43,7 @@
   js:
     - |-
       ((function(i) {
-        if (!i) exit(false, "l'argomento del blocco non ha un valore");
+        if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
         if (i < 1 || i > hiddenState.N)
           exit(false, "la scatola " + i + " non esiste");
         hiddenState.pos = i-1;
@@ -65,7 +65,7 @@
   helpUrl: ""
   js: |-
     (function(i) {
-      if (!i) exit(false, "l'argomento del blocco non ha un valore");
+      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i < 1 || i > hiddenState.N)
         exit(false, "la scatola " + i + " non esiste");
       hiddenState.rot[i-1] = !hiddenState.rot[i-1];
@@ -95,7 +95,7 @@
   helpUrl: ""
   js: |
     (function(t) {
-      if (!t) exit(false, "l'argomento del blocco non ha un valore");
+      if (t === undefined) exit(false, "l'argomento del blocco non ha un valore");
       var sum = 0;
       for (var i = 0; i < hiddenState.N; i++) {
         if (hiddenState.larghezze[i] != hiddenState.altezze[i])

@@ -21,7 +21,7 @@
   helpUrl: ""
   js: |-
     (function(i) {
-      if (!i) exit(false, "l'argomento del blocco non ha un valore");
+      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i < 1 || i > hiddenState.N)
         exit(false, "il pannello " + i + " non esiste");
       hiddenState.pos = i-1;
