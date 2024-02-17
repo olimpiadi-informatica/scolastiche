@@ -776,10 +776,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@olinfo/quizms@^1.0.0-beta.11":
-  version "1.0.0-beta.11"
-  resolved "https://git.olinfo.it/api/packages/bortoz/npm/%40olinfo%2Fquizms/-/1.0.0-beta.11/quizms-1.0.0-beta.11.tgz#5489d5fa76fa96daf0e5891f9c99a44ecede85fe"
-  integrity sha512-/L6cAQzxYKt/uK20RrvJFHaAroUXVTdaDEoA5pGjsSu/15Ttqp27sVNYMNGgxeDaNlvZ64/4cJHyw0Oki2kfNA==
+"@olinfo/quizms@^1.0.0-beta.12":
+  version "1.0.0-beta.12"
+  resolved "https://git.olinfo.it/api/packages/bortoz/npm/%40olinfo%2Fquizms/-/1.0.0-beta.12/quizms-1.0.0-beta.12.tgz#dfeddd7a68c082a14911686d3db916fbef6555dc"
+  integrity sha512-mJ7Dgkn+IU/KATMERyZ7ZCOcsJIwYYKC2Ww22NuWLp/P2jx5TD7Oxcjrjn3D2nMMmAAhIj73K3G0NWek6ZA0ZA==
   dependencies:
     "@ag-grid-community/client-side-row-model" "^31.0"
     "@ag-grid-community/core" "^31.0"
