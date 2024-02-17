@@ -1,7 +1,3 @@
-# Giochi di Fibonacci 2023/2024
-
-## Allenamento per la Fase II - Scuole secondarie
-
 Questa prova contiene _6 domande_ da risolvere in _100 minuti_.
 Le domande sono a **scelta multipla** o a **blocchi**, e sono divise in due parti:
 

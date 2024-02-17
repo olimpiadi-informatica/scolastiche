@@ -8,7 +8,7 @@ export const description = "Prima fase dei Giochi di Fibonacci 2022/2023 per le 
 
 export function App() {
   return (
-    <OlinfoAuth questionCount={8} duration={50}>
+    <OlinfoAuth contestName={description} questionCount={8} duration={50}>
       <Header />
       <Contest />
     </OlinfoAuth>
