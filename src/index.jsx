@@ -1,6 +1,6 @@
 import { kebabCase } from "lodash-es";
 
-import logo from "./logo.png";
+import logo from "./logo.svg";
 import "./index.css";
 
 export const title = "OII e Giochi di Fibonacci";
@@ -32,7 +32,7 @@ export function App() {
   return (
     <main className="prose lg:max-w-[90ch] p-5 mb-12 mx-auto">
       <div className="border-2 dark:border-0 rounded-xl bg-white p-5 mb-8 w-full">
-        <img {...logo} alt="Logo OII" className="my-0 mx-auto" />
+        <img {...logo} alt="Logo OII" className="my-0 mx-auto max-h-32" />
       </div>
       Raccolta delle prove delle gare scolastiche delle Olimpiadi Italiane di Informatica e dei Giochi di Fibonacci.
       <ul>
