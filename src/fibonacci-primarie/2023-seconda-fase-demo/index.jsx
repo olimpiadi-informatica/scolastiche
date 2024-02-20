@@ -10,7 +10,7 @@ export const description = "Prova di allenamento per la seconda fase dei Giochi 
 
 export function App() {
   return (
-    <OlinfoAuth contestName={description} questionCount={12} duration={100}>
+    <OlinfoAuth questionCount={12} duration={100}>
       <Header />
       <Statement />
     </OlinfoAuth>
