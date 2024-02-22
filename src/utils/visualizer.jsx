@@ -7,6 +7,8 @@ import React, {
   useState,
 } from "react";
 
+import "./visualizer.css";
+
 const VisualizerContext = createContext({ gravity: "top", scale: 1 });
 
 export function Canvas({ gravity, scale, children }) {
