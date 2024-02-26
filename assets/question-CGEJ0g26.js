@@ -86,4 +86,4 @@ nella variabile `,e.jsx(a.strong,{children:"somma"}),", inizializzandola a zero 
 incrementando `,e.jsx(a.strong,{children:"somma"})," del valore del premio per l’amico ",e.jsxs(a.span,{className:"inline-block whitespace-nowrap",children:[e.jsx(i,{children:String.raw`i`}),"-esimo"]}),` in questa rotazione. Se la somma
 così calcolata risulta minore del numero di carote a disposizione, Tip-Tap ferma la ruota, altrimenti
 lascia che la ruota continui a girare e continua a provare la prossima rotazione.`]})]})]})}function de(r={}){const{wrapper:a}={...h(),...r.components};return a?e.jsx(a,{...r,children:e.jsx(q,{...r})}):q(r)}function z(r,a){throw new Error("Expected "+(a?"component":"object")+" `"+r+"` to be defined: you likely forgot to import, pass, or provide it.")}export{I as C,le as M,D as R,M as S,P as V,oe as a,ce as b,de as c};
-//# sourceMappingURL=question-BFs6MK-R.js.map
+//# sourceMappingURL=question-CGEJ0g26.js.map
