@@ -1,0 +1,123 @@
+- type: start
+  message0: inizia qui
+  nextStatement: null
+  colour: 20
+  tooltip: L'esecuzione inizia da qui
+  helpUrl: ""
+  maxInstances: 1
+  js: ""
+
+- type: S
+  message0: S
+  output: Number
+  colour: 20
+  tooltip: altezza della colonna di sinistra da costruire
+  helpUrl: ""
+  js:
+    - hiddenState.S
+    - ORDER_MEMBER
+
+- type: D
+  message0: D
+  output: Number
+  colour: 20
+  tooltip: altezza della colonna di destra da costruire
+  helpUrl: ""
+  js:
+    - hiddenState.D
+    - ORDER_MEMBER
+
+- type: M
+  message0: M
+  output: Number
+  colour: 20
+  tooltip: numero di blocchetti nel set da costruzioni
+  helpUrl: ""
+  js:
+    - hiddenState.M
+    - ORDER_MEMBER
+
+- type: altezza colonna destra
+  message0: altezza colonna destra
+  output: Number
+  colour: 20
+  tooltip: altezza corrente della colonna di destra
+  helpUrl: ""
+  js:
+    - hiddenState.pos[2]
+    - ORDER_MEMBER
+
+- type: altezza colonna sinistra
+  message0: altezza colonna sinistra
+  output: Number
+  colour: 20
+  tooltip: altezza corrente della colonna di sinistra
+  helpUrl: ""
+  js:
+    - hiddenState.pos[0]
+    - ORDER_MEMBER
+
+- type: impila blocchetto a destra
+  message0: impila blocchetto %1 a destra
+  args0:
+    - type: input_value
+      name: LENGTH
+      value: 0
+      check: Number
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: impila blocchetto alto i alla colonna di destra
+  helpUrl: ""
+  js: |-
+    (function(i) {
+      hiddenState.orient = 1;
+      hiddenState.pos[1] = i;
+      if (hiddenState.blocchi[i-1][0] !== 1)
+        exit(false, "hai già usato il blocchetto " + i);
+      hiddenState.rimasti -= 1;
+      hiddenState.pos[3] = hiddenState.pos[2] + (i-4)/2;
+      hiddenState.blocchi[i-1] = [2, hiddenState.pos[2]];
+      hiddenState.pos[2] += i;
+      if (hiddenState.pos[2] > hiddenState.D)
+        exit(false, "la colonna di destra è troppo alta");
+    })(%0);
+
+- type: impila blocchetto a sinistra
+  message0: impila blocchetto %1 a sinistra
+  args0:
+    - type: input_value
+      name: LENGTH
+      value: 0
+      check: Number
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: impila blocchetto alto i alla colonna di sinistra
+  helpUrl: ""
+  js: |-
+    (function(i) {
+      hiddenState.orient = 0;
+      hiddenState.pos[1] = i;
+      if (hiddenState.blocchi[i-1][0] !== 1)
+        exit(false, "hai già usato il blocchetto " + i);
+      hiddenState.rimasti -= 1;
+      hiddenState.pos[3] = hiddenState.pos[0] + (i-4)/2;
+      hiddenState.blocchi[i-1] = [0, hiddenState.pos[0]];
+      hiddenState.pos[0] += i;
+      if (hiddenState.pos[0] > hiddenState.S)
+        exit(false, "la colonna di sinistra è troppo alta");
+    })(%0);
+
+- type: termina
+  message0: termina
+  previousStatement: null
+  colour: 20
+  tooltip: termina il procedimento
+  helpUrl: ""
+  js: |-
+    if (hiddenState.pos[0] < hiddenState.S)
+      exit(false, "la colonna di sinistra è troppo bassa");
+    if (hiddenState.pos[2] < hiddenState.D)
+      exit(false, "la colonna di destra è troppo bassa");
+    exit(true, "hai costruito bene le colonne, complimenti!");

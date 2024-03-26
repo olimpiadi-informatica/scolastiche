@@ -1,0 +1,83 @@
+- type: start
+  message0: inizia qui
+  nextStatement: null
+  colour: 20
+  tooltip: L'esecuzione inizia da qui
+  helpUrl: ""
+  maxInstances: 1
+  js: ""
+
+- type: N
+  message0: N
+  output: Number
+  colour: 20
+  tooltip: numero totale di palloni da sistemare
+  helpUrl: ""
+  js:
+    - hiddenState.N
+    - ORDER_MEMBER
+
+- type: pallone da calcio
+  message0: pallone da calcio
+  output: Boolean
+  colour: 20
+  tooltip: il prossimo pallone è da calcio?
+  helpUrl: ""
+  js:
+    - |
+      hiddenState.pos < hiddenState.N ? hiddenState.balls[hiddenState.pos] < 2 : exit(false, "non ci sono più palloni")
+    - ORDER_CONDITIONAL
+
+- type: pallone gonfio
+  message0: pallone gonfio
+  output: Boolean
+  colour: 20
+  tooltip: il prossimo pallone è gonfio?
+  helpUrl: ""
+  js:
+    - |
+      hiddenState.pos < hiddenState.N ? hiddenState.balls[hiddenState.pos] % 2 : exit(false, "non ci sono più palloni")
+    - ORDER_CONDITIONAL
+
+- type: tieni
+  message0: tieni
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: metti da parte il prossimo pallone
+  helpUrl: ""
+  js: |
+    if (hiddenState.pos == hiddenState.N)
+      exit(false, "non ci sono più palloni");
+    hiddenState.deposited += 1;
+    hiddenState.placement[hiddenState.pos] = hiddenState.deposited;
+    hiddenState.pos += 1;
+    if (hiddenState.balls[hiddenState.pos-1] === 2)
+      exit(false, "questo pallone era da buttare");
+
+- type: butta
+  message0: butta
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: butta il prossimo pallone
+  helpUrl: ""
+  js: |
+    if (hiddenState.pos == hiddenState.N)
+      exit(false, "non ci sono più palloni");
+    hiddenState.trashed += 1;
+    hiddenState.placement[hiddenState.pos] = -hiddenState.trashed;
+    hiddenState.pos += 1;
+    if (hiddenState.balls[hiddenState.pos-1] !== 2)
+      exit(false, "questo pallone era da tenere");
+
+- type: termina
+  message0: termina
+  previousStatement: null
+  colour: 20
+  tooltip: termina il procedimento
+  helpUrl: ""
+  js: |
+    if (hiddenState.pos < hiddenState.N)
+      exit(false, "non hai finito di sistemare i palloni");
+    exit(true, "hai sistemato i palloni, complimenti!");

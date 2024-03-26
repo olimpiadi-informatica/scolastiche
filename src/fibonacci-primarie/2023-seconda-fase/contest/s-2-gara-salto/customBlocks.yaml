@@ -1,0 +1,85 @@
+- type: start
+  message0: inizia qui
+  nextStatement: null
+  colour: 20
+  tooltip: L'esecuzione inizia da qui
+  helpUrl: ""
+  maxInstances: 1
+  js: ""
+
+- type: N
+  message0: N
+  output: Number
+  colour: 20
+  tooltip: numero totale di palloni da sistemare
+  helpUrl: ""
+  js:
+    - hiddenState.N
+    - ORDER_MEMBER
+
+- type: altezza della pila
+  message0: altezza della pila %1
+  args0:
+    - type: input_value
+      name: LENGTH
+      value: 0
+      check: Number
+  output: Number
+  colour: 20
+  tooltip: altezza della pila i-esima
+  helpUrl: ""
+  js:
+    - |-
+      (function(i) {
+        hiddenState.pos = i - (hiddenState.pos > i-1 ? 0.5 : 1.5);
+        if (i < 1 || i > hiddenState.N)
+          exit(false, "la pila " + i + " non esiste");
+        return hiddenState.H[i-1];
+      })(%0)
+    - ORDER_FUNCTION_CALL
+
+- type: aggiungi carota alla pila
+  message0: aggiungi carota alla pila %1
+  args0:
+    - type: input_value
+      name: LENGTH
+      value: 0
+      check: Number
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: aggiungi una carota alla pila i-esima
+  helpUrl: ""
+  js: |-
+    (function(i) {
+      hiddenState.pos = i - (hiddenState.pos > i-1 ? 0.5 : 1.5);
+      if (i < 1 || i > hiddenState.N)
+        exit(false, "la pila " + i + " non esiste");
+      hiddenState.C[i-1] += 1;
+      hiddenState.carrots[hiddenState.carrots.length] = i;
+      if (hiddenState.C[i-1] === 3)
+        exit(false, "hai messo una terza carota");
+    })(%0);
+
+- type: termina
+  message0: termina
+  previousStatement: null
+  colour: 20
+  tooltip: termina il procedimento
+  helpUrl: ""
+  js: |-
+    for (var i=0; i<hiddenState.N; i++) {
+      if (hiddenState.C[i] === hiddenState.sol[i]) continue;
+      if (hiddenState.sol[i] === 0)
+        exit(false, "non dovevi mettere carote nella pila " + (i+1));
+      if (hiddenState.C[i] === 0 && hiddenState.sol[i] == 1)
+        exit(false, "non hai messo la carota nella pila " + (i+1));
+      if (hiddenState.C[i] === 0 && hiddenState.sol[i] == 2)
+        exit(false, "non hai messo le due carote nella pila " + (i+1));
+      if (hiddenState.C[i] === 2)
+        exit(false, "non ci voleva la seconda carota nella pila " + (i+1));
+      if (hiddenState.C[i] === 1)
+        exit(false, "manca la seconda carota nella pila " + (i+1));
+      exit(false, "problema di correzione");
+    }
+    exit(true, "hai messo le carote bene, complimenti!");
