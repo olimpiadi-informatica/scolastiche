@@ -29,12 +29,12 @@
   helpUrl: ""
   js:
     - |-
-      ((function(i) {
+      (function(i) {
         if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
         if (i < 1 || i > hiddenState.N)
           exit(false, "l'amico " + i + " non esiste");
         return hiddenState.prizes[(hiddenState.friends[i-1]-hiddenState.pos+hiddenState.S)%hiddenState.S];
-      })(%0))
+      })(%0)
     - ORDER_FUNCTION_CALL
 
 - type: N
