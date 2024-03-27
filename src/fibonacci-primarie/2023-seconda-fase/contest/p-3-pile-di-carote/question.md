@@ -27,3 +27,5 @@ Quante carote mangia Carol?
 > sempre al massimo 3, e quindi quando una pila arriva ad avere meno di $7$ carote (quindi al massimo
 > $6$), l'altra pila non può avere più di $6 + 3 = 9$ carote, per un totale di al massimo $9 + 6 = 15$
 > carote, che è meno di $18$.
+>
+> ![primarie](primarie.asy) ![secondarie](secondarie.asy)

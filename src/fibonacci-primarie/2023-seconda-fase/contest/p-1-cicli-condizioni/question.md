@@ -33,3 +33,5 @@ mangiarsi la lingua?
 >
 > _Nell'opzione 4, Tip-Tap mangia la prima carota, poi una carota ogni due rocce, e infine mangia anche l'ultima carota.
 > Anche in questo caso non mangia la carota sulla roccia grigia centrale._
+>
+> ![primarie](primarie.asy)

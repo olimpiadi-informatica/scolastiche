@@ -20,3 +20,5 @@ Risposte:
 > _Nell'opzione 2, inizia dalla pila 1, salta sulla 3, indietreggia sulla due, salta sulla 4, salta sulla 6, indietreggia sulla 5, salta sulla 7 e finisce sulla 9._
 >
 > _Nell'opzione 3, Bunny non riesce ad uscire perchè rimane bloccato saltando in circolo tra le pile 3, 4, 5 senza mai smettere._
+>
+> ![primarie](primarie.asy) ![secondarie](secondarie.asy)

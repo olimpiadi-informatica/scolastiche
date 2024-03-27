@@ -13,3 +13,5 @@ Purtroppo la successiva pagina è rovinata perciò Tip-Tap non riesce a capire c
 > e lo decrementa per ogni multiplo di $9$ fino a $42$.
 > Siccome i multipli di $7$ fino a $42$ sono $6$ e i multipli di $9$ fino a $42$ sono $4$,
 > il contatore alla fine varrà $6 - 4 = 2$.
+>
+> ![secondarie](secondarie.asy)
