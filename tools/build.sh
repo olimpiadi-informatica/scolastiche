@@ -5,7 +5,7 @@ export DEBIAN_FRONTEND=noninteractive
 
 cd scolastiche
 apt-get update
-apt-get install -y asymptote texlive-latex-extra texlive-fonts-recommended
+apt-get install -y asymptote texlive-latex-extra texlive-fonts-recommended libxkbcommon0
 yarn install --frozen-lockfile
 yarn playwright install-deps chromium
 yarn build
