@@ -18,22 +18,12 @@
    cd scolastiche
    ```
 
-4. Genera un token di accesso da [qui](https://git.olinfo.it/user/settings/applications):
-   - su "Repository and Organization Access" seleziona "Public only";
-   - su "Select permissions" seleziona "Read" per "package" e "No access" su tutto il resto.
-
-5. Configurare il package registry:
-   ```shell
-   npm config set @olinfo:registry https://git.olinfo.it/api/packages/bortoz/npm/
-   npm config set -- '//git.olinfo.it/api/packages/bortoz/npm/:_authToken' <il tuo token...>
-   ```
-
-6. Installa le dipendenze:
+4. Installa le dipendenze:
    ```shell
    yarn install
    ```
 
-7. Avvia il server di sviluppo:
+5. Avvia il server di sviluppo:
    ```shell
    yarn dev
    ```
