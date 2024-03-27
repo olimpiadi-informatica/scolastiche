@@ -1,5 +1,63 @@
+Name: @firebase/util
+Version: 1.9.4
+License: Apache-2.0
+Private: false
+Repository: https://github.com/firebase/firebase-js-sdk.git
+Author: Firebase <firebase-support@google.com> (https://firebase.google.com/)
+
+---
+
+Name: @firebase/component
+Version: 0.6.5
+License: Apache-2.0
+Private: false
+Description: Firebase Component Platform
+Repository: https://github.com/firebase/firebase-js-sdk.git
+Author: Firebase <firebase-support@google.com> (https://firebase.google.com/)
+
+---
+
+Name: @firebase/logger
+Version: 0.4.0
+License: Apache-2.0
+Private: false
+Description: A logger package for use in the Firebase JS SDK
+Repository: https://github.com/firebase/firebase-js-sdk.git
+Author: Firebase <firebase-support@google.com> (https://firebase.google.com/)
+
+---
+
+Name: idb
+Version: 7.1.1
+License: ISC
+Private: false
+Description: A small wrapper that makes IndexedDB usable
+Repository: git://github.com/jakearchibald/idb.git
+Author: Jake Archibald
+License Copyright:
+===
+
+ISC License (ISC)
+Copyright (c) 2016, Jake Archibald <jaffathecake@gmail.com>
+
+Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+---
+
+Name: @firebase/app
+Version: 0.9.29
+License: Apache-2.0
+Private: false
+Description: The primary entrypoint to the Firebase JS SDK
+Repository: https://github.com/firebase/firebase-js-sdk.git
+Author: Firebase <firebase-support@google.com> (https://firebase.google.com/)
+
+---
+
 Name: katex
-Version: 0.16.9
+Version: 0.16.10
 License: MIT
 Private: false
 Description: Fast math typesetting for the web.
@@ -29,7 +87,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
 
 ---
 
@@ -65,7 +122,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-
 ---
 
 Name: react-dom
@@ -99,7 +155,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
 
 ---
 
@@ -135,7 +190,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-
 ---
 
 Name: zod
@@ -170,7 +224,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
 
 ---
 
@@ -236,7 +289,6 @@ maintained libraries used by this software which have their own
 licenses; we recommend you read them, as their terms may differ from the
 terms above.
 
-
 ---
 
 Name: cookie
@@ -275,8 +327,6 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-
-
 ---
 
 Name: jwt-decode
@@ -314,7 +364,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-
 ---
 
 Name: classnames
@@ -349,11 +398,21 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+---
+
+Name: firebase
+Version: 10.9.0
+License: Apache-2.0
+Private: false
+Description: Firebase JavaScript library for web and Node.js
+Repository: https://github.com/firebase/firebase-js-sdk.git
+Homepage: https://firebase.google.com/
+Author: Firebase <firebase-support@google.com> (https://firebase.google.com/)
 
 ---
 
 Name: date-fns
-Version: 3.3.1
+Version: 3.6.0
 License: MIT
 Private: false
 Description: Modern JavaScript date utility library
@@ -385,7 +444,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
 
 ---
 
@@ -420,11 +478,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-
 ---
 
 Name: swr
-Version: 2.2.4
+Version: 2.2.5
 License: MIT
 Private: false
 Description: React Hooks library for remote data fetching
@@ -455,11 +512,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-
 ---
 
 Name: lucide-react
-Version: 0.330.0
+Version: 0.358.0
 License: ISC
 Private: false
 Description: A Lucide icon library package for React applications
@@ -485,15 +541,14 @@ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-
 ---
 
 Name: @noble/hashes
-Version: 1.3.3
+Version: 1.4.0
 License: MIT
 Private: false
 Description: Audited & minimal 0-dependency JS implementation of SHA, RIPEMD, BLAKE, HMAC, HKDF, PBKDF & Scrypt
-Repository: https://github.com/paulmillr/noble-hashes.git
+Repository: git+https://github.com/paulmillr/noble-hashes.git
 Homepage: https://paulmillr.com/noble/
 Author: Paul Miller (https://paulmillr.com)
 License Copyright:
@@ -524,7 +579,7 @@ THE SOFTWARE.
 ---
 
 Name: pure-rand
-Version: 6.0.4
+Version: 6.1.0
 License: MIT
 Private: false
 Description:  Pure random number generator written in TypeScript
@@ -556,18 +611,18 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-
 ---
 
 Name: zod-validation-error
-Version: 3.0.2
+Version: 3.0.3
 License: MIT
 Private: false
 Description: Wrap zod validation errors in user-friendly readable messages
 Repository: git://github.com/causaly/zod-validation-error.git
-Author: Causaly Team <front-end@causaly.com> (https://www.causaly.com)
+Author: Dimitrios C. Michalakos <dimitris@jmike.gr> (https://github.com/jmike)
 Contributors:
-  Dimitrios C. Michalakos <dimitris@jmike.gr> (https://github.com/jmike)
+  Thanos Karagiannis <hey@maestros.io> (https://github.com/thanoskrg)
+  Nikos Kalogridis (https://github.com/nikoskalogridis)
 License Copyright:
 ===
 
@@ -581,44 +636,10 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-
----
-
-Name: @olinfo/quizms
-Version: 1.0.0
-License: MIT
-Private: false
-Author: Alessandro Bortolin <bortolin.alessandro@outlook.it>
-License Copyright:
-===
-
-MIT License
-
-Copyright (c) 2022 Alessandro Bortolin
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-
 ---
 
 Name: react-error-boundary
-Version: 4.0.12
+Version: 4.0.13
 License: MIT
 Private: false
 Description: Simple reusable React error boundary component
@@ -648,6 +669,37 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+---
+
+Name: @olinfo/quizms
+Version: 1.0.5
+License: MIT
+Private: false
+Author: Alessandro Bortolin <bortolin.alessandro@outlook.it>
+License Copyright:
+===
+
+MIT License
+
+Copyright (c) 2022 Alessandro Bortolin
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 ---
 
@@ -691,7 +743,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-
 ---
 
 Name: file-saver
@@ -717,15 +768,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
   [1]: http://eligrey.com
 
-
 ---
 
 Name: js-interpreter
-Version: 5.1.0
+Version: 5.1.1
 License: Apache-2.0
 Private: false
 Description: NPM package for https://github.com/NeilFraser/JS-Interpreter
-Repository: undefined
+Repository: git+https://github.com/aminmarashi/JS-Interpreter.git
 Homepage: https://github.com/aminmarashi/JS-Interpreter#readme
 Author: Amin Marashi
 License Copyright:
@@ -933,7 +983,6 @@ Apache License
    See the License for the specific language governing permissions and
    limitations under the License.
 
-
 ---
 
 Name: vm-browserify
@@ -964,7 +1013,6 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
 
 ---
 
@@ -1021,7 +1069,6 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-
 ---
 
 Name: lowlight
@@ -1061,11 +1108,10 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-
 ---
 
 Name: blockly
-Version: 10.3.1
+Version: 10.4.3
 License: Apache-2.0
 Private: false
 Description: Blockly is a library for building visual programming editors.
