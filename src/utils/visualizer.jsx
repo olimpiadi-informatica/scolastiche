@@ -27,10 +27,12 @@ export function Canvas({ gravity, scale, children }) {
   );
 }
 
-export function Sprite({ src, alt, x, y, rotation, follow, className }) {
+export function Sprite({ src, alt, x, y, width, height, rotation, follow, className }) {
   x ??= 0;
   y ??= 0;
   rotation ??= 0;
+  width ??= 1;
+  height ??= 1;
 
   const ref = useRef();
 
@@ -46,8 +48,8 @@ export function Sprite({ src, alt, x, y, rotation, follow, className }) {
     const box = ref.current?.getBoundingClientRect();
 
     setTimeout(() => {
-      setWidth((w) => Math.max(w, x * scale + (box?.width ?? src.width)));
-      setHeight((h) => Math.max(h, y * scale + (box?.height ?? src.height)));
+      setWidth((w) => Math.max(w, x * scale + (box?.width ?? src.width*width)));
+      setHeight((h) => Math.max(h, y * scale + (box?.height ?? src.height*height)));
     }, 5);
 
     if (!pos.current.changed || !follow) return;
@@ -70,16 +72,17 @@ export function Sprite({ src, alt, x, y, rotation, follow, className }) {
       style={{
         [gravity]: `${y * scale}px`,
         left: `${x * scale}px`,
-        transform: `rotate(${rotation}turn)`,
+        transform: `rotate(${rotation}turn) scaleX(${width}) scaleY(${height})`,
       }}
     />
   );
 }
 
-export function Rectangle({ color, height, width, x, y, rotation, className, children }) {
+export function Rectangle({ color, height, width, x, y, rotation, className, style, children }) {
   x ??= 0;
   y ??= 0;
   rotation ??= 0;
+  style ??= {};
 
   const ref = useRef();
   const { gravity, scale, setWidth, setHeight } = useContext(VisualizerContext);
@@ -102,8 +105,9 @@ export function Rectangle({ color, height, width, x, y, rotation, className, chi
         left: `${x * scale}px`,
         [gravity]: `${y * scale}px`,
         transform: `rotate(${rotation}turn)`,
+        ...style
       }}
-      className={`absolute border-2 border-solid border-black transition ${className ?? ""}`}>
+      className={`absolute border-2 border-solid border-black transition-all ${className ?? ""}`}>
       {children}
     </div>
   );
