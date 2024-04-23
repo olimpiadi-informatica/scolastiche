@@ -3,6 +3,7 @@ import React, {
   createContext,
   useContext,
   useEffect,
+  useLayoutEffect,
   useRef,
   useState,
 } from "react";
@@ -44,12 +45,15 @@ export function Sprite({ src, alt, x, y, width, height, rotation, follow, classN
   }, [pos.current, x, y]);
 
   const { gravity, scale, setWidth, setHeight } = useContext(VisualizerContext);
-  useEffect(() => {
+  useLayoutEffect(() => {
     const box = ref.current?.getBoundingClientRect();
 
+    const scaleX = (width - 1) * 0.5 + 1;
+    const scaleY = (height - 1) * 0.5 + 1;
+
     setTimeout(() => {
-      setWidth((w) => Math.max(w, x * scale + (box?.width ?? src.width*width)));
-      setHeight((h) => Math.max(h, y * scale + (box?.height ?? src.height*height)));
+      setWidth((w) => Math.max(w, x * scale + (box ? box.width / width : src.width) * scaleX));
+      setHeight((h) => Math.max(h, y * scale + (box ? box.height / height : src.height) * scaleY));
     }, 5);
 
     if (!pos.current.changed || !follow) return;
@@ -78,11 +82,13 @@ export function Sprite({ src, alt, x, y, width, height, rotation, follow, classN
   );
 }
 
-export function Rectangle({ color, height, width, x, y, rotation, className, style, children }) {
+export function Rectangle({ color, border_color, height, width, x, y, rotation, className, style, children }) {
   x ??= 0;
   y ??= 0;
   rotation ??= 0;
   style ??= {};
+  color ??= "white";
+  border_color ??= "black";
 
   const ref = useRef();
   const { gravity, scale, setWidth, setHeight } = useContext(VisualizerContext);
@@ -100,6 +106,7 @@ export function Rectangle({ color, height, width, x, y, rotation, className, sty
       ref={ref}
       style={{
         backgroundColor: color,
+        borderColor: border_color,
         height: `${height * scale}px`,
         width: `${width * scale}px`,
         left: `${x * scale}px`,
@@ -107,7 +114,7 @@ export function Rectangle({ color, height, width, x, y, rotation, className, sty
         transform: `rotate(${rotation}turn)`,
         ...style
       }}
-      className={`absolute border-2 border-solid border-black transition-all ${className ?? ""}`}>
+      className={`absolute border-2 border-solid transition-all ${className ?? ""}`}>
       {children}
     </div>
   );

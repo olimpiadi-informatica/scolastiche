@@ -9,6 +9,7 @@ function Sector({ color, from, portion, text }) {
   const deg = 0.5 - portion;
   return (
     <Rectangle
+      color={"invisible"}
       x={8}
       y={12}
       width={200}
