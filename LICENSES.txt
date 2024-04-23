@@ -1,28 +1,28 @@
 Name: @firebase/util
-Version: 1.9.4
+Version: 1.9.5
 License: Apache-2.0
 Private: false
-Repository: https://github.com/firebase/firebase-js-sdk.git
+Repository: git+https://github.com/firebase/firebase-js-sdk.git
 Author: Firebase <firebase-support@google.com> (https://firebase.google.com/)
 
 ---
 
 Name: @firebase/component
-Version: 0.6.5
+Version: 0.6.6
 License: Apache-2.0
 Private: false
 Description: Firebase Component Platform
-Repository: https://github.com/firebase/firebase-js-sdk.git
+Repository: git+https://github.com/firebase/firebase-js-sdk.git
 Author: Firebase <firebase-support@google.com> (https://firebase.google.com/)
 
 ---
 
 Name: @firebase/logger
-Version: 0.4.0
+Version: 0.4.1
 License: Apache-2.0
 Private: false
 Description: A logger package for use in the Firebase JS SDK
-Repository: https://github.com/firebase/firebase-js-sdk.git
+Repository: git+https://github.com/firebase/firebase-js-sdk.git
 Author: Firebase <firebase-support@google.com> (https://firebase.google.com/)
 
 ---
@@ -47,11 +47,11 @@ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH RE
 ---
 
 Name: @firebase/app
-Version: 0.9.29
+Version: 0.10.1
 License: Apache-2.0
 Private: false
 Description: The primary entrypoint to the Firebase JS SDK
-Repository: https://github.com/firebase/firebase-js-sdk.git
+Repository: git+https://github.com/firebase/firebase-js-sdk.git
 Author: Firebase <firebase-support@google.com> (https://firebase.google.com/)
 
 ---
@@ -193,11 +193,11 @@ SOFTWARE.
 ---
 
 Name: zod
-Version: 3.22.4
+Version: 3.23.3
 License: MIT
 Private: false
 Description: TypeScript-first schema declaration and validation library with static type inference
-Repository: https://github.com/colinhacks/zod
+Repository: git+https://github.com/colinhacks/zod.git
 Homepage: https://zod.dev
 Author: Colin McDonnell <colin@colinhacks.com>
 License Copyright:
@@ -401,11 +401,11 @@ SOFTWARE.
 ---
 
 Name: firebase
-Version: 10.9.0
+Version: 10.11.0
 License: Apache-2.0
 Private: false
 Description: Firebase JavaScript library for web and Node.js
-Repository: https://github.com/firebase/firebase-js-sdk.git
+Repository: git+https://github.com/firebase/firebase-js-sdk.git
 Homepage: https://firebase.google.com/
 Author: Firebase <firebase-support@google.com> (https://firebase.google.com/)
 
@@ -614,7 +614,7 @@ SOFTWARE.
 ---
 
 Name: zod-validation-error
-Version: 3.0.3
+Version: 3.1.0
 License: MIT
 Private: false
 Description: Wrap zod validation errors in user-friendly readable messages
@@ -672,7 +672,7 @@ SOFTWARE.
 ---
 
 Name: @olinfo/quizms
-Version: 1.0.5
+Version: 1.0.7
 License: MIT
 Private: false
 Author: Alessandro Bortolin <bortolin.alessandro@outlook.it>
@@ -1122,7 +1122,7 @@ Author: Neil Fraser
 ---
 
 Name: @blockly/disable-top-blocks
-Version: 0.4.10
+Version: 0.4.12
 License: Apache-2.0
 Private: false
 Description: A Blockly plugin that shows the 'disable' context menu option only on non-orphan blocks.
