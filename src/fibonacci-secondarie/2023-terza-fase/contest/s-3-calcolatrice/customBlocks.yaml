@@ -1,0 +1,38 @@
+- type: start
+  message0: inizia qui
+  nextStatement: null
+  colour: 20
+  tooltip: L'esecuzione inizia da qui
+  helpUrl: ""
+  maxInstances: 1
+  js: ""
+
+- type: N
+  message0: N
+  output: Number
+  colour: 20
+  tooltip: il numero da raggiungere
+  helpUrl: ""
+  js:
+    - hiddenState.N
+    - ORDER_MEMBER
+
+- type: termina
+  message0: termina in %1 operazioni
+  args0:
+    - type: input_value
+      name: LENGTH
+      value: 0
+      check: Number
+  previousStatement: null
+  colour: 20
+  tooltip: termina in x operazioni
+  helpUrl: ""
+  js: |-
+    (function(i) {
+      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
+      if (i < 0 || Math.floor(i) != i) exit(false, "numero di operazioni " + i + " non valido");
+      if (i > hiddenState.sol) exit(false, "potevi fare meno di " + i + " operazioni");
+      if (i < hiddenState.sol) exit(false, "non si può ottenere " + hiddenState.N + " con " + i + " operazioni");
+      exit(true, i + " è il numero minimo di operazioni, complimenti!");
+    })(%0);
