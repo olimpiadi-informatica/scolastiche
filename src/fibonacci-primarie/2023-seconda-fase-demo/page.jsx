@@ -1,4 +1,4 @@
-import { OlinfoAuth } from "~/utils/olinfo-auth";
+import { NoAuth } from "@olinfo/quizms/student";
 
 import Statement from "./contest/contest.mdx";
 import Header from "./contest/header.md";
@@ -11,9 +11,9 @@ export const metadata = {
 
 export default function App() {
   return (
-    <OlinfoAuth duration={100}>
+    <NoAuth contestName="Giochi di Fibonacci" duration={100}>
       <Header />
       <Statement />
-    </OlinfoAuth>
+    </NoAuth>
   );
 }

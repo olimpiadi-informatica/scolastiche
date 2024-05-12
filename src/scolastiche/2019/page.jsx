@@ -1,4 +1,4 @@
-import { OlinfoAuth } from "~/utils/olinfo-auth";
+import { NoAuth } from "@olinfo/quizms/student";
 
 import Contest from "./contest/contest.mdx";
 
@@ -9,8 +9,11 @@ export const metadata = {
 
 export default function App() {
   return (
-    <OlinfoAuth contestName={metadata.description} duration={90}>
+    <NoAuth
+      contestName="Olimpiadi di Informatica"
+      contestLongName={metadata.description}
+      duration={90}>
       <Contest />
-    </OlinfoAuth>
+    </NoAuth>
   );
 }
