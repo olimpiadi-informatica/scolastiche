@@ -10,26 +10,26 @@
   },
   "dependencies": {
     "@mdx-js/react": "^3.0",
-    "@olinfo/quizms": "^1.0.0",
-    "@tailwindcss/typography": "^0.5.10",
+    "@olinfo/quizms": "^1.0",
+    "@olinfo/tailwind": "^0.1",
     "@types/react": "^18",
-    "autoprefixer": "^10.4.16",
-    "cookie": "^0.6.0",
-    "daisyui": "^4.5",
-    "jwt-decode": "^4.0.0",
-    "lodash-es": "^4.17.21",
-    "postcss": "^8.4.30",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwindcss": "^3.3.3"
+    "autoprefixer": "^10.4",
+    "cookie": "^0.6",
+    "jwt-decode": "^4.0",
+    "lodash-es": "^4.17",
+    "postcss": "^8.4",
+    "react": "^18.2",
+    "react-dom": "^18.2"
   },
-  "prettier": {
-    "trailingComma": "all",
-    "tabWidth": 2,
-    "semi": true,
-    "singleQuote": false,
-    "printWidth": 120,
-    "endOfLine": "lf",
-    "bracketSameLine": true
-  }
+  "devDependencies": {
+    "@olinfo/eslint": "^0.2.0",
+    "@olinfo/prettier": "^0.1"
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
+  },
+  "prettier": "@olinfo/prettier"
 }

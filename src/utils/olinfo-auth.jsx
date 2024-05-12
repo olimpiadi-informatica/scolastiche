@@ -3,7 +3,7 @@ import cookie from "cookie";
 import { jwtDecode } from "jwt-decode";
 
 import { NoAuth, useStudent } from "@olinfo/quizms/student";
-import "@olinfo/quizms/css";
+import "~/index.css";
 
 /** @type {typeof NoAuth} */
 export const OlinfoAuth = ({ children, ...props }) => {
