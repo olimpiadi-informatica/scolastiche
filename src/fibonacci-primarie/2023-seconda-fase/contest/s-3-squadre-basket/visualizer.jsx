@@ -1,10 +1,11 @@
 import React from "react";
+
 import { range } from "lodash-es";
 
 import { Canvas, Sprite, Variables } from "~/utils/visualizer";
 
-import bunny from "./asy/bunny.asy?w=66";
 import ball from "./asy/ball.asy?w=35";
+import bunny from "./asy/bunny.asy?w=66";
 import fibonacci from "./asy/fibonacci.asy?h=100";
 import turing from "./asy/turing.asy?h=100";
 
@@ -33,7 +34,16 @@ export default function Visualizer({ variables }) {
                 y += 10 * (1 - 2 * i);
               }
             }
-            return <Sprite key={`player-${i}-${k}`} src={teams[i]} alt="Giocatore" x={x} y={y} height={h} />;
+            return (
+              <Sprite
+                key={`player-${i}-${k}`}
+                src={teams[i]}
+                alt="Giocatore"
+                x={x}
+                y={y}
+                height={h}
+              />
+            );
           });
         })}
       </Canvas>

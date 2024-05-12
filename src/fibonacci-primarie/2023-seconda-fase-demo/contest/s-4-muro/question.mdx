@@ -1,5 +1,5 @@
-import initialBlocks from "./initialBlocks.json";
 import customBlocks from "./customBlocks.yaml";
+import initialBlocks from "./initialBlocks.json";
 import testcases from "./testcases.py";
 import Visualizer from "./visualizer.jsx";
 
@@ -43,8 +43,7 @@ Aiuta Bunny a pitturare di modo da lasciare più colori possibile alla fine del 
 >
 > In questo programma, Bunny per avere più colori possibile sfrutta un'idea: far sì che tutti i colori dall'inizio
 > fino alla sua posizione siano tutti diversi. Per ogni colore, prova quindi ad iniziare a colorare dalla posizione
-> **pos** che è subito dopo alla posizione da cui ha colorato precedentemente, incrementando quindi **pos** di $1$
-> _(all'inizio, parte a colorare dalla prima posizione)_. Tuttavia, potrebbe essere che Carol gli chieda di pitturare
+> **pos** che è subito dopo alla posizione da cui ha colorato precedentemente, incrementando quindi **pos** di $1$ > _(all'inizio, parte a colorare dalla prima posizione)_. Tuttavia, potrebbe essere che Carol gli chieda di pitturare
 > più pannelli di quelli che sono disponibili dalla posizione **pos** in avanti: questo succede se **pos** sommato ai
 > pannelli da pitturare supera $N+1$. In questo caso, Bunny è costretto a cancellare alcuni dei colori che ha già
 > usato: torna quindi indietro il meno possibile, finché non ha abbastanza spazio per pitturare il numero di pannelli

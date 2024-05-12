@@ -1,5 +1,5 @@
-import initialBlocks from "./initialBlocks.json";
 import customBlocks from "./customBlocks.yaml";
+import initialBlocks from "./initialBlocks.json";
 import testcases from "./testcases.py";
 import Visualizer from "./visualizer.jsx";
 
@@ -14,6 +14,7 @@ I conigli non fanno fatica a saltare in piano o in basso, ma saltare verso l'alt
 Quindi, Carol vuole mettere una carota come premio su **ogni** pila di balle di fieno che richiede
 un salto **maggiore** di tutti i salti fatti prima per arrivare fino a lì. Inoltre, vuole mettere
 una seconda carota sul salto più alto di tutti del percorso. Carol può fare queste cose:
+
 - `altezza della pila i`: guarda quante balle di fieno $H_i$ ci sono nella pila $i$-esima.
 - `aggiungi carota alla pila i`: aggiungi una carota in cima all'$i$-esima pila.
 - `termina`: smetti di aggiungere carote e fai partire la gara.
@@ -40,7 +41,7 @@ Aiuta Carol a preparare il fienile per la gara di salto!
 > Per ciascuna di queste, calcola quanto è grande il _salto_ che serve per arrivare all'$i$-esima pila.
 > Se questo salto è maggiore del massimo salto finora, allora va ad aggiungere una carota e lo
 > memorizza in _maxsalto_ e _dovesalto_.
-> 
+>
 > Una volta terminato di scorrere tutte le pile, Carol torna all'ultima pila a cui ha aggiunto una
 > carota (_dovesalto_) e ci aggiunge la seconda carota.
 >

@@ -17,9 +17,7 @@ export function Canvas({ gravity, scale, children }) {
   return (
     <VisualizerContext.Provider
       value={{ gravity: gravity ?? "top", scale: scale ?? 1, setWidth, setHeight }}>
-      <div
-        className="relative m-8 w-full"
-        style={{ width: width + 32, height: height + 32 }}>
+      <div className="relative m-8 w-full" style={{ width: width + 32, height: height + 32 }}>
         {children}
       </div>
     </VisualizerContext.Provider>
@@ -40,7 +38,7 @@ export function Sprite({ src, alt, x, y, width, height, rotation, follow, classN
     if (x !== pos.current.x || y !== pos.current.y) {
       pos.current = { x, y, changed: true };
     }
-  }, [pos.current, x, y]);
+  }, [x, y]);
 
   const { gravity, scale, setWidth, setHeight } = useContext(VisualizerContext);
   useLayoutEffect(() => {
@@ -63,7 +61,7 @@ export function Sprite({ src, alt, x, y, width, height, rotation, follow, classN
       });
     }, 160);
     return () => clearTimeout(id);
-  }, [ref.current, pos.current, x, y]);
+  }, [x, y]);
 
   return (
     <img
@@ -80,7 +78,18 @@ export function Sprite({ src, alt, x, y, width, height, rotation, follow, classN
   );
 }
 
-export function Rectangle({ color, border_color, height, width, x, y, rotation, className, style, children }) {
+export function Rectangle({
+  color,
+  border_color,
+  height,
+  width,
+  x,
+  y,
+  rotation,
+  className,
+  style,
+  children,
+}) {
   x ??= 0;
   y ??= 0;
   rotation ??= 0;
@@ -110,7 +119,7 @@ export function Rectangle({ color, border_color, height, width, x, y, rotation, 
         left: `${x * scale}px`,
         [gravity]: `${y * scale}px`,
         transform: `rotate(${rotation}turn)`,
-        ...style
+        ...style,
       }}
       className={`absolute border-2 border-solid transition-all ${className ?? ""}`}>
       {children}

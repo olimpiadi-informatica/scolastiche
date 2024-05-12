@@ -1,7 +1,7 @@
 import { kebabCase } from "lodash-es";
 
-import logo from "./logo.svg";
 import "./index.css";
+import logo from "./logo.svg";
 
 export const title = "OII e Giochi di Fibonacci";
 export const description =
@@ -16,11 +16,22 @@ const links = {
 const contests = {
   "fibonacci-primarie": {
     name: "Giochi di Fibonacci - Scuole primarie",
-    editions: ["2023 - Seconda fase", "2023 - Seconda fase - Demo", "2023 - Prima fase", "2022 - Prima fase"],
+    editions: [
+      "2023 - Seconda fase",
+      "2023 - Seconda fase - Demo",
+      "2023 - Prima fase",
+      "2022 - Prima fase",
+    ],
   },
   "fibonacci-secondarie": {
     name: "Giochi di Fibonacci - Scuole secondarie",
-    editions: ["2023 - Terza fase", "2023 - Seconda fase", "2023 - Seconda fase - Demo", "2023 - Prima fase", "2022 - Prima fase"],
+    editions: [
+      "2023 - Terza fase",
+      "2023 - Seconda fase",
+      "2023 - Seconda fase - Demo",
+      "2023 - Prima fase",
+      "2022 - Prima fase",
+    ],
   },
   scolastiche: {
     name: "Selezioni scolastiche delle Olimpiadi Italiane di Informatica",
@@ -30,11 +41,12 @@ const contests = {
 
 export function App() {
   return (
-    <main className="prose lg:max-w-[90ch] p-5 mb-12 mx-auto">
-      <div className="border-2 dark:border-0 rounded-xl bg-white p-5 mb-8 w-full">
-        <img {...logo} alt="Logo OII" className="my-0 mx-auto max-h-32" />
+    <main className="prose mx-auto mb-12 p-5 lg:max-w-[90ch]">
+      <div className="mb-8 w-full rounded-xl border-2 bg-white p-5 dark:border-0">
+        <img {...logo} alt="Logo OII" className="mx-auto my-0 max-h-32" />
       </div>
-      Raccolta delle prove delle gare scolastiche delle Olimpiadi Italiane di Informatica e dei Giochi di Fibonacci.
+      Raccolta delle prove delle gare scolastiche delle Olimpiadi Italiane di Informatica e dei
+      Giochi di Fibonacci.
       <ul>
         {Object.entries(links).map(([name, url]) => (
           <li key={name}>
@@ -42,7 +54,7 @@ export function App() {
           </li>
         ))}
       </ul>
-      <div className="lg:columns-2 *:inline-block prose-headings:mt-4">
+      <div className="*:inline-block prose-headings:mt-4 lg:columns-2">
         {Object.entries(contests).map(([id, { name, editions }]) => (
           <div key={id}>
             <h2>{name}</h2>

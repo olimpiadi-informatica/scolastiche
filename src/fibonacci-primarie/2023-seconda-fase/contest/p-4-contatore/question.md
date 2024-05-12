@@ -3,6 +3,7 @@ Tip-Tap sistemando la sua soffitta si è imbattuto in un libro di programmazione
 ![code](code.asy)
 
 Purtroppo la successiva pagina è rovinata perciò Tip-Tap non riesce a capire che numero verrà stampato alla fine, aiutalo tu! Quale numero viene stampato dall'ultimo blocco?
+
 - [ ] 0
 - [x] 2
 - [ ] 4

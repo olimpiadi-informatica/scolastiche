@@ -1,8 +1,9 @@
 Tip-Tap ha proprio voglia di una bella scorpacciata di carote!
 Per farla, può usare le seguenti azioni:
-+ `avanza`: salta alla roccia più vicina a destra. 
-+ `mangia carota`: mangia una carota, ma se dov'è arrivato non ci sono carote si **mangia la lingua**!
-+ `roccia marrone`: condizione vera se Tip-Tap si trova su una roccia di colore marrone.
+
+- `avanza`: salta alla roccia più vicina a destra.
+- `mangia carota`: mangia una carota, ma se dov'è arrivato non ci sono carote si **mangia la lingua**!
+- `roccia marrone`: condizione vera se Tip-Tap si trova su una roccia di colore marrone.
 
 Quali di questi procedimenti consentono a Tip-Tap di mangiare tutte le carote, senza
 mangiarsi la lingua?
@@ -18,7 +19,7 @@ mangiarsi la lingua?
 - [ ] tutti tranne l'$1$
 
 > Tip-Tap riesce a mangiare tutte le carote sia seguendo l'opzione 3 che l'opzione 5.
-> 
+>
 > _Nell'opzione 3, inizia mangiando la prima carota, poi le carote sulle rocce marroni tra le 4 successive, poi un'altra carota
 > (quella sulla roccia grigia centrale), e ancora le carote sulle rocce marroni tra le 4 successive._
 >

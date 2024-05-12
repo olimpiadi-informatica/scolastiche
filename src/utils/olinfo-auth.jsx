@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+
+import { NoAuth, useStudent } from "@olinfo/quizms/student";
 import cookie from "cookie";
 import { jwtDecode } from "jwt-decode";
 
-import { NoAuth, useStudent } from "@olinfo/quizms/student";
 import "~/index.css";
 
 /** @type {typeof NoAuth} */
@@ -26,13 +27,16 @@ function OlinfoWrapper({ children }) {
 
   useEffect(() => {
     const information = student.personalInformation;
-    if (olinfoUser && (olinfoUser.name !== information.name || olinfoUser.surname !== information.surname)) {
+    if (
+      olinfoUser &&
+      (olinfoUser.name !== information.name || olinfoUser.surname !== information.surname)
+    ) {
       setStudent({
         ...student,
         personalInformation: { ...information, ...olinfoUser },
       });
     }
-  }, [student, olinfoUser]);
+  }, [student, olinfoUser, setStudent]);
 
   return children;
 }

@@ -5,6 +5,7 @@ Bunny, Tip-Tap e Carol le mangiano seguendo questo procedimento:
 ![code](code.asy)
 
 Quante carote mangia Carol?
+
 - [ ] 0
 - [ ] 1
 - [ ] 2
@@ -20,7 +21,7 @@ Quante carote mangia Carol?
 > **Approfondimento:** visto che la condizione che termina la ripetizione chiede solo che
 > una delle due pile contenga meno di $7$ carote, si potrebbe pensare che alla fine potrebbero
 > rimanere più carote per Carol, come $18$, $28$, $38$, eccetera. Questo però non è possibile!
-> 
+>
 > Infatti, si può notare che ogni volta Tip-Tap e Bunny mangiano più carote dalla pila più grande
 > e meno dalla pila più piccola. Questo porta a ridurre la differenza tra le due pile, finché
 > la differenza non è **al massimo 3**. Da quel punto in poi la differenza tra le due pila rimarrà

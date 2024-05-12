@@ -1,4 +1,5 @@
 import React from "react";
+
 import { range } from "lodash-es";
 
 import { Canvas, Rectangle, Sprite, Variables } from "~/utils/visualizer";
@@ -15,8 +16,8 @@ export default function Visualizer({ variables }) {
 
   const stairs = [stairs1, stairs2, stairs3][hiddenState.M <= 6 ? 0 : hiddenState.M <= 14 ? 1 : 2];
   const bunnies = [bunny_left, bunny_right];
-  const hf = 2.0;
-  const wf = 3.0;
+  const hf = 2;
+  const wf = 3;
 
   const colors = [
     "#4093b0",
@@ -46,11 +47,38 @@ export default function Visualizer({ variables }) {
   return (
     <>
       <Canvas gravity="bottom" scale={10}>
-        <Rectangle key={"L"} color={"#eeeeee"} height={hiddenState.S * hf} width={wf + 1} x={7} y={0} />
-        <Rectangle key={"R"} color={"#eeeeee"} height={hiddenState.D * hf} width={wf + 1} x={23} y={0} />
+        <Rectangle
+          key={"L"}
+          color={"#eeeeee"}
+          height={hiddenState.S * hf}
+          width={wf + 1}
+          x={7}
+          y={0}
+        />
+        <Rectangle
+          key={"R"}
+          color={"#eeeeee"}
+          height={hiddenState.D * hf}
+          width={wf + 1}
+          x={23}
+          y={0}
+        />
         <Sprite src={stairs} alt="Scale" x={13.1} y={0} />
-        <Rectangle key={"base"} color={"#954520"} height={1} width={(wf + 1) * hiddenState.M * 2 + wf + 17} x={7 - (wf + 1) * hiddenState.M} y={hiddenState.pos[3] * hf} />
-        <Sprite src={bunnies[hiddenState.orient]} alt="Bunny" x={14} y={hiddenState.pos[3] * hf} follow />
+        <Rectangle
+          key={"base"}
+          color={"#954520"}
+          height={1}
+          width={(wf + 1) * hiddenState.M * 2 + wf + 17}
+          x={7 - (wf + 1) * hiddenState.M}
+          y={hiddenState.pos[3] * hf}
+        />
+        <Sprite
+          src={bunnies[hiddenState.orient]}
+          alt="Bunny"
+          x={14}
+          y={hiddenState.pos[3] * hf}
+          follow
+        />
         {range(hiddenState.M).map((i) => {
           let x = hiddenState.blocchi[i][0] * 8 + 7.5;
           let y = hiddenState.blocchi[i][1] * hf;
@@ -68,7 +96,7 @@ export default function Visualizer({ variables }) {
               width={wf}
               x={x}
               y={y}
-              style={{ "paddingLeft": "2.5px", "lineHeight": "16px" }}
+              style={{ paddingLeft: "2.5px", lineHeight: "16px" }}
               className="pl-0.5 leading-4"
               children={i + 1}
             />

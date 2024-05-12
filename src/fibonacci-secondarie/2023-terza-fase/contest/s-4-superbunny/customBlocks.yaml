@@ -186,12 +186,12 @@
   tooltip: salva un valore per la pedana più in alto dell'ostacolo dato
   helpUrl: ""
   js: |-
-      (function(i, x) {
-        if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
-        if (i < 1 || i > hiddenState.N || Math.floor(i) != i)
-          exit(false, "l'ostacolo " + i + " non esiste");
-        hiddenState.VA[i-1] = x;
-      })(%0, %1);
+    (function(i, x) {
+      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
+      if (i < 1 || i > hiddenState.N || Math.floor(i) != i)
+        exit(false, "l'ostacolo " + i + " non esiste");
+      hiddenState.VA[i-1] = x;
+    })(%0, %1);
 
 - type: imposta valore pedana bassa
   message0: imposta valore pedana bassa %1 a %2
@@ -210,9 +210,9 @@
   tooltip: salva un valore per la pedana più in basso dell'ostacolo dato
   helpUrl: ""
   js: |-
-      (function(i, x) {
-        if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
-        if (i < 1 || i > hiddenState.N || Math.floor(i) != i)
-          exit(false, "l'ostacolo " + i + " non esiste");
-        hiddenState.VB[i-1] = x;
-      })(%0, %1);
+    (function(i, x) {
+      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
+      if (i < 1 || i > hiddenState.N || Math.floor(i) != i)
+        exit(false, "l'ostacolo " + i + " non esiste");
+      hiddenState.VB[i-1] = x;
+    })(%0, %1);

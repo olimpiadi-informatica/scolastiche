@@ -1,7 +1,7 @@
 import { OlinfoAuth } from "~/utils/olinfo-auth";
 
-import Header from "./contest/header.md";
 import Statement from "./contest/contest.mdx";
+import Header from "./contest/header.md";
 
 export const title = "Giochi di Fibonacci 2023/2024 - Fase Finale";
 export const description = "Fase Finale dei Giochi di Fibonacci 2023/2024";

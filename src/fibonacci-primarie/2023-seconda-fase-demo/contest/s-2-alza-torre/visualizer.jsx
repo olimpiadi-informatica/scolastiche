@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+
 import { range } from "lodash-es";
 
 import { Canvas, Rectangle, Sprite, Variables } from "~/utils/visualizer";
@@ -34,7 +35,7 @@ export default function Visualizer({ variables }) {
     if (container) {
       container.scrollTop = container.scrollHeight;
     }
-  }, [ref.current]);
+  }, []);
 
   if (!state) return;
 

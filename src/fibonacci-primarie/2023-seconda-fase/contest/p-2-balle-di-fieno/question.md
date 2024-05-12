@@ -7,6 +7,7 @@ In quali di queste situazioni Bunny riesce ad uscire dal fienile?
 ![opzione1](opzioni.asy)
 
 Risposte:
+
 - [ ] nessuna
 - [ ] tutte
 - [ ] solo la 1
@@ -14,7 +15,7 @@ Risposte:
 - [ ] la 1 e la 3
 
 > Bunny riesce ad uscire dal fienile nell'opzione 1 e nella 2.
-> 
+>
 > _Nell'opzione 1, inizia dalla pila 1, poi salta di due in due fino alla pila 9._
 >
 > _Nell'opzione 2, inizia dalla pila 1, salta sulla 3, indietreggia sulla due, salta sulla 4, salta sulla 6, indietreggia sulla 5, salta sulla 7 e finisce sulla 9._
