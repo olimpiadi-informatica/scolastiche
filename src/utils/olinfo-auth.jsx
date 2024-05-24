@@ -4,8 +4,6 @@ import { NoAuth, useStudent } from "@olinfo/quizms/student";
 import cookie from "cookie";
 import { jwtDecode } from "jwt-decode";
 
-import "~/index.css";
-
 /** @type {typeof NoAuth} */
 export const OlinfoAuth = ({ children, ...props }) => {
   return (
