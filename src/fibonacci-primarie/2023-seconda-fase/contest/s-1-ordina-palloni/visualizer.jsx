@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 
 import { range } from "lodash-es";
 
@@ -16,7 +16,6 @@ const balls = import.meta.glob("./asy/ball*.asy", {
 
 export default function Visualizer({ variables }) {
   const { blocklyVariables, hiddenState } = variables;
-  if (!hiddenState) return;
 
   function position(i) {
     const batch = hiddenState.N > 20 ? 9 : 4;

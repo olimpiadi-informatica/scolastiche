@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 
 import { range } from "lodash-es";
 
@@ -14,7 +14,6 @@ const paints = import.meta.glob("./asy/paint*.asy", {
 
 export default function Visualizer({ variables }) {
   const { blocklyVariables, hiddenState } = variables;
-  if (!hiddenState) return;
 
   const colors = [
     "#ffffff",

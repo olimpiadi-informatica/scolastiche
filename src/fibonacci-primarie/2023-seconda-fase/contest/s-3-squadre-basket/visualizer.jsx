@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 
 import { range } from "lodash-es";
 
@@ -11,7 +11,6 @@ import turing from "./asy/turing.asy?h=100";
 
 export default function Visualizer({ variables }) {
   const { blocklyVariables, hiddenState } = variables;
-  if (!hiddenState) return;
 
   const teams = [fibonacci, turing];
 

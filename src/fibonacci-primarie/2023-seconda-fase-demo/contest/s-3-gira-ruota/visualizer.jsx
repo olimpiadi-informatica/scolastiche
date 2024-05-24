@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 
 import { range } from "lodash-es";
 
@@ -10,7 +10,7 @@ function Sector({ color, from, portion, text }) {
   const deg = 0.5 - portion;
   return (
     <Rectangle
-      color={"invisible"}
+      color="transparent"
       x={8}
       y={12}
       width={200}
@@ -32,7 +32,6 @@ function Sector({ color, from, portion, text }) {
 
 export default function Visualizer({ variables }) {
   const { blocklyVariables, hiddenState } = variables;
-  if (!hiddenState) return;
 
   const { S, N, C, pos, prizes, friends } = hiddenState;
 

@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 
 import { range } from "lodash-es";
 
@@ -15,69 +15,69 @@ const bunnies = import.meta.glob("./asy/bunnies*.asy", {
 
 export default function Visualizer({ variables }) {
   const { blocklyVariables, hiddenState } = variables;
-  if (!hiddenState) return;
 
-  var blocks = [];
-  var xoffs = 1.5;
-  var yoffs = 9;
-  var sep = 0.15;
+  let { N, M, K, cuts } = hiddenState;
+  if (N > 20 || M > 20) {
+    return <div className="text-slate-800 p-4">La visualizzazione è disponibile solo per i primi 5 livelli.</div>;
+  }
 
-  function chocblock(N0, N, M0, M, name = "cioc") {
-    for (var i = N0; i < N; ++i)
-      for (var j = M0; j < M; ++j)
+  const blocks = [];
+  let xoffs = 1.5;
+  let yoffs = 2;
+
+  function chocblock(N0, N, M0, M) {
+    for (let i = N0; i < N; ++i) {
+      for (let j = M0; j < M; ++j) {
         blocks.push(
           <Sprite
-            key={name + "-" + i + "-" + j}
+            key={`${i}-${j}`}
             src={chocolate}
-            alt={name + "-" + i + "-" + j}
+            alt="cioccolata"
             x={xoffs + i * 0.5}
             y={yoffs - j * 0.5}
           />,
         );
-  }
-
-  var N = hiddenState.N;
-  var M = hiddenState.M;
-  if (N <= 20 && M <= 20) {
-    chocblock(0, N, 0, M);
-    for (var i = hiddenState.cuts.length - 1; i >= 0; --i) {
-      var c = hiddenState.cuts[i];
-      if (c > 0) {
-        yoffs -= sep;
-        chocblock(0, N, M, M + c);
-        M += c;
-      } else {
-        xoffs += sep;
-        chocblock(N, N - c, 0, M);
-        N -= c;
       }
     }
   }
 
-  var len = Object.keys(bunnies).length;
+  const sep = 0.15;
+  chocblock(0, N, 0, M);
+  for (let i = cuts.length - 1; i >= 0; --i) {
+    const c = cuts[i];
+    if (c > 0) {
+      yoffs -= sep;
+      chocblock(0, N, M, M + c);
+      M += c;
+    } else {
+      xoffs += sep;
+      chocblock(N, N - c, 0, M);
+      N -= c;
+    }
+  }
+
+  const len = Object.keys(bunnies).length;
 
   return (
     <>
-      <Canvas scale={50}>
-        <Sprite src={bunny} alt="Tip-Tap" x={0} y={yoffs - 2} follow />
-        {range(N <= 20 && M <= 20 ? hiddenState.K : 0).map((i) => {
-          return (
-            <Sprite
-              key={"bunny-" + i}
-              src={bunnies[`./asy/bunnies${i % len}.asy`]}
-              alt="Bunny"
-              x={2 + N * (0.5 + sep) + ((11 * i) % 19) * 0.4}
-              y={4 + (3 * i) / (hiddenState.K + hiddenState.cuts.length - 1)}
-            />
-          );
-        })}
+      <Canvas scale={50} gravity="bottom">
+        <Sprite src={bunny} alt="Tip-Tap" follow />
+        {range(K).map((i) => (
+          <Sprite
+            key={"bunny-" + i}
+            src={bunnies[`./asy/bunnies${i % len}.asy`]}
+            alt="Bunny"
+            x={2 + N * (0.5 + sep) + ((11 * i) % 19) * 0.4}
+            y={-5 + (3 * i) / (K + cuts.length - 1)}
+          />
+        ))}
         {blocks}
       </Canvas>
       <Variables
         variables={{
-          larghezza: hiddenState.N,
-          altezza: hiddenState.M,
-          compagni: hiddenState.K,
+          larghezza: N,
+          altezza: M,
+          compagni: K,
           ...blocklyVariables,
         }}
       />

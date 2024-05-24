@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 
 import { range } from "lodash-es";
 
@@ -12,7 +12,6 @@ import stairs3 from "./asy/stairs3.asy?w=80";
 
 export default function Visualizer({ variables }) {
   const { blocklyVariables, hiddenState } = variables;
-  if (!hiddenState) return;
 
   const stairs = [stairs1, stairs2, stairs3][hiddenState.M <= 6 ? 0 : hiddenState.M <= 14 ? 1 : 2];
   const bunnies = [bunny_left, bunny_right];
@@ -47,26 +46,11 @@ export default function Visualizer({ variables }) {
   return (
     <>
       <Canvas gravity="bottom" scale={10}>
-        <Rectangle
-          key={"L"}
-          color={"#eeeeee"}
-          height={hiddenState.S * hf}
-          width={wf + 1}
-          x={7}
-          y={0}
-        />
-        <Rectangle
-          key={"R"}
-          color={"#eeeeee"}
-          height={hiddenState.D * hf}
-          width={wf + 1}
-          x={23}
-          y={0}
-        />
+        <Rectangle color="#eeeeee" height={hiddenState.S * hf} width={wf + 1} x={7} y={0} />
+        <Rectangle color="#eeeeee" height={hiddenState.D * hf} width={wf + 1} x={23} y={0} />
         <Sprite src={stairs} alt="Scale" x={13.1} y={0} />
         <Rectangle
-          key={"base"}
-          color={"#954520"}
+          color="#954520"
           height={1}
           width={(wf + 1) * hiddenState.M * 2 + wf + 17}
           x={7 - (wf + 1) * hiddenState.M}
@@ -96,10 +80,9 @@ export default function Visualizer({ variables }) {
               width={wf}
               x={x}
               y={y}
-              style={{ paddingLeft: "2.5px", lineHeight: "16px" }}
-              className="pl-0.5 leading-4"
-              children={i + 1}
-            />
+              className="pl-0.5 leading-4">
+              {i + 1}
+            </Rectangle>
           );
         })}
       </Canvas>

@@ -1,240 +1,70 @@
-import React from "react";
+"use client";
 
-import { range } from "lodash-es";
+import { Fragment } from "react";
 
-import { Canvas, Sprite, Variables } from "~/utils/visualizer";
+import { Canvas, Rectangle, Sprite, Variables } from "~/utils/visualizer";
 
 import bunny from "./asy/bunny.asy?w=50";
-import leftri from "./asy/leftri.asy?w=40";
-import leftsnow from "./asy/leftsnow.asy?w=40";
 import offcharge from "./asy/offcharge.asy?w=20";
 import oncharge from "./asy/oncharge.asy?w=20";
-import rightri from "./asy/rightri.asy?w=40";
-import rightsnow from "./asy/rightsnow.asy?w=40";
-import square from "./asy/square.asy?w=40";
-import squarecap from "./asy/squarecap.asy?w=40";
 
 export default function Visualizer({ variables }) {
   const { blocklyVariables, hiddenState } = variables;
-  if (!hiddenState) return;
 
-  let dry = 0.6;
-  let dy = 0;
-  let mountains = [];
-  let eps = 0.03;
-  let de = eps;
-  let h = hiddenState.H[0] * hiddenState.scale - 1;
-  if (hiddenState.N <= 30) {
-    mountains.push(
-      <Sprite
-        key={"base-start"}
-        src={square}
-        alt="Base"
-        x={-0.75 - eps / 2}
-        y={dy + 10 - 0.5 * h - eps / 2}
-        height={h + 1 + eps}
-        width={0.5 + eps}
-      />,
-      <Sprite
-        key={"plain-start"}
-        src={squarecap}
-        alt="Piana"
-        x={-0.75 - eps / 2}
-        y={dy + 9 - h - eps / 2}
-        height={1 + eps}
-        width={0.5 + eps}
-      />,
-    );
-    for (let i = 0; i < hiddenState.N - 1; ++i) {
-      h = Math.min(hiddenState.H[i], hiddenState.H[i + 1]) * hiddenState.scale;
-      if (hiddenState.H[i] == hiddenState.H[i + 1]) h -= 1;
-      mountains.push(
-        <Sprite
-          key={"base-" + i}
-          src={square}
-          alt="Base"
-          x={i - eps / 2}
-          y={dy + 10 - 0.5 * h - eps / 2}
-          height={h + 1 + eps}
-          width={1 + eps}
-        />,
-      );
-      if (hiddenState.H[i] < hiddenState.H[i + 1]) {
-        var delta = (hiddenState.H[i + 1] - hiddenState.H[i]) * hiddenState.scale;
-        var snow = 0;
-        var cap = i < hiddenState.N - 2 && hiddenState.H[i + 1] > hiddenState.H[i + 2];
-        if (cap) {
-          var bounce = (hiddenState.H[i + 1] - hiddenState.H[i + 2]) * hiddenState.scale;
-          if (bounce >= delta) snow = 1;
-          else snow = bounce / delta;
-        }
-        if (snow > 0 && snow < 1) {
-          mountains.push(
-            <Sprite
-              key={"filler-" + i}
-              src={square}
-              alt="Base"
-              x={i + (1 - snow) * 0.5 - eps / 2}
-              y={
-                dy +
-                9.5 -
-                hiddenState.H[i + 1] * hiddenState.scale +
-                0.5 * delta * (1 + snow) -
-                eps / 2
-              }
-              height={delta * (1 - snow) + eps}
-              width={snow + eps}
-            />,
-          );
-        }
-        if (snow > 0)
-          mountains.push(
-            <Sprite
-              key={"snow-" + i}
-              src={leftsnow}
-              alt="Neve"
-              x={i + (1 - snow) * 0.5 - de / 2}
-              y={dy + 9.5 - hiddenState.H[i + 1] * hiddenState.scale + 0.5 * delta * snow - de / 2}
-              height={delta * snow + de}
-              width={snow + de}
-            />,
-          );
-        if (snow < 1)
-          mountains.push(
-            <Sprite
-              key={"tri-" + i}
-              src={leftri}
-              alt="Punta"
-              x={i - snow * 0.5 - de / 2}
-              y={
-                dy +
-                9.5 -
-                hiddenState.H[i + 1] * hiddenState.scale +
-                0.5 * delta * (1 + snow) -
-                de / 2
-              }
-              height={delta * (1 - snow) + de}
-              width={1 - snow + de}
-            />,
-          );
-      } else if (hiddenState.H[i] > hiddenState.H[i + 1]) {
-        let delta = (hiddenState.H[i] - hiddenState.H[i + 1]) * hiddenState.scale;
-        let snow = 0;
-        let cap = i > 0 && hiddenState.H[i] > hiddenState.H[i - 1];
-        if (cap) {
-          let bounce = (hiddenState.H[i] - hiddenState.H[i - 1]) * hiddenState.scale;
-          if (bounce >= delta) snow = 1;
-          else snow = bounce / delta;
-        }
-        if (snow > 0 && snow < 1) {
-          mountains.push(
-            <Sprite
-              key={"filler-" + i}
-              src={square}
-              alt="Base"
-              x={i - (1 - snow) * 0.5 - eps / 2}
-              y={
-                dy + 9.5 - hiddenState.H[i] * hiddenState.scale + 0.5 * delta * (1 + snow) - eps / 2
-              }
-              height={delta * (1 - snow) + eps}
-              width={snow + eps}
-            />,
-          );
-        }
-        if (snow > 0)
-          mountains.push(
-            <Sprite
-              key={"snow-" + i}
-              src={rightsnow}
-              alt="Neve"
-              x={i - (1 - snow) * 0.5 - de / 2}
-              y={dy + 9.5 - hiddenState.H[i] * hiddenState.scale + 0.5 * delta * snow - de / 2}
-              height={delta * snow + de}
-              width={snow + de}
-            />,
-          );
-        if (snow < 1)
-          mountains.push(
-            <Sprite
-              key={"tri-" + i}
-              src={rightri}
-              alt="Punta"
-              x={i + snow * 0.5 - de / 2}
-              y={
-                dy + 9.5 - hiddenState.H[i] * hiddenState.scale + 0.5 * delta * (1 + snow) - de / 2
-              }
-              height={delta * (1 - snow) + de}
-              width={1 - snow + de}
-            />,
-          );
-      } else {
-        mountains.push(
-          <Sprite
-            key={"plain-" + i}
-            src={squarecap}
-            alt="Piana"
-            x={i - eps / 2}
-            y={dy + 10 - hiddenState.H[i] * hiddenState.scale - eps / 2}
-            height={1 + eps}
-            width={1 + eps}
-          />,
-        );
-      }
-    }
-    h = hiddenState.H[hiddenState.N - 1] * hiddenState.scale - 1;
-    mountains.push(
-      <Sprite
-        key={"base-" + (hiddenState.N - 1)}
-        src={square}
-        alt="Base"
-        x={hiddenState.N - 1.25 - eps / 2}
-        y={dy + 10 - 0.5 * h - eps / 2}
-        height={h + 1 + eps}
-        width={0.5 + eps}
-      />,
-      <Sprite
-        key={"plain-" + (hiddenState.N - 1)}
-        src={squarecap}
-        alt="Piana"
-        x={hiddenState.N - 1.25 - eps / 2}
-        y={dy + 9 - h - eps / 2}
-        height={1 + eps}
-        width={0.5 + eps}
-      />,
-    );
+  /**@type {number[]} */
+  const H = [0, ...hiddenState.H];
+  const N = H.length;
+
+  if (N > 40) {
+    return <div className="text-slate-800 p-4">La visualizzazione è disponibile solo per i primi 5 livelli.</div>;
   }
 
-  function pos(i) {
-    if (i == 0 || i == hiddenState.N - 1) return hiddenState.H[i];
-    return (hiddenState.H[i - 1] + hiddenState.H[i + 1]) * 0.025 + hiddenState.H[i] * 0.95;
-  }
+  const maxH = Math.max(...H);
 
-  var bx = -0.6;
-  var by = dy + 8.7;
-  var br = 0;
-  if (hiddenState.N <= 30) {
-    bx = hiddenState.posx - 0.6 + dry * Math.cos(1.5707963267948966 + hiddenState.rot);
-    by =
-      dy +
-      8.7 -
-      (hiddenState.posx % 1 == 0 ? pos(hiddenState.posx) : hiddenState.posy) * hiddenState.scale +
-      dry -
-      dry * Math.sin(1.5707963267948966 + hiddenState.rot);
-    br = -hiddenState.rot / 6.283185307179586;
+  const p = (y) => (8 * y) / maxH;
+
+  let mountains = "M 0.1,-1";
+  mountains += "Q 0,0 0.5,0";
+  for (let i = 1; i < N; i++) {
+    mountains += `S ${i - 0.5},${p(H[i])} ${i},${p(H[i])}`;
   }
+  mountains += `S ${N},2 ${N - 0.1},-1`;
 
   return (
     <>
       <Canvas scale={40}>
-        {mountains}
-        <Sprite src={bunny} alt="Tip-Tap" x={bx} y={by} rotation={br} follow />
-        {range(hiddenState.N <= 30 ? hiddenState.N : 0).map((i) => (
+        <Rectangle borderColor="transparent" width={N} height={p(maxH) + 1} x={0} y={1.1}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox={`0 -0.9 ${N} ${p(maxH) + 1}`}
+            className="-scale-y-100">
+            <path d={mountains} className="fill-amber-800/80" />
+            {H.slice(1).map((h, i) => {
+              if (h < H[i] || h < H[i + 2]) return;
+              return (
+                <Fragment key={i}>
+                  <ellipse cx={i + 0.7} cy={p(h)} rx=".6" ry="0.6" fill="white" />
+                  <ellipse cx={i + 1} cy={p(h) - 0.1} rx=".4" ry="0.4" fill="white" />
+                </Fragment>
+              );
+            })}
+            <path d={mountains} fillOpacity={0} strokeWidth={0.06} className="stroke-amber-900" />
+          </svg>
+        </Rectangle>
+        <Sprite
+          src={bunny}
+          x={hiddenState.posx + 0.8}
+          y={p(maxH - H[hiddenState.posx + 1])}
+          alt="Tip-Tap"
+          follow
+        />
+        {H.slice(1).map((h, i) => (
           <Sprite
-            key={"charger-" + i}
-            src={i == hiddenState.posx && hiddenState.charging ? oncharge : offcharge}
-            alt="Colonnina"
-            x={i - 0.3}
-            y={dy + 8.87 - pos(i) * hiddenState.scale}
+            key={i}
+            src={i === hiddenState.posx && hiddenState.charging ? oncharge : offcharge}
+            x={i + 0.6}
+            y={p(maxH - h) + 0.1}
+            alt="Stazione di ricarica"
           />
         ))}
       </Canvas>

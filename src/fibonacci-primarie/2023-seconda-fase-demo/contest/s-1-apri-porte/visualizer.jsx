@@ -1,4 +1,6 @@
-import React, { Fragment } from "react";
+"use client";
+
+import { Fragment } from "react";
 
 import { range } from "lodash-es";
 
@@ -12,7 +14,6 @@ import rock from "./asy/rock.asy?w=93";
 
 export default function Visualizer({ variables }) {
   const { blocklyVariables, hiddenState } = variables;
-  if (!hiddenState) return null;
 
   return (
     <>

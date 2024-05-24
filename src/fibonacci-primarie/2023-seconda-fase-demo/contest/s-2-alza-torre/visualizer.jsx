@@ -1,4 +1,6 @@
-import React, { useEffect, useRef } from "react";
+"use client";
+
+import { useEffect, useRef } from "react";
 
 import { range } from "lodash-es";
 
@@ -36,8 +38,6 @@ export default function Visualizer({ variables }) {
       container.scrollTop = container.scrollHeight;
     }
   }, []);
-
-  if (!state) return;
 
   const y = [0];
   for (let i = 0; i < state.N; i++) {
