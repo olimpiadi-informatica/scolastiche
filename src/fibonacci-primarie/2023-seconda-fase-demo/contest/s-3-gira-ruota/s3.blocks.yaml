@@ -20,22 +20,19 @@
   message0: premio di %1
   args0:
     - type: input_value
-      name: LENGTH
       value: 0
       check: Number
   output: Number
   colour: 20
   tooltip: Carote vinte dall'amico numero i
   helpUrl: ""
-  js:
-    - |-
-      (function(i) {
-        if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
-        if (i < 1 || i > hiddenState.N)
-          exit(false, "l'amico " + i + " non esiste");
-        return hiddenState.prizes[(hiddenState.friends[i-1]-hiddenState.pos+hiddenState.S)%hiddenState.S];
-      })(%0)
-    - ORDER_FUNCTION_CALL
+  js: |
+    (function(i) {
+      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
+      if (i < 1 || i > hiddenState.N)
+        exit(false, "l'amico " + i + " non esiste");
+      return hiddenState.prizes[(hiddenState.friends[i-1]-hiddenState.pos+hiddenState.S)%hiddenState.S];
+    })(%0)
 
 - type: N
   message0: N
@@ -43,9 +40,7 @@
   colour: 20
   tooltip: Numero di amici di Tip-Tap
   helpUrl: ""
-  js:
-    - hiddenState.N
-    - ORDER_MEMBER
+  js: hiddenState.N
 
 - type: C
   message0: C
@@ -53,9 +48,7 @@
   colour: 20
   tooltip: Numero di carote raccolte da Tip-Tap
   helpUrl: ""
-  js:
-    - hiddenState.C
-    - ORDER_MEMBER
+  js: hiddenState.C
 
 - type: S
   message0: S
@@ -63,9 +56,7 @@
   colour: 20
   tooltip: Numero di spicchi della ruota
   helpUrl: ""
-  js:
-    - hiddenState.S
-    - ORDER_MEMBER
+  js: hiddenState.S
 
 - type: ferma ruota
   message0: ferma la ruota

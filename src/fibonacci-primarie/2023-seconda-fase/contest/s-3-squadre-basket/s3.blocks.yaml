@@ -13,9 +13,7 @@
   colour: 20
   tooltip: la fila della fattoria Fibonacci è finita?
   helpUrl: ""
-  js:
-    - hiddenState.data[0].pos === hiddenState.data[0].H.length
-    - ORDER_EQUALITY
+  js: hiddenState.data[0].pos === hiddenState.data[0].H.length
 
 - type: fine della fila Turing
   message0: fine della fila Turing
@@ -23,9 +21,7 @@
   colour: 20
   tooltip: la fila della fattoria Turing è finita?
   helpUrl: ""
-  js:
-    - hiddenState.data[1].pos === hiddenState.data[1].H.length
-    - ORDER_EQUALITY
+  js: hiddenState.data[1].pos === hiddenState.data[1].H.length
 
 - type: altezza primo della fila Fibonacci
   message0: altezza primo della fila Fibonacci
@@ -33,10 +29,8 @@
   colour: 20
   tooltip: l'altezza del primo coniglio nella fila della fattoria Fibonacci
   helpUrl: ""
-  js:
-    - |-
-      hiddenState.data[0].pos === hiddenState.data[0].H.length ? exit(false, "la fila Fibonacci è finita") : hiddenState.data[0].H[hiddenState.data[0].pos]
-    - ORDER_CONDITIONAL
+  js: |
+    hiddenState.data[0].pos === hiddenState.data[0].H.length ? exit(false, "la fila Fibonacci è finita") : hiddenState.data[0].H[hiddenState.data[0].pos]
 
 - type: altezza primo della fila Turing
   message0: altezza primo della fila Turing
@@ -44,10 +38,8 @@
   colour: 20
   tooltip: l'altezza del primo coniglio nella fila della fattoria Turing
   helpUrl: ""
-  js:
-    - |
-      hiddenState.data[1].pos === hiddenState.data[1].H.length ? exit(false, "la fila Turing è finita") : hiddenState.data[1].H[hiddenState.data[1].pos]
-    - ORDER_CONDITIONAL
+  js: |
+    hiddenState.data[1].pos === hiddenState.data[1].H.length ? exit(false, "la fila Turing è finita") : hiddenState.data[1].H[hiddenState.data[1].pos]
 
 - type: prendi dalla fila Fibonacci
   message0: prendi dalla fila Fibonacci
@@ -115,7 +107,7 @@
   colour: 20
   tooltip: termina il procedimento
   helpUrl: ""
-  js: |-
+  js: |
     if (hiddenState.data[0].presi.length !== hiddenState.data[1].presi.length)
       exit(false, "le due squadre non hanno lo stesso numero di giocatori");
     if (hiddenState.data[0].presi.length < hiddenState.sol)

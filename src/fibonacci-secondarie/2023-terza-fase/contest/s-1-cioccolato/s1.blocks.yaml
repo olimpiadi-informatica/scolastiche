@@ -13,9 +13,7 @@
   colour: 20
   tooltip: larghezza della tavoletta rimasta
   helpUrl: ""
-  js:
-    - hiddenState.N
-    - ORDER_MEMBER
+  js: hiddenState.N
 
 - type: altezza
   message0: altezza
@@ -23,9 +21,7 @@
   colour: 20
   tooltip: altezza della tavoletta rimasta
   helpUrl: ""
-  js:
-    - hiddenState.M
-    - ORDER_MEMBER
+  js: hiddenState.M
 
 - type: compagni
   message0: compagni
@@ -33,15 +29,12 @@
   colour: 20
   tooltip: numero di compagni rimasti
   helpUrl: ""
-  js:
-    - hiddenState.K
-    - ORDER_MEMBER
+  js: hiddenState.K
 
 - type: spezza in orizzontale
   message0: spezza %1 quadratini in orizzontale
   args0:
     - type: input_value
-      name: LENGTH
       value: 0
       check: Number
   previousStatement: null
@@ -49,7 +42,7 @@
   colour: 20
   tooltip: spezza x quadratini in orizzontale
   helpUrl: ""
-  js: |-
+  js: |
     (function(i) {
       if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i <= 0 || Math.floor(i) != i) exit(false, "numero di righe " + i + " non valido");
@@ -63,7 +56,6 @@
   message0: spezza %1 quadratini in verticale
   args0:
     - type: input_value
-      name: LENGTH
       value: 0
       check: Number
   previousStatement: null
@@ -71,7 +63,7 @@
   colour: 20
   tooltip: spezza x quadratini in verticale
   helpUrl: ""
-  js: |-
+  js: |
     (function(i) {
       if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i <= 0 || Math.floor(i) != i) exit(false, "numero di colonne " + i + " non valido");

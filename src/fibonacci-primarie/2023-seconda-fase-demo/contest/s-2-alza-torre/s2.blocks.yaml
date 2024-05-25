@@ -11,51 +11,44 @@
   message0: altezza della scatola %1
   args0:
     - type: input_value
-      name: LENGTH
       value: 0
       check: Number
   output: Number
   colour: 20
   tooltip: Altezza della scatola i-esima
   helpUrl: ""
-  js:
-    - |-
-      (function(i) {
-        if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
-        if (i < 1 || i > hiddenState.N)
-          exit(false, "la scatola " + i + " non esiste");
-        hiddenState.pos = i-1;
-        return hiddenState.rot[i-1] ? hiddenState.larghezze[i-1] : hiddenState.altezze[i-1];
-      })(%0)
-    - ORDER_FUNCTION_CALL
+  js: |
+    (function(i) {
+      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
+      if (i < 1 || i > hiddenState.N)
+        exit(false, "la scatola " + i + " non esiste");
+      hiddenState.pos = i-1;
+      return hiddenState.rot[i-1] ? hiddenState.larghezze[i-1] : hiddenState.altezze[i-1];
+    })(%0)
 
 - type: larghezza della scatola
   message0: larghezza della scatola %1
   args0:
     - type: input_value
-      name: LENGTH
       value: 0
       check: Number
   output: Number
   colour: 20
   tooltip: Larghezza della scatola i-esima
   helpUrl: ""
-  js:
-    - |-
-      (function(i) {
-        if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
-        if (i < 1 || i > hiddenState.N)
-          exit(false, "la scatola " + i + " non esiste");
-        hiddenState.pos = i-1;
-        return hiddenState.rot[i-1] ? hiddenState.altezze[i-1] : hiddenState.larghezze[i-1];
-      })(%0)
-    - ORDER_FUNCTION_CALL
+  js: |
+    (function(i) {
+      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
+      if (i < 1 || i > hiddenState.N)
+        exit(false, "la scatola " + i + " non esiste");
+      hiddenState.pos = i-1;
+      return hiddenState.rot[i-1] ? hiddenState.altezze[i-1] : hiddenState.larghezze[i-1];
+    })(%0)
 
 - type: ruota la scatola
   message0: ruota la scatola %1
   args0:
     - type: input_value
-      name: LENGTH
       value: 0
       check: Number
   previousStatement: null
@@ -63,7 +56,7 @@
   colour: 20
   tooltip: Ruota la scatola i-esima
   helpUrl: ""
-  js: |-
+  js: |
     (function(i) {
       if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i < 1 || i > hiddenState.N)
@@ -78,15 +71,12 @@
   colour: 20
   tooltip: Numero di scatole
   helpUrl: ""
-  js:
-    - hiddenState.N
-    - ORDER_MEMBER
+  js: hiddenState.N
 
 - type: riporta altezza
   message0: riporta altezza %1
   args0:
     - type: input_value
-      name: LENGTH
       value: 0
       check: Number
   previousStatement: null

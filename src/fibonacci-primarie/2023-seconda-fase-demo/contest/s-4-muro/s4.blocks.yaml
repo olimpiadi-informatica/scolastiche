@@ -11,7 +11,6 @@
   message0: colora dalla posizione %1
   args0:
     - type: input_value
-      name: LENGTH
       value: 0
       check: Number
   previousStatement: null
@@ -19,7 +18,7 @@
   colour: 20
   tooltip: Colora il muro dal pannello i-esimo
   helpUrl: ""
-  js: |-
+  js: |
     (function(i) {
       if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i < 1 || i > hiddenState.N)
@@ -40,9 +39,7 @@
   colour: 20
   tooltip: Numero di pannelli da pitturare
   helpUrl: ""
-  js:
-    - hiddenState.L[hiddenState.i]
-    - ORDER_MEMBER
+  js: hiddenState.L[hiddenState.i]
 
 - type: N
   message0: N
@@ -50,9 +47,7 @@
   colour: 20
   tooltip: Numero di pannelli nel muro
   helpUrl: ""
-  js:
-    - hiddenState.N
-    - ORDER_MEMBER
+  js: hiddenState.N
 
 - type: C
   message0: C
@@ -60,9 +55,7 @@
   colour: 20
   tooltip: Numero di colori
   helpUrl: ""
-  js:
-    - hiddenState.C
-    - ORDER_MEMBER
+  js: hiddenState.C
 
 - type: metti via i pennelli
   message0: metti via i pennelli

@@ -13,9 +13,7 @@
   colour: 20
   tooltip: numero totale di palloni da sistemare
   helpUrl: ""
-  js:
-    - hiddenState.N
-    - ORDER_MEMBER
+  js: hiddenState.N
 
 - type: pallone da calcio
   message0: pallone da calcio
@@ -23,10 +21,8 @@
   colour: 20
   tooltip: il prossimo pallone è da calcio?
   helpUrl: ""
-  js:
-    - |
-      hiddenState.pos < hiddenState.N ? hiddenState.balls[hiddenState.pos] < 2 : exit(false, "non ci sono più palloni")
-    - ORDER_CONDITIONAL
+  js: |
+    hiddenState.pos < hiddenState.N ? hiddenState.balls[hiddenState.pos] < 2 : exit(false, "non ci sono più palloni")
 
 - type: pallone gonfio
   message0: pallone gonfio
@@ -34,10 +30,8 @@
   colour: 20
   tooltip: il prossimo pallone è gonfio?
   helpUrl: ""
-  js:
-    - |
-      hiddenState.pos < hiddenState.N ? hiddenState.balls[hiddenState.pos] % 2 : exit(false, "non ci sono più palloni")
-    - ORDER_CONDITIONAL
+  js: |
+    hiddenState.pos < hiddenState.N ? hiddenState.balls[hiddenState.pos] % 2 : exit(false, "non ci sono più palloni")
 
 - type: tieni
   message0: tieni

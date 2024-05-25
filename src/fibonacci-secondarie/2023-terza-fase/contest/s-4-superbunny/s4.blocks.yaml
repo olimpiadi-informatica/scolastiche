@@ -13,112 +13,95 @@
   colour: 20
   tooltip: il numero di ostacoli
   helpUrl: ""
-  js:
-    - hiddenState.N
-    - ORDER_MEMBER
+  js: hiddenState.N
 
 - type: pedana alta
   message0: pedana alta %1
   args0:
     - type: input_value
-      name: LENGTH
       value: 0
       check: Number
   output: Number
   colour: 20
   tooltip: l'altezza della pedana più in alto dell'ostacolo dato
   helpUrl: ""
-  js:
-    - |-
-      (function(i) {
-        if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
-        if (i < 1 || i > hiddenState.N || Math.floor(i) != i)
-          exit(false, "l'ostacolo " + i + " non esiste");
-        return hiddenState.A[i-1];
-      })(%0)
-    - ORDER_FUNCTION_CALL
+  js: |
+    (function(i) {
+      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
+      if (i < 1 || i > hiddenState.N || Math.floor(i) != i)
+        exit(false, "l'ostacolo " + i + " non esiste");
+      return hiddenState.A[i-1];
+    })(%0)
 
 - type: pedana bassa
   message0: pedana bassa %1
   args0:
     - type: input_value
-      name: LENGTH
       value: 0
       check: Number
   output: Number
   colour: 20
   tooltip: l'altezza della pedana più in basso dell'ostacolo dato
   helpUrl: ""
-  js:
-    - |-
-      (function(i) {
-        if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
-        if (i < 1 || i > hiddenState.N || Math.floor(i) != i)
-          exit(false, "l'ostacolo " + i + " non esiste");
-        return hiddenState.B[i-1];
-      })(%0)
-    - ORDER_FUNCTION_CALL
+  js: |
+    (function(i) {
+      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
+      if (i < 1 || i > hiddenState.N || Math.floor(i) != i)
+        exit(false, "l'ostacolo " + i + " non esiste");
+      return hiddenState.B[i-1];
+    })(%0)
 
 - type: differenza assoluta
   message0: differenza assoluta tra %1 e %2
   args0:
     - type: input_value
-      name: FIRST
       value: 0
       check: Number
     - type: input_value
-      name: SECOND
       value: 0
       check: Number
   output: Number
   colour: 20
   tooltip: la differenza assoluta tra x e y
   helpUrl: ""
-  js:
-    - |-
-      (function(x, y) {
-        if (x === undefined || y === undefined) exit(false, "un argomento del blocco non ha un valore");
-        if (x < y) return y - x;
-        else return x - y;
-      })(%0, %1)
-    - ORDER_FUNCTION_CALL
+  js: |
+    (function(x, y) {
+      if (x === undefined || y === undefined) exit(false, "un argomento del blocco non ha un valore");
+      if (x < y) return y - x;
+      else return x - y;
+    })(%0, %1)
 
 - type: minimo
   message0: minimo tra %1 e %2
   args0:
     - type: input_value
-      name: FIRST
       value: 0
       check: Number
     - type: input_value
-      name: SECOND
       value: 0
       check: Number
   output: Number
   colour: 20
   tooltip: il valore minimo tra x e y
   helpUrl: ""
-  js:
-    - |-
-      (function(x, y) {
-        if (x === undefined || y === undefined) exit(false, "un argomento del blocco non ha un valore");
-        if (x < y) return x;
-        else return y;
-      })(%0, %1)
-    - ORDER_FUNCTION_CALL
+  js: |
+    (function(x, y) {
+      if (x === undefined || y === undefined) exit(false, "un argomento del blocco non ha un valore");
+      if (x < y) return x;
+      else return y;
+    })(%0, %1)
 
 - type: termina
   message0: termina in %1 tempo
   args0:
     - type: input_value
-      name: LENGTH
       value: 0
       check: Number
   previousStatement: null
   colour: 20
   tooltip: termina in x tempo
   helpUrl: ""
-  js: |-
+  js: |
     (function(i) {
       if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i < 0 || Math.floor(i) != i) exit(false, "tempo " + i + " non valido");
@@ -131,53 +114,45 @@
   message0: valore pedana alta %1
   args0:
     - type: input_value
-      name: LENGTH
       value: 0
       check: Number
   output: Number
   colour: 20
   tooltip: valore salvato per la pedana più in alto dell'ostacolo dato
   helpUrl: ""
-  js:
-    - |-
-      (function(i) {
-        if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
-        if (i < 1 || i > hiddenState.N || Math.floor(i) != i)
-          exit(false, "l'ostacolo " + i + " non esiste");
-        return hiddenState.VA[i-1];
-      })(%0)
-    - ORDER_FUNCTION_CALL
+  js: |
+    (function(i) {
+      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
+      if (i < 1 || i > hiddenState.N || Math.floor(i) != i)
+        exit(false, "l'ostacolo " + i + " non esiste");
+      return hiddenState.VA[i-1];
+    })(%0)
 
 - type: valore pedana bassa
   message0: valore pedana bassa %1
   args0:
     - type: input_value
-      name: LENGTH
       value: 0
       check: Number
   output: Number
   colour: 20
   tooltip: valore salvato per la pedana più in basso dell'ostacolo dato
   helpUrl: ""
-  js:
-    - |-
-      (function(i) {
-        if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
-        if (i < 1 || i > hiddenState.N || Math.floor(i) != i)
-          exit(false, "l'ostacolo " + i + " non esiste");
-        return hiddenState.VB[i-1];
-      })(%0)
-    - ORDER_FUNCTION_CALL
+  js: |
+    (function(i) {
+      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
+      if (i < 1 || i > hiddenState.N || Math.floor(i) != i)
+        exit(false, "l'ostacolo " + i + " non esiste");
+      return hiddenState.VB[i-1];
+    })(%0)
 
 - type: imposta valore pedana alta
   message0: imposta valore pedana alta %1 a %2
   args0:
     - type: input_value
-      name: INDEX
       value: 0
       check: Number
     - type: input_value
-      name: VALUE
       value: 0
       check: Number
   previousStatement: null
@@ -185,7 +160,7 @@
   colour: 20
   tooltip: salva un valore per la pedana più in alto dell'ostacolo dato
   helpUrl: ""
-  js: |-
+  js: |
     (function(i, x) {
       if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i < 1 || i > hiddenState.N || Math.floor(i) != i)
@@ -197,11 +172,9 @@
   message0: imposta valore pedana bassa %1 a %2
   args0:
     - type: input_value
-      name: INDEX
       value: 0
       check: Number
     - type: input_value
-      name: VALUE
       value: 0
       check: Number
   previousStatement: null
@@ -209,7 +182,7 @@
   colour: 20
   tooltip: salva un valore per la pedana più in basso dell'ostacolo dato
   helpUrl: ""
-  js: |-
+  js: |
     (function(i, x) {
       if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i < 1 || i > hiddenState.N || Math.floor(i) != i)

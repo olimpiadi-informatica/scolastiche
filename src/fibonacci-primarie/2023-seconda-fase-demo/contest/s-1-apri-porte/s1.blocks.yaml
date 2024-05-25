@@ -29,9 +29,7 @@
   colour: 20
   tooltip: vedi porta chiusa
   helpUrl: ""
-  js:
-    - hiddenState.pos < hiddenState.N && hiddenState.door[hiddenState.pos] === 1 && !hiddenState.open[hiddenState.pos]
-    - ORDER_LOGICAL_AND
+  js: hiddenState.pos < hiddenState.N && hiddenState.door[hiddenState.pos] === 1 && !hiddenState.open[hiddenState.pos]
 
 - type: N
   message0: N
@@ -39,9 +37,7 @@
   colour: 20
   tooltip: distanza iniziale dalla carota
   helpUrl: ""
-  js:
-    - hiddenState.N
-    - ORDER_MEMBER
+  js: hiddenState.N
 
 - type: apri porta
   message0: apri porta

@@ -13,22 +13,19 @@
   colour: 20
   tooltip: il numero da raggiungere
   helpUrl: ""
-  js:
-    - hiddenState.N
-    - ORDER_MEMBER
+  js: hiddenState.N
 
 - type: termina
   message0: termina in %1 operazioni
   args0:
     - type: input_value
-      name: LENGTH
       value: 0
       check: Number
   previousStatement: null
   colour: 20
   tooltip: termina in x operazioni
   helpUrl: ""
-  js: |-
+  js: |
     (function(i) {
       if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i < 0 || Math.floor(i) != i) exit(false, "numero di operazioni " + i + " non valido");

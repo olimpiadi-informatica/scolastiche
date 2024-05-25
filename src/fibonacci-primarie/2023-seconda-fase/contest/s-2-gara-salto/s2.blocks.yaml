@@ -13,36 +13,30 @@
   colour: 20
   tooltip: numero totale di palloni da sistemare
   helpUrl: ""
-  js:
-    - hiddenState.N
-    - ORDER_MEMBER
+  js: hiddenState.N
 
 - type: altezza della pila
   message0: altezza della pila %1
   args0:
     - type: input_value
-      name: LENGTH
       value: 0
       check: Number
   output: Number
   colour: 20
   tooltip: altezza della pila i-esima
   helpUrl: ""
-  js:
-    - |-
-      (function(i) {
-        hiddenState.pos = i - (hiddenState.pos > i-1 ? 0.5 : 1.5);
-        if (i < 1 || i > hiddenState.N)
-          exit(false, "la pila " + i + " non esiste");
-        return hiddenState.H[i-1];
-      })(%0)
-    - ORDER_FUNCTION_CALL
+  js: |
+    (function(i) {
+      hiddenState.pos = i - (hiddenState.pos > i-1 ? 0.5 : 1.5);
+      if (i < 1 || i > hiddenState.N)
+        exit(false, "la pila " + i + " non esiste");
+      return hiddenState.H[i-1];
+    })(%0)
 
 - type: aggiungi carota alla pila
   message0: aggiungi carota alla pila %1
   args0:
     - type: input_value
-      name: LENGTH
       value: 0
       check: Number
   previousStatement: null
@@ -50,7 +44,7 @@
   colour: 20
   tooltip: aggiungi una carota alla pila i-esima
   helpUrl: ""
-  js: |-
+  js: |
     (function(i) {
       hiddenState.pos = i - (hiddenState.pos > i-1 ? 0.5 : 1.5);
       if (i < 1 || i > hiddenState.N)
@@ -67,7 +61,7 @@
   colour: 20
   tooltip: termina il procedimento
   helpUrl: ""
-  js: |-
+  js: |
     for (var i=0; i<hiddenState.N; i++) {
       if (hiddenState.C[i] === hiddenState.sol[i]) continue;
       if (hiddenState.sol[i] === 0)

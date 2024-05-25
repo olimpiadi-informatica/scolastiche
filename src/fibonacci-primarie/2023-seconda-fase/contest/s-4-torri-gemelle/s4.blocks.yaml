@@ -13,9 +13,7 @@
   colour: 20
   tooltip: altezza della colonna di sinistra da costruire
   helpUrl: ""
-  js:
-    - hiddenState.S
-    - ORDER_MEMBER
+  js: hiddenState.S
 
 - type: D
   message0: D
@@ -23,9 +21,7 @@
   colour: 20
   tooltip: altezza della colonna di destra da costruire
   helpUrl: ""
-  js:
-    - hiddenState.D
-    - ORDER_MEMBER
+  js: hiddenState.D
 
 - type: M
   message0: M
@@ -33,9 +29,7 @@
   colour: 20
   tooltip: numero di blocchetti nel set da costruzioni
   helpUrl: ""
-  js:
-    - hiddenState.M
-    - ORDER_MEMBER
+  js: hiddenState.M
 
 - type: altezza colonna destra
   message0: altezza colonna destra
@@ -43,9 +37,7 @@
   colour: 20
   tooltip: altezza corrente della colonna di destra
   helpUrl: ""
-  js:
-    - hiddenState.pos[2]
-    - ORDER_MEMBER
+  js: hiddenState.pos[2]
 
 - type: altezza colonna sinistra
   message0: altezza colonna sinistra
@@ -53,15 +45,12 @@
   colour: 20
   tooltip: altezza corrente della colonna di sinistra
   helpUrl: ""
-  js:
-    - hiddenState.pos[0]
-    - ORDER_MEMBER
+  js: hiddenState.pos[0]
 
 - type: impila blocchetto a destra
   message0: impila blocchetto %1 a destra
   args0:
     - type: input_value
-      name: LENGTH
       value: 0
       check: Number
   previousStatement: null
@@ -69,7 +58,7 @@
   colour: 20
   tooltip: impila blocchetto alto i alla colonna di destra
   helpUrl: ""
-  js: |-
+  js: |
     (function(i) {
       hiddenState.orient = 1;
       hiddenState.pos[1] = i;
@@ -87,7 +76,6 @@
   message0: impila blocchetto %1 a sinistra
   args0:
     - type: input_value
-      name: LENGTH
       value: 0
       check: Number
   previousStatement: null
@@ -95,7 +83,7 @@
   colour: 20
   tooltip: impila blocchetto alto i alla colonna di sinistra
   helpUrl: ""
-  js: |-
+  js: |
     (function(i) {
       hiddenState.orient = 0;
       hiddenState.pos[1] = i;
@@ -115,7 +103,7 @@
   colour: 20
   tooltip: termina il procedimento
   helpUrl: ""
-  js: |-
+  js: |
     if (hiddenState.pos[0] < hiddenState.S)
       exit(false, "la colonna di sinistra è troppo bassa");
     if (hiddenState.pos[2] < hiddenState.D)
