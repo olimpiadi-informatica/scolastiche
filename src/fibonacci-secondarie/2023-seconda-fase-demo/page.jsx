@@ -1,7 +1,7 @@
 import { NoAuth } from "@olinfo/quizms/student";
 
 import Statement from "./contest/contest.mdx";
-import Header from "./contest/header.md";
+import Header from "./header.md";
 
 export const metadata = {
   title: "Giochi di Fibonacci 2023/2024 - Demo Fase II - Scuole secondarie",
