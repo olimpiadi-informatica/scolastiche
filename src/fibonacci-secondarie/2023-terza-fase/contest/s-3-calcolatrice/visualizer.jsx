@@ -6,9 +6,9 @@ import bunny from "./asy/bunny.asy?w=100";
 import calcolatrice from "./calcolatrice.svg?w=200";
 
 export default function Visualizer({ variables }) {
-  const { blocklyVariables, hiddenState } = variables;
+  const { blocklyVariables, state } = variables;
 
-  if (hiddenState.N > 10_000) {
+  if (state.N > 10_000) {
     return <div className="text-slate-800 p-4">La visualizzazione è disponibile solo per i primi 5 livelli.</div>;
   }
 
@@ -31,7 +31,7 @@ export default function Visualizer({ variables }) {
           y={1.4}
           rotation={0.025}
           className="font-[Orbitron] text-black">
-          {hiddenState.N}
+          {state.N}
         </Rectangle>
       </Canvas>
       <Variables variables={{ ...blocklyVariables }} />

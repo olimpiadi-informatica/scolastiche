@@ -6,9 +6,9 @@ import bunny from "./asy/bunny.asy?w=50";
 import platform from "./asy/platform.asy?w=90";
 
 export default function Visualizer({ variables }) {
-  const { blocklyVariables, hiddenState } = variables;
+  const { blocklyVariables, state } = variables;
 
-  const { N, A, VA, B, VB } = hiddenState;
+  const { N, A, VA, B, VB } = state;
   if (N > 50) {
     return <div className="text-slate-800 p-4">La visualizzazione è disponibile solo per i primi 5 livelli.</div>;
   }

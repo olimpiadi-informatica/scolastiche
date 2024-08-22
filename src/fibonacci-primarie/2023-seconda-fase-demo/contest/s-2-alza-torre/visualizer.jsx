@@ -10,7 +10,7 @@ import bunny from "./asy/bunny.asy?w=66";
 import stairs from "./asy/stairs.asy?w=80";
 
 export default function Visualizer({ variables }) {
-  const { blocklyVariables, hiddenState: state } = variables;
+  const { blocklyVariables, state: state } = variables;
 
   const colors = [
     "#4093b0",

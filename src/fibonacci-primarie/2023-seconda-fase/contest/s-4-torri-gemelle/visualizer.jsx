@@ -11,9 +11,9 @@ import stairs2 from "./asy/stairs2.asy?w=80";
 import stairs3 from "./asy/stairs3.asy?w=80";
 
 export default function Visualizer({ variables }) {
-  const { blocklyVariables, hiddenState } = variables;
+  const { blocklyVariables, state } = variables;
 
-  const stairs = [stairs1, stairs2, stairs3][hiddenState.M <= 6 ? 0 : hiddenState.M <= 14 ? 1 : 2];
+  const stairs = [stairs1, stairs2, stairs3][state.M <= 6 ? 0 : state.M <= 14 ? 1 : 2];
   const bunnies = [bunny_left, bunny_right];
   const hf = 2;
   const wf = 3;
@@ -38,39 +38,39 @@ export default function Visualizer({ variables }) {
   ];
 
   let bsplit = 0;
-  for (let i = 0; i < hiddenState.pos[1]; ++i) {
-    if (hiddenState.blocchi[i][0] === 1) bsplit += 1;
+  for (let i = 0; i < state.pos[1]; ++i) {
+    if (state.blocchi[i][0] === 1) bsplit += 1;
   }
 
   let bx = 3 - bsplit * (wf + 1);
   return (
     <>
       <Canvas gravity="bottom" scale={10}>
-        <Rectangle color="#eeeeee" height={hiddenState.S * hf} width={wf + 1} x={7} y={0} />
-        <Rectangle color="#eeeeee" height={hiddenState.D * hf} width={wf + 1} x={23} y={0} />
+        <Rectangle color="#eeeeee" height={state.S * hf} width={wf + 1} x={7} y={0} />
+        <Rectangle color="#eeeeee" height={state.D * hf} width={wf + 1} x={23} y={0} />
         <Sprite src={stairs} alt="Scale" x={13.1} y={0} />
         <Rectangle
           color="#954520"
           height={1}
-          width={(wf + 1) * hiddenState.M * 2 + wf + 17}
-          x={7 - (wf + 1) * hiddenState.M}
-          y={hiddenState.pos[3] * hf}
+          width={(wf + 1) * state.M * 2 + wf + 17}
+          x={7 - (wf + 1) * state.M}
+          y={state.pos[3] * hf}
         />
         <Sprite
-          src={bunnies[hiddenState.orient]}
+          src={bunnies[state.orient]}
           alt="Bunny"
           x={14}
-          y={hiddenState.pos[3] * hf}
+          y={state.pos[3] * hf}
           follow
         />
-        {range(hiddenState.M).map((i) => {
-          let x = hiddenState.blocchi[i][0] * 8 + 7.5;
-          let y = hiddenState.blocchi[i][1] * hf;
-          if (hiddenState.blocchi[i][0] === 1) {
-            if (i >= hiddenState.pos[1] && bx < 23) bx = 23.5;
+        {range(state.M).map((i) => {
+          let x = state.blocchi[i][0] * 8 + 7.5;
+          let y = state.blocchi[i][1] * hf;
+          if (state.blocchi[i][0] === 1) {
+            if (i >= state.pos[1] && bx < 23) bx = 23.5;
             bx += wf + 1;
             x = bx;
-            y = hiddenState.pos[3] * hf + 0.5;
+            y = state.pos[3] * hf + 0.5;
           }
           return (
             <Rectangle
@@ -88,9 +88,9 @@ export default function Visualizer({ variables }) {
       </Canvas>
       <Variables
         variables={{
-          sinistra: hiddenState.pos[0] + "/" + hiddenState.S,
-          destra: hiddenState.pos[2] + "/" + hiddenState.D,
-          blocchetti: hiddenState.rimasti + "/" + hiddenState.M,
+          sinistra: state.pos[0] + "/" + state.S,
+          destra: state.pos[2] + "/" + state.D,
+          blocchetti: state.rimasti + "/" + state.M,
           ...blocklyVariables,
         }}
       />

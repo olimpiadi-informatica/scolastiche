@@ -15,24 +15,24 @@ const balls = import.meta.glob("./asy/ball*.asy", {
 });
 
 export default function Visualizer({ variables }) {
-  const { blocklyVariables, hiddenState } = variables;
+  const { blocklyVariables, state } = variables;
 
   function position(i) {
-    const batch = hiddenState.N > 20 ? 9 : 4;
-    const step = hiddenState.N > 20 ? 0.2 : 0.4;
+    const batch = state.N > 20 ? 9 : 4;
+    const step = state.N > 20 ? 0.2 : 0.4;
     let p = [0, 3];
-    if (i >= hiddenState.pos) {
-      p = [0.35 * (i - hiddenState.pos) + 2.4, 1.4];
-    } else if (hiddenState.placement[i] > 0) {
-      const col = (hiddenState.placement[i] - 1) % batch;
-      const row = (hiddenState.placement[i] - 1 - col) / batch;
+    if (i >= state.pos) {
+      p = [0.35 * (i - state.pos) + 2.4, 1.4];
+    } else if (state.placement[i] > 0) {
+      const col = (state.placement[i] - 1) % batch;
+      const row = (state.placement[i] - 1 - col) / batch;
       p = [col * step + 0.08, 1.27 - row * 0.4];
     } else {
-      const row = -hiddenState.placement[i] - 1;
+      const row = -state.placement[i] - 1;
       const col = ((7 * row) % 11) - 5;
       p = [1.6 + col * (0.04 + row * 0.001), 2.7 - row * 0.06];
     }
-    if (hiddenState.balls[i] % 2) p[1] -= 0.14;
+    if (state.balls[i] % 2) p[1] -= 0.14;
     return p;
   }
 
@@ -40,10 +40,10 @@ export default function Visualizer({ variables }) {
     <>
       <Canvas scale={130}>
         <Sprite src={shelf} alt="Scaffale" x={0} y={0.2} />
-        {range(hiddenState.N).map((i) => (
+        {range(state.N).map((i) => (
           <Sprite
             key={i}
-            src={balls[`./asy/ball${hiddenState.balls[i]}.asy`]}
+            src={balls[`./asy/ball${state.balls[i]}.asy`]}
             alt="Pallone"
             x={position(i)[0]}
             y={position(i)[1]}

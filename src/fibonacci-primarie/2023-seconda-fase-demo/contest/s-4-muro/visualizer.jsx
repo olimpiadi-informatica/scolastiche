@@ -13,7 +13,7 @@ const paints = import.meta.glob("./asy/paint*.asy", {
 });
 
 export default function Visualizer({ variables }) {
-  const { blocklyVariables, hiddenState } = variables;
+  const { blocklyVariables, state } = variables;
 
   const colors = [
     "#ffffff",
@@ -33,25 +33,25 @@ export default function Visualizer({ variables }) {
   return (
     <>
       <Canvas scale={40}>
-        {range(hiddenState.N).map((i) => (
+        {range(state.N).map((i) => (
           <Rectangle
             key={i}
-            color={colors[hiddenState.muro[i]]}
+            color={colors[state.muro[i]]}
             width={1}
             height={4}
             x={i + 2}
             y={0}
           />
         ))}
-        <Sprite src={bunny} alt="Bunny" x={1 + hiddenState.pos} y={1.4} />
+        <Sprite src={bunny} alt="Bunny" x={1 + state.pos} y={1.4} />
         <Sprite
-          src={paints[`./asy/paint${Math.min(hiddenState.i + 1, hiddenState.C)}.asy`]}
+          src={paints[`./asy/paint${Math.min(state.i + 1, state.C)}.asy`]}
           alt="Vernice"
           x={0}
           y={3}
         />
       </Canvas>
-      <Variables variables={{ colori: hiddenState.C, ...blocklyVariables }} />
+      <Variables variables={{ colori: state.C, ...blocklyVariables }} />
     </>
   );
 }

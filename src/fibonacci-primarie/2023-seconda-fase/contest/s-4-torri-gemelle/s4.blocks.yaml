@@ -13,7 +13,7 @@
   colour: 20
   tooltip: altezza della colonna di sinistra da costruire
   helpUrl: ""
-  js: hiddenState.S
+  js: state.S
 
 - type: D
   message0: D
@@ -21,7 +21,7 @@
   colour: 20
   tooltip: altezza della colonna di destra da costruire
   helpUrl: ""
-  js: hiddenState.D
+  js: state.D
 
 - type: M
   message0: M
@@ -29,7 +29,7 @@
   colour: 20
   tooltip: numero di blocchetti nel set da costruzioni
   helpUrl: ""
-  js: hiddenState.M
+  js: state.M
 
 - type: altezza colonna destra
   message0: altezza colonna destra
@@ -37,7 +37,7 @@
   colour: 20
   tooltip: altezza corrente della colonna di destra
   helpUrl: ""
-  js: hiddenState.pos[2]
+  js: state.pos[2]
 
 - type: altezza colonna sinistra
   message0: altezza colonna sinistra
@@ -45,7 +45,7 @@
   colour: 20
   tooltip: altezza corrente della colonna di sinistra
   helpUrl: ""
-  js: hiddenState.pos[0]
+  js: state.pos[0]
 
 - type: impila blocchetto a destra
   message0: impila blocchetto %1 a destra
@@ -60,15 +60,15 @@
   helpUrl: ""
   js: |
     (function(i) {
-      hiddenState.orient = 1;
-      hiddenState.pos[1] = i;
-      if (hiddenState.blocchi[i-1][0] !== 1)
+      state.orient = 1;
+      state.pos[1] = i;
+      if (state.blocchi[i-1][0] !== 1)
         exit(false, "hai già usato il blocchetto " + i);
-      hiddenState.rimasti -= 1;
-      hiddenState.pos[3] = hiddenState.pos[2] + (i-4)/2;
-      hiddenState.blocchi[i-1] = [2, hiddenState.pos[2]];
-      hiddenState.pos[2] += i;
-      if (hiddenState.pos[2] > hiddenState.D)
+      state.rimasti -= 1;
+      state.pos[3] = state.pos[2] + (i-4)/2;
+      state.blocchi[i-1] = [2, state.pos[2]];
+      state.pos[2] += i;
+      if (state.pos[2] > state.D)
         exit(false, "la colonna di destra è troppo alta");
     })(%0);
 
@@ -85,15 +85,15 @@
   helpUrl: ""
   js: |
     (function(i) {
-      hiddenState.orient = 0;
-      hiddenState.pos[1] = i;
-      if (hiddenState.blocchi[i-1][0] !== 1)
+      state.orient = 0;
+      state.pos[1] = i;
+      if (state.blocchi[i-1][0] !== 1)
         exit(false, "hai già usato il blocchetto " + i);
-      hiddenState.rimasti -= 1;
-      hiddenState.pos[3] = hiddenState.pos[0] + (i-4)/2;
-      hiddenState.blocchi[i-1] = [0, hiddenState.pos[0]];
-      hiddenState.pos[0] += i;
-      if (hiddenState.pos[0] > hiddenState.S)
+      state.rimasti -= 1;
+      state.pos[3] = state.pos[0] + (i-4)/2;
+      state.blocchi[i-1] = [0, state.pos[0]];
+      state.pos[0] += i;
+      if (state.pos[0] > state.S)
         exit(false, "la colonna di sinistra è troppo alta");
     })(%0);
 
@@ -104,8 +104,8 @@
   tooltip: termina il procedimento
   helpUrl: ""
   js: |
-    if (hiddenState.pos[0] < hiddenState.S)
+    if (state.pos[0] < state.S)
       exit(false, "la colonna di sinistra è troppo bassa");
-    if (hiddenState.pos[2] < hiddenState.D)
+    if (state.pos[2] < state.D)
       exit(false, "la colonna di destra è troppo bassa");
     exit(true, "hai costruito bene le colonne, complimenti!");

@@ -14,9 +14,9 @@ const bunnies = import.meta.glob("./asy/bunnies*.asy", {
 });
 
 export default function Visualizer({ variables }) {
-  const { blocklyVariables, hiddenState } = variables;
+  const { blocklyVariables, state } = variables;
 
-  let { N, M, K, cuts } = hiddenState;
+  let { N, M, K, cuts } = state;
   if (N > 20 || M > 20) {
     return <div className="text-slate-800 p-4">La visualizzazione è disponibile solo per i primi 5 livelli.</div>;
   }

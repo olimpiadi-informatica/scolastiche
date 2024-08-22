@@ -13,7 +13,7 @@
   colour: 20
   tooltip: larghezza della tavoletta rimasta
   helpUrl: ""
-  js: hiddenState.N
+  js: state.N
 
 - type: altezza
   message0: altezza
@@ -21,7 +21,7 @@
   colour: 20
   tooltip: altezza della tavoletta rimasta
   helpUrl: ""
-  js: hiddenState.M
+  js: state.M
 
 - type: compagni
   message0: compagni
@@ -29,7 +29,7 @@
   colour: 20
   tooltip: numero di compagni rimasti
   helpUrl: ""
-  js: hiddenState.K
+  js: state.K
 
 - type: spezza in orizzontale
   message0: spezza %1 quadratini in orizzontale
@@ -46,10 +46,10 @@
     (function(i) {
       if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i <= 0 || Math.floor(i) != i) exit(false, "numero di righe " + i + " non valido");
-      if (i > hiddenState.M) exit(false, "non ci sono " + i + " righe");
-      hiddenState.M -= i;
-      hiddenState.K -= 1;
-      hiddenState.cuts.push(i);
+      if (i > state.M) exit(false, "non ci sono " + i + " righe");
+      state.M -= i;
+      state.K -= 1;
+      state.cuts.push(i);
     })(%0);
 
 - type: spezza in verticale
@@ -67,10 +67,10 @@
     (function(i) {
       if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i <= 0 || Math.floor(i) != i) exit(false, "numero di colonne " + i + " non valido");
-      if (i > hiddenState.N) exit(false, "non ci sono " + i + " colonne");
-      hiddenState.N -= i;
-      hiddenState.K -= 1;
-      hiddenState.cuts.push(-i);
+      if (i > state.N) exit(false, "non ci sono " + i + " colonne");
+      state.N -= i;
+      state.K -= 1;
+      state.cuts.push(-i);
     })(%0);
 
 - type: termina
@@ -80,8 +80,8 @@
   tooltip: termina il procedimento
   helpUrl: ""
   js: |
-    if (hiddenState.K > 0)
+    if (state.K > 0)
       exit(false, "ci sono ancora compagni che vogliono cioccolato");
-    if (hiddenState.N*hiddenState.M < hiddenState.sol)
+    if (state.N*state.M < state.sol)
       exit(false, "potevi tenerti più cioccolato");
     exit(true, "hai distribuito bene il cioccolato, complimenti!");

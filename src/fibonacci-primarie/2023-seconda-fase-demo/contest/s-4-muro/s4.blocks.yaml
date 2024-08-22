@@ -21,16 +21,16 @@
   js: |
     (function(i) {
       if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
-      if (i < 1 || i > hiddenState.N)
+      if (i < 1 || i > state.N)
         exit(false, "il pannello " + i + " non esiste");
-      hiddenState.pos = i-1;
-      if (hiddenState.i >= hiddenState.C)
+      state.pos = i-1;
+      if (state.i >= state.C)
         exit(false, "sono finiti i colori")
-      if (i > hiddenState.N - hiddenState.L[hiddenState.i] + 1)
+      if (i > state.N - state.L[state.i] + 1)
         exit(false, "non c'è abbastanza spazio dal pannello " + i);
-      for (var j = 0; j < hiddenState.L[hiddenState.i]; j++)
-        hiddenState.muro[i+j-1] = hiddenState.i+1;
-      hiddenState.i++;
+      for (var j = 0; j < state.L[state.i]; j++)
+        state.muro[i+j-1] = state.i+1;
+      state.i++;
     })(%0);
 
 - type: pannelli da pitturare
@@ -39,7 +39,7 @@
   colour: 20
   tooltip: Numero di pannelli da pitturare
   helpUrl: ""
-  js: hiddenState.L[hiddenState.i]
+  js: state.L[state.i]
 
 - type: N
   message0: N
@@ -47,7 +47,7 @@
   colour: 20
   tooltip: Numero di pannelli nel muro
   helpUrl: ""
-  js: hiddenState.N
+  js: state.N
 
 - type: C
   message0: C
@@ -55,7 +55,7 @@
   colour: 20
   tooltip: Numero di colori
   helpUrl: ""
-  js: hiddenState.C
+  js: state.C
 
 - type: metti via i pennelli
   message0: metti via i pennelli
@@ -65,14 +65,14 @@
   helpUrl: ""
   js: |
     var found = [];
-    for (var i=0; i<=hiddenState.C; ++i)
+    for (var i=0; i<=state.C; ++i)
       found[i] = 0;
-    for (var i=0; i<hiddenState.N; ++i)
-      found[hiddenState.muro[i]] = 1;
+    for (var i=0; i<state.N; ++i)
+      found[state.muro[i]] = 1;
     var tot = 0;
-    for (var i=1; i<=hiddenState.C; ++i)
+    for (var i=1; i<=state.C; ++i)
       tot += found[i];
-    if (tot == hiddenState.sol)
+    if (tot == state.sol)
       exit(true, "si vedono tanti colori, bravo!");
     else
-      exit(false, "si poteva far vedere " + hiddenState.sol + " colori");
+      exit(false, "si poteva far vedere " + state.sol + " colori");

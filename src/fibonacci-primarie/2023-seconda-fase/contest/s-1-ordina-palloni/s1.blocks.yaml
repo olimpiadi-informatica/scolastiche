@@ -13,7 +13,7 @@
   colour: 20
   tooltip: numero totale di palloni da sistemare
   helpUrl: ""
-  js: hiddenState.N
+  js: state.N
 
 - type: pallone da calcio
   message0: pallone da calcio
@@ -22,7 +22,7 @@
   tooltip: il prossimo pallone è da calcio?
   helpUrl: ""
   js: |
-    hiddenState.pos < hiddenState.N ? hiddenState.balls[hiddenState.pos] < 2 : exit(false, "non ci sono più palloni")
+    state.pos < state.N ? state.balls[state.pos] < 2 : exit(false, "non ci sono più palloni")
 
 - type: pallone gonfio
   message0: pallone gonfio
@@ -31,7 +31,7 @@
   tooltip: il prossimo pallone è gonfio?
   helpUrl: ""
   js: |
-    hiddenState.pos < hiddenState.N ? hiddenState.balls[hiddenState.pos] % 2 : exit(false, "non ci sono più palloni")
+    state.pos < state.N ? state.balls[state.pos] % 2 : exit(false, "non ci sono più palloni")
 
 - type: tieni
   message0: tieni
@@ -41,12 +41,12 @@
   tooltip: metti da parte il prossimo pallone
   helpUrl: ""
   js: |
-    if (hiddenState.pos == hiddenState.N)
+    if (state.pos == state.N)
       exit(false, "non ci sono più palloni");
-    hiddenState.deposited += 1;
-    hiddenState.placement[hiddenState.pos] = hiddenState.deposited;
-    hiddenState.pos += 1;
-    if (hiddenState.balls[hiddenState.pos-1] === 2)
+    state.deposited += 1;
+    state.placement[state.pos] = state.deposited;
+    state.pos += 1;
+    if (state.balls[state.pos-1] === 2)
       exit(false, "questo pallone era da buttare");
 
 - type: butta
@@ -57,12 +57,12 @@
   tooltip: butta il prossimo pallone
   helpUrl: ""
   js: |
-    if (hiddenState.pos == hiddenState.N)
+    if (state.pos == state.N)
       exit(false, "non ci sono più palloni");
-    hiddenState.trashed += 1;
-    hiddenState.placement[hiddenState.pos] = -hiddenState.trashed;
-    hiddenState.pos += 1;
-    if (hiddenState.balls[hiddenState.pos-1] !== 2)
+    state.trashed += 1;
+    state.placement[state.pos] = -state.trashed;
+    state.pos += 1;
+    if (state.balls[state.pos-1] !== 2)
       exit(false, "questo pallone era da tenere");
 
 - type: termina
@@ -72,6 +72,6 @@
   tooltip: termina il procedimento
   helpUrl: ""
   js: |
-    if (hiddenState.pos < hiddenState.N)
+    if (state.pos < state.N)
       exit(false, "non hai finito di sistemare i palloni");
     exit(true, "hai sistemato i palloni, complimenti!");

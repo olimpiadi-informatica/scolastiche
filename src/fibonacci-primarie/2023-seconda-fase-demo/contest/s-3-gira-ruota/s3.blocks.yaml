@@ -14,7 +14,7 @@
   colour: 20
   tooltip: Gira la ruota di uno spicchio
   helpUrl: ""
-  js: hiddenState.pos++;
+  js: state.pos++;
 
 - type: carote vinte
   message0: premio di %1
@@ -29,9 +29,9 @@
   js: |
     (function(i) {
       if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
-      if (i < 1 || i > hiddenState.N)
+      if (i < 1 || i > state.N)
         exit(false, "l'amico " + i + " non esiste");
-      return hiddenState.prizes[(hiddenState.friends[i-1]-hiddenState.pos+hiddenState.S)%hiddenState.S];
+      return state.prizes[(state.friends[i-1]-state.pos+state.S)%state.S];
     })(%0)
 
 - type: N
@@ -40,7 +40,7 @@
   colour: 20
   tooltip: Numero di amici di Tip-Tap
   helpUrl: ""
-  js: hiddenState.N
+  js: state.N
 
 - type: C
   message0: C
@@ -48,7 +48,7 @@
   colour: 20
   tooltip: Numero di carote raccolte da Tip-Tap
   helpUrl: ""
-  js: hiddenState.C
+  js: state.C
 
 - type: S
   message0: S
@@ -56,7 +56,7 @@
   colour: 20
   tooltip: Numero di spicchi della ruota
   helpUrl: ""
-  js: hiddenState.S
+  js: state.S
 
 - type: ferma ruota
   message0: ferma la ruota
@@ -65,9 +65,9 @@
   tooltip: Ferma la ruota
   helpUrl: ""
   js: |
-    var i = hiddenState.good_pos.indexOf(hiddenState.pos);
+    var i = state.good_pos.indexOf(state.pos);
     if (i == 0)
-      exit(true, "hai speso meno di " + hiddenState.C + " carote, bravo!");
+      exit(true, "hai speso meno di " + state.C + " carote, bravo!");
     else if (i != -1)
       exit(false, "potevi far girare meno la ruota");
     else

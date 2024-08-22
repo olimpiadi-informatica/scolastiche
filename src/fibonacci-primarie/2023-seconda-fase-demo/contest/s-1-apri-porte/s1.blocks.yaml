@@ -15,11 +15,11 @@
   tooltip: Vai avanti
   helpUrl: ""
   js: |
-    if(hiddenState.pos < hiddenState.N && hiddenState.door[hiddenState.pos] === 1 && !hiddenState.open[hiddenState.pos]) {
+    if(state.pos < state.N && state.door[state.pos] === 1 && !state.open[state.pos]) {
       exit(false, "non puoi avanzare, c\'è una porta chiusa");
     }
-    hiddenState.pos += 1;
-    if(hiddenState.pos > hiddenState.N) {
+    state.pos += 1;
+    if(state.pos > state.N) {
       exit(false, "hai superato la carota");
     }
 
@@ -29,7 +29,7 @@
   colour: 20
   tooltip: vedi porta chiusa
   helpUrl: ""
-  js: hiddenState.pos < hiddenState.N && hiddenState.door[hiddenState.pos] === 1 && !hiddenState.open[hiddenState.pos]
+  js: state.pos < state.N && state.door[state.pos] === 1 && !state.open[state.pos]
 
 - type: N
   message0: N
@@ -37,7 +37,7 @@
   colour: 20
   tooltip: distanza iniziale dalla carota
   helpUrl: ""
-  js: hiddenState.N
+  js: state.N
 
 - type: apri porta
   message0: apri porta
@@ -47,10 +47,10 @@
   tooltip: apri porta
   helpUrl: ""
   js: |
-    if(hiddenState.pos == hiddenState.N || hiddenState.door[hiddenState.pos] === 0 || hiddenState.open[hiddenState.pos]) {
+    if(state.pos == state.N || state.door[state.pos] === 0 || state.open[state.pos]) {
       exit(false, "non ci sono porte da aprire");
     }
-    hiddenState.open[hiddenState.pos] = true;
+    state.open[state.pos] = true;
 
 - type: mangia carota
   message0: mangia carota
@@ -59,8 +59,8 @@
   tooltip: mangia carota
   helpUrl: ""
   js: |
-    if(hiddenState.pos !== hiddenState.N) {
+    if(state.pos !== state.N) {
       exit(false, "non ci sono carote da mangiare");
     }
-    hiddenState.eaten = true;
+    state.eaten = true;
     exit(true, "hai mangiato la carota, bravo!");

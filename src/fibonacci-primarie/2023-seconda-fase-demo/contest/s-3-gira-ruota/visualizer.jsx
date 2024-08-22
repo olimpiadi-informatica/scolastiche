@@ -31,9 +31,9 @@ function Sector({ color, from, portion, text }) {
 }
 
 export default function Visualizer({ variables }) {
-  const { blocklyVariables, hiddenState } = variables;
+  const { blocklyVariables, state } = variables;
 
-  const { S, N, C, pos, prizes, friends } = hiddenState;
+  const { S, N, C, pos, prizes, friends } = state;
 
   const colors = [
     "#4093b0",

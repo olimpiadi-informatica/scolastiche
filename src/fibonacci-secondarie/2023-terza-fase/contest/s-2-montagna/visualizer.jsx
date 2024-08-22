@@ -9,10 +9,10 @@ import offcharge from "./asy/offcharge.asy?w=20";
 import oncharge from "./asy/oncharge.asy?w=20";
 
 export default function Visualizer({ variables }) {
-  const { blocklyVariables, hiddenState } = variables;
+  const { blocklyVariables, state } = variables;
 
   /**@type {number[]} */
-  const H = [0, ...hiddenState.H];
+  const H = [0, ...state.H];
   const N = H.length;
 
   if (N > 40) {
@@ -53,15 +53,15 @@ export default function Visualizer({ variables }) {
         </Rectangle>
         <Sprite
           src={bunny}
-          x={hiddenState.posx + 0.8}
-          y={p(maxH - H[hiddenState.posx + 1])}
+          x={state.posx + 0.8}
+          y={p(maxH - H[state.posx + 1])}
           alt="Tip-Tap"
           follow
         />
         {H.slice(1).map((h, i) => (
           <Sprite
             key={i}
-            src={i === hiddenState.posx && hiddenState.charging ? oncharge : offcharge}
+            src={i === state.posx && state.charging ? oncharge : offcharge}
             x={i + 0.6}
             y={p(maxH - h) + 0.1}
             alt="Stazione di ricarica"
@@ -70,9 +70,9 @@ export default function Visualizer({ variables }) {
       </Canvas>
       <Variables
         variables={{
-          N: hiddenState.N,
-          energia: hiddenState.energy,
-          tempo: hiddenState.time,
+          N: state.N,
+          energia: state.energy,
+          tempo: state.time,
           ...blocklyVariables,
         }}
       />
