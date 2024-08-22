@@ -14,7 +14,11 @@ export default function Visualizer({ variables, state }) {
   const N = H.length;
 
   if (N > 40) {
-    return <div className="text-slate-800 p-4">La visualizzazione è disponibile solo per i primi 5 livelli.</div>;
+    return (
+      <div className="text-slate-800 p-4">
+        La visualizzazione è disponibile solo per i primi 5 livelli.
+      </div>
+    );
   }
 
   const maxH = Math.max(...H);
@@ -36,6 +40,7 @@ export default function Visualizer({ variables, state }) {
             xmlns="http://www.w3.org/2000/svg"
             viewBox={`0 -0.9 ${N} ${p(maxH) + 1}`}
             className="-scale-y-100">
+            <title>I conigli attraversano la montagna</title>
             <path d={mountains} className="fill-amber-800/80" />
             {H.slice(1).map((h, i) => {
               if (h < H[i] || h < H[i + 2]) return;

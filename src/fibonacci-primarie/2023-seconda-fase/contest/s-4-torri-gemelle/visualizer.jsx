@@ -54,13 +54,7 @@ export default function Visualizer({ variables, state }) {
           x={7 - (wf + 1) * state.M}
           y={state.pos[3] * hf}
         />
-        <Sprite
-          src={bunnies[state.orient]}
-          alt="Bunny"
-          x={14}
-          y={state.pos[3] * hf}
-          follow
-        />
+        <Sprite src={bunnies[state.orient]} alt="Bunny" x={14} y={state.pos[3] * hf} follow />
         {range(state.M).map((i) => {
           let x = state.blocchi[i][0] * 8 + 7.5;
           let y = state.blocchi[i][1] * hf;
@@ -86,9 +80,9 @@ export default function Visualizer({ variables, state }) {
       </Canvas>
       <Variables
         variables={{
-          sinistra: state.pos[0] + "/" + state.S,
-          destra: state.pos[2] + "/" + state.D,
-          blocchetti: state.rimasti + "/" + state.M,
+          sinistra: `${state.pos[0]}/${state.S}`,
+          destra: `${state.pos[2]}/${state.D}`,
+          blocchetti: `${state.rimasti}/${state.M}`,
           ...variables,
         }}
       />

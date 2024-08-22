@@ -2,7 +2,7 @@
 
 import {
   Fragment,
-  ReactNode,
+  type ReactNode,
   createContext,
   useCallback,
   useContext,
@@ -12,6 +12,8 @@ import {
   useRef,
   useState,
 } from "react";
+
+import clsx from "clsx";
 
 type BoundingBox = {
   x: number;
@@ -95,7 +97,7 @@ export function Sprite({ src, alt, x = 0, y = 0, rotation, follow, className }: 
   useEffect(() => {
     setBoundingBox(id, { x: x * scale, width: +src.width, y: y * scale, height: +src.height });
     return () => setBoundingBox(id, { x: 0, width: 0, y: 0, height: 0 });
-  }, [x, y, src, follow, scale, id, setBoundingBox]);
+  }, [x, y, src, scale, id, setBoundingBox]);
 
   useEffect(() => {
     if (!pos.current.changed || !follow) return;
@@ -112,9 +114,9 @@ export function Sprite({ src, alt, x = 0, y = 0, rotation, follow, className }: 
   return (
     <img
       ref={ref}
-      alt={alt}
       {...src}
-      className={`absolute transition-all ${className ?? ""}`}
+      alt={alt}
+      className={clsx("absolute transition-all", className)}
       style={{
         top: `${y * scale}px`,
         left: `${x * scale}px`,

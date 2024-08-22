@@ -1,4 +1,4 @@
-import { Student } from "@olinfo/quizms/student";
+import type { Student } from "@olinfo/quizms/student";
 import clsx from "clsx";
 import { isFuture } from "date-fns";
 import { kebabCase } from "lodash-es";
@@ -10,10 +10,8 @@ export function Score({ edition }: { edition: string }) {
 
   if (student.finishedAt && isFuture(student.finishedAt)) {
     return (
-      <div className="rounded-lg px-2 text-sm bg-warning text-warning-content">
-        in corso...
-      </div>
-    )
+      <div className="rounded-lg px-2 text-sm bg-warning text-warning-content">in corso...</div>
+    );
   }
 
   const score = student.score;

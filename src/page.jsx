@@ -11,12 +11,6 @@ export const metadata = {
     "Raccolta delle prove delle gare scolastiche delle Olimpiadi Italiane di Informatica e dei Giochi di Fibonacci",
 };
 
-const links = {
-  "Sito ufficiale delle Olimpiadi Italiane di Informatica": "https://olimpiadi-informatica.it",
-  "Sito ufficiale dei Giochi di Fibonacci": "https://fibonacci.olinfo.it",
-  "Indice delle risorse per le Olimpiadi di Informatica": "https://olinfo.it",
-};
-
 export default function App() {
   return (
     <>

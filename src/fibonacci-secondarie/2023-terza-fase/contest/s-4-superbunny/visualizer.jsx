@@ -8,7 +8,11 @@ import platform from "./asy/platform.asy?w=90";
 export default function Visualizer({ variables, state }) {
   const { N, A, VA, B, VB } = state;
   if (N > 50) {
-    return <div className="text-slate-800 p-4">La visualizzazione è disponibile solo per i primi 5 livelli.</div>;
+    return (
+      <div className="text-slate-800 p-4">
+        La visualizzazione è disponibile solo per i primi 5 livelli.
+      </div>
+    );
   }
 
   const maxH = Math.max(...A);

@@ -5,36 +5,32 @@
   "scripts": {
     "postinstall": "playwright install chromium",
     "dev": "quizms dev",
-    "fmt": "prettier --write .",
+    "lint": "biome check --write",
     "build": "quizms build --training"
   },
   "dependencies": {
     "@mdx-js/react": "^3.0",
     "@olinfo/quizms": "^1.0",
-    "@olinfo/react-components": "^0.3",
+    "@olinfo/react-components": "^0.7",
     "@olinfo/tailwind": "^0.1",
+    "@types/lodash-es": "^4.17",
     "@types/react": "^18",
     "autoprefixer": "^10.4",
     "clsx": "^2.1",
-    "cookie": "^0.6",
     "date-fns": "^3.6",
-    "jwt-decode": "^4.0",
     "lodash-es": "^4.17",
-    "lucide-react": ">=0.395, <1",
     "postcss": "^8.4",
     "react": "^18.2",
     "react-dom": "^18.2",
     "wouter": "^3.1.3"
   },
   "devDependencies": {
-    "@olinfo/eslint": "^0.2.0",
-    "@olinfo/prettier": "^0.1"
+    "@biomejs/biome": "^1.8"
   },
   "postcss": {
     "plugins": {
       "tailwindcss": {},
       "autoprefixer": {}
     }
-  },
-  "prettier": "@olinfo/prettier"
+  }
 }

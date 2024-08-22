@@ -16,7 +16,11 @@ const bunnies = import.meta.glob("./asy/bunnies*.asy", {
 export default function Visualizer({ variables, state }) {
   let { N, M, K, cuts } = state;
   if (N > 20 || M > 20) {
-    return <div className="text-slate-800 p-4">La visualizzazione è disponibile solo per i primi 5 livelli.</div>;
+    return (
+      <div className="text-slate-800 p-4">
+        La visualizzazione è disponibile solo per i primi 5 livelli.
+      </div>
+    );
   }
 
   const blocks = [];
@@ -62,7 +66,7 @@ export default function Visualizer({ variables, state }) {
         <Sprite src={bunny} alt="Tip-Tap" follow />
         {range(K).map((i) => (
           <Sprite
-            key={"bunny-" + i}
+            key={i}
             src={bunnies[`./asy/bunnies${i % len}.asy`]}
             alt="Bunny"
             x={2 + N * (0.5 + sep) + ((11 * i) % 19) * 0.4}

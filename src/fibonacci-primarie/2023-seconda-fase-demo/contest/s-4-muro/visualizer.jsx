@@ -32,14 +32,7 @@ export default function Visualizer({ variables, state }) {
     <>
       <Canvas scale={40}>
         {range(state.N).map((i) => (
-          <Rectangle
-            key={i}
-            color={colors[state.muro[i]]}
-            width={1}
-            height={4}
-            x={i + 2}
-            y={0}
-          />
+          <Rectangle key={i} color={colors[state.muro[i]]} width={1} height={4} x={i + 2} y={0} />
         ))}
         <Sprite src={bunny} alt="Bunny" x={1 + state.pos} y={1.4} />
         <Sprite
