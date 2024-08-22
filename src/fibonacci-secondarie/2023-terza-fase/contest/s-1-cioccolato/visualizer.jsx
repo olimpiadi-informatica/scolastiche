@@ -13,9 +13,7 @@ const bunnies = import.meta.glob("./asy/bunnies*.asy", {
   query: { w: 50 },
 });
 
-export default function Visualizer({ variables }) {
-  const { variables, state } = variables;
-
+export default function Visualizer({ variables, state }) {
   let { N, M, K, cuts } = state;
   if (N > 20 || M > 20) {
     return <div className="text-slate-800 p-4">La visualizzazione è disponibile solo per i primi 5 livelli.</div>;

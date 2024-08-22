@@ -30,9 +30,7 @@ function Sector({ color, from, portion, text }) {
   );
 }
 
-export default function Visualizer({ variables }) {
-  const { variables, state } = variables;
-
+export default function Visualizer({ variables, state }) {
   const { S, N, C, pos, prizes, friends } = state;
 
   const colors = [

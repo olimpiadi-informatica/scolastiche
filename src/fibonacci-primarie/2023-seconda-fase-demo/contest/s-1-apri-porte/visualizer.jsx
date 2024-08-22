@@ -12,9 +12,7 @@ import closedDoor from "./asy/closed-door.asy?w=55";
 import openedDoor from "./asy/opened-door.asy?w=100";
 import rock from "./asy/rock.asy?w=93";
 
-export default function Visualizer({ variables }) {
-  const { variables, state } = variables;
-
+export default function Visualizer({ variables, state }) {
   return (
     <>
       <Canvas scale={130}>

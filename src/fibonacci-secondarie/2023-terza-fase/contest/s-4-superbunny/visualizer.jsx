@@ -5,9 +5,7 @@ import { Canvas, Rectangle, Sprite, Variables } from "~/utils/visualizer";
 import bunny from "./asy/bunny.asy?w=50";
 import platform from "./asy/platform.asy?w=90";
 
-export default function Visualizer({ variables }) {
-  const { variables, state } = variables;
-
+export default function Visualizer({ variables, state }) {
   const { N, A, VA, B, VB } = state;
   if (N > 50) {
     return <div className="text-slate-800 p-4">La visualizzazione è disponibile solo per i primi 5 livelli.</div>;

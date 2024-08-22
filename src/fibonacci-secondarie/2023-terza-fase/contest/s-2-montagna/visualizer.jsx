@@ -8,9 +8,7 @@ import bunny from "./asy/bunny.asy?w=50";
 import offcharge from "./asy/offcharge.asy?w=20";
 import oncharge from "./asy/oncharge.asy?w=20";
 
-export default function Visualizer({ variables }) {
-  const { variables, state } = variables;
-
+export default function Visualizer({ variables, state }) {
   /**@type {number[]} */
   const H = [0, ...state.H];
   const N = H.length;

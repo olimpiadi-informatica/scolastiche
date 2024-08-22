@@ -8,9 +8,7 @@ import bunny from "./asy/bunny.asy?w=40";
 import carrot from "./asy/carrot.asy?w=25";
 import hay from "./asy/hay.asy?w=60";
 
-export default function Visualizer({ variables }) {
-  const { variables, state } = variables;
-
+export default function Visualizer({ variables, state }) {
   return (
     <>
       <Canvas gravity="bottom" scale={10}>

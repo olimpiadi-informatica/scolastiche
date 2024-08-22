@@ -9,9 +9,7 @@ import bunny from "./asy/bunny.asy?w=66";
 import fibonacci from "./asy/fibonacci.asy?h=100";
 import turing from "./asy/turing.asy?h=100";
 
-export default function Visualizer({ variables }) {
-  const { variables, state } = variables;
-
+export default function Visualizer({ variables, state }) {
   const teams = [fibonacci, turing];
 
   return (

@@ -9,9 +9,7 @@ import { Canvas, Rectangle, Sprite, Variables } from "~/utils/visualizer";
 import bunny from "./asy/bunny.asy?w=66";
 import stairs from "./asy/stairs.asy?w=80";
 
-export default function Visualizer({ variables }) {
-  const { variables, state: state } = variables;
-
+export default function Visualizer({ variables, state }) {
   const colors = [
     "#4093b0",
     "#bf4eb4",

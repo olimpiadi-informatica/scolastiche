@@ -10,9 +10,7 @@ import stairs1 from "./asy/stairs1.asy?w=80";
 import stairs2 from "./asy/stairs2.asy?w=80";
 import stairs3 from "./asy/stairs3.asy?w=80";
 
-export default function Visualizer({ variables }) {
-  const { variables, state } = variables;
-
+export default function Visualizer({ variables, state }) {
   const stairs = [stairs1, stairs2, stairs3][state.M <= 6 ? 0 : state.M <= 14 ? 1 : 2];
   const bunnies = [bunny_left, bunny_right];
   const hf = 2;

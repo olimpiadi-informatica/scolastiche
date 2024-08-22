@@ -12,9 +12,7 @@ const paints = import.meta.glob("./asy/paint*.asy", {
   query: { w: 40 },
 });
 
-export default function Visualizer({ variables }) {
-  const { variables, state } = variables;
-
+export default function Visualizer({ variables, state }) {
   const colors = [
     "#ffffff",
     "#0000ff",

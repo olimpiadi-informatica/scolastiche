@@ -14,9 +14,7 @@ const balls = import.meta.glob("./asy/ball*.asy", {
   query: { w: 40 },
 });
 
-export default function Visualizer({ variables }) {
-  const { variables, state } = variables;
-
+export default function Visualizer({ variables, state }) {
   function position(i) {
     const batch = state.N > 20 ? 9 : 4;
     const step = state.N > 20 ? 0.2 : 0.4;
