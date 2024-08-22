@@ -14,7 +14,7 @@ const bunnies = import.meta.glob("./asy/bunnies*.asy", {
 });
 
 export default function Visualizer({ variables }) {
-  const { blocklyVariables, state } = variables;
+  const { variables, state } = variables;
 
   let { N, M, K, cuts } = state;
   if (N > 20 || M > 20) {
@@ -78,7 +78,7 @@ export default function Visualizer({ variables }) {
           larghezza: N,
           altezza: M,
           compagni: K,
-          ...blocklyVariables,
+          ...variables,
         }}
       />
     </>

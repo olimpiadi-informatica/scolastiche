@@ -9,7 +9,7 @@ import offcharge from "./asy/offcharge.asy?w=20";
 import oncharge from "./asy/oncharge.asy?w=20";
 
 export default function Visualizer({ variables }) {
-  const { blocklyVariables, state } = variables;
+  const { variables, state } = variables;
 
   /**@type {number[]} */
   const H = [0, ...state.H];
@@ -73,7 +73,7 @@ export default function Visualizer({ variables }) {
           N: state.N,
           energia: state.energy,
           tempo: state.time,
-          ...blocklyVariables,
+          ...variables,
         }}
       />
     </>

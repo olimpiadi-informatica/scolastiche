@@ -31,7 +31,7 @@ function Sector({ color, from, portion, text }) {
 }
 
 export default function Visualizer({ variables }) {
-  const { blocklyVariables, state } = variables;
+  const { variables, state } = variables;
 
   const { S, N, C, pos, prizes, friends } = state;
 
@@ -68,7 +68,7 @@ export default function Visualizer({ variables }) {
           />
         ))}
       </Canvas>
-      <Variables variables={{ carote: C, ...blocklyVariables }} />
+      <Variables variables={{ carote: C, ...variables }} />
     </>
   );
 }

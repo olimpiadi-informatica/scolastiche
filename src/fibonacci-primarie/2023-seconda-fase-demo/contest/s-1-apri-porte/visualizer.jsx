@@ -13,7 +13,7 @@ import openedDoor from "./asy/opened-door.asy?w=100";
 import rock from "./asy/rock.asy?w=93";
 
 export default function Visualizer({ variables }) {
-  const { blocklyVariables, state } = variables;
+  const { variables, state } = variables;
 
   return (
     <>
@@ -39,7 +39,7 @@ export default function Visualizer({ variables }) {
           y={state.eaten ? 0.37 : 0.77}
         />
       </Canvas>
-      <Variables variables={blocklyVariables} />
+      <Variables variables={variables} />
     </>
   );
 }

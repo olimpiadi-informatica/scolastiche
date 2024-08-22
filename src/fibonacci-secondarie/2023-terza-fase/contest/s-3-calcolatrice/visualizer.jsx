@@ -6,7 +6,7 @@ import bunny from "./asy/bunny.asy?w=100";
 import calcolatrice from "./calcolatrice.svg?w=200";
 
 export default function Visualizer({ variables }) {
-  const { blocklyVariables, state } = variables;
+  const { variables, state } = variables;
 
   if (state.N > 10_000) {
     return <div className="text-slate-800 p-4">La visualizzazione è disponibile solo per i primi 5 livelli.</div>;
@@ -34,7 +34,7 @@ export default function Visualizer({ variables }) {
           {state.N}
         </Rectangle>
       </Canvas>
-      <Variables variables={{ ...blocklyVariables }} />
+      <Variables variables={{ ...variables }} />
     </>
   );
 }

@@ -15,7 +15,7 @@ const balls = import.meta.glob("./asy/ball*.asy", {
 });
 
 export default function Visualizer({ variables }) {
-  const { blocklyVariables, state } = variables;
+  const { variables, state } = variables;
 
   function position(i) {
     const batch = state.N > 20 ? 9 : 4;
@@ -52,7 +52,7 @@ export default function Visualizer({ variables }) {
         <Sprite src={bunny} alt="Tip-Tap" x={1.9} y={0.7} follow />
         <Sprite src={trash} alt="Cestino" x={1.3} y={1.8} />
       </Canvas>
-      <Variables variables={blocklyVariables} />
+      <Variables variables={variables} />
     </>
   );
 }

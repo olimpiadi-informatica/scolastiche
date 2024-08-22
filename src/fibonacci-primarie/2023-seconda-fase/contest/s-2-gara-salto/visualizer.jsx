@@ -9,7 +9,7 @@ import carrot from "./asy/carrot.asy?w=25";
 import hay from "./asy/hay.asy?w=60";
 
 export default function Visualizer({ variables }) {
-  const { blocklyVariables, state } = variables;
+  const { variables, state } = variables;
 
   return (
     <>
@@ -32,7 +32,7 @@ export default function Visualizer({ variables }) {
           return <Sprite key={i} src={carrot} alt="Carota" x={x} y={y} />;
         })}
       </Canvas>
-      <Variables variables={{ ...blocklyVariables, pile: state.N }} />
+      <Variables variables={{ ...variables, pile: state.N }} />
     </>
   );
 }

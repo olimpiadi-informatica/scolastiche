@@ -13,7 +13,7 @@ const paints = import.meta.glob("./asy/paint*.asy", {
 });
 
 export default function Visualizer({ variables }) {
-  const { blocklyVariables, state } = variables;
+  const { variables, state } = variables;
 
   const colors = [
     "#ffffff",
@@ -51,7 +51,7 @@ export default function Visualizer({ variables }) {
           y={3}
         />
       </Canvas>
-      <Variables variables={{ colori: state.C, ...blocklyVariables }} />
+      <Variables variables={{ colori: state.C, ...variables }} />
     </>
   );
 }

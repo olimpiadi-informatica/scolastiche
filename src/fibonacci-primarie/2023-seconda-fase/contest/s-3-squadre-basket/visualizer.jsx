@@ -10,7 +10,7 @@ import fibonacci from "./asy/fibonacci.asy?h=100";
 import turing from "./asy/turing.asy?h=100";
 
 export default function Visualizer({ variables }) {
-  const { blocklyVariables, state } = variables;
+  const { variables, state } = variables;
 
   const teams = [fibonacci, turing];
 
@@ -48,7 +48,7 @@ export default function Visualizer({ variables }) {
       </Canvas>
       <Variables
         variables={{
-          ...blocklyVariables,
+          ...variables,
           Fibonacci: state.data[0].H.length - state.data[0].pos,
           Turing: state.data[1].H.length - state.data[1].pos,
         }}

@@ -6,7 +6,7 @@ import bunny from "./asy/bunny.asy?w=50";
 import platform from "./asy/platform.asy?w=90";
 
 export default function Visualizer({ variables }) {
-  const { blocklyVariables, state } = variables;
+  const { variables, state } = variables;
 
   const { N, A, VA, B, VB } = state;
   if (N > 50) {
@@ -67,7 +67,7 @@ export default function Visualizer({ variables }) {
         <Rectangle color="brown" borderColor="#D35A1E" height={0.3} width={Math.min(N, 50) + 2} />
         <Sprite src={bunny} alt="Bunny" x={0.2} y={-0.8} />
       </Canvas>
-      <Variables variables={{ ...blocklyVariables }} />
+      <Variables variables={{ ...variables }} />
     </>
   );
 }

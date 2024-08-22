@@ -10,7 +10,7 @@ import bunny from "./asy/bunny.asy?w=66";
 import stairs from "./asy/stairs.asy?w=80";
 
 export default function Visualizer({ variables }) {
-  const { blocklyVariables, state: state } = variables;
+  const { variables, state: state } = variables;
 
   const colors = [
     "#4093b0",
@@ -66,7 +66,7 @@ export default function Visualizer({ variables }) {
         <Sprite src={stairs} alt="Scale" x={0.6} y={0} />
         <Sprite src={bunny} alt="Bunny" x={1.5} y={y[state.pos]} follow />
       </Canvas>
-      <Variables variables={{ scatole: state.N, ...blocklyVariables }} />
+      <Variables variables={{ scatole: state.N, ...variables }} />
     </div>
   );
 }
