@@ -1,5 +1,6 @@
 "use client";
 
+import clsx from "clsx";
 import { range } from "lodash-es";
 
 import { Canvas, Sprite, Variables } from "~/utils/visualizer";
@@ -23,25 +24,22 @@ export default function Visualizer({ variables, state }) {
     );
   }
 
-  const blocks = [];
+  const xChoco = range(N).map(() => []);
+  const yChoco = range(M).map(() => []);
+
   let xoffs = 1.5;
   let yoffs = 2;
 
-  function chocblock(N0, N, M0, M) {
+  const chocblock = (N0, N, M0, M) => {
     for (let i = N0; i < N; ++i) {
+      xChoco[i] ??= [];
+      yChoco[i] ??= [];
       for (let j = M0; j < M; ++j) {
-        blocks.push(
-          <Sprite
-            key={`${i}-${j}`}
-            src={chocolate}
-            alt="cioccolata"
-            x={xoffs + i * 0.5}
-            y={yoffs - j * 0.5}
-          />,
-        );
+        xChoco[i][j] = xoffs + i * 0.5;
+        yChoco[i][j] = yoffs - j * 0.5;
       }
     }
-  }
+  };
 
   const sep = 0.15;
   chocblock(0, N, 0, M);
@@ -62,18 +60,23 @@ export default function Visualizer({ variables, state }) {
 
   return (
     <>
-      <Canvas scale={50} gravity="bottom">
+      <Canvas scale={50}>
         <Sprite src={bunny} alt="Tip-Tap" follow />
-        {range(K).map((i) => (
+        {range(state.initialK).map((i) => (
           <Sprite
             key={i}
             src={bunnies[`./asy/bunnies${i % len}.asy`]}
             alt="Bunny"
             x={2 + N * (0.5 + sep) + ((11 * i) % 19) * 0.4}
             y={-5 + (3 * i) / (K + cuts.length - 1)}
+            className={clsx(i < state.initialK - K && "invisible")}
           />
         ))}
-        {blocks}
+        {xChoco.flatMap((row, i) =>
+          row.map((x, j) => (
+            <Sprite key={`${i}-${j}`} src={chocolate} alt="cioccolata" x={x} y={yChoco[i][j]} />
+          )),
+        )}
       </Canvas>
       <Variables
         variables={{

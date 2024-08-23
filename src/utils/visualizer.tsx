@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  type CSSProperties,
   Fragment,
   type ReactNode,
   createContext,
@@ -23,21 +24,24 @@ type BoundingBox = {
 };
 
 type ContextProps = {
+  gravity: "top" | "bottom";
   scale: number;
   setBoundingBox: (id: string, box: BoundingBox) => void;
 };
 
 const VisualizerContext = createContext<ContextProps>({
+  gravity: "top",
   scale: 1,
   setBoundingBox: () => {},
 });
 
 type CanvasProps = {
+  gravity?: "top" | "bottom";
   scale?: number;
   children: ReactNode;
 };
 
-export function Canvas({ scale = 1, children }: CanvasProps) {
+export function Canvas({ gravity = "top", scale = 1, children }: CanvasProps) {
   const [objects, setObjects] = useState<Record<string, BoundingBox>>({});
 
   const setBoundingBox = useCallback((id: string, box: BoundingBox) => {
@@ -56,11 +60,15 @@ export function Canvas({ scale = 1, children }: CanvasProps) {
       hMax = Math.max(hMax, y + height);
     }
 
+    if (gravity === "bottom") {
+      [hMin, hMax] = [-hMax, -hMin];
+    }
+
     return { wMin, wMax, hMin, hMax };
-  }, [objects]);
+  }, [objects, gravity]);
 
   return (
-    <VisualizerContext.Provider value={{ scale, setBoundingBox }}>
+    <VisualizerContext.Provider value={{ gravity, scale, setBoundingBox }}>
       <div className="m-8" style={{ width: size.wMax - size.wMin, height: size.hMax - size.hMin }}>
         <div
           className="relative"
@@ -78,50 +86,64 @@ type SpriteProps = {
   x?: number;
   y?: number;
   rotation?: number;
+  scaleX?: number;
+  scaleY?: number;
   follow?: boolean;
   className?: string;
 };
 
-export function Sprite({ src, alt, x = 0, y = 0, rotation, follow, className }: SpriteProps) {
+export function Sprite({
+  src,
+  alt,
+  x = 0,
+  y = 0,
+  rotation = 0,
+  scaleX = 1,
+  scaleY = 1,
+  follow,
+  className,
+}: SpriteProps) {
   const id = useId();
+
+  const ref = useRef<HTMLImageElement>(null);
+  const { gravity, scale, setBoundingBox } = useContext(VisualizerContext);
+  useEffect(() => {
+    setBoundingBox(id, { x: x * scale, width: +src.width, y: y * scale, height: +src.height });
+    return () => setBoundingBox(id, { x: 0, width: 0, y: 0, height: 0 });
+  }, [x, y, src, scale, id, setBoundingBox]);
 
   const pos = useRef({ x, y, changed: false });
   useEffect(() => {
     if (x !== pos.current.x || y !== pos.current.y) {
       pos.current = { x, y, changed: true };
     }
-  }, [x, y]);
 
-  const ref = useRef<HTMLImageElement>(null);
-  const { scale, setBoundingBox } = useContext(VisualizerContext);
-  useEffect(() => {
-    setBoundingBox(id, { x: x * scale, width: +src.width, y: y * scale, height: +src.height });
-    return () => setBoundingBox(id, { x: 0, width: 0, y: 0, height: 0 });
-  }, [x, y, src, scale, id, setBoundingBox]);
-
-  useEffect(() => {
     if (!pos.current.changed || !follow) return;
     const id = setTimeout(() => {
-      return ref.current?.scrollIntoView({
+      ref.current?.scrollIntoView({
         behavior: "smooth",
         block: "nearest",
         inline: "center",
       });
     }, 160);
     return () => clearTimeout(id);
-  }, [follow]);
+  }, [follow, x, y]);
 
   return (
     <img
       ref={ref}
       {...src}
       alt={alt}
-      className={clsx("absolute transition-all", className)}
-      style={{
-        top: `${y * scale}px`,
-        left: `${x * scale}px`,
-        transform: `rotate(${rotation}turn)`,
-      }}
+      className={clsx("absolute transition-all transform", className)}
+      style={
+        {
+          [gravity]: `${y * scale}px`,
+          left: `${x * scale}px`,
+          "--tw-rotate": `${rotation}turn`,
+          "--tw-scale-x": scaleX,
+          "--tw-scale-y": scaleY,
+        } as CSSProperties
+      }
     />
   );
 }
@@ -135,7 +157,7 @@ type RectangleProps = {
   y?: number;
   rotation?: number;
   className?: string;
-  children: ReactNode;
+  children?: ReactNode;
 };
 
 export function Rectangle({
@@ -150,7 +172,7 @@ export function Rectangle({
   children,
 }: RectangleProps) {
   const id = useId();
-  const { scale, setBoundingBox } = useContext(VisualizerContext);
+  const { gravity, scale, setBoundingBox } = useContext(VisualizerContext);
 
   useEffect(() => {
     setBoundingBox(id, {
@@ -164,16 +186,18 @@ export function Rectangle({
 
   return (
     <div
-      style={{
-        backgroundColor: color,
-        borderColor,
-        height: `${height * scale}px`,
-        width: `${width * scale}px`,
-        top: `${y * scale}px`,
-        left: `${x * scale}px`,
-        transform: `rotate(${rotation}turn)`,
-      }}
-      className={`absolute border-2 border-solid transition-all ${className}`}>
+      className={clsx("absolute transition-all transform", className)}
+      style={
+        {
+          backgroundColor: color,
+          border: `2px solid ${borderColor}`,
+          height: `${height * scale}px`,
+          width: `${width * scale}px`,
+          [gravity]: `${y * scale}px`,
+          left: `${x * scale}px`,
+          "--tw-rotate": `${rotation}turn`,
+        } as CSSProperties
+      }>
       {children}
     </div>
   );
@@ -186,7 +210,7 @@ export function Variables({ variables }: { variables: Record<string, any> }) {
         <Fragment key={name}>
           <div className="rounded-l-2xl">{name}</div>
           <div className="rounded-r-2xl">
-            <div className="rounded-lg bg-white px-2">{value ?? "-"}</div>
+            <div className="rounded-lg bg-white px-2">{Number.isFinite(value) ? value : "-"}</div>
           </div>
         </Fragment>
       ))}

@@ -2,7 +2,7 @@
 
 import { range } from "lodash-es";
 
-import { Canvas, Sprite, Variables } from "~/utils/visualizer";
+import { Canvas, Rectangle, Sprite, Variables } from "~/utils/visualizer";
 
 import bunny from "./asy/bunny.asy?w=40";
 import carrot from "./asy/carrot.asy?w=25";
@@ -17,6 +17,7 @@ export default function Visualizer({ variables, state }) {
             <Sprite key={`hay-${i}-${h}`} src={hay} alt="Fieno" x={1.5 + i * 6} y={h * 2.8} />
           ));
         })}
+        <Rectangle borderColor="transparent" x={-3} y={-1} width={1} height={1} />
         <Sprite src={bunny} alt="Carol" x={3 + state.pos * 6} y={-1} follow />
         <Sprite src={carrot} alt="Carota" x={5 + state.pos * 6} y={-0.1} />
         {range(state.carrots.length + 2).map((i) => {

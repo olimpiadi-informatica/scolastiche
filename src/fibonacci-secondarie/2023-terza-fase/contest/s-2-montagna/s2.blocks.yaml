@@ -53,24 +53,24 @@
       exit(false, "sei già arrivato alla fine");
     delta = state.H[state.posx+1] - state.H[state.posx];
     state.rot = Math.atan2(state.scale * delta, 1);
-    pause(1);
+    pause();
     if (state.energy >= delta) {
       state.posx += 1;
-      state.posy += state.scale * delta;
       state.energy -= delta;
     } else {
       state.posx += state.energy / delta;
-      state.posy += state.scale * state.energy;
       state.energy = 0;
       exit(false, "hai finito l'energia prima di arrivare");
     }
-    pause(1);
-    if (state.posx < state.N-1)
+    pause();
+    if (state.posx < state.N-1) {
       state.rot = (
         Math.atan2(state.scale * (state.H[state.posx+1] - state.H[state.posx]), 1) +
         Math.atan2(state.scale * (state.H[state.posx] - state.H[state.posx-1]), 1)
-      )/2;
-    else state.rot = 0;
+      ) / 2;
+    } else {
+      state.rot = 0;
+    }
 
 - type: ricarica
   message0: ricarica per %1 minuti

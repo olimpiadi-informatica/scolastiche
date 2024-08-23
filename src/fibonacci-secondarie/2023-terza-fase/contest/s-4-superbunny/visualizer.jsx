@@ -49,7 +49,7 @@ export default function Visualizer({ variables, state }) {
             width={2.2}
             x={i + 1.1}
             y={-p(A[i]) - 0.35}
-            className="text-3xl">
+            className="text-3xl text-gray-400 [text-shadow:0_0_2px_#fff]">
             {v}
           </Rectangle>
         ))}
@@ -62,7 +62,7 @@ export default function Visualizer({ variables, state }) {
             width={2.2}
             x={i + 1.1}
             y={-p(B[i]) - 0.35}
-            className="text-3xl">
+            className="text-3xl text-gray-400 [text-shadow:0_0_2px_#fff]">
             {v}
           </Rectangle>
         ))}

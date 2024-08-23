@@ -49,7 +49,9 @@ def generate(L, U, type):
     sol = solve(N, M, K)
     cuts = []
 
-    return {k:v for k,v in locals().items() if k not in args}
+    state = {k:v for k,v in locals().items() if k not in args}
+    state["initialK"] = K
+    return state
 
 testcases = []
 for args in zip(*params):

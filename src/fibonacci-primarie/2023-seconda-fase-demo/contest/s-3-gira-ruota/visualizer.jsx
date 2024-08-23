@@ -52,6 +52,7 @@ export default function Visualizer({ variables, state }) {
   return (
     <>
       <Canvas>
+        <Rectangle borderColor="white" x={8 - 50} y={12 - 50} width={300} height={300} />
         {range(S).map((i) => (
           <Sector key={i} color={colors[i]} from={(i + pos) / S} portion={1 / S} text={prizes[i]} />
         ))}

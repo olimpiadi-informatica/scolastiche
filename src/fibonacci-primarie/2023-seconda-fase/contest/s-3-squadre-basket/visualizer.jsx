@@ -12,33 +12,41 @@ import turing from "./asy/turing.asy?h=100";
 export default function Visualizer({ variables, state }) {
   const teams = [fibonacci, turing];
 
+  const offset = Math.max(...state.data.map((d) => d.presi.length)) * 5;
+
   return (
     <>
       <Canvas gravity="bottom" scale={10}>
-        <Sprite src={bunny} alt="Bunny" x={20} y={19.5} follow />
-        <Sprite src={ball} alt="Pallone" x={23.5} y={20.5} />
+        <Sprite src={bunny} alt="Bunny" x={0 + offset} y={19.5} follow />
+        <Sprite src={ball} alt="Pallone" x={3.5 + offset} y={20.5} />
         {range(2).flatMap((i) => {
-          const len = state.data[i].H.length;
-          return range(i * (len - 1), (len + 1) * (1 - i) - 1, 1 - 2 * i).map((k) => {
-            const h = state.data[i].H[k] / 28;
-            let x = 26 + (k - state.data[i].pos) * 5;
-            let y = 30 - 23 * i + (h - 1) * 5;
-            if (k < state.data[i].pos) {
-              if (state.data[i].scelta[k] > 0) {
-                x = 14 + (state.data[i].scelta[k] - state.data[i].presi.length) * 5;
-              } else {
-                x = 21 - state.data[i].scelta[k] * 3;
-                y += 10 * (1 - 2 * i);
-              }
+          const { H, scelta } = state.data[i];
+          let offsetPreso = 0;
+          let offsetScarto = 0;
+          return range(H.length).map((k) => {
+            let x;
+            let y = [30, 7][i];
+
+            if (k >= scelta.length) {
+              x = (k - scelta.length) * 5 + offset + 10;
+            } else if (scelta[k] > 0) {
+              x = offsetPreso;
+              offsetPreso += 5;
+            } else {
+              x = offsetScarto + offset + 10;
+              offsetScarto += 5;
+              y += [12, -10][i];
             }
+
             return (
               <Sprite
-                key={`player-${i}-${k}`}
+                key={`${i}-${k}`}
                 src={teams[i]}
                 alt="Giocatore"
                 x={x}
                 y={y}
-                height={h}
+                scaleY={H[k] / 28}
+                className="origin-bottom"
               />
             );
           });
