@@ -31,4 +31,4 @@
       if (i > state.sol) exit(false, "potevi fare meno di " + i + " operazioni");
       if (i < state.sol) exit(false, "non si può ottenere " + state.N + " con " + i + " operazioni");
       exit(true, i + " è il numero minimo di operazioni, complimenti!");
-    })(%0);
+    })(%1);

@@ -18,7 +18,7 @@
   colour: 20
   tooltip: la fila è finita?
   helpUrl: ""
-  js: state.data[%0].pos === state.data[%0].H.length
+  js: state.data[%1].pos === state.data[%1].H.length
 
 - type: altezza primo della fila
   message0: altezza primo della fila %1
@@ -32,9 +32,9 @@
   tooltip: l'altezza del primo coniglio nella fila
   helpUrl: ""
   js: |
-    state.data[%0].pos === state.data[%0].H.length
-      ? exit(false, %0 === 0 ? "la fila Fibonacci è finita" : "la fila Turing è finita")
-      : state.data[%0].H[state.data[%0].pos]
+    state.data[%1].pos === state.data[%1].H.length
+      ? exit(false, %1 === 0 ? "la fila Fibonacci è finita" : "la fila Turing è finita")
+      : state.data[%1].H[state.data[%1].pos]
 
 - type: prendi dalla fila
   message0: prendi dalla fila %1
@@ -49,14 +49,14 @@
   tooltip: prendi il prossimo coniglio dalla fila
   helpUrl: ""
   js: |
-    state.data[%0].presi[state.data[%0].presi.length] = state.data[%0].H[state.data[%0].pos];
-    if (state.data[%0].pos === state.data[%0].H.length)
+    state.data[%1].presi[state.data[%1].presi.length] = state.data[%1].H[state.data[%1].pos];
+    if (state.data[%1].pos === state.data[%1].H.length)
       exit(false, "la fila Fibonacci è finita");
-    state.data[%0].scelta[state.data[%0].pos] = state.data[%0].presi.length;
-    state.data[%0].pos += 1
-    if (state.data[%0].presi.length <= state.data[1].presi.length
-          && state.data[%0].presi[state.data[%0].presi.length-1] !== state.data[1-%0].presi[state.data[%0].presi.length-1])
-      exit(false, "l'ultimo preso da " + (%0 === 0 ? "Fibonacci" : "Turing") + " ha un'altezza che non corrisponde");
+    state.data[%1].scelta[state.data[%1].pos] = state.data[%1].presi.length;
+    state.data[%1].pos += 1
+    if (state.data[%1].presi.length <= state.data[1].presi.length
+          && state.data[%1].presi[state.data[%1].presi.length-1] !== state.data[1-%1].presi[state.data[%1].presi.length-1])
+      exit(false, "l'ultimo preso da " + (%1 === 0 ? "Fibonacci" : "Turing") + " ha un'altezza che non corrisponde");
 
 - type: scarta dalla fila
   message0: scarta dalla fila %1
@@ -71,11 +71,11 @@
   tooltip: scarta il prossimo coniglio dalla fila
   helpUrl: ""
   js: |
-    state.data[%0].scartati[state.data[%0].scartati.length] = state.data[%0].H[state.data[%0].pos];
-    if (state.data[%0].pos === state.data[%0].H.length)
-      exit(false, %0 === 0 ? "la fila Fibonacci è finita" : "la fila Turing è finita");
-    state.data[%0].scelta[state.data[%0].pos] = -state.data[%0].scartati.length;
-    state.data[%0].pos += 1
+    state.data[%1].scartati[state.data[%1].scartati.length] = state.data[%1].H[state.data[%1].pos];
+    if (state.data[%1].pos === state.data[%1].H.length)
+      exit(false, %1 === 0 ? "la fila Fibonacci è finita" : "la fila Turing è finita");
+    state.data[%1].scelta[state.data[%1].pos] = -state.data[%1].scartati.length;
+    state.data[%1].pos += 1
 
 - type: termina
   message0: termina

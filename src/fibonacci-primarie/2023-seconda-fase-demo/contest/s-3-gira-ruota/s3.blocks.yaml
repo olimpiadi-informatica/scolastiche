@@ -31,7 +31,7 @@
       if (i < 1 || i > state.N)
         exit(false, "l'amico " + i + " non esiste");
       return state.prizes[(state.friends[i-1]-state.pos+state.S)%state.S];
-    })(%0)
+    })(%1)
 
 - type: N
   message0: N

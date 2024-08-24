@@ -30,7 +30,7 @@
       for (var j = 0; j < state.L[state.i]; j++)
         state.muro[i+j-1] = state.i+1;
       state.i++;
-    })(%0);
+    })(%1);
 
 - type: pannelli da pitturare
   message0: pannelli da pitturare
