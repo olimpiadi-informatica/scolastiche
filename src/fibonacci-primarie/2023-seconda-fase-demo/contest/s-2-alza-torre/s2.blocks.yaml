@@ -11,7 +11,6 @@
   message0: altezza della scatola %1
   args0:
     - type: input_value
-      value: 0
       check: Number
   output: Number
   colour: 20
@@ -30,7 +29,6 @@
   message0: larghezza della scatola %1
   args0:
     - type: input_value
-      value: 0
       check: Number
   output: Number
   colour: 20
@@ -49,7 +47,6 @@
   message0: ruota la scatola %1
   args0:
     - type: input_value
-      value: 0
       check: Number
   previousStatement: null
   nextStatement: null
@@ -77,7 +74,6 @@
   message0: riporta altezza %1
   args0:
     - type: input_value
-      value: 0
       check: Number
   previousStatement: null
   colour: 20

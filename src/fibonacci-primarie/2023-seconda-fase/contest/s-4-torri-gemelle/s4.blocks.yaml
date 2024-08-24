@@ -51,7 +51,6 @@
   message0: impila blocchetto %1 a destra
   args0:
     - type: input_value
-      value: 0
       check: Number
   previousStatement: null
   nextStatement: null
@@ -76,7 +75,6 @@
   message0: impila blocchetto %1 a sinistra
   args0:
     - type: input_value
-      value: 0
       check: Number
   previousStatement: null
   nextStatement: null

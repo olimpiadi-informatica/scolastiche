@@ -20,7 +20,6 @@
   message0: premio di %1
   args0:
     - type: input_value
-      value: 0
       check: Number
   output: Number
   colour: 20

@@ -27,7 +27,6 @@
   message0: altitudine della colonnina %1
   args0:
     - type: input_value
-      value: 0
       check: Number
   output: Number
   colour: 20
@@ -77,7 +76,6 @@
   message0: ricarica per %1 minuti
   args0:
     - type: input_value
-      value: 0
       check: Number
   previousStatement: null
   nextStatement: null

@@ -19,7 +19,6 @@
   message0: termina in %1 operazioni
   args0:
     - type: input_value
-      value: 0
       check: Number
   previousStatement: null
   colour: 20

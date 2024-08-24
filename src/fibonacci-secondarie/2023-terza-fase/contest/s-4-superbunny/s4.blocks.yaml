@@ -19,7 +19,6 @@
   message0: pedana alta %1
   args0:
     - type: input_value
-      value: 0
       check: Number
   output: Number
   colour: 20
@@ -37,7 +36,6 @@
   message0: pedana bassa %1
   args0:
     - type: input_value
-      value: 0
       check: Number
   output: Number
   colour: 20
@@ -55,10 +53,8 @@
   message0: differenza assoluta tra %1 e %2
   args0:
     - type: input_value
-      value: 0
       check: Number
     - type: input_value
-      value: 0
       check: Number
   output: Number
   colour: 20
@@ -75,10 +71,8 @@
   message0: minimo tra %1 e %2
   args0:
     - type: input_value
-      value: 0
       check: Number
     - type: input_value
-      value: 0
       check: Number
   output: Number
   colour: 20
@@ -95,7 +89,6 @@
   message0: termina in %1 tempo
   args0:
     - type: input_value
-      value: 0
       check: Number
   previousStatement: null
   colour: 20
@@ -114,7 +107,6 @@
   message0: valore pedana alta %1
   args0:
     - type: input_value
-      value: 0
       check: Number
   output: Number
   colour: 20
@@ -132,7 +124,6 @@
   message0: valore pedana bassa %1
   args0:
     - type: input_value
-      value: 0
       check: Number
   output: Number
   colour: 20
@@ -150,10 +141,8 @@
   message0: imposta valore pedana alta %1 a %2
   args0:
     - type: input_value
-      value: 0
       check: Number
     - type: input_value
-      value: 0
       check: Number
   previousStatement: null
   nextStatement: null
@@ -172,10 +161,8 @@
   message0: imposta valore pedana bassa %1 a %2
   args0:
     - type: input_value
-      value: 0
       check: Number
     - type: input_value
-      value: 0
       check: Number
   previousStatement: null
   nextStatement: null

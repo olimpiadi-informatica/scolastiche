@@ -11,7 +11,6 @@
   message0: colora dalla posizione %1
   args0:
     - type: input_value
-      value: 0
       check: Number
   previousStatement: null
   nextStatement: null
