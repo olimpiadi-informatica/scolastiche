@@ -7,99 +7,75 @@
   maxInstances: 1
   js: ""
 
-- type: fine della fila Fibonacci
-  message0: fine della fila Fibonacci
+- type: fine della fila
+  message0: fine della fila %1
+  args0:
+    - type: field_dropdown
+      options:
+        - [Fibonacci, "0"]
+        - [Turing, "1"]
   output: Boolean
   colour: 20
-  tooltip: la fila della fattoria Fibonacci è finita?
+  tooltip: la fila è finita?
   helpUrl: ""
-  js: state.data[0].pos === state.data[0].H.length
+  js: state.data[%0].pos === state.data[%0].H.length
 
-- type: fine della fila Turing
-  message0: fine della fila Turing
-  output: Boolean
-  colour: 20
-  tooltip: la fila della fattoria Turing è finita?
-  helpUrl: ""
-  js: state.data[1].pos === state.data[1].H.length
-
-- type: altezza primo della fila Fibonacci
-  message0: altezza primo della fila Fibonacci
+- type: altezza primo della fila
+  message0: altezza primo della fila %1
+  args0:
+    - type: field_dropdown
+      options:
+        - [Fibonacci, "0"]
+        - [Turing, "1"]
   output: Number
   colour: 20
-  tooltip: l'altezza del primo coniglio nella fila della fattoria Fibonacci
+  tooltip: l'altezza del primo coniglio nella fila
   helpUrl: ""
   js: |
-    state.data[0].pos === state.data[0].H.length ? exit(false, "la fila Fibonacci è finita") : state.data[0].H[state.data[0].pos]
+    state.data[%0].pos === state.data[%0].H.length
+      ? exit(false, %0 === 0 ? "la fila Fibonacci è finita" : "la fila Turing è finita")
+      : state.data[%0].H[state.data[%0].pos]
 
-- type: altezza primo della fila Turing
-  message0: altezza primo della fila Turing
-  output: Number
-  colour: 20
-  tooltip: l'altezza del primo coniglio nella fila della fattoria Turing
-  helpUrl: ""
-  js: |
-    state.data[1].pos === state.data[1].H.length ? exit(false, "la fila Turing è finita") : state.data[1].H[state.data[1].pos]
-
-- type: prendi dalla fila Fibonacci
-  message0: prendi dalla fila Fibonacci
+- type: prendi dalla fila
+  message0: prendi dalla fila %1
+  args0:
+    - type: field_dropdown
+      options:
+        - [Fibonacci, "0"]
+        - [Turing, "1"]
   previousStatement: null
   nextStatement: null
   colour: 20
-  tooltip: prendi il prossimo coniglio dalla fila della fattoria Fibonacci
+  tooltip: prendi il prossimo coniglio dalla fila
   helpUrl: ""
   js: |
-    state.data[0].presi[state.data[0].presi.length] = state.data[0].H[state.data[0].pos];
-    if (state.data[0].pos === state.data[0].H.length)
+    state.data[%0].presi[state.data[%0].presi.length] = state.data[%0].H[state.data[%0].pos];
+    if (state.data[%0].pos === state.data[%0].H.length)
       exit(false, "la fila Fibonacci è finita");
-    state.data[0].scelta[state.data[0].pos] = state.data[0].presi.length;
-    state.data[0].pos += 1
-    if (state.data[0].presi.length <= state.data[1].presi.length && state.data[0].presi[state.data[0].presi.length-1] !== state.data[1].presi[state.data[0].presi.length-1])
-      exit(false, "l'ultimo preso da Fibonacci ha un'altezza che non corrisponde");
+    state.data[%0].scelta[state.data[%0].pos] = state.data[%0].presi.length;
+    state.data[%0].pos += 1
+    if (state.data[%0].presi.length <= state.data[1].presi.length
+          && state.data[%0].presi[state.data[%0].presi.length-1] !== state.data[1-%0].presi[state.data[%0].presi.length-1])
+      exit(false, "l'ultimo preso da " + (%0 === 0 ? "Fibonacci" : "Turing") + " ha un'altezza che non corrisponde");
 
-- type: prendi dalla fila Turing
-  message0: prendi dalla fila Turing
+- type: scarta dalla fila
+  message0: scarta dalla fila %1
+  args0:
+    - type: field_dropdown
+      options:
+        - [Fibonacci, "0"]
+        - [Turing, "1"]
   previousStatement: null
   nextStatement: null
   colour: 20
-  tooltip: prendi il prossimo coniglio dalla fila della fattoria Turing
+  tooltip: scarta il prossimo coniglio dalla fila
   helpUrl: ""
   js: |
-    state.data[1].presi[state.data[1].presi.length] = state.data[1].H[state.data[1].pos];
-    if (state.data[1].pos === state.data[1].H.length)
-      exit(false, "la fila Turing è finita");
-    state.data[1].scelta[state.data[1].pos] = state.data[1].presi.length;
-    state.data[1].pos += 1
-    if (state.data[1].presi.length <= state.data[0].presi.length && state.data[1].presi[state.data[1].presi.length-1] !== state.data[0].presi[state.data[1].presi.length-1])
-      exit(false, "l'ultimo preso da Turing ha un'altezza che non corrisponde");
-
-- type: scarta dalla fila Fibonacci
-  message0: scarta dalla fila Fibonacci
-  previousStatement: null
-  nextStatement: null
-  colour: 20
-  tooltip: scarta il prossimo coniglio dalla fila della fattoria Fibonacci
-  helpUrl: ""
-  js: |
-    state.data[0].scartati[state.data[0].scartati.length] = state.data[0].H[state.data[0].pos];
-    if (state.data[0].pos === state.data[0].H.length)
-      exit(false, "la fila Fibonacci è finita");
-    state.data[0].scelta[state.data[0].pos] = -state.data[0].scartati.length;
-    state.data[0].pos += 1
-
-- type: scarta dalla fila Turing
-  message0: scarta dalla fila Turing
-  previousStatement: null
-  nextStatement: null
-  colour: 20
-  tooltip: scarta il prossimo coniglio dalla fila della fattoria Turing
-  helpUrl: ""
-  js: |
-    state.data[1].scartati[state.data[1].scartati.length] = state.data[1].H[state.data[1].pos];
-    if (state.data[1].pos === state.data[1].H.length)
-      exit(false, "la fila Turing è finita");
-    state.data[1].scelta[state.data[1].pos] = -state.data[1].scartati.length;
-    state.data[1].pos += 1
+    state.data[%0].scartati[state.data[%0].scartati.length] = state.data[%0].H[state.data[%0].pos];
+    if (state.data[%0].pos === state.data[%0].H.length)
+      exit(false, %0 === 0 ? "la fila Fibonacci è finita" : "la fila Turing è finita");
+    state.data[%0].scelta[state.data[%0].pos] = -state.data[%0].scartati.length;
+    state.data[%0].pos += 1
 
 - type: termina
   message0: termina
