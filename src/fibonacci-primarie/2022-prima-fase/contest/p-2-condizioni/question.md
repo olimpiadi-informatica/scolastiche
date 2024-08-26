@@ -1,19 +1,6 @@
 Considera questo procedimento, rappresentato come diagramma di flusso. Il procedimento si riferisce a tre **variabili** numeriche, rappresentate dalle lettere $a$, $b$ e $c$.
 
-```mermaid alt=Diagramma%20di%20flusso
-flowchart TD
-    Inizio --> B{{a è più grande di b?}}
-    B -->|sì| C{{a è più grande di c?}}
-    B -->|no| D{{b è più grande di c?}}
-    C -->|sì| E[scrivi il valore di a]
-    C -->|no| F[scrivi il valore di c]
-    D -->|sì| G[scrivi il valore di b]
-    D -->|no| H[scrivi il valore di c]
-    E --> Fine
-    F --> Fine
-    G --> Fine
-    H --> Fine
-```
+![Diagramma di flusso](flowchart.svg)
 
 Questo programma viene eseguito due volte:
 
