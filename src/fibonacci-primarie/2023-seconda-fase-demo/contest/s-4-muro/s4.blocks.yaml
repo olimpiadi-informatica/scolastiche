@@ -70,7 +70,7 @@
     var tot = 0;
     for (var i=1; i<=state.C; ++i)
       tot += found[i];
-    if (tot == state.sol)
+    if (tot === state.sol)
       exit(true, "si vedono tanti colori, bravo!");
     else
       exit(false, "si poteva far vedere " + state.sol + " colori");

@@ -80,12 +80,12 @@
     (function(t) {
       var sum = 0;
       for (var i = 0; i < state.N; i++) {
-        if (state.larghezze[i] != state.altezze[i])
-          if (state.rot[i] != (state.altezze[i] < state.larghezze[i]))
+        if (state.larghezze[i] !== state.altezze[i])
+          if (state.rot[i] !== (state.altezze[i] < state.larghezze[i]))
             exit(false, "la scatola " + (i+1) + " non è ruotata bene");
         sum += state.altezze[i] > state.larghezze[i] ? state.altezze[i] : state.larghezze[i];
       }
-      if (sum == t)
+      if (sum === t)
         exit(true, "hai fatto la torre più alta, bravo!");
       else
         exit(false, "hai sbagliato a riportare l'altezza");

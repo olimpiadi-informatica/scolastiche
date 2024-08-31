@@ -64,9 +64,9 @@
       if (state.C[i] === state.sol[i]) continue;
       if (state.sol[i] === 0)
         exit(false, "non dovevi mettere carote nella pila " + (i+1));
-      if (state.C[i] === 0 && state.sol[i] == 1)
+      if (state.C[i] === 0 && state.sol[i] === 1)
         exit(false, "non hai messo la carota nella pila " + (i+1));
-      if (state.C[i] === 0 && state.sol[i] == 2)
+      if (state.C[i] === 0 && state.sol[i] === 2)
         exit(false, "non hai messo le due carote nella pila " + (i+1));
       if (state.C[i] === 2)
         exit(false, "non ci voleva la seconda carota nella pila " + (i+1));

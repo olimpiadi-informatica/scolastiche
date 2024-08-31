@@ -64,9 +64,9 @@
   helpUrl: ""
   js: |
     var i = state.good_pos.indexOf(state.pos);
-    if (i == 0)
+    if (i === 0)
       exit(true, "hai speso meno di " + state.C + " carote, bravo!");
-    else if (i != -1)
+    else if (i !== -1)
       exit(false, "potevi far girare meno la ruota");
     else
       exit(false, "non hai abbastanza carote per i premi");

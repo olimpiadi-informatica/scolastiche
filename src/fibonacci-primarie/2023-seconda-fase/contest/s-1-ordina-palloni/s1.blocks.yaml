@@ -41,7 +41,7 @@
   tooltip: metti da parte il prossimo pallone
   helpUrl: ""
   js: |
-    if (state.pos == state.N)
+    if (state.pos === state.N)
       exit(false, "non ci sono più palloni");
     state.deposited += 1;
     state.placement[state.pos] = state.deposited;
@@ -57,7 +57,7 @@
   tooltip: butta il prossimo pallone
   helpUrl: ""
   js: |
-    if (state.pos == state.N)
+    if (state.pos === state.N)
       exit(false, "non ci sono più palloni");
     state.trashed += 1;
     state.placement[state.pos] = -state.trashed;

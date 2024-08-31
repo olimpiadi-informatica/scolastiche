@@ -34,7 +34,7 @@
   helpUrl: ""
   js: |
     (function(i) {
-      if (i < 1 || i > state.N || Math.floor(i) != i)
+      if (i < 1 || i > state.N || Math.floor(i) !== i)
         exit(false, "la colonnina " + i + " non esiste");
       return state.H[i-1];
     })(%1)
@@ -48,7 +48,7 @@
   helpUrl: ""
   js: |
     state.charging = false;
-    if (state.posx == state.N-1)
+    if (state.posx === state.N-1)
       exit(false, "sei già arrivato alla fine");
     delta = state.H[state.posx+1] - state.H[state.posx];
     state.rot = Math.atan2(state.scale * delta, 1);
@@ -83,7 +83,7 @@
   helpUrl: ""
   js: |
     (function(i) {
-      if (i < 0 || i > 1000000 || Math.floor(i) != i)
+      if (i < 0 || i > 1000000 || Math.floor(i) !== i)
         exit(false, "numero di minuti " + i + " non valido");
       state.time += i;
       state.energy += i;
