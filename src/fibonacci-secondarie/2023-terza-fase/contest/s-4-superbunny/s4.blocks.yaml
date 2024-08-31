@@ -30,7 +30,6 @@
   helpUrl: ""
   js: |
     (function(i) {
-      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i < 1 || i > state.N || Math.floor(i) != i)
         exit(false, "l'ostacolo " + i + " non esiste");
       return state.%1[i-1];
@@ -49,7 +48,6 @@
   helpUrl: ""
   js: |
     (function(x, y) {
-      if (x === undefined || y === undefined) exit(false, "un argomento del blocco non ha un valore");
       if (x < y) return y - x;
       else return x - y;
     })(%1, %2)
@@ -67,7 +65,6 @@
   helpUrl: ""
   js: |
     (function(x, y) {
-      if (x === undefined || y === undefined) exit(false, "un argomento del blocco non ha un valore");
       if (x < y) return x;
       else return y;
     })(%1, %2)
@@ -83,7 +80,6 @@
   helpUrl: ""
   js: |
     (function(i) {
-      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i < 0 || Math.floor(i) != i) exit(false, "tempo " + i + " non valido");
       if (i > state.sol) exit(false, "potevi metterci meno di " + i + " tempo");
       if (i < state.sol) exit(false, "non si può finire il livello in " + i + " tempo");
@@ -105,7 +101,6 @@
   helpUrl: ""
   js: |
     (function(i) {
-      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i < 1 || i > state.N || Math.floor(i) != i)
         exit(false, "l'ostacolo " + i + " non esiste");
       return state.%1[i-1];
@@ -129,7 +124,6 @@
   helpUrl: ""
   js: |
     (function(i, x) {
-      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i < 1 || i > state.N || Math.floor(i) != i)
         exit(false, "l'ostacolo " + i + " non esiste");
       state.%1[i-1] = x;

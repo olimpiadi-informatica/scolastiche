@@ -18,7 +18,6 @@
   helpUrl: ""
   js: |
     (function(i) {
-      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i < 1 || i > state.N)
         exit(false, "la scatola " + i + " non esiste");
       state.pos = i-1;
@@ -36,7 +35,6 @@
   helpUrl: ""
   js: |
     (function(i) {
-      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i < 1 || i > state.N)
         exit(false, "la scatola " + i + " non esiste");
       state.pos = i-1;
@@ -55,7 +53,6 @@
   helpUrl: ""
   js: |
     (function(i) {
-      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i < 1 || i > state.N)
         exit(false, "la scatola " + i + " non esiste");
       state.rot[i-1] = !state.rot[i-1];
@@ -81,7 +78,6 @@
   helpUrl: ""
   js: |
     (function(t) {
-      if (t === undefined) exit(false, "l'argomento del blocco non ha un valore");
       var sum = 0;
       for (var i = 0; i < state.N; i++) {
         if (state.larghezze[i] != state.altezze[i])

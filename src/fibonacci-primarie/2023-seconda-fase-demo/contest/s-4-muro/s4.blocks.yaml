@@ -19,7 +19,6 @@
   helpUrl: ""
   js: |
     (function(i) {
-      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i < 1 || i > state.N)
         exit(false, "il pannello " + i + " non esiste");
       state.pos = i-1;

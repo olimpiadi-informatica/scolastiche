@@ -34,7 +34,6 @@
   helpUrl: ""
   js: |
     (function(i) {
-      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i < 1 || i > state.N || Math.floor(i) != i)
         exit(false, "la colonnina " + i + " non esiste");
       return state.H[i-1];
@@ -84,7 +83,6 @@
   helpUrl: ""
   js: |
     (function(i) {
-      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i < 0 || i > 1000000 || Math.floor(i) != i)
         exit(false, "numero di minuti " + i + " non valido");
       state.time += i;

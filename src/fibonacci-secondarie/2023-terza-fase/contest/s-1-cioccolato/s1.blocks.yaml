@@ -43,7 +43,6 @@
   helpUrl: ""
   js: |
     (function(i) {
-      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i <= 0 || Math.floor(i) != i) exit(false, "numero di righe " + i + " non valido");
       if (i > state.M) exit(false, "non ci sono " + i + " righe");
       state.M -= i;
@@ -63,7 +62,6 @@
   helpUrl: ""
   js: |
     (function(i) {
-      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i <= 0 || Math.floor(i) != i) exit(false, "numero di colonne " + i + " non valido");
       if (i > state.N) exit(false, "non ci sono " + i + " colonne");
       state.N -= i;

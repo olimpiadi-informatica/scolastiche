@@ -26,7 +26,6 @@
   helpUrl: ""
   js: |
     (function(i) {
-      if (i === undefined) exit(false, "l'argomento del blocco non ha un valore");
       if (i < 0 || Math.floor(i) != i) exit(false, "numero di operazioni " + i + " non valido");
       if (i > state.sol) exit(false, "potevi fare meno di " + i + " operazioni");
       if (i < state.sol) exit(false, "non si può ottenere " + state.N + " con " + i + " operazioni");
