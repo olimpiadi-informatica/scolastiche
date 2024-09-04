@@ -11,7 +11,9 @@
   message0: colora dalla posizione %1
   args0:
     - type: input_value
-      check: Number
+      check: Integer
+      min: "1"
+      max: state.N
   previousStatement: null
   nextStatement: null
   colour: 20
@@ -19,8 +21,6 @@
   helpUrl: ""
   js: |
     (function(i) {
-      if (i < 1 || i > state.N)
-        exit(false, "il pannello " + i + " non esiste");
       state.pos = i-1;
       if (state.i >= state.C)
         exit(false, "sono finiti i colori")

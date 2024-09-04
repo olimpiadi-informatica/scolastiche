@@ -23,17 +23,14 @@
         - [alta, A]
         - [bassa, B]
     - type: input_value
-      check: Number
+      check: Integer
+      min: "1"
+      max: state.N
   output: Number
   colour: 20
   tooltip: l'altezza dell'ostacolo dato
   helpUrl: ""
-  js: |
-    (function(i) {
-      if (i < 1 || i > state.N || Math.floor(i) !== i)
-        exit(false, "l'ostacolo " + i + " non esiste");
-      return state.%1[i-1];
-    })(%2)
+  js: state.%1[(%2) - 1]
 
 - type: differenza assoluta
   message0: differenza assoluta tra %1 e %2
@@ -46,11 +43,7 @@
   colour: 20
   tooltip: la differenza assoluta tra x e y
   helpUrl: ""
-  js: |
-    (function(x, y) {
-      if (x < y) return y - x;
-      else return x - y;
-    })(%1, %2)
+  js: Math.abs((%1) - (%2))
 
 - type: minimo
   message0: minimo tra %1 e %2
@@ -63,24 +56,20 @@
   colour: 20
   tooltip: il valore minimo tra x e y
   helpUrl: ""
-  js: |
-    (function(x, y) {
-      if (x < y) return x;
-      else return y;
-    })(%1, %2)
+  js: Math.min(%1, %2)
 
 - type: termina
   message0: termina in %1 tempo
   args0:
     - type: input_value
-      check: Number
+      check: Integer
+      min: "0"
   previousStatement: null
   colour: 20
   tooltip: termina in x tempo
   helpUrl: ""
   js: |
     (function(i) {
-      if (i < 0 || Math.floor(i) !== i) exit(false, "tempo " + i + " non valido");
       if (i > state.sol) exit(false, "potevi metterci meno di " + i + " tempo");
       if (i < state.sol) exit(false, "non si può finire il livello in " + i + " tempo");
       exit(true, i + " è il tempo minimo per finire il livello, complimenti!");
@@ -94,17 +83,14 @@
         - [alta, VA]
         - [bassa, VB]
     - type: input_value
-      check: Number
+      check: Integer
+      min: "1"
+      max: state.N
   output: Number
   colour: 20
   tooltip: valore salvato dell'ostacolo dato
   helpUrl: ""
-  js: |
-    (function(i) {
-      if (i < 1 || i > state.N || Math.floor(i) !== i)
-        exit(false, "l'ostacolo " + i + " non esiste");
-      return state.%1[i-1];
-    })(%2)
+  js: state.%1[(%2) - 1]
 
 - type: imposta valore pedana
   message0: imposta valore pedana %1 %2 a %3
@@ -114,7 +100,9 @@
         - [alta, VA]
         - [bassa, VB]
     - type: input_value
-      check: Number
+      check: Integer
+      min: "1"
+      max: state.N
     - type: input_value
       check: Number
   previousStatement: null
@@ -122,9 +110,4 @@
   colour: 20
   tooltip: salva un valore dell'ostacolo dato
   helpUrl: ""
-  js: |
-    (function(i, x) {
-      if (i < 1 || i > state.N || Math.floor(i) !== i)
-        exit(false, "l'ostacolo " + i + " non esiste");
-      state.%1[i-1] = x;
-    })(%2, %3);
+  js: state.%1[(%2) - 1] = %3;

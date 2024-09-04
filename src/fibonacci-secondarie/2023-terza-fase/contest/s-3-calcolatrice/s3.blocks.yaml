@@ -19,14 +19,14 @@
   message0: termina in %1 operazioni
   args0:
     - type: input_value
-      check: Number
+      check: Integer
+      min: "0"
   previousStatement: null
   colour: 20
   tooltip: termina in x operazioni
   helpUrl: ""
   js: |
     (function(i) {
-      if (i < 0 || Math.floor(i) !== i) exit(false, "numero di operazioni " + i + " non valido");
       if (i > state.sol) exit(false, "potevi fare meno di " + i + " operazioni");
       if (i < state.sol) exit(false, "non si può ottenere " + state.N + " con " + i + " operazioni");
       exit(true, i + " è il numero minimo di operazioni, complimenti!");

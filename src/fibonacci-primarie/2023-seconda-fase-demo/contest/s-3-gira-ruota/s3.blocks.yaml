@@ -20,17 +20,15 @@
   message0: premio di %1
   args0:
     - type: input_value
-      check: Number
+      check: Integer
+      min: "1"
+      max: state.N
   output: Number
   colour: 20
   tooltip: Carote vinte dall'amico numero i
   helpUrl: ""
   js: |
-    (function(i) {
-      if (i < 1 || i > state.N)
-        exit(false, "l'amico " + i + " non esiste");
-      return state.prizes[(state.friends[i-1]-state.pos+state.S)%state.S];
-    })(%1)
+    state.prizes[(state.friends[(%1) - 1] - state.pos + state.S) % state.S]
 
 - type: N
   message0: N

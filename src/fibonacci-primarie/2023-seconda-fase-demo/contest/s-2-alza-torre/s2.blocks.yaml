@@ -11,15 +11,15 @@
   message0: altezza della scatola %1
   args0:
     - type: input_value
-      check: Number
+      check: Integer
+      min: "1"
+      max: state.N
   output: Number
   colour: 20
   tooltip: Altezza della scatola i-esima
   helpUrl: ""
   js: |
     (function(i) {
-      if (i < 1 || i > state.N)
-        exit(false, "la scatola " + i + " non esiste");
       state.pos = i-1;
       return state.rot[i-1] ? state.larghezze[i-1] : state.altezze[i-1];
     })(%1)
@@ -28,15 +28,15 @@
   message0: larghezza della scatola %1
   args0:
     - type: input_value
-      check: Number
+      check: Integer
+      min: "1"
+      max: state.N
   output: Number
   colour: 20
   tooltip: Larghezza della scatola i-esima
   helpUrl: ""
   js: |
     (function(i) {
-      if (i < 1 || i > state.N)
-        exit(false, "la scatola " + i + " non esiste");
       state.pos = i-1;
       return state.rot[i-1] ? state.altezze[i-1] : state.larghezze[i-1];
     })(%1)
@@ -45,7 +45,9 @@
   message0: ruota la scatola %1
   args0:
     - type: input_value
-      check: Number
+      check: Integer
+      min: "1"
+      max: state.N
   previousStatement: null
   nextStatement: null
   colour: 20
@@ -53,8 +55,6 @@
   helpUrl: ""
   js: |
     (function(i) {
-      if (i < 1 || i > state.N)
-        exit(false, "la scatola " + i + " non esiste");
       state.rot[i-1] = !state.rot[i-1];
       state.pos = i-1;
     })(%1);

@@ -35,7 +35,9 @@
   message0: spezza %1 quadratini in orizzontale
   args0:
     - type: input_value
-      check: Number
+      check: Integer
+      min: "1"
+      max: state.M
   previousStatement: null
   nextStatement: null
   colour: 20
@@ -43,8 +45,6 @@
   helpUrl: ""
   js: |
     (function(i) {
-      if (i <= 0 || Math.floor(i) !== i) exit(false, "numero di righe " + i + " non valido");
-      if (i > state.M) exit(false, "non ci sono " + i + " righe");
       state.M -= i;
       state.K -= 1;
       state.cuts.push(i);
@@ -54,7 +54,9 @@
   message0: spezza %1 quadratini in verticale
   args0:
     - type: input_value
-      check: Number
+      check: Integer
+      min: "1"
+      max: state.N
   previousStatement: null
   nextStatement: null
   colour: 20
@@ -62,8 +64,6 @@
   helpUrl: ""
   js: |
     (function(i) {
-      if (i <= 0 || Math.floor(i) !== i) exit(false, "numero di colonne " + i + " non valido");
-      if (i > state.N) exit(false, "non ci sono " + i + " colonne");
       state.N -= i;
       state.K -= 1;
       state.cuts.push(-i);

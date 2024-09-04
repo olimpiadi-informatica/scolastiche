@@ -48,7 +48,9 @@
   message0: impila blocchetto %1 a %2
   args0:
     - type: input_value
-      check: Number
+      check: Integer
+      min: "1"
+      max: state.M
     - type: field_dropdown
       options:
         - [sinistra, "0"]

@@ -27,17 +27,14 @@
   message0: altitudine della colonnina %1
   args0:
     - type: input_value
-      check: Number
+      check: Integer
+      min: "1"
+      max: state.N
   output: Number
   colour: 20
   tooltip: altitudine della colonnina i-esima
   helpUrl: ""
-  js: |
-    (function(i) {
-      if (i < 1 || i > state.N || Math.floor(i) !== i)
-        exit(false, "la colonnina " + i + " non esiste");
-      return state.H[i-1];
-    })(%1)
+  js: state.H[(%1) - 1]
 
 - type: avanza
   message0: avanza
@@ -75,7 +72,9 @@
   message0: ricarica per %1 minuti
   args0:
     - type: input_value
-      check: Number
+      check: Integer
+      min: "0"
+      max: "1000000"
   previousStatement: null
   nextStatement: null
   colour: 20
@@ -83,8 +82,6 @@
   helpUrl: ""
   js: |
     (function(i) {
-      if (i < 0 || i > 1000000 || Math.floor(i) !== i)
-        exit(false, "numero di minuti " + i + " non valido");
       state.time += i;
       state.energy += i;
       state.charging = true;
