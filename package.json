@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@mdx-js/react": "^3.0",
-    "@olinfo/quizms": "^1.0",
+    "@olinfo/quizms": "^2.0.0-beta.3",
     "@olinfo/react-components": "^0.7",
     "@olinfo/tailwind": "^0.1",
     "@types/d3-shape": "^3.1.6",
