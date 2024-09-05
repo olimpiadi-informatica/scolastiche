@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "postinstall": "playwright install chromium",
     "dev": "quizms dev",
     "lint": "biome check --write",
     "build": "quizms build --training"
