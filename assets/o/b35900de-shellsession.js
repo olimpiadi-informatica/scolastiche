@@ -1,0 +1,3 @@
+/*! For licenses information, see LICENSES.txt */
+import s from"../x/06964942-shellscript.js";const e=Object.freeze({displayName:"Shell Session",fileTypes:["sh-session"],name:"shellsession",patterns:[{captures:{1:{name:"entity.other.prompt-prefix.shell-session"},2:{name:"punctuation.separator.prompt.shell-session"},3:{name:"source.shell",patterns:[{include:"source.shell"}]}},match:"^(?:((?:\\(\\S+\\)\\s*)?(?:sh\\S*?|\\w+\\S+[@:]\\S+(?:\\s+\\S+)?|\\[\\S+?[@:][^\\n]+?\\].*?))\\s*)?([>$#%❯➜]|\\p{Greek})\\s+(.*)$"},{match:"^.+$",name:"meta.output.shell-session"}],scopeName:"text.shell-session",embeddedLangs:["shellscript"],aliases:["console"]});var t=[...s,e];export{t as default};
+//# sourceMappingURL=b35900de-shellsession.js.map
