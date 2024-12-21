@@ -12,7 +12,7 @@ Ti è permesso:
 
 Non ti è permesso:
 
-- navigare su internet, se non all'indirizzo del sito della prova https://gara.scolastiche.olinfo.it;
+- navigare su internet, se non all'indirizzo del sito della prova;
 - comunicare con i tuoi compagni;
 - comunicare con il docente sorvegliante sul contenuto della prova;
 - diffondere il testo della prova, o parte di esso, prima delle 20:00 del giorno della prova (16 dicembre).

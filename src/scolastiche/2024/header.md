@@ -15,19 +15,22 @@ Non ti è permesso:
 - navigare su internet, se non all'indirizzo del sito della prova;
 - comunicare con i tuoi compagni;
 - comunicare con il docente sorvegliante sul contenuto della prova;
-- diffondere il testo della prova, o parte di esso, prima delle 20:00 del giorno della prova (14 dicembre).
+- diffondere il testo della prova, o parte di esso, prima delle 20:00 del giorno della prova (12 dicembre).
 
 ## Formato della prova
 
-Questa prova contiene _20 domande_, da svolgere in un tempo totale di _90 minuti_. La prova consiste di quesiti a **scelta multipla** e quesiti a **domanda aperta numerica**, ed è divisa in tre parti:
+La prova contiene _10 problemi_ da risolvere in _90 minuti_, ed è divisa in due parti:
+- sette problemi di **pensiero logico-algoritmico**, e
+- tre problemi di interpretazione di **procedimenti procedurali** come programmi a blocchi.
 
-- 6 quesiti a scelta multipla a **carattere logico-matematico**,
-- 6 quesiti a scelta multipla di **programmazione** in pseudocodice, e
-- 4 quesiti a **carattere algoritmico**, ciascuno con 2 domande aperte numeriche.
+In entrambe le parti i problemi sono **in ordine casuale**, e quindi non in ordine di difficoltà.
+Ogni problema comprende _due domande_, valutate separatamente.
+La prima domanda è **sempre più semplice**, e può aiutare a rispondere alla seconda domanda (che in genere è da considerarsi difficile).
 
 ## Punteggio
 
-Tutti i quesiti a _scelta multipla_ presentano 5 opzioni, di cui **solo una** è corretta. Il punteggio assegnato per tali quesiti è:
+Le domande possono essere a scelta multipla oppure a risposta aperta numerica.
+Tutte le domande a _scelta multipla_ presentano 5 opzioni, di cui **solo una** è corretta. Il punteggio assegnato per tali domande è:
 
 - 5 punti per una risposta _corretta_;
 - 1 punto per una risposta _in bianco_;
@@ -37,8 +40,6 @@ Ogni _domanda aperta numerica_ richiede come risposta un numero intero (eventual
 
 - 5 punti per una risposta _corretta_;
 - 0 punti per una risposta _errata_ o _in bianco_.
-
-In particolare, il punteggio massimo ottenibile per un quesito a carattere algoritmico è 5 + 5 = 10.
 
 ## Quesiti di programmazione e pseudocodice
 
