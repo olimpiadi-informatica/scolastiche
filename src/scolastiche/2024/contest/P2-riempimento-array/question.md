@@ -31,7 +31,6 @@ function f(n: integer) -> integer
 end function
 ```
 
-<div className="break-inside-avoid">
 Cosa viene restituito da `f({n1})`?
 
 - [x] $\js{correct1}$
@@ -39,7 +38,6 @@ Cosa viene restituito da `f({n1})`?
 - [ ] $\js{wrong1[1]}$
 - [ ] $\js{wrong1[2]}$
 - [ ] $\js{wrong1[3]}$
-</div>
 
 > Questo primo quesito si può risolvere anche eseguendo il programma a mano, e calcolando quindi il valore di `arr`, che si può osservare conterrà, in ogni posizione $i$, il massimo multiplo di $2$ o di $3$ minore o uguale di $i$.
 >

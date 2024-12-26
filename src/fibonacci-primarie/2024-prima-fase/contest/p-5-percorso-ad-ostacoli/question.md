@@ -11,12 +11,7 @@ Per esempio se Bunny compie un'azione **salta** quando è sulla casella $1$, sup
 **ATTENZIONE:** sul percorso ci sono delle *grandi rocce*! Bunny non può passare su una casella occupata da una *grande roccia*, altrimenti cadrebbe, ma può superarla grazie ad un'azione **salta**.
 Se Bunny segue il procedimento qui sotto, riesce a raggiungere la bandierina?
 
-<div class="print:hidden">
 ![code](code.asy)
-</div>
-<div class="hidden print:block">
-![code](code.asy?s=0.5)
-</div>
 
 - [ ] si, raggiunge la bandierina
 - [ ] no, perchè cade sulla *grande roccia* in posizione $4$
@@ -47,12 +42,7 @@ Ricordiamo il percorso ad ostacoli ed il procedimento seguito da Bunny:
 
 ![fig](fig.asy)
 
-<div class="print:hidden">
 ![code](code.asy)
-</div>
-<div class="hidden print:block">
-![code](code.asy?s=0.5)
-</div>
 
 Bunny si chiede se cambiando punto di partenza riuscirebbe a raggiungere o superare la bandierina. Per quali di questi punti di partenza Bunny raggiunge la bandierina seguendo il suo procedimento?
 

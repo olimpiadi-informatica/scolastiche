@@ -20,7 +20,7 @@ Può farlo con degli **scambi** di posto tra coppie di suoi amici. Quali di ques
 
 ---
 
-Per rendere il gioco più difficile, ora Bunny può solo fare **scambi di vicini**, cioè può scambiare di posto due suoi amici <u>solo se</u> sono uno di fianco all'altro.
+Per rendere il gioco più difficile, ora Bunny può solo fare **scambi di vicini**, cioè può scambiare di posto due suoi amici **solo se** sono uno di fianco all'altro.
 Quanti **scambi di vicini** deve fare per ordinare i suoi amici?
 
 - [ ] $6$
