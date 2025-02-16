@@ -28,6 +28,19 @@
       "style": {
         "noNegationElse": "error",
         "noNonNullAssertion": "off",
+        "useNamingConvention": {
+          "level": "error",
+          "options": {
+            "conventions": [
+              {
+                "selector": {
+                  "kind": "objectLiteralMember"
+                },
+                "formats": ["camelCase", "PascalCase"]
+              }
+            ]
+          }
+        },
         "useFilenamingConvention": {
           "level": "error",
           "options": {

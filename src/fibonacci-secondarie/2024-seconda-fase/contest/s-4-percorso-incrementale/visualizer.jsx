@@ -1,5 +1,6 @@
 "use client";
 
+import clsx from "clsx";
 import { range } from "lodash-es";
 import { Canvas, Rectangle, Sprite, Variables } from "~/utils/visualizer";
 import bunny from "./asy/bunny.asy?w=66";
@@ -16,70 +17,51 @@ class Random {
 }
 
 export default function Visualizer({ variables, state }) {
-  const cell_side = 20;
-  const cell_padding = 1;
+  const cellSide = 20;
+  const cellPadding = 1;
   const scale = 10;
-  const font_height = 4;
+  const fontHeight = 4;
 
   const random = new Random(state.N);
   const colors = ["orange", "lightgreen", "blue", "aquamarine", "yellow", "red"];
-  const cell_color = range(state.N).map(() => colors[random.next() % colors.length]);
+  const cellColor = range(state.N).map(() => colors[random.next() % colors.length]);
   return (
     <>
       <Canvas gravity="bottom" scale={scale}>
         {range(state.N).map((i) => (
           <Rectangle
             color="transparent"
-            width={cell_side}
-            height={cell_side}
-            key={"rect" + i}
-            x={cell_side * i}
+            width={cellSide}
+            height={cellSide}
+            key={`rect${i}`}
+            x={cellSide * i}
             y={2}>
             <Rectangle
-              color={{ W: "white", B: cell_color[i] }[state.cols[i]]}
-              width={cell_side - 2 * cell_padding}
-              height={cell_side - 2 * cell_padding}
-              x={cell_padding}
-              y={cell_padding}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: 10 * scale,
-              }}>
+              color={{ W: "white", B: cellColor[i] }[state.cols[i]]}
+              width={cellSide - 2 * cellPadding}
+              height={cellSide - 2 * cellPadding}
+              x={cellPadding}
+              y={cellPadding}
+              className="flex items-center justify-center text-8xl">
               {i + 1}
             </Rectangle>
           </Rectangle>
         ))}
-        <Sprite src={bunny} alt="Bunny" x={cell_side * (state.pos + 0.25) - 3.5} y={0} follow />
+        <Sprite src={bunny} alt="Bunny" x={cellSide * (state.pos + 0.25) - 3.5} y={0} follow />
         <Rectangle
-          style={{
-            padding: "5px",
-            textAlign: "center",
-            borderRadius: "10px",
-          }}
-          x={Math.max(cell_side * state.pos, 40)}
-          y={-font_height * state.M - 2}
-          height={font_height * state.M + 2}
-          width={30}>
+          x={Math.max(cellSide * state.pos, 40)}
+          y={-fontHeight * state.M - 2}
+          height={fontHeight * state.M + 2}
+          width={30}
+          className="p-2 rounded-lg">
           {range(state.M).map((i) => (
-            <Rectangle
+            <div
               key={`instr-${i}`}
-              style={{
-                border: "None",
-                textAlign: "center",
-                fontSize: `${scale * font_height}px`,
-                lineHeight: `${scale * font_height}px`,
-                fontWeight: i === state.i ? "bold" : "normal",
-                fontFamily: "monospace",
-              }}
-              y={(-i + state.M - 1) * font_height + 1}
-              x={1}
-              width="100%">
+              className={clsx("border-0 text-4xl font-mono", i === state.i && "font-bold")}>
               <pre>
                 {`${(state.M > 9) && (i + 1 < 10) ? " " : ""}${i + 1}. ${{ S: "SALTA", A: "AVANZA" }[state.instr[i]]}`}
               </pre>
-            </Rectangle>
+            </div>
           ))}
         </Rectangle>
       </Canvas>

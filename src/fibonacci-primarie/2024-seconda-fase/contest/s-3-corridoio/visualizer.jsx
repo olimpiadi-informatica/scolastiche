@@ -2,6 +2,7 @@
 
 import { Fragment } from "react";
 
+import clsx from "clsx";
 import { range } from "lodash-es";
 
 import { Canvas, Rectangle, Sprite, Variables } from "~/utils/visualizer";
@@ -28,25 +29,24 @@ export default function Visualizer({ variables, state }) {
       <Canvas gravity="bottom" scale={10}>
         {range(state.N).map((i) => (
           <Rectangle
-            key={"rect" + i}
+            key={`rect${i}`}
             color={state.light[i] ? "#eee" : "#333"}
             height={height}
             width={width}
             x={width * (i + 1)}
             y={6}>
             <div
-              style={{
-                color: state.light[i] ? "black" : "white",
-                textDecorationColor: state.light[i] ? "black" : "white",
-              }}
-              className="absolute mt-1 size-full origin-bottom text-center text-2xl text-slate-900 underline decoration-slate-900">
+              className={clsx(
+                "absolute mt-1 size-full origin-bottom text-center text-2xl underline",
+                state.light[i] ? "text-black" : "text-white",
+              )}>
               {i + 1}
             </div>
           </Rectangle>
         ))}
         {range(state.N).map((i) => (
           <Sprite
-            key={"bulb" + i}
+            key={`bulb${i}`}
             src={state.light[i] ? bulbOn : bulbOff}
             alt=""
             x={width * (i + 1.5) - 1.5}
@@ -55,7 +55,7 @@ export default function Visualizer({ variables, state }) {
         ))}
         {range(state.N * 2).map((i) => (
           <Sprite
-            key={"switch" + i}
+            key={`switch${i}`}
             src={
               i > 0 && state.light[Math.floor((i - 1) / 2)]
                 ? state.switch[i]
@@ -71,7 +71,7 @@ export default function Visualizer({ variables, state }) {
           />
         ))}
         {range(state.N).map((i) => (
-          <Fragment key={"door" + i}>
+          <Fragment key={`door${i}`}>
             {state.door[i] ? (
               <Sprite src={openedDoor} alt="Porta aperta" x={width * (i + 1) - 1.5} y={3} />
             ) : (

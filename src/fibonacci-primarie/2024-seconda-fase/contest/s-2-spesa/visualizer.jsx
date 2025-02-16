@@ -41,7 +41,14 @@ export default function Visualizer({ variables, state }) {
           return <Sprite key={nc++} src={carrot} alt="Carota" x={x} y={y} />;
         })}
       </Canvas>
-      <Variables variables={{ ...variables, "N (num. stanze)": state.N, "K (dim. pacco)": state.K, "euro spesi": state.cost }} />
+      <Variables
+        variables={{
+          ...variables,
+          "N (num. stanze)": state.N,
+          "K (dim. pacco)": state.K,
+          "euro spesi": state.cost,
+        }}
+      />
     </>
   );
 }
