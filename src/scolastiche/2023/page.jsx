@@ -4,7 +4,7 @@ import Contest from "./contest/contest.mdx";
 import Header from "./header.md";
 
 export const metadata = {
-  title: "Scolastiche 2023",
+  title: "Olimpiadi di Informatica",
   description: "Olimpiadi Italiane di Informatica 2023/2024 - Selezione scolastica",
 };
 

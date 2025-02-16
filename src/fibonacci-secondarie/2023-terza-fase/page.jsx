@@ -4,7 +4,7 @@ import Statement from "./contest/contest.mdx";
 import Header from "./header.md";
 
 export const metadata = {
-  title: "Giochi di Fibonacci 2023/2024 - Fase Finale",
+  title: "Giochi di Fibonacci",
   description: "Fase Finale dei Giochi di Fibonacci 2023/2024",
 };
 

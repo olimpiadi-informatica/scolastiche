@@ -3,7 +3,7 @@ import { NoAuth } from "@olinfo/quizms/student";
 import Contest from "./contest/contest.mdx";
 
 export const metadata = {
-  title: "Scolastiche 2020",
+  title: "Olimpiadi di Informatica",
   description: "Olimpiadi Italiane di Informatica 2020/2021 - Selezione scolastica",
 };
 

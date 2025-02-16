@@ -4,7 +4,7 @@ import Contest from "./contest/contest.mdx";
 import Header from "./header.md";
 
 export const metadata = {
-  title: "Giochi di Fibonacci 2023/2024 - Fase I - Scuole primarie",
+  title: "Giochi di Fibonacci",
   description: "Prima fase dei Giochi di Fibonacci 2023/2024 per le scuole primarie",
 };
 

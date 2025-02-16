@@ -133,6 +133,7 @@ dist
 # QuizMS
 bundle
 pdf
+.quizms
 
 # SWC
 .swc
