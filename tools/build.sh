@@ -8,4 +8,4 @@ apt-get update
 apt-get install -y asymptote texlive-latex-extra texlive-fonts-recommended libxkbcommon0
 yarn install --production --frozen-lockfile
 yarn build
-cp dist/index.html dist/404.html
+cp .quizms/hosting-build/index.html .quizms/hosting-build/404.html
