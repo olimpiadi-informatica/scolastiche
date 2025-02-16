@@ -1,0 +1,129 @@
+- type: start
+  message0: inizia qui
+  nextStatement: null
+  colour: 20
+  tooltip: L'esecuzione inizia da qui
+  helpUrl: ""
+  maxInstances: 1
+  js: |
+    function controlla_posizione() {
+      if(state.pos >= state.N) {
+        exit(false, "sei andato oltre l'ultima parete");
+      }
+    }
+    function controlla_indice() {
+      if (state.i >= state.M) {
+        exit(false, "sei andato oltre l'ultima istruzione");
+      }
+    }
+    function colore() {
+      controlla_posizione();
+      return state.cols[state.pos];
+    }
+    function colora() {
+      controlla_posizione();
+      state.cols[state.pos] = "B";
+      if (state.cols[state.pos] !== state.solution[state.pos])
+        exit(false, "non dovevi colorare questa parete");
+    }
+    function prossima_posizione() {
+      controlla_posizione();
+      state.pos += 1;
+    }
+    function istruzione() {
+      controlla_indice();
+      return state.instr[state.i];
+    }
+    function prossima_istruzione() {
+      controlla_indice();
+      state.i += 1;
+    }
+
+- type: N
+  message0: N
+  output: Number
+  colour: 20
+  tooltip: il numero di pareti
+  helpUrl: ""
+  js: state.N
+
+- type: M
+  message0: M
+  output: Number
+  colour: 20
+  tooltip: il numero di istruzioni
+  helpUrl: ""
+  js: state.M
+
+- type: istruzione corrente
+  message0: l'istruzione attuale è %1
+  args0:
+    - type: field_dropdown
+      options:
+        - [avanza, "A"]
+        - [salta, "S"]
+  output: Boolean
+  colour: 20
+  tooltip: CAMBIAMI
+  helpUrl: ""
+  js: istruzione() == "%1"
+
+- type: colore parete
+  message0: la parete corrente è %1
+  args0:
+    - type: field_dropdown
+      options:
+        - [bianca, "W"]
+        - [colorata, "B"]
+  output: Boolean
+  colour: 20
+  tooltip: controlla il colore della parete davanti ad Allie
+  js: colore() == "%1"
+
+- type: colora
+  message0: colora la parete 
+  colour: 20
+  previousStatement: null
+  nextStatement: null
+  tooltip: colora la parete davanti ad Allie
+  js: colora();
+
+- type: avanza
+  message0: avanza
+  colour: 20
+  previousStatement: null
+  nextStatement: null
+  tooltip: passa alla parete successiva
+  js: prossima_posizione();
+
+- type: prossima istruzione
+  message0: prossima istruzione
+  colour: 20
+  previousStatement: null
+  nextStatement: null
+  tooltip: passa all'istruzione successiva
+  js: prossima_istruzione();
+
+- type: torna all'inizio
+  message0: torna all'inizio
+  colour: 20
+  previousStatement: null
+  nextStatement: null
+  tooltip: torna alla prima parete e alla prima istruzione
+  js: |
+    if(state.must_optimize) {
+      exit(false, "non puoi tornare all'inizio in questo livello");
+    }
+    state.pos = 0;
+    state.i = 0;
+
+- type: termina
+  message0: termina
+  previousStatement: null
+  colour: 20
+  tooltip: termina il procedimento
+  js: |
+    for (i = 0; i < state.N; i++)
+      if (state.cols[i] !== state.solution[i])
+        exit(false, "non hai colorato la parete " + (i+1) + " come voleva Carol");
+    exit(true, "hai colorato bene le pareti, complimenti!");

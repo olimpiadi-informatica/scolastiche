@@ -1,0 +1,90 @@
+- type: start
+  message0: inizia qui
+  nextStatement: null
+  colour: 20
+  tooltip: L'esecuzione inizia da qui
+  helpUrl: ""
+  maxInstances: 1
+  js: ""
+
+- type: N
+  message0: N
+  output: Number
+  colour: 20
+  tooltip: numero di conigli in fila
+  helpUrl: ""
+  js: state.N
+
+- type: K
+  message0: K
+  output: Number
+  colour: 20
+  tooltip: numero di carote in ogni pacco
+  helpUrl: ""
+  js: state.K
+
+- type: coniglio adulto
+  message0: coniglio adulto
+  output: Boolean
+  colour: 20
+  tooltip: se il prossimo coniglio in fila è adulto
+  helpUrl: ""
+  js: |
+    state.queue[state.pos] === 2
+
+- type: carote rimaste
+  message0: carote rimaste
+  output: Number
+  colour: 20
+  tooltip: quante carote sono rimaste al momento a Carol
+  helpUrl: ""
+  js: |
+    state.carrots
+
+- type: dai carote
+  message0: dai %1 carote
+  args0:
+    - type: input_value
+      check: Integer
+      min: "0"
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: consegna carote al prossimo coniglio in fila
+  helpUrl: ""
+  js: |
+    (function(i) {
+      if (state.pos >= state.N)
+        exit(false, "non ci sono più conigli in fila");
+      if (i > state.carrots)
+        exit(false, "non hai " + i + " carote da dare");
+      state.carrots -= i;
+      state.wealth[state.pos] += i;
+      state.pos++;
+      if (state.queue[state.pos-1] !== i)
+        exit(false, "hai dato " + i + " carote ma dovevi darne " + state.queue[state.pos-1]);
+    })(%1);
+
+- type: compra pacco di carote
+  message0: compra pacco di carote
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: acquista un pacco di carote per 1 euro
+  helpUrl: ""
+  js: |
+    state.carrots += state.K;
+    state.cost++;
+
+- type: termina
+  message0: termina
+  previousStatement: null
+  colour: 20
+  tooltip: smetti di consegnare carote
+  helpUrl: ""
+  js: |
+    if (state.pos < state.N)
+      exit(false, "non hai finito la fila");
+    if (state.cost > state.sol)
+      exit(false, "potevi spendere meno soldi");
+    exit(true, "hai distribuito le carote bene, complimenti!");
