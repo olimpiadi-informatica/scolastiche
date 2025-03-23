@@ -95,7 +95,7 @@
   helpUrl: ""
   js: |
     state.charging = false;
-    if (state.pos < state.N-1)
+    if (state.posx < state.N-1)
       exit(false, "non sei arrivato alla fine");
     if (state.time > state.sol)
       exit(false, "potevi aspettare meno alle colonnine");

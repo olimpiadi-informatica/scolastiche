@@ -10,7 +10,7 @@ type = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
 params = [MIN, MAX, type]
 
 def solve(N):
-    risposta = 1;
+    risposta = 1
     while N > 2:
         if N%2 == 1:
             N += 1
