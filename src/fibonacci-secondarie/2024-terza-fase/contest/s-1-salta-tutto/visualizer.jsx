@@ -5,9 +5,9 @@ import { range } from "lodash-es";
 import { Canvas, Sprite, Variables } from "~/utils/visualizer";
 
 import bunny from "./asy/bunny.asy?w=66";
-import rock from "./asy/rock.asy?w=120";
-import flat_rock from "./asy/flat_rock.asy?w=120";
 import flag from "./asy/flag.asy?w=80";
+import flatRock from "./asy/flat_rock.asy?w=120";
+import rock from "./asy/rock.asy?w=120";
 
 export default function Visualizer({ variables, state }) {
   if (state.N > 50) {
@@ -21,11 +21,11 @@ export default function Visualizer({ variables, state }) {
   return (
     <>
       <Canvas scale={130}>
-        {range(state.N+2).map((i) => {
+        {range(state.N + 2).map((i) => {
           return (
             <Sprite
               key={i}
-              src={state.rocks[i] ? rock : flat_rock}
+              src={state.rocks[i] ? rock : flatRock}
               alt={state.rocks[i] ? "ostacolo" : "percorso"}
               x={i}
               y={state.rocks[i] ? 0.9 : 1.5}

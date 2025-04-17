@@ -170,7 +170,6 @@ export function Rectangle({
   y = 0,
   rotation = 0,
   className = "",
-  style = {},
   children,
 }: RectangleProps) {
   const id = useId();
@@ -197,10 +196,9 @@ export function Rectangle({
           [gravity]: `${y * scale}px`,
           left: `${x * scale}px`,
           "--tw-rotate": `${rotation}turn`,
-          ...style,
         } as CSSProperties
       }
-      className={clsx("absolute border-2 border-solid border-black transition-all transform", className)}>
+      className={clsx("absolute transition-all transform", className)}>
       {children}
     </div>
   );

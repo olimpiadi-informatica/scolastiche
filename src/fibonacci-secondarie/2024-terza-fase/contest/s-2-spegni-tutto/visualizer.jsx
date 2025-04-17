@@ -1,7 +1,6 @@
 "use client";
 
-import { Fragment } from "react";
-
+import clsx from "clsx";
 import { range } from "lodash-es";
 
 import { Canvas, Rectangle, Sprite, Variables } from "~/utils/visualizer";
@@ -18,7 +17,6 @@ import switchOnOff from "./asy/switch-on-off.asy?w=30";
 import switchOnOn from "./asy/switch-on-on.asy?w=30";
 
 export default function Visualizer({ variables, state }) {
-
   const height = 24;
   const width = 18;
   const grays = ["#222", "#555", "#888", "#bbb", "#eee"];
@@ -34,29 +32,28 @@ export default function Visualizer({ variables, state }) {
   }
 
   function isOn(i) {
-    return i<0 || i>=state.N ? 0 : state.light[i] * state.screwed[i];
+    return i < 0 || i >= state.N ? 0 : state.light[i] * state.screwed[i];
   }
 
   return (
     <>
       <Canvas gravity="bottom" scale={10}>
         {range(state.N).map((i) => {
-          const light = 2*isOn(i)+isOn(i-1)+isOn(i+1);
+          const light = 2 * isOn(i) + isOn(i - 1) + isOn(i + 1);
           return (
             <Rectangle
-              key={"rect" + i}
+              key={`rect${i}`}
               color={grays[light]}
               height={height}
               width={width}
               x={width * (i + 1)}
               y={6}
-              className="border-none">
+              className="!border-none">
               <div
-                style={{
-                  color: light >= 2 ? "black" : "white",
-                  textDecorationColor: light >= 2 ? "black" : "white",
-                }}
-                className="absolute mt-1 size-full origin-bottom text-center text-2xl text-slate-900 underline decoration-slate-900">
+                className={clsx(
+                  "absolute mt-1 size-full origin-bottom text-center text-2xl underline",
+                  light >= 2 ? "text-black decoration-black" : "text-white decoration-white",
+                )}>
                 {i + 1}
               </div>
             </Rectangle>
@@ -64,7 +61,7 @@ export default function Visualizer({ variables, state }) {
         })}
         {range(state.N).map((i) => (
           <Sprite
-            key={"bulb" + i}
+            key={`bulb${i}`}
             src={isOn(i) ? bulbOn : bulbOff}
             alt=""
             x={width * (i + 1.5) - 1.5}
@@ -72,11 +69,11 @@ export default function Visualizer({ variables, state }) {
             rotation={state.screwed[i] ? 0 : 0.32}
           />
         ))}
-        {range(state.N-1).map((i) => {
-          const light = isOn(i)+isOn(i+1);
+        {range(state.N - 1).map((i) => {
+          const light = isOn(i) + isOn(i + 1);
           return (
             <Sprite
-              key={"switch" + i}
+              key={`switch${i}`}
               src={state.switch[i] ? switchOn[light] : switchOff[light]}
               alt=""
               x={width * (i + 2) - 1.5}
@@ -84,21 +81,21 @@ export default function Visualizer({ variables, state }) {
             />
           );
         })}
-        {range(state.N-1).map((i) => {
-          const light = isOn(i)+isOn(i+1);
+        {range(state.N - 1).map((i) => {
+          const light = isOn(i) + isOn(i + 1);
           return (
             <Rectangle
-              key={"lbl" + i}
+              key={`lbl${i}`}
               height={1}
               width={3}
               x={width * (i + 2) - 1.5}
               y={10}
-              className="border-none">
+              className="!border-none">
               <div
-                style={{
-                  color: light > 1 ? "black" : "white",
-                }}
-                className="absolute mt-1 size-full origin-bottom text-center text-2xl text-slate-900 decoration-slate-900">
+                className={clsx(
+                  "absolute mt-1 size-full origin-bottom text-center text-2xl decoration-slate-900",
+                  light > 1 ? "text-black" : "text-white",
+                )}>
                 {i + 1}
               </div>
             </Rectangle>
