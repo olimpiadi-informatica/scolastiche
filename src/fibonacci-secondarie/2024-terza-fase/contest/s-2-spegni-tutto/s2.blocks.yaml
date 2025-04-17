@@ -1,0 +1,100 @@
+- type: start
+  message0: inizia qui
+  nextStatement: null
+  colour: 20
+  tooltip: L'esecuzione inizia da qui
+  helpUrl: ""
+  maxInstances: 1
+  js: ""
+
+- type: N
+  message0: N
+  output: Number
+  colour: 20
+  tooltip: numero di lampadine
+  helpUrl: ""
+  js: state.N
+
+- type: lampadina accesa
+  message0: lampadina %1 accesa
+  args0:
+    - type: input_value
+      check: Integer
+      min: "1"
+  output: Boolean
+  colour: 20
+  tooltip: vero se la lampadina $i$-esima è accesa
+  helpUrl: ""
+  js: |
+    (function(i) {
+      if (i > state.N || i < 1)
+        exit(false, "non c'è una lampadina " + i + "-esima");
+      if (state.pos !== i)
+        state.dir = i > state.pos ? 1 : -1;
+      state.pos = i;
+      return state.light[i-1] === 1;
+    })(%1)
+
+- type: svita lampadina
+  message0: svita lampadina %1
+  args0:
+    - type: input_value
+      check: Integer
+      min: "1"
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: svita l'$i$-esima lampadina
+  helpUrl: ""
+  js: |
+    (function(i) {
+      if (i > state.N || i < 1)
+        exit(false, "non c'è una lampadina " + i + "-esima");
+      if (state.pos !== i)
+        state.dir = i > state.pos ? 1 : -1;
+      state.pos = i;
+      pause();
+      if (state.screwed[i-1] === 0)
+        exit(false, "la lampadina " + i + "-esima è già svitata");
+      state.count += 1;
+      state.screwed[i-1] = 0;
+    })(%1);
+
+- type: premi interruttore
+  message0: premi l'interruttore %1
+  args0:
+    - type: input_value
+      check: Integer
+      min: "1"
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: premi l'interruttore $i$-esimo
+  helpUrl: ""
+  js: |
+    (function(i) {
+      if (i >= state.N || i < 1)
+        exit(false, "non c'è un interruttore " + i + "-esimo");
+      if (state.pos !== i+0.5)
+        state.dir = i+0.5 > state.pos ? 1 : -1;
+      state.pos = i+0.5;
+      pause();
+      state.count += 1;
+      state.switch[i-1] ^= 1;
+      state.light[i-1] ^= 1;
+      state.light[i] ^= 1;
+    })(%1);
+
+- type: termina
+  message0: termina
+  previousStatement: null
+  colour: 20
+  tooltip: raggiungi i tuoi amici per la cena intorno al fuoco
+  helpUrl: ""
+  js: |
+    for (i=0; i<state.N; i++)
+      if (state.light[i] === 1 && state.screwed[i] === 1)
+        exit(false, "non hai spento la luce nella stanza " + (i+1));
+    if (state.count !== state.sol)
+      exit(false, "hai fatto " + state.count + " azioni, ma ne bastavano " + state.sol);
+    exit(true, "hai spento le luci con poche azioni, complimenti!");

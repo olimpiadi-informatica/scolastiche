@@ -1,0 +1,44 @@
+import initialBlocks from "./initial-blocks.json";
+import customBlocks from "./s4.blocks.yaml";
+import testcases from "./testcases.py";
+import Visualizer from "./visualizer.jsx";
+
+Per il suo compleanno, a Tip-Tap hanno regalato un titolo di investimento della **Carrot**. Il titolo oggi ha un valore $T_0$ carote,
+ma il suo valore sale di $G_0$ carote ogni giorno, per cui tra $k$ giorni varrà $T_0 + k \cdot G_0$. Il nostro amico allora ha deciso di darsi alla finanza!
+
+Tuttavia, un solo intermediario accetta di fare affari con i conigli, e con delle condizioni molto restrittive. Ogni giorno,
+l'intermediario offre a Tip-Tap un singolo titolo: nel giorno $i$, un titolo che vale $T_i$ in quel giorno e il cui valore salirà di $G_i$
+in ogni successivo giorno. Se il titolo che Tip-Tap possiede quel giorno vale più di quello offerto dall'intermediario, Tip-Tap può decidere di scambiare il
+titolo che ha con quello offerto, ma senza ricevere nessun resto in cambio.
+
+Quello che però l'intermediario non sa è che Tip-Tap è molto furbo, ed è riuscito a scoprire quali titoli offrirà l'intermediario per i prossimi $N$ giorni.
+Usa queste informazioni per assicurarti il massimo guadagno dopo $N$ giorni!
+Hai a disposizione questi blocchi per ispezionare la situazione:
+
+- `N`: il numero di giorni.
+- `valore del titolo` $i$: il valore $T_i$ del titolo che viene proposto nel giorno $i$.
+- `guadagno del titolo` $i$: il guadagno $G_i$ che avrà il titolo $i$-esimo in ogni giorno successivo.
+- `valore del titolo` $i$ `al giorno` $d$: il valore $T_i$ del titolo che viene proposto nel giorno $i$, incrementato di $G_i$ al giorno fino al giorno $d$ ($T_i + (d-i) \cdot G_i$).
+
+Inoltre, hai a disposizione questi blocchi per annotarti informazioni di supporto:
+
+- `annota preferenza` $x$ `per il titolo` $i$: annota un numero $x$ a tua scelta sul titolo $i$-esimo.
+- `leggi preferenza per il titolo` $i$: leggi il numero che hai annotato sul titolo $i$-esimo.
+
+Infine, hai a disposizione questi blocchi per riportare un piano finanziario:
+
+- `prendi il titolo` $k$ `dopo il titolo` $i$: pianifica di prendere il titolo $k$ come prossimo titolo dopo $i$ (se prenderai il titolo $i$).
+- `non prendere altri titoli dopo` $i$: pianifica di tenere il titolo $i$ fino alla fine degli $N$ giorni (e questo è il piano iniziale per tutti i titoli).
+- `termina`: segui il piano che hai indicato con i blocchi fino alla fine degli $N$ giorni.
+
+**Attenzione:** è possibile cambiare idea più volte su quale titolo prendere dopo un certo titolo $i$ (e se prenderne o no), usando più volte i blocchi relativi.
+Nota inoltre che il tuo piano può pianificare un _prossimo titolo_ anche per titoli che in realtà non verranno poi presi nell'esecuzione finale.
+
+<Blockly
+  customBlocks={customBlocks}
+  initialBlocks={initialBlocks}
+  testcases={testcases}
+  visualizer={Visualizer}
+/>
+
+> Un possibile programma che segue esattamente le istruzioni di Allie è il seguente:

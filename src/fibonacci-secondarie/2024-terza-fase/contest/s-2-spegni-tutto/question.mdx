@@ -1,0 +1,29 @@
+import initialBlocks from "./initial-blocks.json";
+import customBlocks from "./s2.blocks.yaml";
+import testcases from "./testcases.py";
+import Visualizer from "./visualizer.jsx";
+
+Bunny ha superato la paura del buio, e deve spegnere tutte le $N$ lampadine nel lungo corridoio della fattoria prima di andare a dormire!
+Tuttavia, la disposizione degli interruttori nel corridoio è un po' particolare: ce ne è uno in mezzo a ogni due lampadine vicine, collegato ad entrambe.
+In particolare, gli interruttori numerati da $1$ a $N-1$ sono tali per cui l'$i$-esimo è collegato alle lampadine $i$-esima e $(i+1)$-esima.
+Premendo l'interruttore, entrambe le lampadine collegate si spegneranno se sono accese (o accenderanno se sono spente).
+Questo rende un po' complicato spegnere tutto, quindi Bunny ha deciso non andare troppo per il sottile, e se serve svitare direttamente alcune lampadine.
+Hai a disposizione questi blocchi:
+
+- `N`: il numero di lampadine.
+- `lampadina` $i$ `accesa`: vero se la lampadina $i$-esima è accesa.
+- `svita lampadina` $i$: svita l'$i$-esima lampadina, rendendola spenta (e non più accendibile dagli interruttori).
+- `premi l'interruttore` $i$: premi l'interruttore $i$-esimo, cambiando lo stato delle lampadine collegate (se non sono svitate).
+- `termina`: vai a dormire.
+
+Bunny è molto stanco e vorrebbe finire il suo lavoro il prima possibile: porta il buio nel corridoio facendo meno azioni possibile!
+Contano come azioni sia svitare una lampadina che premere un interruttore.
+
+<Blockly
+  customBlocks={customBlocks}
+  initialBlocks={initialBlocks}
+  testcases={testcases}
+  visualizer={Visualizer}
+/>
+
+> Un possibile programma corretto è il seguente.

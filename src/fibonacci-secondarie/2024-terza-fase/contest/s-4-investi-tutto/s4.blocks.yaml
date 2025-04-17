@@ -1,0 +1,180 @@
+- type: start
+  message0: inizia qui
+  nextStatement: null
+  colour: 20
+  tooltip: L'esecuzione inizia da qui
+  helpUrl: ""
+  maxInstances: 1
+  js: ""
+
+- type: N
+  message0: N
+  output: Number
+  colour: 20
+  tooltip: il numero di giorni
+  helpUrl: ""
+  js: state.N
+
+- type: valore del titolo al giorno
+  message0: valore del titolo %1 al giorno %2
+  args0:
+    - type: input_value
+      check: Integer
+      min: "0"
+    - type: input_value
+      check: Integer
+      min: "0"
+  output: Number
+  colour: 20
+  tooltip: valore del titolo i-esimo al giorno d-esimo
+  js: |
+    (function(i, d) {
+      if (i < 0 || i >= state.N)
+        exit(false, "il titolo " + i + " non esiste");
+      if (d > state.N)
+        exit(false, "il giorno " + d + " non esiste");
+      if (d <= i)
+        exit(false, "il giorno " + d + " è prima della validità del titolo " + i);
+      return state.V[i] + (d-i)*state.G[i];
+    })(%1, %2)
+
+- type: valore del titolo
+  message0: valore del titolo %1
+  args0:
+    - type: input_value
+      check: Integer
+      min: "0"
+  output: Number
+  colour: 20
+  tooltip: valore del titolo i-esimo
+  js: |
+    (function(i) {
+      if (i < 0 || i >= state.N)
+        exit(false, "il titolo " + i + " non esiste");
+      return state.V[i];
+    })(%1)
+
+- type: guadagno del titolo
+  message0: guadagno del titolo %1
+  args0:
+    - type: input_value
+      check: Integer
+      min: "0"
+  output: Number
+  colour: 20
+  tooltip: guadagno del titolo i-esimo
+  js: |
+    (function(i) {
+      if (i < 0 || i >= state.N)
+        exit(false, "il titolo " + i + " non esiste");
+      return state.G[i];
+    })(%1)
+
+
+- type: annota preferenza per il titolo
+  message0: annota preferenza %1 per il titolo %2
+  args0:
+    - type: input_value
+      check: Integer
+    - type: input_value
+      check: Integer
+      min: "0"
+  colour: 20
+  previousStatement: null
+  nextStatement: null
+  tooltip: annota preferenza per il titolo i-esimo
+  js: |
+    (function(x, i) {
+      if (i < 0 || i >= state.N)
+        exit(false, "il titolo " + i + " non esiste");
+      state.pos = i;
+      state.pref[i] = x;
+    })(%1, %2);
+
+- type: leggi preferenza per il titolo
+  message0: leggi preferenza per il titolo %1
+  args0:
+    - type: input_value
+      check: Integer
+      min: "0"
+  output: Number
+  colour: 20
+  tooltip: leggi preferenza per il titolo i-esimo
+  js: |
+    (function(i) {
+      if (i < 0 || i >= state.N)
+        exit(false, "il titolo " + i + " non esiste");
+      return state.pref[i];
+    })(%1)
+
+
+- type: prendi il titolo dopo il titolo
+  message0: prendi il titolo %1 dopo il titolo %2
+  args0:
+    - type: input_value
+      check: Integer
+      min: "0"
+    - type: input_value
+      check: Integer
+      min: "0"
+  colour: 20
+  previousStatement: null
+  nextStatement: null
+  tooltip: prendi il titolo k dopo il titolo i-esimo
+  js: |
+    (function(k, i) {
+      if (i < 0 || i >= state.N)
+        exit(false, "il titolo " + i + " non esiste");
+      if (k < 0 || k >= state.N)
+        exit(false, "il titolo " + k + " non esiste");
+      if (k <= i)
+        exit(false, "il titolo " + k + " non è dopo il titolo " + i);
+      if (state.V[i] + (k-i)*state.G[i] <= state.V[k])
+        exit(false, "non puoi scambiare il titolo " + k + " per il titolo " + i);
+      state.pos = i;
+      state.next[i] = k;
+    })(%1, %2);
+
+- type: non prendere altri titoli dopo
+  message0: non prendere altri titoli dopo %1
+  args0:
+    - type: input_value
+      check: Integer
+      min: "0"
+  colour: 20
+  previousStatement: null
+  nextStatement: null
+  tooltip: non prendere altri titoli dopo il titolo i-esimo
+  js: |
+    (function(i) {
+      if (i < 0 || i >= state.N)
+        exit(false, "il titolo " + i + " non esiste");
+      state.pos = i;
+      state.next[i] = i;
+    })(%1);
+
+- type: termina
+  message0: termina
+  previousStatement: null
+  colour: 20
+  tooltip: esegui il piano
+  js: |
+    var next = 0;
+    for (var i = 0; i < state.N; i++) {
+      state.pos = i;
+      state.curval += state.G[state.taken];
+      pause();
+      if (i === next) {
+        if (state.curval <= state.V[i])
+          exit(false, "ATTENZIONE: non puoi scambiare il titolo " + i + " per il titolo " + state.taken);
+        state.taken = i;
+        state.curval = state.V[i];
+        next = state.next[i];
+        pause();
+      }
+    }
+    state.pos = state.N;
+    state.curval += state.G[state.taken];
+    if (state.curval < state.sol)
+      exit(false, "potevi guadagnare di più");
+    exit(true, "hai guadagnato il massimo, complimenti!");

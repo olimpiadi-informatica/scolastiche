@@ -1,0 +1,32 @@
+import initialBlocks from "./initial-blocks.json";
+import customBlocks from "./s3.blocks.yaml";
+import testcases from "./testcases.py";
+import Visualizer from "./visualizer.jsx";
+
+Allie Muschio ha deciso di iniziare a giocare a FarmCraft. Il gioco sembra abbastanza divertente, ma ha un piccolo problema:
+Allie è ancora ultima nella graduatoria globale con zero punti. Potrebbe allenarsi per alzare il suo punteggio, ma Allie ha un piano migliore!
+
+La graduatoria di FarmCraft contiene $N$ giocatori, con il giocatore in posizione $i$-esima a punteggio $P_i$.
+Nello store del gioco, Allie ha visto che c'è la possibilità di comprare $N$ diverse box speciali, numerate da $1$ a $N$, ciascuna con un
+diverso costo di $C_i$ carote. Comprando la box $i$-esima, Allie potrà abbassare di $1$ punto il punteggio della persona che
+**in quel momento** sarà $i$-esima in graduatoria. Ogni box però può essere comprata un qualunque numero di volte.
+Dato che Allie Muschio è la più facoltosa della fattoria, ha deciso di usare queste box
+per abbassare il punteggio di tutti gli altri a zero e diventare così prima in classifica!
+Hai a disposizione questi blocchi:
+
+- `N`: il numero di giocatori di FarmCraft.
+- `punteggio del giocatore` $i$: il punteggio del giocatore che in questo momento è $i$-esimo in graduatoria.
+- `costo della box` $i$: costo in carote della box $i$-esima.
+- `compra box` $i$: paga la box $i$-esima e abbassa di $1$ il punteggio del giocatore che al momento è $i$-esimo.
+- `termina`: goditi la meritata vittoria.
+
+Aiuta Allie ad azzerare il punteggio di tutti gli altri giocatori, spendendo meno possibile!
+
+<Blockly
+  customBlocks={customBlocks}
+  initialBlocks={initialBlocks}
+  testcases={testcases}
+  visualizer={Visualizer}
+/>
+
+> Un possibile programma corretto è il seguente:
