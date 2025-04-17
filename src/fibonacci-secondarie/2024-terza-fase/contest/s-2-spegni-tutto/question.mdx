@@ -26,4 +26,16 @@ Contano come azioni sia svitare una lampadina che premere un interruttore.
   visualizer={Visualizer}
 />
 
-> Un possibile programma corretto è il seguente.
+> Un possibile programma corretto è il seguente:
+>
+> ![soluzione](sol.png)
+>
+> Secondo questo programma, il protagonista scandisce tutti gli interruttori, che sono
+> numerati da $1$ a $N-1$, in ordine dal primo. Quando incontra un interruttore, ci sono
+> tre casi da considerare:
+> 1. Se entrambe le sue due lampadine collegate sono accese, è conveniente premerlo per spegnerle entrambe. 
+>    Altrimenti non è conveniente: si rimarrebbe con un numero di lampadine accese uguale se non superiore a prima! 
+> 2. Quindi, se solo la lampadina corrente è accesa ma non la successiva, conviene svitarla.
+> 3. Se invece la lampadina corrente è spenta, non occorre fare nulla e possiamo andare avanti.
+>
+> Se poi alla fine del procedimento l'ultima lampadina fosse ancora accesa, bisognerà spegnerla.

@@ -30,3 +30,15 @@ Aiuta Allie ad azzerare il punteggio di tutti gli altri giocatori, spendendo men
 />
 
 > Un possibile programma corretto è il seguente:
+>
+> ![soluzione](sol.png)
+>
+> Secondo questo programma, la protagonista continua a comprare box finché persino il primo in classifica
+> si ritrova con zero punti. Per capire quale box comprare a ogni volta, segue un'idea molto semplice:
+> comprare ogni volta quello che costa meno, tra quelli che sono relativi ad una posizione in cui si trova
+> qualcuno che ha ancora punti!
+>
+> Cerchiamo di trovare quale sia la box migliore, salvandola in una variabile _min_.
+> Partiamo considerando la box $1$, che sicuramente si riferisce ad un giocatore che non è ancora a zero punti.
+> Poi consideriamo tutte le altre box $i$ da $2$ a $N$ tramite un ciclo: se il giocatore della box $i$-esima
+> ha ancora punti, e la box $i$-esima costa meno della box che abbiamo salvato in _min_, la sostituiamo a _min_.

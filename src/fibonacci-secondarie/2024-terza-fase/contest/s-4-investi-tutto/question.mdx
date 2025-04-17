@@ -41,4 +41,25 @@ Nota inoltre che il tuo piano può pianificare un _prossimo titolo_ anche per ti
   visualizer={Visualizer}
 />
 
-> Un possibile programma che segue esattamente le istruzioni di Allie è il seguente:
+> L'idea principale che serve a risolvere il problema è capire cosa annotare sui titoli. Supponiamo
+> di annotare su ogni titolo un numero che rappresenta **quanto al massimo potremmo avere all'ultimo giorno**,
+> **se prenderemo questo titolo e poi faremo le scelte migliori possibili**.
+> Con questa idea, un possibile programma corretto è il seguente:
+>
+> ![soluzione](sol.png)
+>
+> Secondo questo programma, scandiamo i titoli dall'ultimo all'indietro dall'ultimo fino al primo, per capire
+> cosa possiamo annotarci sopra (e quale "freccia" mettere). Per l'ultimo ci sono poche scelte: dovremo per
+> forza tenerlo, quindi non mettiamo frecce e annotiamo il valore che acquisisce all'ultimo giorno.
+>
+> Per gli altri titoli $i$, iniziamo comunque allo stesso modo, considerando cosa possiamo ottenere se li tenessimo
+> fino alla fine, quindi annotando il valore che acquisirebbero all'ultimo giorno. Poi, però, dobbiamo consideriare
+> se ad un certo punto ci potrebbe convenire scambiarli con un altro titolo!
+>
+> Iteriamo quindi sui titoli $j$ successivi, verificando prima se lo scambio ci verrebbe accettato dall'intermediario,
+> e poi se lo scambio ci porterebbe vantaggio. Possiamo facilmente capire se ci porta vantaggio, andando a leggere
+> l'annotazione che su quel titolo avremo già messo, e che ci dice quanto al massimo potremo fare dal titolo $j$
+> in poi! Se questa è meglio di quello che abbiamo trovato finora per il titolo $i$, e lo scambio è accettabile,
+> ipotizziamo di fare lo scambio: aggiorniamo quindi l'annotazione per $i$ e programmiamo di prendere $j$ dopo $i$.
+>
+> Ripetendo questo procedimento per tutti i titoli, andiamo a costruire il piano di investimento migliore!
