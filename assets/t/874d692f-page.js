@@ -1,0 +1,26 @@
+/*! For licenses information, see LICENSES.txt */
+import{j as n}from"../_virtual_quizms-routes-d1784a15.js";import{P as M,I as f}from"../u/cd1572b5-components.js";import{M as D,a as X,b as P,c as $,d as b,e as F,f as z,g as S,h as v,i as A,j as I,k as O,l as R,m as T,n as G,o as y,p as N,q as k,r as w,s as _,t as E,u as L,v as q,w as B,x as Q,y as H,z as W,A as Z}from"../o/968aaac8-question.js";function g(){return{...M(),A1OrdinaColonne:Z,A14RettangoliCornice:W,A5CancellaPermutazione:H,A5CancellaPermutazioneFib:Q,A8GrafoDisconnesso:B,M12CavalieriFurfanti:q,A6MuroMattoni:L,M14Bigliettino:E,M5PallineTricolori:_,M3PermutaSottrai:w,M17QuasiOrdinato:k,M6StringaOii:N,M5PallineTricoloriFib:y,M8GiocoOca:G,M6StringaOiiFib:T,M9EasyRettangoliCorniceFib:R,M9HardRettangoliCornice:O,P10RiordinaIstruzioni:I,P11OggettiIfelse:A,P3StepInvariante:v,P2SommaZero:S,P6WalkBack:z,P4IntervalliNascosti:F,P5PiuStampato:b,P7TerzoNumeroFib:$,P7TerzoNumero:P,P8SostituisciRiga:X,P9MangiaCarota:D}}function x(i){const e={h2:"h2",...g(),...i.components},{A14RettangoliCornice:s,A5CancellaPermutazioneFib:a,Contest:c,M5PallineTricoloriFib:l,M6StringaOiiFib:d,M8GiocoOca:h,P10RiordinaIstruzioni:p,P11OggettiIfelse:u,P7TerzoNumeroFib:m,Problem:o,Section:r}=e;return s||t("A14RettangoliCornice"),a||t("A5CancellaPermutazioneFib"),c||t("Contest"),l||t("M5PallineTricoloriFib"),d||t("M6StringaOiiFib"),h||t("M8GiocoOca"),p||t("P10RiordinaIstruzioni"),u||t("P11OggettiIfelse"),m||t("P7TerzoNumeroFib"),o||t("Problem"),r||t("Section"),n.jsxs(c,{children:[n.jsx(e.h2,{children:"Sezione 1: pensiero logico"}),n.jsxs(r,{children:[n.jsx(o,{points:[5,1,0],id:1,children:n.jsx(h,{})}),n.jsx(o,{points:[5,1,0],id:2,children:n.jsx(l,{})}),n.jsx(o,{points:[5,1,0],id:3,children:n.jsx(d,{})})]}),n.jsx(e.h2,{children:"Sezione 2: pensiero algoritmico"}),n.jsxs(r,{children:[n.jsx(o,{points:[5,0,0],id:4,children:n.jsx(a,{})}),n.jsx(o,{points:[5,0,0],id:5,children:n.jsx(s,{})})]}),n.jsx(e.h2,{children:"Sezione 3: procedimenti procedurali"}),n.jsxs(r,{children:[n.jsx(o,{points:[5,1,0],id:6,children:n.jsx(p,{})}),n.jsx(o,{points:[5,1,0],id:7,children:n.jsx(u,{})}),n.jsx(o,{points:[5,1,0],id:8,children:n.jsx(m,{})})]})]})}function J(i={}){const{wrapper:e}={...g(),...i.components};return e?n.jsx(e,{...i,children:n.jsx(x,{...i})}):x(i)}function t(i,e){throw new Error("Expected component `"+i+"` to be defined: you likely forgot to import, pass, or provide it.")}function C(){return{...M()}}function j(i){const e={em:"em",h1:"h1",h2:"h2",li:"li",p:"p",strong:"strong",ul:"ul",...C(),...i.components};return n.jsxs(n.Fragment,{children:[n.jsx(e.h1,{children:"Giochi di Fibonacci 2023/2024"}),`
+`,n.jsx(e.h2,{children:"Fase I - Scuole secondarie"}),`
+`,n.jsxs(e.p,{children:["Questa prova contiene ",n.jsx(e.em,{children:"10 domande"})," da risolvere in ",n.jsx(e.em,{children:"50 minuti"}),`.
+Le domande sono a `,n.jsx(e.strong,{children:"scelta multipla"})," o a ",n.jsx(e.strong,{children:"risposta aperta numerica"}),", e sono divise in tre parti:"]}),`
+`,n.jsxs(e.ul,{children:[`
+`,n.jsxs(e.li,{children:["domande di ",n.jsx(e.strong,{children:"pensiero logico"}),","]}),`
+`,n.jsxs(e.li,{children:["domande di ",n.jsx(e.strong,{children:"pensiero algoritmico"}),", e"]}),`
+`,n.jsxs(e.li,{children:["domande di interpretazione di ",n.jsx(e.strong,{children:"procedimenti procedurali"})," come programmi a blocchi."]}),`
+`]}),`
+`,n.jsxs(e.p,{children:[`In tutte le tre parti, le domande sono ordinate per difficoltà crescente.
+`,n.jsx(e.strong,{children:"Attento che la difficoltà è soggettiva!"})," Se stai passando tanto tempo cercando di risolvere una domanda, prova a passare ad altre domande e altre categorie!"]}),`
+`,n.jsx(e.h2,{children:"Punteggio"}),`
+`,n.jsxs(e.p,{children:["Tutte le domande a ",n.jsx(e.em,{children:"scelta multipla"})," hanno 5 opzioni, di cui ",n.jsx(e.strong,{children:"solo una"})," è corretta. Il punteggio che puoi ottenere è:"]}),`
+`,n.jsxs(e.ul,{children:[`
+`,n.jsxs(e.li,{children:["5 punti per una risposta ",n.jsx(e.em,{children:"corretta"}),";"]}),`
+`,n.jsxs(e.li,{children:["1 punto per una risposta ",n.jsx(e.em,{children:"non data"}),";"]}),`
+`,n.jsxs(e.li,{children:["0 punti per una risposta ",n.jsx(e.em,{children:"sbagliata"}),"."]}),`
+`]}),`
+`,n.jsxs(e.p,{children:["Le domande a ",n.jsx(e.em,{children:"risposta aperta"})," hanno come risposta un numero (senza virgola o segno). Il punteggio che puoi ottenere è:"]}),`
+`,n.jsxs(e.ul,{children:[`
+`,n.jsxs(e.li,{children:["5 punti per una risposta ",n.jsx(e.em,{children:"corretta"}),";"]}),`
+`,n.jsxs(e.li,{children:["0 punti per una risposta ",n.jsx(e.em,{children:"sbagliata"})," o ",n.jsx(e.em,{children:"non data"}),"."]}),`
+`]}),`
+`,n.jsx(e.p,{children:"Attenzione che alcune domande potrebbero richiedere più risposte numeriche a richieste diverse, tutte valutate separatamente!"})]})}function K(i={}){const{wrapper:e}={...C(),...i.components};return e?n.jsx(e,{...i,children:n.jsx(j,{...i})}):j(i)}const nn={title:"Giochi di Fibonacci",description:"Prima fase dei Giochi di Fibonacci 2023/2024 per le scuole secondarie"};function en(){return n.jsxs(f,{contestName:"Giochi di Fibonacci",duration:50,children:[n.jsx(K,{}),n.jsx(J,{})]})}export{en as default,nn as metadata};
+//# sourceMappingURL=874d692f-page.js.map
