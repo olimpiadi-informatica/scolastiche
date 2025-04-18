@@ -6,13 +6,11 @@ import { Navbar } from "~/utils/navbar";
 import { Score } from "~/utils/score";
 
 export const metadata = {
-  title: "Giochi di Fibonacci - Corso di Programmazione",
-  description: "Corso di programmazione a blocchi, preparatorio per la seconda e terza fase dei Giochi di Fibonacci per le scuole primarie e secondarie",
+  title: "OII - Scolastiche",
+  description: "Raccolta delle prove delle selezioni scolastiche delle Olimpiadi di Informatica",
 };
 
-const editions = [
-  "1 - Blocchi Esecuzione e Ripeti N",
-];
+const editions = ["2024", "2023", "2022", "2022 - Demo", "2021", "2020", "2019"];
 
 export default function App() {
   return (
@@ -21,13 +19,13 @@ export default function App() {
       <div className="mx-auto flex w-full max-w-screen-xl grow flex-col p-4 pb-8">
         <div className="flex flex-col gap-4">
           <h1 className="px-2 text-center text-2xl font-bold">
-            Giochi di Fibonacci - Corso di Programmazione
+            Olimpiadi di Informatica - Selezioni scolastiche
           </h1>
           <Menu fallback="Nessun problema trovato">
             {editions.map((edition) => (
               <li key={edition}>
                 <Link href={`/${kebabCase(edition)}/`} className="grid-cols-[1fr_auto]">
-                  <div>Lezione {edition}</div>
+                  <div>Edizione {edition}</div>
                   <Score edition={edition} />
                 </Link>
               </li>

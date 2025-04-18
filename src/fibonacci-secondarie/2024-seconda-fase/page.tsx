@@ -4,13 +4,13 @@ import Statement from "./contest/contest.mdx";
 import Header from "./header.md";
 
 export const metadata = {
-  title: "Corso di Programmazione",
-  description: "Corso di Programmazione a Blocchi per i Giochi di Fibonacci",
+  title: "Giochi di Fibonacci",
+  description: "Seconda fase dei Giochi di Fibonacci 2024/2025 per le scuole secondarie",
 };
 
 export default function App() {
   return (
-    <NoAuth contestName="Corso di Programmazione" duration={5760}>
+    <NoAuth contestLongName="" contestName="Giochi di Fibonacci" duration={120}>
       <Header />
       <Statement />
     </NoAuth>

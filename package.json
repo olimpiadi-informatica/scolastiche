@@ -11,13 +11,13 @@
     "@mdx-js/react": "^3.0",
     "@olinfo/quizms": "^3.0.0-beta.0",
     "@olinfo/quizms-mdx": "^3.0.0-beta.0",
-    "@olinfo/react-components": "^0.10",
+    "@olinfo/react-components": "^0.12",
     "@olinfo/tailwind": "^0.1",
     "@types/d3-shape": "^3.1.6",
     "@types/lodash-es": "^4.17",
     "@types/react": "^19",
     "autoprefixer": "^10.4",
-    "blockly": "^12.0.0",
+    "blockly": "^12.0",
     "clsx": "^2.1",
     "d3-shape": "^3.2.0",
     "date-fns": "^4.1",
@@ -30,7 +30,8 @@
     "wouter": "^3.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.8"
+    "@biomejs/biome": "^1.8",
+    "typescript": "^5.8.3"
   },
   "postcss": {
     "plugins": {

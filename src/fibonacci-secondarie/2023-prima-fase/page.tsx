@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function App() {
   return (
-    <NoAuth contestName="Giochi di Fibonacci" duration={50}>
+    <NoAuth contestLongName="" contestName="Giochi di Fibonacci" duration={50}>
       <Header />
       <Contest />
     </NoAuth>

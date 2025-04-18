@@ -6,12 +6,12 @@ import Header from "./header.md";
 export const metadata = {
   title: "Giochi di Fibonacci",
   description:
-    "Prova di allenamento per la seconda fase dei Giochi di Fibonacci 2023/2024 per le scuole secondarie",
+    "Prova di allenamento per la seconda fase dei Giochi di Fibonacci 2023/2024 per le scuole primarie",
 };
 
 export default function App() {
   return (
-    <NoAuth contestName="Giochi di Fibonacci" duration={100}>
+    <NoAuth contestLongName="" contestName="Giochi di Fibonacci" duration={100}>
       <Header />
       <Statement />
     </NoAuth>

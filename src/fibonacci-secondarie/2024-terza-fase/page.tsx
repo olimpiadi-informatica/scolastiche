@@ -1,18 +1,18 @@
 import { NoAuth } from "@olinfo/quizms/student";
 
-import Contest from "./contest/contest.mdx";
+import Statement from "./contest/contest.mdx";
 import Header from "./header.md";
 
 export const metadata = {
   title: "Giochi di Fibonacci",
-  description: "Prima fase dei Giochi di Fibonacci 2022/2023 per le scuole secondarie",
+  description: "Fase Finale dei Giochi di Fibonacci 2024/2025",
 };
 
 export default function App() {
   return (
-    <NoAuth contestName="Giochi di Fibonacci" duration={50}>
+    <NoAuth contestLongName="" contestName="Giochi di Fibonacci" duration={180}>
       <Header />
-      <Contest />
+      <Statement />
     </NoAuth>
   );
 }
