@@ -131,8 +131,7 @@ dist
 .pnp.*
 
 # QuizMS
-bundle
-pdf
+variants
 .quizms
 
 # SWC

@@ -82,7 +82,7 @@ export function Canvas({ gravity = "top", scale = 1, children }: CanvasProps) {
 }
 
 type SpriteProps = {
-  src: { src: string; width: string; height: string };
+  src: ImageSrc;
   alt: string;
   x?: number;
   y?: number;

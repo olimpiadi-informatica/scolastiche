@@ -12,7 +12,11 @@ Quali delle seguenti griglie può ottenere se applica questa operazione in modo 
 
 ![Immagine](griglie2.asy?v=variants.py)
 
+:::answers{.open}
+
 ?> {ans1}
+
+:::
 
 > Le righe non interagiscono tra loro, quindi posso controllare ogni riga singolarmente.
 > Notiamo che effettuare due operazioni sulla stessa riga è inutile. Quindi, su una riga, posso scegliere se effettuare l'operazione una sola volta o zero volte.
@@ -28,7 +32,11 @@ Il giorno dopo Francesco si accorge che può anche invertire una colonna della g
 
 ![Immagine](griglie2.asy?v=variants.py)
 
+:::answers{.open}
+
 ?> {ans2}
+
+:::
 
 > Le uniche mosse che possono modificare la prima riga sono:
 > - invertire la prima riga;

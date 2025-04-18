@@ -13,11 +13,15 @@ Per completare la sua composizione, Tip-Tap vuole mettere **una sola carota** in
 
 Per essere soddisfatto della sua composizione, Tip-Tap vuole che le due bilance siano in equilibrio. Quanti chilogrammi deve pesare la carota viola nel piatto di destra?
 
+:::answers{.multipleChoice}
+
 - [ ] $3$
 - [ ] $4$
 - [ ] $7$
 - [x] $8$
 - [ ] $10$
+
+:::
 
 > Perché le bilance siano in equilibrio Tip-Tap ha bisogno di due carote di peso uguale, più un'altra carota di peso doppio. Ci sono solo due coppie di carote di peso uguale: di 3 e 4 chilogrammi. Dato che non ha carote da 6 chilogrammi, l'unico modo di disporre i pesi per far stare in equilibrio le bilance è mettere due carote di peso $4$ nei piatti della bilancia a sinistra e una di peso $8$ nel piatto di destra, come in figura.
 >

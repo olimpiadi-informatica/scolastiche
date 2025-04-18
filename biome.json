@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "files": {
-    "includes": ["src/**", "!src/asy_library"]
+    "includes": ["src/**", "!src/asy_library", "!**/*.md"]
   },
   "formatter": {
     "indentStyle": "space",
@@ -25,8 +25,7 @@
         "useUniqueElementIds": "off"
       },
       "nursery": {
-        "noFloatingPromises": "error",
-        "noImportCycles": "error"
+        "noFloatingPromises": "error"
       },
       "performance": {
         "noImgElement": "off"
@@ -62,6 +61,7 @@
         "noArrayIndexKey": "off",
         "noExplicitAny": "off",
         "noConfusingVoidType": "off",
+        "noImportCycles": "error",
         "useAwait": "error"
       }
     }

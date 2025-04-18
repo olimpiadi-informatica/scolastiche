@@ -4,11 +4,15 @@ Marco ha una scacchiera quadrata $8 \times 8$, divisa in $64$ quadratini uguali.
 
 Marco vuole disporre il tassello sulla scacchiera, in modo che copra per intero esattamente tre quadratini di quest'ultima. Nel farlo, può ruotare il tassello come vuole. In quanti modi può disporre il tassello sulla scacchiera? (Due disposizioni si considerano diverse se non coprono le stesse tre caselle.)
 
+:::answers{.multipleChoice}
+
 - [ ] $64$
 - [ ] $95$
 - [ ] $128$
 - [ ] $144$
 - [x] $196$
+
+:::
 
 > La risposta è $196$.
 >

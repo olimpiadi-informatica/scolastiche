@@ -14,4 +14,8 @@ nella seguente griglia, in cui alcuni numeri sono già stati inseriti:
 Si chiede quindi di riportare i numeri corretti associati alle lettere A, E, G, H, N, P, R, S e U che completino
 correttamente la suddetta griglia. Rispondere concatenando i numeri di riga associati alle lettere mancanti.
 
+:::answers{.open}
+
 ?> 10715815141719
+
+:::

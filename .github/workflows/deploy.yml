@@ -18,7 +18,7 @@ jobs:
         run: biome ci
 
       - name: Build
-        run: docker run -v .:/scolastiche node:20 /scolastiche/tools/build.sh
+        run: docker run -v .:/scolastiche node:24 /scolastiche/tools/build.sh
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

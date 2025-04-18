@@ -6,11 +6,15 @@ Questo procedimento dovrebbe stampare la _mediana_ tra le tre variabili, ovvero 
 
 Quale delle seguenti può essere la parte mancante, da sostituire al blocco indicato con **???**, affinché il procedimento stampi sempre la mediana?
 
+:::answers{.multipleChoice}
+
 - [x] ![opzione1](opz1.asy)
 - [ ] ![opzione2](opz2.asy)
 - [ ] ![opzione3](opz3.asy)
 - [ ] ![opzione4](opz4.asy)
 - [ ] Il procedimento è già completo, non servono altri blocchi
+
+:::
 
 > La risposta è
 >

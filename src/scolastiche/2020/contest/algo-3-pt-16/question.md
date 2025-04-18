@@ -20,4 +20,8 @@ Esistono diversi percorsi disponibili per Barbagialla per raggiungere il tesoro;
 
 Quanto vale `MAX + MIN`?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

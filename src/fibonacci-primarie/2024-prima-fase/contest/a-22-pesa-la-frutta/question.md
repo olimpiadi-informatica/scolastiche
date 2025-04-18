@@ -8,11 +8,15 @@ Carol ha comprato una nuova bilancia. Ha quindi confrontato alcuni frutti e dell
 in entrambe le prove le bilance sono in *equilibrio*, cioè la somma dei pesi degli oggetti sul piatto a sinistra è uguale alla somma dei pesi degli oggetti sul piatto a destra.
 Quali tra queste immagini riporta gli oggetti in ordine dal più leggero al più pesante?
 
+:::answers{.multipleChoice}
+
 - [ ] <span>![A](A.asy?v=variants.py&s=0.6)</span>
 - [ ] <span>![B](B.asy?v=variants.py&s=0.6)</span>
 - [ ] <span>![C](C.asy?v=variants.py&s=0.6)</span>
 - [ ] <span>![D](D.asy?v=variants.py&s=0.6)</span>
 - [x] <span>![E](E.asy?v=variants.py&s=0.6)</span>
+
+:::
 
 > Togliendo due carote da entrambi i piatti della prima bilancia Carol riesce a capire che il peso dei due frutti rimanenti sul piatto sinistro
 > della prima bilancia è uguale a quello di una carota. Sapendo questo, capisce quindi che il peso del piatto sinistro della seconda bilancia è di 
@@ -36,11 +40,15 @@ Carol compra altri frutti da pesare e ottiene il risultato che vedi nella prima 
 
 Quante carote deve mettere Carol al posto del punto interrogativo ($\texttt{?}$) per equilibrare l'ultima bilancia?
 
+:::answers{.multipleChoice}
+
 - [x] $4$
 - [ ] $6$
 - [ ] $8$
 - [ ] $7$
 - [ ] $2$
+
+:::
 
 > Con lo stesso ragionamento di prima si capisce che la somma dei pesi dei nuovi frutti è di una carota, perchè il frutto sulla destra della 
 > bilancia ne pesa due e una carota è già presente a sinistra. Di conseguenza per mettere la bilancia in equilibrio sul piatto al posto del punto di domanda andranno 4 carote:

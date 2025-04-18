@@ -8,11 +8,15 @@ Il procedimento viene eseguito tre volte, sempre con $N$ pari a $9$ e con i tre 
 
 Per quali di questi valori di $A$ il procedimento stampa _"trovato"_?
 
+:::answers{.multipleChoice}
+
 - [x] Solo il valore 1.
 - [ ] Solo il valore 2.
 - [ ] Solo il valore 3.
 - [ ] Tutti.
 - [ ] Solo i valori 1 e 3.
+
+:::
 
 > Il procedimento scandisce la lista di numeri dall'inizio, andando a cercare una posizione che contiene uno zero seguito da un uno: se la trova stampa _"trovato"_, altrimenti non stampa nulla.
 >

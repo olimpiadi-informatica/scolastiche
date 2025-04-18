@@ -20,4 +20,8 @@ Dato il seguente programma:
 
 Cosa viene stampato al termine dell'esecuzione?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

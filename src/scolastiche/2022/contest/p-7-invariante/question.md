@@ -22,11 +22,15 @@ function transform() -> integer
 end function
 ```
 
+:::answers{.multipleChoice}
+
 - [x] $\js{2 * n}$
 - [ ] $\js{n / 1000}$
 - [ ] $\js{Math.floor(2 * n / 3)}$
 - [ ] $\js{n}$
 - [ ] $\js{Math.floor(5 * n / 3)}$
+
+:::
 
 > La risposta è $\js{2 * n}$.
 >

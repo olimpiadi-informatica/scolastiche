@@ -20,4 +20,8 @@ $$
 
 qual è il costo minimo per sommarli tutti tra di loro?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

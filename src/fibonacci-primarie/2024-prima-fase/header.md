@@ -1,7 +1,3 @@
-# Giochi di Fibonacci 2024/2025
-
-## Fase I - Scuole primarie
-
 Questa prova contiene _6 problemi_ da risolvere in _50 minuti_, ed è divisa in due parti:
 - quattro problemi di **pensiero logico-algoritmico**, e
 - due problemi di interpretazione di **procedimenti procedurali** come programmi a blocchi.

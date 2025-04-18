@@ -11,7 +11,11 @@ Quante sono le tabelle crescenti simili alla seguente tabella?
 
 ![](table1.asy?v=variants.py)
 
+:::answers{.open}
+
 ?> {ans1}
+
+:::
 
 ---
 
@@ -19,4 +23,8 @@ Quante sono le tabelle crescenti simili alla seguente tabella?
 
 ![](table2.asy?v=variants.py)
 
+:::answers{.open}
+
 ?> {ans2}
+
+:::

@@ -24,11 +24,15 @@ end while
 
 Quanti diversi valori di `y` tra $0$ e $\js{n-1}$ potresti scegliere di modo che la passeggiata termini, senza andare avanti all'infinito?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{ans1}$
 - [ ] $\js{wrong1[0]}$
 - [ ] $\js{wrong1[1]}$
 - [ ] $\js{wrong1[2]}$
 - [ ] non ce ne sono, la passeggiata va sempre avanti all'infinito
+
+:::
 
 > Potremmo risolvere il problema simulando la passeggiata per ogni possibile valore di `y`.
 > Ma possiamo fare di meglio! Leggendo il programma, capiamo che la passeggiata parte
@@ -57,7 +61,11 @@ Per quale coppia di valori `y` e `rosso[y]` riusciresti a visitare tutti i numer
 
 Indica la risposta come **AB**, dove **A** è il valore di `y` e **B** è il nuovo valore da assegnare a `rosso[y]`.
 
+:::answers{.open}
+
 ?> {ans2-1}{ans2}
+
+:::
 
 > Dal ragionamento di prima, sappiamo che `y` deve essere nella prima metà
 > dell'array e `rosso[y]` nella seconda. Dati tali valori, notiamo che la

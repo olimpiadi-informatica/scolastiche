@@ -22,4 +22,8 @@ A seconda delle case, il costo per installare l'antenna è diverso. Per esempio,
 
 Aiuta gli abitanti del comprensorio a decidere dove costruire le antenne, in maniera da rispettare la regola descritta e da minimizzare la spesa complessiva, ovvero la somma dei costi delle antenne. Qual è il valore della spesa minima complessiva?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

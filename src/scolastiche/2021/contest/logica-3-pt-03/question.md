@@ -21,4 +21,8 @@ Sai che contandole a 5 a 5 {cinque}, contandole a 6 a 6 {sei}, contandole a 7 a 
 
 Quanto vale $F$, il più piccolo numero che rispetta i vincoli descritti?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

@@ -6,10 +6,18 @@ All’inizio ogni pila è vuota. Nella pila $i$-esima puoi aggiungere solo matto
 Per ragioni di stabilità, in ogni istante le altezze di due pile **adiacenti** possono differire di al più $d = \js{d}$.
 Qual è il massimo intero $M$ tale che si riescono a rendere tutte le pile alte almeno $M$?
 
+:::answers{.open}
+
 ?> {ans1}
+
+:::
 
 ---
 
 Qual è il minimo valore intero per il parametro $d$ tale che si riescono a rendere tutte le pile alte almeno $\js{M}$?
 
+:::answers{.open}
+
 ?> {ans2}
+
+:::

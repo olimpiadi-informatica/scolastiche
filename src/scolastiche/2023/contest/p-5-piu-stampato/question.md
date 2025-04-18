@@ -20,8 +20,12 @@ end function
 
 Chiamando `f({n})`, quante volte viene stampato il numero che viene stampato più volte?
 
+:::answers{.multipleChoice}
+
 - [x] {correct}
 - [ ] {wrong[0]}
 - [ ] {wrong[1]}
 - [ ] {wrong[2]}
 - [ ] {wrong[3]}
+
+:::

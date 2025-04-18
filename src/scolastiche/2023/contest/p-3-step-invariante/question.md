@@ -23,8 +23,12 @@ end function
 
 Per quale delle seguenti coppie `(a, b)` il valore restituito da `step(a, b)` è {n}?
 
+:::answers{.multipleChoice}
+
 - [x] $(\js{correct})$
 - [ ] $(\js{wrong[0]})$
 - [ ] $(\js{wrong[1]})$
 - [ ] $(\js{wrong[2]})$
 - [ ] $(\js{wrong[3]})$
+
+:::

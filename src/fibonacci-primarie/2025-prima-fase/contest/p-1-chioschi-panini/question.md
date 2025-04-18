@@ -10,11 +10,15 @@ La passeggiata prevede {length} tratti di percorso. In ogni tratto seguirà ques
 
 Con quanti panini rimane alla fine del percorso?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{ans1}$
 - [ ] $\js{wrong1[0]}$
 - [ ] $\js{wrong1[1]}$
 - [ ] $\js{wrong1[2]}$
 - [ ] non gli rimane nessun panino
+
+:::
 
 > Per ogni salita Bunny mangia un panino, quindi basta contare il numero di tratti in
 > salita ($\js{panini - ans1}$) nel percorso e sottrarli al numero iniziale di panini.
@@ -31,11 +35,15 @@ Ha quindi deciso di seguire quest'altro procedimento:
 
 Con quanti panini rimane alla fine del percorso?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{ans2}$
 - [ ] $\js{wrong2[0]}$
 - [ ] $\js{wrong2[1]}$
 - [ ] $\js{wrong2[2]}$
 - [ ] non gli rimane nessun panino
+
+:::
 
 > Ora Bunny non solo mangia un panino per ogni salita, ma compra anche un panino per ogni chiosco.
 > Contiamo quindi il numero di tratti in salita ($\js{panini + num_chioschi - ans2}$)

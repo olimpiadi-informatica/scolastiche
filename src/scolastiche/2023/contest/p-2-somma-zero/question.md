@@ -22,8 +22,12 @@ end function
 
 Supponiamo di chiamare `compute(a, {n})`, dove `a = [{a}]`. Qual è il valore restituito dalla funzione?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{correct}$
 - [ ] $\js{wrong[0]}$
 - [ ] $\js{wrong[1]}$
 - [ ] $\js{wrong[2]}$
 - [ ] $\js{wrong[3]}$
+
+:::

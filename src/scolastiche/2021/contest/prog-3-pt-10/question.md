@@ -40,6 +40,10 @@ end function
 
 Qual è il numero totale delle chiamate ad `f` più il numero delle chiamate a `g` che vengono effettuate per calcolare `f({value})`?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::
 
 _**NOTA POST GARA**: dal testo non era chiaro se il numero totale di chiamate dovesse includere anche la chiamata iniziale `f({value})`. Nella nostra interpretazione lo doveva includere, ma abbiamo dato buone anche le soluzioni che non lo includevano (ovvero che differivano di -1 dalla soluzione corretta)._

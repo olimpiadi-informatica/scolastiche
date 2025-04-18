@@ -12,7 +12,11 @@ Rispondi considerando che questa è la lista dei valori dei quaderni, in ordine 
 
 ![Immagine](array1.asy?v=variants.py)
 
+:::answers{.open}
+
 ?> {ans1}
+
+:::
 
 > Non ha senso comprare quaderni di valore $0$ (se non li compro, ottengo una soluzione con la stessa somma).
 > Quindi guardo gli intervalli massimali contenenti solo quaderni di valore $1$, e da ogni intervallo mi conviene prendere il primo quaderno, il terzo, il quinto, e così via.
@@ -29,7 +33,11 @@ Quale sarebbe invece la massima somma se i valori fossero questi?
 
 ![Immagine](array2.asy?v=variants.py)
 
+:::answers{.open}
+
 ?> {ans2}
+
+:::
 
 > Qui non sembra esserci una strategia semplice (senza memoria) per prendere i quaderni. Ad esempio, "guardo da sinistra a destra e prendo un quaderno se posso e ha valore positivo" non funziona.
 > Neanche "guardo i quaderni partendo da quello di valore massimo e se posso prenderne uno lo prendo" funziona!

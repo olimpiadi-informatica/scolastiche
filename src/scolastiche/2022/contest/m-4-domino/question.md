@@ -8,11 +8,15 @@ Ad esempio, un possibile modo di posizionare le tre tessere è il seguente:
 
 ![Le tessere 4-3, 3-2, 2-5, 5-1, 1-6](example.asy)
 
+:::answers{.multipleChoice}
+
 - [x] $21$
 - [ ] $36$
 - [ ] $19$
 - [ ] $25$
 - [ ] $30$
+
+:::
 
 > La risposta è $21$.
 >

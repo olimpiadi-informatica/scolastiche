@@ -1,3 +1,5 @@
+"use client";
+
 import { type ReactNode, useRef } from "react";
 
 import { Button, Modal } from "@olinfo/react-components";

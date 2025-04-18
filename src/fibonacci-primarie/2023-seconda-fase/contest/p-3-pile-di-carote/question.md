@@ -6,11 +6,15 @@ Bunny, Tip-Tap e Carol le mangiano seguendo questo procedimento:
 
 Quante carote mangia Carol?
 
+:::answers{.multipleChoice}
+
 - [ ] 0
 - [ ] 1
 - [ ] 2
 - [ ] 4
 - [x] 8
+
+:::
 
 > Si può notare che ad ogni passaggio della ripetizione, indipendentemente da quale mucchio
 > abbia più carote, Tip-Tap e Bunny in totale mangiano $10$ carote.

@@ -16,4 +16,8 @@ Siamo interessati al **minimo** numero di monete per raggiungere una determinata
 
 Qual è il minimo numero di monete necessario per raggiungere $\js{target}$ elboni?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

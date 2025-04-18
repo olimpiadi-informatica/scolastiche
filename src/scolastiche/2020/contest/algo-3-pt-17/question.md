@@ -25,4 +25,8 @@ La congettura di Collatz, chiamata anche congettura $3N+1$, afferma che l’algo
 
 Considerando i numeri compresi tra $\js{minINT}$ e $\js{maxINT}$ (estremi inclusi), qual è il valore **minimo** della lunghezza della sequenza (calcolata usando l’algoritmo descritto qui sopra)?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

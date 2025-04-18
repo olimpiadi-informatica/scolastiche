@@ -6,10 +6,14 @@ Bunny vorrebbe leggere due libri di giardinaggio qualunque, e sa che i libri su 
 
 Qual è il minimo numero di libri che Bunny deve spostare, **contando anche i libri di giardinaggio che prende**?
 
+:::answers{.multipleChoice}
+
 - [ ] $2$
 - [ ] $4$
 - [x] $5$
 - [ ] $6$
 - [ ] $7$
+
+:::
 
 > Bunny può prendere i due libri di giardinaggio nella seconda pila, per farlo deve spostare tutti i libri della pila, che sono 5.

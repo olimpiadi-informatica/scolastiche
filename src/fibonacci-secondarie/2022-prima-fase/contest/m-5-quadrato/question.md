@@ -8,11 +8,15 @@ Riesci ad aiutare Bunny, trovando quale numero va inserito nella casella in bass
 
 ![Quadrato](fig1.asy)
 
+:::answers{.multipleChoice}
+
 - [x] 3
 - [ ] 7
 - [ ] 1
 - [ ] 6
 - [ ] 4
+
+:::
 
 > Notiamo che la somma di tutti i numeri da 1 a 9 è 45. Dato che la somma di ogni riga deve essere uguale e ce ne sono tre, ogni riga (e ogni colonna e diagonale) deve avere somma 45/3 = 15. A questo punto possiamo completare il quadrato magico, ogni volta andando ad aggiungere il terzo numero mancante che consente di arrivare a somma 15 in una riga, colonna o diagonale con già due numeri. L' unico modo di completare il quadrato magico è quindi il seguente:
 >

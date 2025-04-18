@@ -33,4 +33,8 @@ Si sa inoltre:
 
 Quanti sono gli amici in tutto?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

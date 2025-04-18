@@ -31,11 +31,15 @@ end function
 
 Per quanti valori di `n` si ha che `increase(n)` è uguale a `n`?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{a}$
 - [ ] $1$
 - [ ] $\js{b}$
 - [ ] $\js{a * b}$
 - [ ] Infiniti
+
+:::
 
 > La risposta è $\js{a}$.
 >

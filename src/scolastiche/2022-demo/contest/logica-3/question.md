@@ -7,11 +7,15 @@ Una formica inizia a camminare sulla retta, partendo in posizione $0$ e muovendo
 
 Quanti secondi sono passati, dall'istante in cui ha iniziato a camminare, quando la formica raggiunge la posizione $9$?
 
+:::answers{.multipleChoice}
+
 - [ ] $442$
 - [x] $511$
 - [ ] $373$
 - [ ] $896$
 - [ ] $424$
+
+:::
 
 > La risposta è $511$.
 >

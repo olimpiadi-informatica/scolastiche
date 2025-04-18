@@ -1,0 +1,767 @@
+[fibonacci-corso-1-blocchi-esecuzione-e-ripeti-n]
+name = "1 - Blocchi esecuzione e ripeti n"
+long_name = "Corso Fibonacci - 1. Blocchi esecuzione e ripeti n"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 60,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[fibonacci-corso-2-blocchi-condizionali-e-ripeti-mentre]
+name = "2 - Blocchi condizionali e ripeti mentre"
+long_name = "Corso Fibonacci - 2. Blocchi condizionali e ripeti mentre"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 60,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[fibonacci-corso-3-composizione-di-cicli-e-condizioni]
+name = "3 - Composizione di cicli e condizioni"
+long_name = "Corso Fibonacci - 3. Composizione di cicli e condizioni"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 60,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[fibonacci-corso-4-blocchi-matematici-e-variabili]
+name = "4 - Blocchi matematici e variabili"
+long_name = "Corso Fibonacci - 4. Blocchi matematici e variabili"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 60,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[fibonacci-corso-5-algoritmi-greedy]
+name = "5 - Algoritmi greedy"
+long_name = "Corso Fibonacci - 5. Algoritmi greedy"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 60,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[fibonacci-corso-6-programmazione-dinamica]
+name = "6 - Programmazione dinamica"
+long_name = "Corso Fibonacci - 6. Programmazione dinamica"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 60,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[fibonacci-primarie-2022-prima-fase]
+name = "Edizione 2022/23 - Prima fase"
+long_name = "Giochi di Fibonacci 2022/2023 per le scuole primarie - Prima fase"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 50,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[fibonacci-primarie-2023-prima-fase]
+name = "Edizione 2023/24 - Prima fase"
+long_name = "Giochi di Fibonacci 2023/2024 per le scuole primarie - Prima fase"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 50,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[fibonacci-primarie-2023-seconda-fase-demo]
+name = "Edizione 2023/24 - Seconda fase (demo)"
+long_name = "Giochi di Fibonacci 2023/2024 per le scuole primarie - Prova di allenamento per la seconda fase"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 100,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[fibonacci-primarie-2023-seconda-fase]
+name = "Edizione 2023/24 - Seconda fase"
+long_name = "Giochi di Fibonacci 2023/2024 per le scuole primarie - Seconda fase"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 100,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[fibonacci-primarie-2024-prima-fase]
+name = "Edizione 2024/25 - Prima fase"
+long_name = "Giochi di Fibonacci 2024/2025 per le scuole primarie - Prima fase"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 50,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[fibonacci-primarie-2024-seconda-fase]
+name = "Edizione 2024/25 - Seconda fase"
+long_name = "Giochi di Fibonacci 2024/2025 per le scuole primarie - Seconda fase"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 120,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[fibonacci-primarie-2025-prima-fase]
+name = "Edizione 2025/26 - Prima fase"
+long_name = "Giochi di Fibonacci 2025/2026 per le scuole primarie - Prima fase"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 50,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[fibonacci-primarie-2025-seconda-fase]
+name = "Edizione 2025/26 - Seconda fase"
+long_name = "Giochi di Fibonacci 2025/2026 per le scuole primarie - Seconda fase"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 120,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[fibonacci-secondarie-2022-prima-fase]
+name = "Edizione 2022/23 - Prima fase"
+long_name = "Giochi di Fibonacci 2022/2023 per le scuole secondarie - Prima fase"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 50,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[fibonacci-secondarie-2023-prima-fase]
+name = "Edizione 2023/24 - Prima fase"
+long_name = "Giochi di Fibonacci 2023/2024 per le scuole secondarie - Prima fase"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 50,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[fibonacci-secondarie-2023-seconda-fase-demo]
+name = "Edizione 2023/24 - Seconda fase (demo)"
+long_name = "Giochi di Fibonacci 2023/2024 per le scuole secondarie - Prova di allenamento per la seconda fase"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 100,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[fibonacci-secondarie-2023-seconda-fase]
+name = "Edizione 2023/24 - Seconda fase"
+long_name = "Giochi di Fibonacci 2023/2024 per le scuole secondarie - Seconda fase"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 100,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[fibonacci-secondarie-2023-terza-fase]
+name = "Edizione 2023/24 - Terza fase"
+long_name = "Giochi di Fibonacci 2023/2024 - Fase finale"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 180,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[fibonacci-secondarie-2024-prima-fase]
+name = "Edizione 2024/25 - Prima fase"
+long_name = "Giochi di Fibonacci 2024/2025 per le scuole secondarie - Prima fase"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 50,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[fibonacci-secondarie-2024-seconda-fase]
+name = "Edizione 2024/25 - Seconda fase"
+long_name = "Giochi di Fibonacci 2024/2025 per le scuole secondarie - Seconda fase"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 120,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[fibonacci-secondarie-2024-terza-fase]
+name = "Edizione 2024/25 - Terza fase"
+long_name = "Giochi di Fibonacci 2024/2025 - Fase finale"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 180,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[fibonacci-secondarie-2025-prima-fase]
+name = "Edizione 2025/26 - Prima fase"
+long_name = "Giochi di Fibonacci 2025/2026 per le scuole secondarie - Prima fase"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 50,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[fibonacci-secondarie-2025-seconda-fase]
+name = "Edizione 2025/26 - Seconda fase"
+long_name = "Giochi di Fibonacci 2025/2026 per le scuole secondarie - Seconda fase"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 120,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[scolastiche-2019]
+name = "Edizione 2019"
+long_name = "Olimpiadi Italiane di Informatica 2019/2020 - Selezione scolastica"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 90,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[scolastiche-2020]
+name = "Edizione 2020"
+long_name = "Olimpiadi Italiane di Informatica 2020/2021 - Selezione scolastica"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 90,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[scolastiche-2021]
+name = "Edizione 2021"
+long_name = "Olimpiadi Italiane di Informatica 2021/2022 - Selezione scolastica"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 90,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[scolastiche-2022-demo]
+name = "Edizione 2022 (demo)"
+long_name = "Olimpiadi Italiane di Informatica 2022/2023 - Selezione scolastica (demo)"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 45,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[scolastiche-2022]
+name = "Edizione 2022"
+long_name = "Olimpiadi Italiane di Informatica 2022/2023 - Selezione scolastica"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 90,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[scolastiche-2023]
+name = "Edizione 2023"
+long_name = "Olimpiadi Italiane di Informatica 2023/2024 - Selezione scolastica"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 90,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[scolastiche-2024]
+name = "Edizione 2024"
+long_name = "Olimpiadi Italiane di Informatica 2024/2025 - Selezione scolastica"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 90,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
+[scolastiche-2025]
+name = "Edizione 2025"
+long_name = "Olimpiadi Italiane di Informatica 2025/2026 - Selezione scolastica"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 90,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []

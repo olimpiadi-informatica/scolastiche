@@ -10,11 +10,15 @@ Il procedimento viene eseguito tre volte, sempre con $n = 9$ e con i tre seguent
 
 Per quali di questi valori di $a$ il procedimento scrive 1?
 
+:::answers{.multipleChoice}
+
 - [x] Solo il valore 1.
 - [ ] Solo il valore 2.
 - [ ] Solo il valore 3.
 - [ ] Tutti.
 - [ ] Solo i valori 1 e 3.
+
+:::
 
 > Il procedimento scandisce la lista di numeri dall'inizio, andando a cercare una posizione che contiene uno zero seguito da un uno: se la trova scrive $1$, altrimenti scrive $0$.
 >

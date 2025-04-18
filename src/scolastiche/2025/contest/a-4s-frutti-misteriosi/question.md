@@ -16,11 +16,15 @@ Oggi hai comprato alcuni frutti e poi hai provato a pesarli sulla tua bilancia, 
 In tutte e due le prove le bilance sono squilibrate: il peso totale degli oggetti a sinistra è meno del peso totale degli oggetti a destra.
 Sai che i frutti di tipo uguale pesano tutti uguale. Qual è l'ordine di peso dei frutti (dal più leggero al più pesante)?
 
+:::answers{.multipleChoice}
+
 - [ ] <span>![A](A.asy?v=variants.py&s=0.6)</span>
 - [ ] <span>![B](B.asy?v=variants.py&s=0.6)</span>
 - [ ] <span>![C](C.asy?v=variants.py&s=0.6)</span>
 - [ ] <span>![D](D.asy?v=variants.py&s=0.6)</span>
 - [x] <span>![E](E.asy?v=variants.py&s=0.6)</span>
+
+:::
 
 > Dalla prima pesata, togliendo da entrambi i piatti una {names[perm[2]]} (frutti uguali hanno sempre lo stesso peso!), capiamo che la {names[perm[0]]} pesa meno che la {names[perm[1]]}.
 > Con la seconda pesata capiamo invece che la {names[perm[2]]} pesa più della {names[perm[1]]}. Infatti, se sostituiamo nel piatto destro la {names[perm[0]]} con la {names[perm[1]]}
@@ -44,11 +48,15 @@ Visto che hai anche comprato alcune verdure (patate, carote e melanzane), provi 
 
 Da questi risultati, cosa puoi dedurre sul peso di queste tre verdure?
 
+:::answers{.multipleChoice}
+
 - [x] la {names[perm[3]]} è la più leggera, ma non si può sapere niente sulle altre due verdure
 - [ ] la {names[perm[3]]} è la più leggera, la {names[perm[5]]} è intermedia e la {names[perm[4]]} è la più pesante
 - [ ] la {names[perm[5]]} è la più leggera, ma non si può sapere niente sulle altre due verdure
 - [ ] la {names[perm[4]]} è la più leggera, la {names[perm[5]]} è intermedia e la {names[perm[3]]} è la più pesante
 - [ ] non si può dedurre niente sui pesi delle tre verdure
+
+:::
 
 > Togliendo da ognuna delle pesate le verdure presenti su entrambi i piatti, possiamo vedere che sia la {names[perm[4]]} che la {names[perm[5]]}
 > sono più pesanti della media delle altre due verdure. L'unico caso in cui questo può succedere è se la {names[perm[3]]} è la verdura più leggera.

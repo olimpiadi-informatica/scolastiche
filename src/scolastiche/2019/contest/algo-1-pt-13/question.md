@@ -10,4 +10,8 @@ sono, ma ha commesso alcuni errori di battitura e ha scritto: “Olinpiadi Itali
 Sapendo che la distanza tra due frasi è la somma delle distanze tra le parole corrispondenti,
 ovvero quanto la frase scritta da Luca si discosta da “Olimpiadi Italiane di Informatica”
 
+:::answers{.open}
+
 ?> 6
+
+:::

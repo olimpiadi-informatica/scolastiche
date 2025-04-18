@@ -53,4 +53,8 @@ Ad esempio, per il castello di $4$ stanze visto sopra, le ultime due stanze visi
 
 Quanto vale $XY$ nel castello di $8$ stanze, partendo dalla stanza $\js{nuovoposto}$ (dopo aver già visitato la stanza $\js{posto}$ e aver già consumato il fagiolo $\js{fagiolo}$)?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

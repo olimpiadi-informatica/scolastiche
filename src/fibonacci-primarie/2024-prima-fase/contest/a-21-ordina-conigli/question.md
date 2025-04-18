@@ -5,11 +5,15 @@ Durante la ricreazione, gli amici di Bunny si sono disposti in fila:
 Per gioco, Bunny deve ordinarli dal più basso al più alto (le altezze degli amici sono scritte sulle loro magliette).
 Può farlo con degli **scambi** di posto tra coppie di suoi amici. Quali di questi **scambi** può fare Bunny per riordinarli?
 
+:::answers{.multipleChoice}
+
 - [x] scambiare l'amico alto $4$ con l'amico alto $1$ e poi scambiare l'amico alto $6$ con l'amico alto $3$
 - [ ] scambiare l'amico alto $4$ con l'amico alto $2$ e poi scambiare l'amico alto $6$ con l'amico alto $1$
 - [ ] Bunny non può ordinarli solo con scambi
 - [ ] scambiare l'amico alto $6$ con l'amico alto $3$
 - [ ] scambiare l'amico alto $6$ con l'amico alto $3$ e poi scambiare l'amico alto $4$ con l'amico alto $2$
+
+:::
 
 > Il coniglio alto $1$ è in quarta posizione e quello alto $4$ è in prima posizione, quindi vanno scambiati.
 > Inoltre, il coniglio alto $3$ è in sesta posizione e quello alto $6$ è in terza posizione, quindi vanno scambiati.
@@ -23,11 +27,15 @@ Può farlo con degli **scambi** di posto tra coppie di suoi amici. Quali di ques
 Per rendere il gioco più difficile, ora Bunny può solo fare **scambi di vicini**, cioè può scambiare di posto due suoi amici **solo se** sono uno di fianco all'altro.
 Quanti **scambi di vicini** deve fare per ordinare i suoi amici?
 
+:::answers{.multipleChoice}
+
 - [ ] $6$
 - [ ] $2$
 - [x] $8$
 - [ ] $12$
 - [ ] $11$
+
+:::
 
 > Conviene fare solo scambi tra conigli vicini in ordine sbagliato, cioè conviene fare uno scambio solo se il coniglio a sinistra è più alto di quello a destra. Ad esempio,
 >

@@ -10,4 +10,8 @@ delle due funzioni restituisca il valore zero? Nelle chiamate di `rec1` contare 
 
 Rispondere con $100 \cdot \text{NUMREC1} + \text{NUMREC2}$.
 
+:::answers{.open}
+
 ?> 202
+
+:::

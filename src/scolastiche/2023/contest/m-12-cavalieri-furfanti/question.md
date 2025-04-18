@@ -6,8 +6,12 @@ Ogni persona che non si trova agli estremi della fila dichiara: "I miei vicini s
 
 Quanti sono al massimo i furfanti?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{correct}$
 - [ ] $\js{wrong[0]}$
 - [ ] $\js{wrong[1]}$
 - [ ] $\js{wrong[2]}$
 - [ ] $\js{wrong[3]}$
+
+:::

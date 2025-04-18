@@ -9,11 +9,15 @@ Questo programma viene eseguito due volte:
 
 Quali numeri stampa il procedimento?
 
+:::answers{.multipleChoice}
+
 - [x] 7 e 9
 - [ ] 6 e 9
 - [ ] 7 e 7
 - [ ] 5 e 7
 - [ ] 4 e 5
+
+:::
 
 > Il procedimento ogni volta stampa il numero più grande tra $A$, $B$ e $C$.
 >

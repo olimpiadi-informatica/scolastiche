@@ -12,11 +12,15 @@ Ogni minuto puoi fare esattamente una di queste 2 azioni:
 
 Di quanti minuti hai bisogno al minimo per essere sicuro di capire qual è l'interruttore rotto, anche se sei sfortunato?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{ans1}$
 - [ ] $\js{wrong1[0]}$
 - [ ] $\js{wrong1[1]}$
 - [ ] $\js{wrong1[2]}$
 - [ ] $\js{wrong1[3]}$
+
+:::
 
 > Una strategia ottimale è la seguente.
 >
@@ -38,7 +42,11 @@ Dopo averci pensato meglio, ti sei accorto che c'è una terza azione che puoi fa
 
 Con quest'altra possibilità, e le due precedenti, di quanti minuti hai bisogno per capire qual è l'interruttore rotto?
 
+:::answers{.open}
+
 ?> {ans2}
+
+:::
 
 > In questo caso si può adottare una tecnica chiamata [_ricerca binaria_](https://it.wikipedia.org/wiki/Ricerca_dicotomica).
 >

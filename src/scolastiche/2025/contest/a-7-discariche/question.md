@@ -11,11 +11,15 @@ Vuoi acquistare alcune case nel _quartiere stretto_, che è una linea di $\js{l}
 
 Quante sono le case del quartiere stretto da cui non si sente l'odore di nessuna discarica?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{ans1}$
 - [ ] $\js{wrong1[0]}$
 - [ ] $\js{wrong1[1]}$
 - [ ] $\js{wrong1[2]}$
 - [ ] $\js{wrong1[3]}$
+
+:::
 
 > Se simuliamo la situazione descritta su un pezzo di carta,
 > escludendo le case troppo vicine ad una discarica e contando quelle valide,
@@ -36,11 +40,15 @@ Per esempio, in questa configurazione ci sono $8$ case abbastanza lontane dalla 
 
 Quante sono le case del quartiere quadro da cui non si sente l'odore di nessuna discarica?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{ans2}$
 - [ ] $\js{wrong2[0]}$
 - [ ] $\js{wrong2[1]}$
 - [ ] $\js{wrong2[2]}$
 - [ ] $\js{wrong2[3]}$
+
+:::
 
 > Anche in questo caso è possibile simulare la situazione descritta, come nella prima domanda.
 > Il modo migliore è riportare la mappa su un pezzo di carta, e poi segnare le aree verso

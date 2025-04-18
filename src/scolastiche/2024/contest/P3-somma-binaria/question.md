@@ -30,11 +30,15 @@ end function
 
 Che valore viene restituito da `calcola({l1}, {r1})`?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{correct1}$
 - [ ] $\js{wrong1[0]}$
 - [ ] $\js{wrong1[1]}$
 - [ ] $\js{wrong1[2]}$
 - [ ] $\js{wrong1[3]}$
+
+:::
 
 > Questa versione del problema si può risolvere a mano, simulando l'esecuzione del codice su carta.
 >
@@ -44,11 +48,15 @@ Che valore viene restituito da `calcola({l1}, {r1})`?
 
 Che valore viene restituito da `calcola({l2}, {r2})`?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{correct2}$
 - [ ] $\js{wrong2[0]}$
 - [ ] $\js{wrong2[1]}$
 - [ ] $\js{wrong2[2]}$
 - [ ] $\js{wrong2[3]}$
+
+:::
 
 > Qui invece conviene capire cosa fa effettivamente il codice. Intanto, tutti i valori in $[l, r)$ diventano $1$ (prima che $j$ venga diviso per $2$).
 > Anche i valori in $[\lfloor l/2 \rfloor, \lceil r/2 \rceil)$ diventano $1$ (quando $j$ viene diviso per $2$ esattamente una volta).

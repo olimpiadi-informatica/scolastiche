@@ -19,6 +19,8 @@ end function
 
 Quale delle seguenti può essere la parte mancante?
 
+:::answers{.multipleChoice}
+
 - [x] {" "}
   ```srs
   if a > b then
@@ -42,6 +44,8 @@ Quale delle seguenti può essere la parte mancante?
   end if
   ```
 - [ ] La funzione è corretta così com'è, non sono necessarie ulteriori righe di pseudocodice
+
+:::
 
 > La risposta è
 >

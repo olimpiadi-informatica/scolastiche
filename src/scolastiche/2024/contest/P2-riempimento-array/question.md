@@ -33,11 +33,15 @@ end function
 
 Cosa viene restituito da `f({n1})`?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{correct1}$
 - [ ] $\js{wrong1[0]}$
 - [ ] $\js{wrong1[1]}$
 - [ ] $\js{wrong1[2]}$
 - [ ] $\js{wrong1[3]}$
+
+:::
 
 > Questo primo quesito si può risolvere anche eseguendo il programma a mano, e calcolando quindi il valore di `arr`, che si può osservare conterrà, in ogni posizione $i$, il massimo multiplo di $2$ o di $3$ minore o uguale di $i$.
 >
@@ -47,11 +51,15 @@ Cosa viene restituito da `f({n1})`?
 
 Cosa viene restituito da `f({n2})`?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{correct2}$
 - [ ] $\js{wrong2[0]}$
 - [ ] $\js{wrong2[1]}$
 - [ ] $\js{wrong2[2]}$
 - [ ] $\js{wrong2[3]}$
+
+:::
 
 > Qui invece conviene accorgersi che `i - arr[i]` dipende solo dal resto di `i` quando viene diviso per $6$ (in particolare, fa $1$ se il resto è $1$ o $5$, $0$ altrimenti).
 > Quindi il problema chiede di contare gli interi in $[1, n]$ che danno resto $1$ o $5$ divisi per $6$: di questi numeri ce ne sono due ogni sei, e quindi dato che $\js{n2}$ è multiplo di sei la risposta è $\js{n2} \times 2 / 6 = \js{n2/3}$.

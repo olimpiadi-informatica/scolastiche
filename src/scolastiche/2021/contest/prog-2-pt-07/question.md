@@ -28,4 +28,8 @@ end function
 
 Quanto vale `f({value})`?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

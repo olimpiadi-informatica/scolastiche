@@ -14,11 +14,15 @@ Carol esplora il labirinto seguendo questo procedimento:
 
 In che posizione arriva alla fine del procedimento?
 
+:::answers{.multipleChoice}
+
 - [ ] in posizione **{wrong_fy[0]}{wrong_fx[0]}**
 - [ ] in posizione **{wrong_fy[1]}{wrong_fx[1]}**
 - [x] in posizione **{fy}{fx}**
 - [ ] in posizione **{wrong_fy[2]}{wrong_fx[2]}**
 - [ ] in posizione **{wrong_fy[3]}{wrong_fx[3]}**
+
+:::
 
 > Seguendo la procedura indicata, Carol farà questo percorso:
 > 
@@ -32,11 +36,15 @@ In che posizione arriva alla fine del procedimento?
 Carol ha sentito che in posizione **{qsy}{qx+1}** (cerchio rosso nella griglia sopra) hanno nascosto una carota speciale! Allora vuole ripetere le tre operazioni di prima (avanza, avanza, gira) **finché non ci arriva**.
 Partendo sempre dall'entrata in posizione **A1**, quante volte le deve ripetere per arrivare in posizione **{qsy}{qx+1}**?
 
+:::answers{.multipleChoice}
+
 - [ ] $\js{wrong[0]}$
 - [ ] $\js{wrong[1]}$
 - [ ] $\js{wrong[2]}$
 - [x] $\js{ans}$
 - [ ] $\js{wrong[3]}$
+
+:::
 
 > Per arrivare in posizione **{qsy}{qx+1}** deve ripetere il ciclo $\js{ans}$ volte, facendo questo percorso:
 >

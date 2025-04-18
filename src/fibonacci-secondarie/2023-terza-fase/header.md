@@ -1,7 +1,3 @@
-# Giochi di Fibonacci 2023/2024
-
-## Fase finale - Scuole secondarie
-
 Questa prova contiene _4 domande_ da risolvere in _3 ore_.
 Tutte le domande sono di **programmazione** tramite blocchi, e sono ordinate per difficoltà crescente.
 **Attento che la difficoltà è soggettiva!** Se stai passando tanto tempo cercando di risolvere una domanda, prova a passare ad altre domande e altre categorie!

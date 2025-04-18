@@ -1,4 +1,4 @@
-# Giochi di Fibonacci 2023/2024
+
 
 ## Allenamento per la Fase II - Scuole secondarie
 

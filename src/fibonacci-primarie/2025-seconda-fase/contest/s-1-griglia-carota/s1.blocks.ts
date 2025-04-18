@@ -27,8 +27,8 @@ export default [
     message0: "N",
     colour: 20,
     tooltip: "dimensione dei lati della griglia",
-    fn: (_ctx: Context, _state: State): number => {
-      return _state.N;
+    fn: (_ctx: Context, state: State): number => {
+      return state.N;
     },
   },
   {
@@ -36,12 +36,12 @@ export default [
     message0: "recinto raggiunto",
     colour: 20,
     tooltip: "se si è di fronte al recinto",
-    fn: (_ctx: Context, _state: State): boolean => {
+    fn: (_ctx: Context, state: State): boolean => {
       return (
-        _state.x + _state.dx < 0 ||
-        _state.x + _state.dx > _state.N ||
-        _state.y + _state.dy < 0 ||
-        _state.y + _state.dy > _state.N
+        state.x + state.dx < 0 ||
+        state.x + state.dx > state.N ||
+        state.y + state.dy < 0 ||
+        state.y + state.dy > state.N
       );
     },
   },
@@ -52,19 +52,19 @@ export default [
     nextStatement: null,
     colour: 20,
     tooltip: "avanza al prossimo passo della griglia",
-    fn: (_ctx: Context, _state: State) => {
+    fn: (ctx: Context, state: State) => {
       if (
-        _state.x + _state.dx < 0 ||
-        _state.x + _state.dx > _state.N ||
-        _state.y + _state.dy < 0 ||
-        _state.y + _state.dy > _state.N
+        state.x + state.dx < 0 ||
+        state.x + state.dx > state.N ||
+        state.y + state.dy < 0 ||
+        state.y + state.dy > state.N
       ) {
-        _state.x += _state.dx * 0.3;
-        _state.y += _state.dy * 0.3;
-        _ctx.exit(false, "ti sei scontrato con il recinto");
+        state.x += state.dx * 0.3;
+        state.y += state.dy * 0.3;
+        ctx.exit(false, "ti sei scontrato con il recinto");
       }
-      _state.x += _state.dx;
-      _state.y += _state.dy;
+      state.x += state.dx;
+      state.y += state.dy;
     },
   },
   {
@@ -74,9 +74,9 @@ export default [
     nextStatement: null,
     colour: 20,
     tooltip: "gira sul posto verso destra/sinistra",
-    fn: (_ctx: Context, _state: State, dir: "destra" | "sinistra") => {
-      [_state.dx, _state.dy] = dir === "destra" ? [_state.dy, -_state.dx] : [-_state.dy, _state.dx];
-      _state.a += dir === "destra" ? 0.25 : -0.25;
+    fn: (_ctx: Context, state: State, dir: "destra" | "sinistra") => {
+      [state.dx, state.dy] = dir === "destra" ? [state.dy, -state.dx] : [-state.dy, state.dx];
+      state.a += dir === "destra" ? 0.25 : -0.25;
     },
   },
   {
@@ -85,9 +85,9 @@ export default [
     previousStatement: null,
     colour: 20,
     tooltip: "mangia la carota",
-    fn: (ctx: Context, _state: State) => {
-      if (_state.x === _state.N && _state.y === _state.N) {
-        _state.eat = true;
+    fn: (ctx: Context, state: State) => {
+      if (state.x === state.N && state.y === state.N) {
+        state.eat = true;
         ctx.exit(true, "hai mangiato la carota, complimenti!");
       }
       ctx.exit(false, "non c'è nessuna carota da mangiare qui");

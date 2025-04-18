@@ -6,11 +6,15 @@ Il tabellone del gioco del coniglio contiene $10$ caselle, numerate da $1$ a $10
 
 Alla fine, su che casella si trova?
 
+:::answers{.multipleChoice}
+
 - [ ] $\js{wrong[0]}$
 - [ ] $\js{wrong[1]}$
 - [x] $\js{correct}$
 - [ ] $\js{wrong[2]}$
 - [ ] $\js{wrong[3]}$
+
+:::
 
 > Potremmo contare come avanza il coniglio dopo tutti questi spostamenti, ma sarebbe lungo e noioso!
 >

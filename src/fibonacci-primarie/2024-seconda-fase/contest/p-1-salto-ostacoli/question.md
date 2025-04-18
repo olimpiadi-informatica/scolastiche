@@ -15,11 +15,15 @@ Se Bunny segue il procedimento qui sotto, riesce a raggiungere la bandierina?
 
 ![code](code.asy)
 
+:::answers{.multipleChoice}
+
 - [ ] no, perchè si ferma prima di arrivare al traguardo senza cadere
 - [ ] si, raggiunge o supera la bandierina
 - [ ] no, perchè cade sulla *grande roccia* in posizione $4$
 - [X] no, perchè cade sulla *grande roccia* in posizione $10$
 - [ ] no, perchè cade sulla *grande roccia* in posizione $16$
+
+:::
 
 > Bunny cade sulla *grande roccia* in posizione $10$.
 >
@@ -42,11 +46,15 @@ Sempre nello stesso percorso ad ostacoli, Bunny vuole provare un po' di strategi
 Quali di queste strategie gli consentono di raggiungere o superare il traguardo?
 
 
+:::answers{.multipleChoice}
+
 - [ ] la strategia 1
 - [ ] la strategia 2
 - [ ] la strategia 3
 - [x] le strategie 1 e 2
 - [ ] le strategie 2 e 3
+
+:::
 
 > Funzionano entrambe le strategie 1 e 2.
 >

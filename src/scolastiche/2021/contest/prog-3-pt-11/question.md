@@ -23,4 +23,8 @@ Di tutto questo programma, Al è solo sicuro che le righe 1, 2, 3 e 9, 10, 11 no
 
 _Per esempio, per riportare che l'intero programma è già nell'ordine corretto, devi riportare il numero: `12345678910111213141516`._
 
+:::answers{.open}
+
 ?> 12345761391011161415812
+
+:::

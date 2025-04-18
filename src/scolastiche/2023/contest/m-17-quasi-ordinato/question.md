@@ -5,8 +5,12 @@ Per esempio `[1,3,7]` e `[3,5,8,2,6]` sono quasi crescenti, mentre `[2,6,5,3]` n
 
 Data la sequenza `[{A}]` , quanti sono i suoi diversi riordinamenti, eventualmente incluso quello della sequenza iniziale, che sono _quasi crescenti_?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{correct}$
 - [ ] $\js{wrong[0]}$
 - [ ] $\js{wrong[1]}$
 - [ ] $\js{wrong[2]}$
 - [ ] $\js{wrong[3]}$
+
+:::

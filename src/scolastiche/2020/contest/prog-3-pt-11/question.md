@@ -20,4 +20,8 @@ Dato il seguente programma:
 
 Qual è il **{num}** valore che viene stampato dal programma durante la sua esecuzione?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

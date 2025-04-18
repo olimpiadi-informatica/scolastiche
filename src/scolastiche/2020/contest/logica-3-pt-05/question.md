@@ -50,4 +50,8 @@ $$
 
 Quale è la stringa, di otto caratteri zero o uno, che rappresenta l'espressione logica di questa tabella di verità (sempre leggendo dall'alto al basso)?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

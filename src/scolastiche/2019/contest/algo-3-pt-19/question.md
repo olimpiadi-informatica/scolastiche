@@ -7,4 +7,8 @@ il costo totale, pari alla somma dei costi dei nove collegamenti selezionati.
 
 ![](es19.png)
 
+:::answers{.open}
+
 ?> 88
+
+:::

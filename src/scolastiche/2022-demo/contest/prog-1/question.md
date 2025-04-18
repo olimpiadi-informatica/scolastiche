@@ -15,11 +15,15 @@ function count()
 end function
 ```
 
+:::answers{.multipleChoice}
+
 - [x] $100$
 - [ ] $200$
 - [ ] $300$
 - [ ] $1000$
 - [ ] $2000$
+
+:::
 
 > La risposta è $100$.
 >

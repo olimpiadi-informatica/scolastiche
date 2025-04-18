@@ -17,4 +17,8 @@ variants:
 Dato un cassetto con {bianchi} calzini bianchi e {neri} calzini neri qual è il numero minimo di
 calzini da estrarre per essere sicuri di averne almeno due dello stesso colore?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

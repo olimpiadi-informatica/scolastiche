@@ -5,4 +5,8 @@ $23732$, $23400432$ e $124421$ sono palindromi ma non palizeri.
 
 Si dica quanti sono i numeri palizeri compresi tra $10^3$ e $10^5$ estremi esclusi.
 
+:::answers{.open}
+
 ?> 90
+
+:::

@@ -3,4 +3,8 @@ Si definisce $D(x, X)$ il numero di elementi presenti in X di cui x è un diviso
 (formalmente $D(x, X) = \#\{y \text{ in } X \text{ such that } x | y\}$).
 Indicare il più piccolo numero c tale che risulti $D(c, A) > D(c, B)$.
 
+:::answers{.open}
+
 ?> 2
+
+:::

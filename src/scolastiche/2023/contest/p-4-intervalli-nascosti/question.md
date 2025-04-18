@@ -15,8 +15,12 @@ end function
 
 Quale delle seguenti affermazioni è vera?
 
+:::answers{.multipleChoice}
+
 - [x] `loop(a, b, c, d)` è sempre uguale a `loop(c, d, a, b)`
 - [ ] `loop` restituisce sicuramente un numero $\leq b - a$
 - [ ] `loop` restituisce sicuramente un numero $\leq d - c$
 - [ ] `loop` non restituisce mai $0$
 - [ ] `loop(2 * a, 2 * b, 2 * c, 2 * d)` è sempre uguale a `2 * loop(a, b, c, d)`
+
+:::

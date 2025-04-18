@@ -16,4 +16,8 @@ Il seguente programma cerca, all'interno di un array `v` di `n` interi, il sotto
 
 Tuttavia è presente un errore, in quale riga?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

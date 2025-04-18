@@ -22,7 +22,11 @@ Che valore viene restituito da `conta([{array1}], 10)`? (l'array $a$ è anche ri
 
 ![Immagine](immagine1.asy?v=variants.py)
 
+:::answers{.open}
+
 ?> {ans1}
+
+:::
 
 > Questa versione del problema si può risolvere a mano, simulando l'esecuzione del codice su carta, e ottenendo la risposta $\js{ans1}$.
 >
@@ -32,7 +36,11 @@ Che valore viene restituito da `conta([{array1}], 10)`? (l'array $a$ è anche ri
 
 Quanti valori distinti può ritornare la funzione `conta` se $n$ vale $\js{len2}$ e l'array $a$ è composto da $\js{len2}$ valori tra $0$ e $9$?
 
+:::answers{.open}
+
 ?> {ans2}
+
+:::
 
 > Qui invece conviene capire cosa fa effettivamente il codice.
 > Per ogni coppia di elementi adiacenti uguali, aggiungiamo $1$ alla risposta, e per ogni coppia di elementi adiacenti diversi aggiungiamo $a_i-a_{i-1}$.

@@ -12,7 +12,11 @@ di mettere in connessione tutti gli snodi (in altre parole, devono esserci almen
 due snodi non connessi), e l'economato non vuole che due tubature diverse abbiano per
 estremi la stessa coppia di snodi. Quante tubature può aggiungere al massimo?
 
+:::answers{.open}
+
 ?> {ans1}
+
+:::
 
 ---
 
@@ -20,4 +24,8 @@ Luca ora si sta occupando della rete idrica di un'altra città. Quante tubature 
 
 ![Immagine](immagine2.asy?v=variants.py)
 
+:::answers{.open}
+
 ?> {ans2}
+
+:::

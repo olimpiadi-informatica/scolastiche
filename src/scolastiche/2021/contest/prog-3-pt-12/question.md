@@ -33,4 +33,8 @@ output(maxl)
 
 Tuttavia è presente un errore, in quale riga?
 
+:::answers{.open}
+
 ?> 19
+
+:::

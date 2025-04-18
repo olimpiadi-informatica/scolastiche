@@ -18,6 +18,8 @@ end function
 
 Quale dei seguenti può essere il pezzo mancante?
 
+:::answers{.multipleChoice}
+
 - [ ] {" "}
   ```srs
   if i < k - 1 then
@@ -46,6 +48,8 @@ Quale dei seguenti può essere il pezzo mancante?
   ```srs
   a[m] <- -1
   ```
+
+:::
 
 > La risposta è
 >

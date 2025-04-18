@@ -10,11 +10,15 @@ Ad esempio, questo è uno dei percorsi più brevi (lungo $10$ unità) che potreb
 Valerio è malvagio, e sceglie i punti $A$, $B$ e $C$ per rendere il percorso il più lungo possibile.
 Qual'è la lunghezza del percorso più lungo che potrebbe dover scegliere Davide su una griglia $\js{n}$ x $\js{n}$?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{correct1}$
 - [ ] $\js{wrong1[0]}$
 - [ ] $\js{wrong1[1]}$
 - [ ] $\js{wrong1[2]}$
 - [ ] $\js{wrong1[3]}$
+
+:::
 
 > Valerio vorrebbe rendere sia la distanza $A \rightarrow B$ sia la distanza $B \rightarrow C$ uguali al massimo possibile, cioè $\js{2*n}$ (mettendo $A$ e $B$ opposti, $B$ e $C$ opposti). Ma questo non è possibile perché $A$ e $C$ non possono coincidere.
 > Tuttavia, Valerio può rendere la prima distanza $\js{2*n}$ e la seconda distanza $\js{2*n-1}$, scegliendo $A = (0, 0)$, $B = (\js{n}, \js{n})$, $C = (0, 1)$. Quindi la risposta corretta è $\js{correct1}$.
@@ -32,11 +36,15 @@ Ad esempio, sulla griglia precedente, questo è uno dei percorsi più brevi (lun
 Qual è la lunghezza del percorso più lungo che potrebbe dover scegliere Davide su una griglia $\js{n}$ x $\js{n}$, scegliendo in modo ottimale l'ordine in cui attraversare i punti?
 
 
+:::answers{.multipleChoice}
+
 - [x] $\js{correct2}$
 - [ ] $\js{wrong2[0]}$
 - [ ] $\js{wrong2[1]}$
 - [ ] $\js{wrong2[2]}$
 - [ ] $\js{wrong2[3]}$
+
+:::
 
 > A Valerio conviene mettere i punti sul bordo. In questo modo, Davide gira intorno al bordo, che è composto da tre sottopercorsi $A \rightarrow B$, $B \rightarrow C$, $C \rightarrow A$, di lunghezza totale uguale al perimetro del quadrato, cioè $\js{4*n}$.
 > Per visitare tutti e tre i punti, a Davide basta visitare due di questi tre sottopercorsi, in particolare i due più corti.

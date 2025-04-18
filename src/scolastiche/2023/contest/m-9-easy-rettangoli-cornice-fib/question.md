@@ -6,11 +6,15 @@ Ora vuole acquistare una bacheca rettangolare in cui mettere le cartoline, possi
 
 Per risparmiare, Tip-Tap vorrebbe acquistare la bacheca più piccola possibile: quanto vale la più piccola area (in cm²) di una bacheca che può contenere le cartoline?
 
+:::answers{.multipleChoice}
+
 - [ ] $80$
 - [ ] $10$
 - [x] $90$
 - [ ] $85$
 - [ ] $0$
+
+:::
 
 > Per far stare le cartoline nella cornice, a Tip-Tap conviene sovrapporle il più possibile.
 >

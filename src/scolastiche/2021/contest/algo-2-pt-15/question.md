@@ -23,4 +23,8 @@ Nella prima riunione è ovviamente il cavaliere numero 2, nella seconda riunione
 
 Chi è che occuperà il posto numero 2 all'ottava riunione?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

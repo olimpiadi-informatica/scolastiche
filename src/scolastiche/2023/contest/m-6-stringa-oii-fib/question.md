@@ -7,11 +7,15 @@ Per esempio:
 
 Quanti sono i possibili nomi che Tip-Tap può dare alla gara?
 
+:::answers{.multipleChoice}
+
 - [ ] $16$
 - [ ] $4$
 - [ ] $8$
 - [ ] $6$
 - [x] $12$
+
+:::
 
 > Potremmo elencare tutti i nomi ammissibili, ma sarebbe lungo e noioso!
 >

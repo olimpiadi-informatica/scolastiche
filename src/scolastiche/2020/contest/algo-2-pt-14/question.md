@@ -22,4 +22,8 @@ $$
 \js{panini}
 $$
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

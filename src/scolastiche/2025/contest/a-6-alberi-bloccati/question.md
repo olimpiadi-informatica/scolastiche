@@ -6,11 +6,15 @@ Hai appena aperto un allevamento di conigli. L'allevamento comprende diverse are
 
 Alcune delle aree dell'allevamento contengono conigli, altre contengono dei campi di carote. I percorsi interni invece possono essere bloccati da una recinzione, indicata nello schema da un lucchetto, che i conigli non possono attraversare. Nella configurazione sopra, quante sono le **diverse coppie** (coniglio, carota) per cui il coniglio può raggiungere la carota? Le coppie possono anche avere conigli e carote in comune tra loro
 
+:::answers{.multipleChoice}
+
 - [ ] $\js{wrong1[0]}$
 - [ ] $\js{wrong1[1]}$
 - [ ] $\js{wrong1[2]}$
 - [x] $\js{ans1}$
 - [ ] $\js{wrong1[3]}$
+
+:::
 
 > Dato che il nodo con il lucchetto non può essere mai attraversato, possiamo 
 > rimuoverlo dall'albero. Questo ci lascia una configurazione formata da $3$
@@ -29,11 +33,15 @@ L'ora del pranzo è terminata, e ora vuoi evitare che i conigli possano raggiung
 
 Quanti percorsi interni (cerchi bianchi) devi bloccare al minimo di modo che nessun coniglio possa raggiungere nessuna carota?
 
+:::answers{.multipleChoice}
+
 - [ ] $\js{wrong2[0]}$
 - [x] $\js{ans2}$
 - [ ] $\js{wrong2[1]}$
 - [ ] $\js{wrong2[2]}$
 - [ ] $\js{wrong2[3]}$
+
+:::
 
 > Definiamo _radice_ dell'albero il nodo più in alto tra tutti.
 > Possiamo risolvere il problema tramite il seguente algoritmo. Facciamo

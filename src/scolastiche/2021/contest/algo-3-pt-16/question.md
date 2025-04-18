@@ -26,4 +26,8 @@ $$
 [\js{vettore}]
 $$
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

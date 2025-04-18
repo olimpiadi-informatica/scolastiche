@@ -6,7 +6,11 @@ Caterina può cambiare tutte le lettere che vuole, sostituendo ciascuna di esse 
 
 Quante lettere deve cambiare, al minimo, per rendere tutte le righe uguali?
 
+:::answers{.open}
+
 ?> 7
+
+:::
 
 > La risposta è $7$.
 >
@@ -36,7 +40,11 @@ Invece, la parola ottenuta incollando le colonne è $\texttt{bcaacc}$:
 
 Quante lettere deve cambiare nella tabella iniziale, al minimo, affinché ciò sia possibile?
 
+:::answers{.open}
+
 ?> 9
+
+:::
 
 > La risposta è $9$.
 >

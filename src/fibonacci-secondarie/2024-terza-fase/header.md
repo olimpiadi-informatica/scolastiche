@@ -1,7 +1,3 @@
-# Giochi di Fibonacci 2024/2025
-
-## Fase finale - Scuole secondarie
-
 Questa prova contiene _4 problemi_ di **programmazione** tramite blocchi da risolvere in _180 minuti_.
 I problemi sono ordinati per difficoltà crescente.
 **Attento che la difficoltà è soggettiva!** Se stai passando tanto tempo cercando di risolvere un problema, prova a passare ad altri problemi e altre categorie!

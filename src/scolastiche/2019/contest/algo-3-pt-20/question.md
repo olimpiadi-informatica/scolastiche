@@ -28,4 +28,8 @@ cifra) per RA indica che si intende dare come risposta la prima riga dello scena
 
 Rispondere concatenando i valori RA, CA, RB, CB.
 
+:::answers{.open}
+
 ?> 1232
+
+:::

@@ -20,11 +20,15 @@ end while
 
 Dove si troverà il robot alla fine del procedimento?
 
+:::answers{.multipleChoice}
+
 - [x] nella stanza $\js{ans1}$
 - [ ] nella stanza $\js{wrong1[0]}$
 - [ ] nella stanza $\js{wrong1[1]}$
 - [ ] nella stanza $\js{wrong1[2]}$
 - [ ] il robot esce dall'appartamento
+
+:::
 
 > Il robot preme l'interruttore ogni volta che incontra una porta chiusa.
 > Quindi può procedere fintanto che le luci già accese solo precedute da
@@ -56,7 +60,11 @@ Per riportare la programmazione al robot, devi quindi scrivere una sequenza di n
 Per esempio, il programma riportato nella domanda precedente corrisponde al programma **{perm[3]}{perm[1]}**, ma purtroppo non sempre consente al robot di arrivare in fondo all'appartamento.
 Quale sarebbe invece un programma corretto? Tieni conto che il robot non può avanzare se la porta è chiusa, e in caso di più programmi corretti, riporta **quello più corto (con meno istruzioni)**.
 
+:::answers{.open}
+
 ?> {perm[0]}{perm[1]}{perm[2]}
+
+:::
 
 > Osserviamo che il ciclo più esterno richiede una luce accesa per continuare.
 > Ciò vuol dire che al robot è permesso entrare in una stanza con la luce spenta,

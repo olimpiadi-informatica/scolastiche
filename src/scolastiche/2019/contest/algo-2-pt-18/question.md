@@ -19,6 +19,8 @@ del carapace sono regolari e hanno lato l,
 scegliere tra le seguenti quattro alternative quella
 che **non** fa il disegno corretto.
 
+:::answers{.multipleChoice}
+
 - [ ] {" "}
   ```
   ripeti 4 {
@@ -111,3 +113,5 @@ che **non** fa il disegno corretto.
       }
   }
   ```
+
+:::

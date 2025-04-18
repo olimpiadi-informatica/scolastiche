@@ -23,4 +23,8 @@ $$
 
 Quanto vale la somma di $X$ e $Y$?
 
+:::answers{.open}
+
 ?> {res}
+
+:::

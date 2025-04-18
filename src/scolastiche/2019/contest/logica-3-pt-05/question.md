@@ -5,4 +5,8 @@ fino a toccare la locomotiva del primo, dove si gira e torna indietro e così vi
 
 Quanti chilometri ha percorso, complessivamente, il colibrì?
 
+:::answers{.open}
+
 ?> 240
+
+:::

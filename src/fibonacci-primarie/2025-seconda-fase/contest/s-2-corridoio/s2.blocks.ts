@@ -25,8 +25,8 @@ export default [
     message0: "N",
     colour: 20,
     tooltip: "numero di stanze nel corridoio",
-    fn: (_ctx: Context, _state: State): number => {
-      return _state.N;
+    fn: (_ctx: Context, state: State): number => {
+      return state.N;
     },
   },
   {
@@ -34,8 +34,8 @@ export default [
     message0: "stanza a %1 buia",
     colour: 20,
     tooltip: "se la stanza a destra/sinistra è buia",
-    fn: (_ctx: Context, _state: State, dir: "destra" | "sinistra"): boolean => {
-      return !_state.light[_state.pos + (dir === "destra" ? 1 : -1)];
+    fn: (_ctx: Context, state: State, dir: "destra" | "sinistra"): boolean => {
+      return !state.light[state.pos + (dir === "destra" ? 1 : -1)];
     },
   },
   {
@@ -45,10 +45,10 @@ export default [
     nextStatement: null,
     colour: 20,
     tooltip: "spostati nella prossima stanza verso destra/sinistra",
-    fn: (_ctx: Context, _state: State, dir: "destra" | "sinistra") => {
-      _state.dir = dir === "destra" ? 1 : -1;
-      _state.pos += _state.dir;
-      if (!_state.light[_state.pos]) _ctx.exit(false, "sei entrato in una stanza buia");
+    fn: (ctx: Context, state: State, dir: "destra" | "sinistra") => {
+      state.dir = dir === "destra" ? 1 : -1;
+      state.pos += state.dir;
+      if (!state.light[state.pos]) ctx.exit(false, "sei entrato in una stanza buia");
     },
   },
   {
@@ -56,8 +56,8 @@ export default [
     message0: "carota raggiunta",
     colour: 20,
     tooltip: "se c'è una carota nella stanza corrente",
-    fn: (_ctx: Context, _state: State): boolean => {
-      return _state.carrot[_state.pos];
+    fn: (_ctx: Context, state: State): boolean => {
+      return state.carrot[state.pos];
     },
   },
   {
@@ -67,11 +67,11 @@ export default [
     nextStatement: null,
     colour: 20,
     tooltip: "mangia la carota nella stanza corrente",
-    fn: (_ctx: Context, _state: State) => {
-      if (!_state.carrot[_state.pos]) {
-        _ctx.exit(false, "non c'è una carota nella stanza corrente");
+    fn: (ctx: Context, state: State) => {
+      if (!state.carrot[state.pos]) {
+        ctx.exit(false, "non c'è una carota nella stanza corrente");
       }
-      _state.carrot[_state.pos] = false;
+      state.carrot[state.pos] = false;
     },
   },
   {
@@ -80,13 +80,13 @@ export default [
     previousStatement: null,
     colour: 20,
     tooltip: "smetti di cercare le carote",
-    fn: (ctx: Context, _state: State) => {
-      var low = _state.pos;
-      var high = _state.pos;
-      while (low > 0 && _state.light[low - 1]) low--;
-      while (high < _state.N - 1 && _state.light[high + 1]) high++;
+    fn: (ctx: Context, state: State) => {
+      let low = state.pos;
+      let high = state.pos;
+      while (low > 0 && state.light[low - 1]) low--;
+      while (high < state.N - 1 && state.light[high + 1]) high++;
       for (let i = low; i <= high; i++)
-        if (_state.carrot[i]) ctx.exit(false, `non hai raccolto la carota nella stanza ${i + 1}`);
+        if (state.carrot[i]) ctx.exit(false, `non hai raccolto la carota nella stanza ${i + 1}`);
       ctx.exit(true, "hai finito, complimenti!");
     },
   },

@@ -12,8 +12,12 @@ y <- [0, 1, 2, 3]
 
 Quale dei seguenti assegnamenti, sostituito a `[???]`, risulta in un programma valido?
 
+:::answers{.multipleChoice}
+
 - [x] `{correct}`
 - [ ] `{wrong[0]}`
 - [ ] `{wrong[1]}`
 - [ ] `{wrong[2]}`
 - [ ] `{wrong[3]}`
+
+:::

@@ -7,11 +7,15 @@ Quali delle seguenti successioni di azioni consentono a Tip-Tap di raggiungere l
 
 ![code](code.asy)
 
+:::answers{.multipleChoice}
+
 - [ ] solo $1$
 - [ ] $2$ e $1$
 - [ ] solo $2$
 - [x] $1$ e $3$
 - [ ] sono tutti corretti
+
+:::
 
 > Sia seguendo l'opzione $1$ che l'opzione $3$, e svolgendo le ripetizioni, la sequenza complessiva di azioni che Tip-Tap svolge è questa:
 >

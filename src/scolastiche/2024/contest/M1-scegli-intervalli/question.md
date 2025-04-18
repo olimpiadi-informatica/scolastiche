@@ -11,11 +11,15 @@ Ad esempio questo è un modo valido di scegliere i segmenti.
 
 In quanti modi puoi farlo?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{correct1}$
 - [ ] $\js{wrong1[0]}$
 - [ ] $\js{wrong1[1]}$
 - [ ] $\js{wrong1[2]}$
 - [ ] $\js{wrong1[3]}$
+
+:::
 
 > Chiamiamo intervallo destro l'intervallo che si toverà a destra in una possibile disposizione e intervallo sinistro quello che si 
 > troverà a sinistra. Fissando l'intervallo sinistro tra la coordinata $0$ e la $1$ avremmo $\js{l - 1}$ modi di fissare quello destro,
@@ -31,11 +35,15 @@ Ad esempio questo è un modo **non** valido dato che i segmenti si sovrappongono
 
 ![Immagine](segments2.asy?v=variants.py)
 
+:::answers{.multipleChoice}
+
 - [x] $\js{correct2}$
 - [ ] $\js{wrong2[0]}$
 - [ ] $\js{wrong2[1]}$
 - [ ] $\js{wrong2[2]}$
 - [ ] $\js{wrong2[3]}$
+
+:::
 
 > Usiamo lo stesso ragionamento di prima: fissando l'intervallo sinistro tra la coordinata $0$ e la $2$ avremmo $\js{l - 3}$ modi di fissare quello destro,
 > fissando l'intervallo sinistro tra la coordinata $1$ e la $3$ avremmo $\js{l - 4}$ modi di fissare quello destro e così via.  La risposta

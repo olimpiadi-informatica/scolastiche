@@ -6,11 +6,15 @@ Quale o quali tra le seguenti affermazioni sono risposte possibili?
 2. "Ci sono più furfanti che cavalieri"
 3. "I cavalieri sono tanti quanti i furfanti"
 
+:::answers{.multipleChoice}
+
 - [x] Solo la $1$ e la $3$
 - [ ] Solo la $1$
 - [ ] Solo la $2$
 - [ ] Solo la $2$ e la $3$
 - [ ] Tutte le risposte sono possibili
+
+:::
 
 > La risposta è **Solo la $1$ e la $3$**.
 >

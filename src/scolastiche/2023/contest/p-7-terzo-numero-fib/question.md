@@ -2,11 +2,15 @@ Qual è il **terzo** numero stampato dal seguente programma?
 
 ![code](code.asy)
 
+:::answers{.multipleChoice}
+
 - [x] $25$
 - [ ] $50$
 - [ ] $20$
 - [ ] $10$
 - [ ] $4$
+
+:::
 
 > Cerchiamo di capire cosa fa questo programma.
 > Si parte con la variabile $i$ che vale $1$. Per $100$ volte, si incrementa $j$ da $1$ fino a $100$ stampandone il valore se $i \times j = 100$.

@@ -12,8 +12,12 @@ for i in [1, {n+1}) do
 end for
 ```
 
+:::answers{.multipleChoice}
+
 - [x] $\js{correct}$
 - [ ] $\js{wrong[0]}$
 - [ ] $\js{wrong[1]}$
 - [ ] $\js{wrong[2]}$
 - [ ] $\js{wrong[3]}$
+
+:::

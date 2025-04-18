@@ -20,4 +20,8 @@ Dato il seguente programma:
 
 {domanda}
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

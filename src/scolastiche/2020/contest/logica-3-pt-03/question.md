@@ -34,4 +34,8 @@ $$
 
 $A$, $B$ e $C$ sono numeri di cui dovete desumere il valore. Quanto vale $C$?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

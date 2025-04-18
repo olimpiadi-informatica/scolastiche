@@ -1,4 +1,4 @@
-import type { ToolboxInfo } from "blockly/core/utils/toolbox";
+import type { ToolboxInfo } from "@olinfo/quizms-mdx/blockly-types";
 
 export const toolbox: ToolboxInfo = {
   kind: "categoryToolbox",

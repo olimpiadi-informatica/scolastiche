@@ -24,11 +24,15 @@ cammina()
 
 Con quanti panini rimarrai alla fine del percorso?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{ans1}$
 - [ ] $\js{wrong1[0]}$
 - [ ] $\js{wrong1[1]}$
 - [ ] $\js{wrong1[2]}$
 - [ ] non ti rimarrà nessun panino
+
+:::
 
 > In ogni posizione abbiamo quattro possibili situazioni:
 > 
@@ -49,11 +53,15 @@ Una volta arrivato, ti sei accorto di aver dimenticato i panini!
 C'è solo una soluzione: sperare che aprano altri chioschi nel frattempo. I chioschi possono aggiungersi all'inizio di ogni tratto (incluso il primo) in cui non c'è già un chiosco.
 Quanti chioschi dovrebbero aggiungersi **al minimo**, perché tu possa riuscire ad arrivare fino in fondo al percorso rispettando il procedimento, e partendo **senza panini**?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{ans2}$
 - [ ] $\js{wrong2[0]}$
 - [ ] $\js{wrong2[1]}$
 - [ ] $\js{wrong2[2]}$
 - [ ] non serve aggiungere nessun chiosco
+
+:::
 
 > Proviamo a simulare il percorso partendo senza panini. Ogni volta che ci ritroveremmo
 > a dover mangiare un panino ma non ne abbiamo, andiamo ad aggiungere un chiosco in una

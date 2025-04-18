@@ -16,7 +16,11 @@ modulo $7$ fa $5$ e inserire un $1$ in posizione $5$, ottenendo la tabella BF2:
 
 Indicare la corretta fra le seguenti affermazioni, riferite alla prima tabella BF1:
 
+:::answers{.multipleChoice}
+
 - [ ] In BF1 è presente il numero $4$
 - [ ] In BF1 non è presente il numero $19$
 - [ ] In BF1 potrebbe essere presente il numero $6$
 - [x] In BF1 potrebbe essere presente il numero $12$
+
+:::

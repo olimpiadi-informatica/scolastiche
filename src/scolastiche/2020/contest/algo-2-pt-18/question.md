@@ -33,4 +33,8 @@ $$
 
 Sia `Min` il valore della discesa di somma minima, `Max` il valore della discesa di somma massima. Quanto vale `Min + Max`?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

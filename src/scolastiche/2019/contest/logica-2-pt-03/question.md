@@ -5,4 +5,8 @@ nell'insieme $X$), $A_1 \cup A_2 = A$, $A_1 \cap A_2 = \emptyset$ e
 $\text{somma}(A_1) = \text{somma}(A_2)$ (dove $\text{somma}(X)$ è la somma di tutti
 gli elementi nell'insieme $X$)?
 
+:::answers{.open}
+
 ?> 0
+
+:::

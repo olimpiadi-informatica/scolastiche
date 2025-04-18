@@ -10,6 +10,10 @@ Questi sono i numeri di carote contenuti in ogni scatola:
 
 Quante carote può guadagnare al massimo Tip-Tap comprando tutte le scatole che vuole?
 
+:::answers{.open}
+
 ?> 37
+
+:::
 
 > Tip-Tap ottiene il massimo guadagno comprando e rivendendo tutte le scatole che contengono più di 10 carote. Ad esempio, per comprare e rivendere una scatola contenente 12 carote, Tip-Tap spende 10 carote e ne ricava 12, per un guadagno di 12-10=2 carote. Comprando quindi tutte le scatole tranne quelle di valore 1, 4, 9, 9, 8, 2, 3 il suo guadagno sarà di 37 carote.

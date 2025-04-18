@@ -18,4 +18,8 @@ Si supponga di prendere una carta C1 dal mazzo, di rimetterla dentro, mischiare,
 
 La probabilità di questo scenario è $\frac{1}{X}$, quanto vale $X$?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

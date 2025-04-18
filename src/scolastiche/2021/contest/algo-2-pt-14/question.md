@@ -16,4 +16,8 @@ Ad esempio, se volete sommare i numeri 2, 3 e 7, possiamo sommare 2 e 3, con cos
 
 Se i numeri da sommare sono $\js{numeri}$, qual è il costo minimo per sommarli tutti tra di loro?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

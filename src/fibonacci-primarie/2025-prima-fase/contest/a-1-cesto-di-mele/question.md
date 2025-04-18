@@ -6,11 +6,15 @@ Quante mele rimangono sull’albero?
 
 ![immagine](immagine.asy?v=variants.py)
 
+:::answers{.multipleChoice}
+
 - [x] $\js{ans1}$
 - [ ] $\js{wrong1[0]}$
 - [ ] $\js{wrong1[1]}$
 - [ ] $\js{wrong1[2]}$
 - [ ] $\js{wrong1[3]}$
+
+:::
 
 > Visto che il cestino può contenere massimo $\js{s}$ mele, dopo averlo riempito sull'albero rimangono $\js{n} - \js{s} = \js{ans1}$ mele.
 
@@ -19,11 +23,15 @@ Quante mele rimangono sull’albero?
 Ora Carol vuole raccogliere anche le altre mele rimaste sull’albero usando sempre lo stesso cestino.
 Quante altre volte deve riempirlo e svuotarlo per portarle via tutte?
 
+:::answers{.multipleChoice}
+
 - [ ] $\js{ans2}$
 - [x] $\js{wrong2[0]}$
 - [ ] $\js{wrong2[1]}$
 - [ ] $\js{wrong2[2]}$
 - [ ] $\js{wrong2[3]}$
+
+:::
 
 > Ora sull'albero sono rimaste $\js{ans1}$ mele. Carol ne può portare via al massimo $\js{s}$ alla volta,
 > quindi può riempire completamente il cestino un numero di volte dato da $\js{ans1}$ diviso $\js{s}$, che fa $\js{wrong2[0]-1}$.

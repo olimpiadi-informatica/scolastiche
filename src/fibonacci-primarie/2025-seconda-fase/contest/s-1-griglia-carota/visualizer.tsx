@@ -8,7 +8,7 @@ import { Canvas, Rectangle, Sprite, Variables } from "~/utils/visualizer";
 import bunny from "./asy/bunny.asy?w=45";
 import carrot from "./asy/carrot.asy?w=40";
 
-const content = import.meta.glob("./asy/content*.asy", {
+const content = import.meta.glob<ImageSrc>("./asy/content*.asy", {
   eager: true,
   import: "default",
   query: { w: 60 },

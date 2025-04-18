@@ -8,7 +8,11 @@ Bunny vuole capire quali numeri può ottenere allineando i foglietti in vertical
 
 Qual è il più grande numero che può ottenere in questo modo?
 
+:::answers{.open}
+
 ?> 29688
+
+:::
 
 > Per ottenere il numero più grande abbiamo bisogno di scegliere da ogni foglietto il suo numero più grande. Un modo per farlo è il seguente: ![Soluzione](fig4.asy)
 
@@ -20,6 +24,10 @@ In realtà, Bunny vorrebbe anche capire qual è il più grande numero che può o
 
 Qual è il più grande numero che può ottenere in questo altro caso?
 
+:::answers{.open}
+
 ?> 98862
+
+:::
 
 > In questo caso possiamo ulteriormente riordinare i foglietti a partire dalla disposizione di prima, di modo da mettere prima quelli con il numero più grande. Un modo di farlo è il seguente: ![Soluzione](fig5.asy)

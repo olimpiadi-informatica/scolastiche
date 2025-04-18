@@ -18,4 +18,8 @@ Il gondoliere può condurre una sola gondola alla volta, ma può agganciare alla
 
 Qual è il tempo minimo necessario al gondoliere per trasferire le 4 gondole da una riva all’altra?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

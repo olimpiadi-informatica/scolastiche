@@ -8,11 +8,15 @@ In quali di queste situazioni Bunny riesce ad uscire dal fienile?
 
 Risposte:
 
+:::answers{.multipleChoice}
+
 - [ ] nessuna
 - [ ] tutte
 - [ ] solo la 1
 - [x] la 1 e la 2
 - [ ] la 1 e la 3
+
+:::
 
 > Bunny riesce ad uscire dal fienile nell'opzione 1 e nella 2.
 >

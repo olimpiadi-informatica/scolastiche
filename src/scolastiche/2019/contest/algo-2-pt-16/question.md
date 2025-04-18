@@ -11,4 +11,8 @@ Si consideri una versione semplificata, con una matrice $4\times 4$ come quella 
 Inizialmente le luci sono tutte spente. Una mossa consiste nel premere un elemento della matrice. Qual è il
 numero minimo di mosse che bisogna fare per arrivare alla configurazione in cui tutte le luci sono accese?
 
+:::answers{.open}
+
 ?> 4
+
+:::

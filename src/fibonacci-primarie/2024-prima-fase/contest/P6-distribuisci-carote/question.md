@@ -10,11 +10,15 @@ Per ogni coniglio in fila, da sinistra a destra, Carol decide quante carote darg
 
 Quante carote gli rimarranno alla fine, se all'inizio ne ha $\js{k1}$?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{ans1}$
 - [ ] $\js{wrong1[0]}$
 - [ ] $\js{wrong1[1]}$
 - [ ] $\js{wrong1[2]}$
 - [ ] $\js{wrong1[3]}$
+
+:::
 
 > Se incontra un coniglio adulto, Carol rimane con metà delle carote che aveva, arrotondate per difetto. Altrimenti, Carol perde una carota.
 > Ripetendo l'operazione per ogni coniglio presente, si arriva alla soluzione.
@@ -26,11 +30,15 @@ Quante carote gli rimarranno alla fine, se all'inizio ne ha $\js{k1}$?
 
 Se alla fine della distribuzione Carol volesse rimanere con almeno $\js{k2}$ carote, quante ne deve avere almeno all'inizio?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{ans2}$
 - [ ] $\js{wrong2[0]}$
 - [ ] $\js{wrong2[1]}$
 - [ ] $\js{wrong2[2]}$
 - [ ] $\js{wrong2[3]}$
+
+:::
 
 > Possiamo ripercorrere il numero di carote di Carol al contrario (dalla fine all'inizio).
 > - Se l'ultimo coniglio è bambino, prima di incontrarlo Carol aveva una carota in più.

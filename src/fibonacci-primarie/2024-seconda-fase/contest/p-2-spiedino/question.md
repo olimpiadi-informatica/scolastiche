@@ -8,11 +8,15 @@ Ora deve determinare il **valore** dello spiedino per portarlo al mercato. Per c
 
 Quanto è il valore calcolato alla fine di questo procedimento?
 
+:::answers{.multipleChoice}
+
 - [ ] 4
 - [x] 8
 - [ ] 12
 - [ ] 18
 - [ ] 25
+
+:::
 
 > Ragionando sul programma di Allie, si può vedere che con un ciclo percorre tutti i valori $i$ da $1$ a $24$,
 > esaminando per ciascuno se i cibi nelle posizioni $i$ e $i+1$ sono diversi. In altre parole, Allie sta
@@ -36,11 +40,15 @@ Quanto è il valore calcolato alla fine di questo procedimento?
 Carol sta pensando che gli piacerebbe cambiare un po' il suo spiedino, di modo che il suo valore aumenti di $5$.
 Quanti frutti dovrà modificare al minimo per ottenere questo risultato?
 
+:::answers{.multipleChoice}
+
 - [ ] 2
 - [x] 3
 - [ ] 4
 - [ ] 5
 - [ ] 6
+
+:::
 
 > Possiamo creare $5$ zone di frutta in più cambiando solo tre frutti.
 > Con un singolo frutto possiamo spezzare una zona che sia lunga almeno tre per farla diventare tre zone.

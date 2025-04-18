@@ -2,11 +2,15 @@ In quale ordine vanno messe queste istruzioni, per ottenere il numero $6$ nella 
 
 ![x=2](code.asy)
 
+:::answers{.multipleChoice}
+
 - [ ] $2$, $1$, $3$
 - [x] $1$, $3$, $2$
 - [ ] $3$, $2$, $1$
 - [ ] $1$, $2$, $3$
 - [ ] $2$, $3$, $1$
+
+:::
 
 > All'inizio non sappiamo quale numero potrebbe esserci nella variabile $x$!
 > Per essere sicuri di un risultato, dobbiamo iniziare mettendoci un valore definito, e quindi con il blocco $1$ che ci mette il valore $2$.

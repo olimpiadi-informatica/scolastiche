@@ -9,8 +9,12 @@ Per esempio se le dimensioni delle cartoline (in cm) **fossero** $8 \times 4$, $
 
 Per risparmiare, Francesco vorrebbe acquistare la bacheca più piccola possibile: quanto vale al minimo l'area (in cm²) di una bacheca che può contenere le cartoline?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{correct}$
 - [ ] $\js{wrong[0]}$
 - [ ] $\js{wrong[1]}$
 - [ ] $\js{wrong[2]}$
 - [ ] $\js{wrong[3]}$
+
+:::

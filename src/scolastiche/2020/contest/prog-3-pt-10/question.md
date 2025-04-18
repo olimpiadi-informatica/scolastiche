@@ -20,4 +20,8 @@ Date le seguenti funzioni:
 
 Tenendo conto che la divisione restituisce un risultato intero (quindi, ad esempio, sia $4/2$ che $5/2$ restituiscono $2$), qual è il massimo $x$ tale per cui $\mathrm{G}(x) = \js{val}$?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

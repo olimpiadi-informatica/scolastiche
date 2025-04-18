@@ -10,7 +10,11 @@ $$
 
 Qual è la massima somma delle altezze ottenibile?
 
+:::answers{.open}
+
 ?> 65
+
+:::
 
 > La risposta è $65$.
 >
@@ -26,7 +30,11 @@ Aggiungiamo una seconda condizione da rispettare: la differenza tra le altezze d
 
 Qual è la massima somma delle altezze ottenibile con entrambi i vincoli?
 
+:::answers{.open}
+
 ?> 59
+
+:::
 
 > La risposta è $59$.
 >

@@ -2,11 +2,15 @@ Un numero intero positivo si dice _palindromo_ se è lo stesso letto da sinistra
 
 Qual è la **somma delle cifre** del più piccolo numero palindromo di **esattamente** $9$ cifre, della forma $\texttt{\_}3\texttt{\_}2\texttt{\_}\texttt{\_}9\texttt{\_}\texttt{\_}$? I trattini bassi possono essere qualunque cifra, ma quello più a sinistra non può essere $0$.
 
+:::answers{.multipleChoice}
+
 - [ ] $27$
 - [ ] $28$
 - [ ] $29$
 - [x] $30$
 - [ ] $32$
+
+:::
 
 > La risposta è $30$.
 >

@@ -7,8 +7,12 @@ Per esempio:
 
 Quanti sono i possibili nomi che Valerio può dare alla gara?
 
+:::answers{.multipleChoice}
+
 - [ ] $24$
 - [ ] $31$
 - [ ] $32$
 - [x] $33$
 - [ ] $36$
+
+:::

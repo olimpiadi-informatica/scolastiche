@@ -6,7 +6,11 @@ Ognuno di loro ha una diversa altezza, scritta sulla propria maglietta:
 Tip-Tap in una mossa può scegliere due amici consecutivi e far uscire dalla fila il più basso dei due.
 Qual è la minima altezza di un amico che può rimanere in fila dopo $5$ mosse?
 
+:::answers{.open}
+
 ?> {6}
+
+:::
 
 > La risposta corretta è $6$.
 >
@@ -20,7 +24,11 @@ Qual è la minima altezza di un amico che può rimanere in fila dopo $5$ mosse?
 
 Qual è la minima altezza di un amico che può rimanere in fila dopo $4$ mosse?
 
+:::answers{.open}
+
 ?> {2}
+
+:::
 
 > La risposta corretta è $2$. Infatti, dopo $4$ mosse devono rimanere due amici e uno di loro deve essere l'amico di altezza $6$, per il ragionamento di prima.
 >

@@ -37,4 +37,8 @@ end function
 
 Qual è il minimo valore positivo che si può passare ad `f` per ottenere $\js{result}$?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

@@ -16,4 +16,8 @@ Dato il seguente programma:
 
 Qual è il valore dell'ultimo intero che viene stampato durante l'esecuzione di questo programma?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

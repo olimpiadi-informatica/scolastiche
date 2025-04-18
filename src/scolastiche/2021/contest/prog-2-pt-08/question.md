@@ -52,4 +52,8 @@ end function
 
 Qual è il minimo valore che `f` può restituire, per un qualunque valore del parametro `x`?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

@@ -19,4 +19,8 @@ sia pari a $\js{soldi}$ euro._''
 
 Qual è il valore complessivo dell'eredità di Martina e Valerio?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

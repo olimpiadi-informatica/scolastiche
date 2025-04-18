@@ -4,11 +4,15 @@ Tip-Tap sistemando la sua soffitta si è imbattuto in un libro di programmazione
 
 Purtroppo la successiva pagina è rovinata perciò Tip-Tap non riesce a capire che numero verrà stampato alla fine, aiutalo tu! Quale numero viene stampato dall'ultimo blocco?
 
+:::answers{.multipleChoice}
+
 - [ ] 0
 - [x] 2
 - [ ] 4
 - [ ] 6
 - [ ] 10
+
+:::
 
 > Il programma incrementa il contatore per ogni multiplo di $7$ fino a $42$,
 > e lo decrementa per ogni multiplo di $9$ fino a $42$.

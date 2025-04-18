@@ -2,11 +2,15 @@ Roberto ha una lista di $n \geq 2$ numeri **interi positivi distinti**, dove $n$
 
 Quale tra i seguenti **non può** essere il valore di $k$?
 
+:::answers{.multipleChoice}
+
 - [x] $4$
 - [ ] $5$
 - [ ] $6$
 - [ ] $7$
 - [ ] $8$
+
+:::
 
 > La risposta è $4$.
 >

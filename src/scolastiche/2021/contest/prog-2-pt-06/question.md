@@ -41,4 +41,8 @@ end while
 
 Cosa viene stampato durante l'esecuzione? Riportare la risposta senza spazi.
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

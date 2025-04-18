@@ -41,4 +41,8 @@ Per rispondere al quesito devi scrivere di seguito i due numeri delle due piazza
 
 Ad esempio, se pensi che le due piazze siano la $5$ e la $1$, devi scrivere $15$ (mi raccomando, **non scrivere $51$**!).
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

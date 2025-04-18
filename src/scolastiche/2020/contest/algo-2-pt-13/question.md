@@ -24,4 +24,8 @@ Per esempio, per $D=9$, Hulk salta _due_ volte (effettua un salto da $1$ metro a
 
 Sapete che, nel suo ultimo spostamento, Hulk ha fatto in totale 3 salti, di cui l'ultimo al tempo $t=\js{min}$ minuti. Qual è la distanza **{tipo}** percorsa da Hulk nel suo ultimo spostamento?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

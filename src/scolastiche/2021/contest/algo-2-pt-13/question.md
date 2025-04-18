@@ -16,4 +16,8 @@ Per esempio, per pagina 9 è stata usata una sola cifra decimale (il '9'), mentr
 
 Quante sono le pagine del libro?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

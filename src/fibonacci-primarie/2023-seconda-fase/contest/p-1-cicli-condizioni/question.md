@@ -12,11 +12,15 @@ mangiarsi la lingua?
 
 ![code](code.asy)
 
+:::answers{.multipleChoice}
+
 - [ ] $1$, $3$ e $5$
 - [ ] $2$ e $4$
 - [x] $3$ e $5$
 - [ ] solo $5$
 - [ ] tutti tranne l'$1$
+
+:::
 
 > Tip-Tap riesce a mangiare tutte le carote sia seguendo l'opzione 3 che l'opzione 5.
 >

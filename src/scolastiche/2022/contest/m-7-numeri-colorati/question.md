@@ -24,11 +24,15 @@ variants:
 
 I numeri da $1$ a $2022$ sono stati colorati con $\js{n}$ colori diversi, in modo che ogni gruppo di $\js{n}$ numeri consecutivi contenga **almeno** $\js{k}$ colori distinti. Quale delle seguenti affermazioni è necessariamente vera?
 
+:::answers{.multipleChoice}
+
 - [x] Ogni gruppo di $\js{ns[0]}$ numeri consecutivi contiene almeno $\js{ks[0]}$ colori distinti
 - [ ] Ogni gruppo di $\js{ns[1]}$ numeri consecutivi contiene almeno $\js{ks[1]}$ colori distinti
 - [ ] Ogni gruppo di $\js{ns[2]}$ numeri consecutivi contiene almeno $\js{ks[2]}$ colori distinti
 - [ ] Ogni gruppo di $\js{ns[3]}$ numeri consecutivi contiene almeno $\js{ks[3]}$ colori distinti
 - [ ] Ogni gruppo di $\js{ns[4]}$ numeri consecutivi contiene almeno $\js{ks[4]}$ colori distinti
+
+:::
 
 > La riposta è **Ogni gruppo di $\js{ns[0]}$ numeri consecutivi contiene almeno $\js{ks[0]}$ colori distinti**.
 >

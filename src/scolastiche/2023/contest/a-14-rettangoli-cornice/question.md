@@ -6,7 +6,11 @@ Ora vuole acquistare una bacheca rettangolare in cui mettere le cartoline, possi
 
 Per risparmiare, Tip-Tap vorrebbe acquistare la bacheca più piccola possibile: quanto vale al minimo l'area (in cm²) di una bacheca che può contenere le cartoline?
 
+:::answers{.open}
+
 ?> 90
+
+:::
 
 > Per far stare le cartoline nella cornice, a Tip-Tap conviene sovrapporle il più possibile.
 >
@@ -24,7 +28,11 @@ Per risparmiare, Tip-Tap vorrebbe acquistare la bacheca più piccola possibile: 
 
 Per risparmiare ulteriormente, Tip-Tap sta pensando che in effetti potrebbe anche ruotare alcune cartoline di 90°. In questo caso, quale sarebbe la minima area?
 
+:::answers{.open}
+
 ?> 50
+
+:::
 
 > In questo caso, la strategia migliore per Tip-Tap è di orientare le cartoline tutte nello stesso verso, per esempio di modo che siano strette e alte.
 > Come prima cosa, ruota quindi le cartoline facendole diventare di dimensioni (in cm) $4 \times 8$, $5 \times 5$, $3 \times 10$, $1 \times 9$ e $4 \times 6$.

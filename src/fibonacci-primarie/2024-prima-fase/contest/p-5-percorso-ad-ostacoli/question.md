@@ -13,11 +13,15 @@ Se Bunny segue il procedimento qui sotto, riesce a raggiungere la bandierina?
 
 ![code](code.asy)
 
+:::answers{.multipleChoice}
+
 - [ ] si, raggiunge la bandierina
 - [ ] no, perchè cade sulla *grande roccia* in posizione $4$
 - [x] no, perchè si ferma sulla casella $9$
 - [ ] no, perchè cade sulla *grande roccia* in posizione $8$
 - [ ] si, raggiunge e supera la bandierina arrivando sulla casella $13$
+
+:::
 
 > Ripercorriamo il percorso di Bunny:
 >
@@ -47,11 +51,15 @@ Ricordiamo il percorso ad ostacoli ed il procedimento seguito da Bunny:
 Bunny si chiede se cambiando punto di partenza riuscirebbe a raggiungere o superare la bandierina. Per quali di questi punti di partenza Bunny raggiunge la bandierina seguendo il suo procedimento?
 
 
+:::answers{.multipleChoice}
+
 - [ ] la casella $2$
 - [x] la casella $5$
 - [ ] la casella $7$
 - [ ] la casella $6$
 - [ ] non ci sono punti di partenza da cui raggiunge la bandierina
+
+:::
 
 > Bunny vince partendo dalla casella $5$, in questo modo:
 >

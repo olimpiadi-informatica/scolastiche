@@ -18,4 +18,8 @@ Noi usiamo il sistema numerico decimale, ovvero il sistema di numerazione posizi
 
 Come probabilmente avrai intuito, la domanda fa riferimento a una base diversa da 10. Importante: anche la tua risposta deve essere nella stessa base (ovvero, non in base 10)!
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

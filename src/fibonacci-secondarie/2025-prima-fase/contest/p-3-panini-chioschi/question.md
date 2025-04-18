@@ -10,11 +10,15 @@ La passeggiata prevede {length} tratti di percorso e passa per alcuni chioschi d
 
 Con quanti panini rimarrà alla fine del percorso?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{ans1}$
 - [ ] $\js{wrong1[0]}$
 - [ ] $\js{wrong1[1]}$
 - [ ] $\js{wrong1[2]}$
 - [ ] non gli rimarrà nessun panino
+
+:::
 
 > In ogni posizione, Bunny si può trovare in quattro possibili situazioni:
 > 
@@ -35,11 +39,15 @@ Una volta arrivato, Bunny si è accorto che Tip-Tap gli ha mangiato tutti i pani
 Per farsi perdonare, Tip-Tap vuole aprire alcuni chioschi **aggiuntivi** lungo il percorso: può aggiungere chioschi all'inizio di ogni tratto (incluso il primo) in cui non c'è già un chiosco.
 Quanti ne deve aggiungere **al minimo**, perché Bunny possa finire il percorso rispettando il suo procedimento, anche se parte **senza panini**?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{ans2}$
 - [ ] $\js{wrong2[0]}$
 - [ ] $\js{wrong2[1]}$
 - [ ] $\js{wrong2[2]}$
 - [ ] non serve aggiungere nessun chiosco
+
+:::
 
 > Proviamo a simulare il percorso partendo senza panini. Ogni volta che Bunny si ritroverebbe
 > a dover mangiare un panino ma non ne ha, andiamo ad aggiungere un chiosco in una

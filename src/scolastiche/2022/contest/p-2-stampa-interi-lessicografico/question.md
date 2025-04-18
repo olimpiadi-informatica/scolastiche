@@ -35,11 +35,15 @@ end function
 
 Supponiamo di chiamare `print_numbers({n}, 0)`. Quale numero viene stampato in output immediatamente dopo $\js{n}$?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{correct}$
 - [ ] $\js{n}$ è l'ultimo numero stampato
 - [ ] $\js{wrong[0]}$
 - [ ] $\js{wrong[1]}$
 - [ ] $\js{wrong[2]}$
+
+:::
 
 > La risposta è $\js{correct}$.
 >

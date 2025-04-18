@@ -20,4 +20,8 @@ Data la seguente funzione:
 
 Qual è il valore minimo da passare ad `f` perché questa ritorni $\js{res}$?
 
+:::answers{.open}
+
 ?> {sol}
+
+:::

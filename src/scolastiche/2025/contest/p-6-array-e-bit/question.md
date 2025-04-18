@@ -35,11 +35,15 @@ end while
 
 Alla fine del procedimento, che numero sarà contenuto in `array[{x1}]`?
 
+:::answers{.multipleChoice}
+
 - [x] $\js{ans1}$
 - [ ] $\js{wrong1[0]}$
 - [ ] $\js{wrong1[1]}$
 - [ ] $\js{wrong1[2]}$
 - [ ] $\js{wrong1[3]}$
+
+:::
 
 > Proviamo a replicare il procedimento passo dopo passo.
 > Dopo il primo ciclo for (contatore), l'array conterrà i valori:
@@ -70,7 +74,11 @@ Alla fine del procedimento, che numero sarà contenuto in `array[{x1}]`?
 Non essendo soddisfatto di un codice così corto, decidi di ripetere il procedimento con un `array` di lunghezza totale $t = \js{l2}$.
 Alla fine del procedimento, che numero sarà contenuto in `array[{x2}]`?
 
+:::answers{.open}
+
 ?> {ans2}
+
+:::
 
 > Questa volta non possiamo replicare il procedimento passo dopo passo, ma dobbiamo ragionare sul suo comportamento in generale.
 > All’inizio l’array contiene `array[i] = i`.

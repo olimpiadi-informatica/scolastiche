@@ -10,11 +10,15 @@ Allie ha programmato il robot per seguire questo procedimento:
 
 Dove si troverà il robot alla fine del procedimento?
 
+:::answers{.multipleChoice}
+
 - [x] nella stanza $\js{ans1}$
 - [ ] nella stanza $\js{wrong1[0]}$
 - [ ] nella stanza $\js{wrong1[1]}$
 - [ ] nella stanza $\js{wrong1[2]}$
 - [ ] il robot esce dall'appartamento
+
+:::
 
 > Il robot preme l'interruttore ogni volta che incontra una porta chiusa.
 > Quindi può procedere fintanto che le luci già accese solo precedute da
@@ -45,11 +49,15 @@ Purtroppo però il robot ha una programmazione molto vincolata! Devi per forza t
 Per esempio, il programma della domanda precedente corrisponde alla sequenza del **blocco {perm[3]}** seguito dal **blocco {perm[1]}**, ma non sempre consente al robot di arrivare in fondo all'appartamento.
 Quale di questi sarebbe invece un programma corretto? Tieni conto che il robot non può avanzare se la porta è chiusa, e in caso di più programmi corretti, riporta **quello più corto (con meno istruzioni)**.
 
+:::answers{.multipleChoice}
+
 - [x] **blocco {perm[0]}**, poi **blocco {perm[1]}**, poi **blocco {perm[2]}**
 - [ ] **blocco {perm[3]}**, poi **blocco {perm[1]}**, poi **blocco {perm[2]}**
 - [ ] **blocco {perm[1]}**, poi **blocco {perm[2]}**, poi **blocco {perm[0]}**
 - [ ] **blocco {perm[0]}**, poi **blocco {perm[1]}**, poi **blocco {perm[4]}**
 - [ ] **blocco {perm[3]}**, poi **blocco {perm[1]}**, poi **blocco {perm[4]}**
+
+:::
 
 > Osserviamo che il ciclo più esterno richiede una luce accesa per continuare.
 > Ciò vuol dire che al robot è permesso entrare in una stanza con la luce spenta,

@@ -1,0 +1,316 @@
+[fibonacci-corso-1-blocchi-esecuzione-e-ripeti-n]
+secret = ""
+entry = "fibonacci-corso/1-blocchi-esecuzione-e-ripeti-n/contest/contest.mdx"
+header = "fibonacci-corso/1-blocchi-esecuzione-e-ripeti-n/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[fibonacci-corso-2-blocchi-condizionali-e-ripeti-mentre]
+secret = ""
+entry = "fibonacci-corso/2-blocchi-condizionali-e-ripeti-mentre/contest/contest.mdx"
+header = "fibonacci-corso/2-blocchi-condizionali-e-ripeti-mentre/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[fibonacci-corso-3-composizione-di-cicli-e-condizioni]
+secret = ""
+entry = "fibonacci-corso/3-composizione-di-cicli-e-condizioni/contest/contest.mdx"
+header = "fibonacci-corso/3-composizione-di-cicli-e-condizioni/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[fibonacci-corso-4-blocchi-matematici-e-variabili]
+secret = ""
+entry = "fibonacci-corso/4-blocchi-matematici-e-variabili/contest/contest.mdx"
+header = "fibonacci-corso/4-blocchi-matematici-e-variabili/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[fibonacci-corso-5-algoritmi-greedy]
+secret = ""
+entry = "fibonacci-corso/5-algoritmi-greedy/contest/contest.mdx"
+header = "fibonacci-corso/5-algoritmi-greedy/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[fibonacci-corso-6-programmazione-dinamica]
+secret = ""
+entry = "fibonacci-corso/6-programmazione-dinamica/contest/contest.mdx"
+header = "fibonacci-corso/6-programmazione-dinamica/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[fibonacci-primarie-2022-prima-fase]
+secret = ""
+entry = "fibonacci-primarie/2022-prima-fase/contest/contest.mdx"
+header = "fibonacci-primarie/2022-prima-fase/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[fibonacci-primarie-2023-prima-fase]
+secret = ""
+entry = "fibonacci-primarie/2023-prima-fase/contest/contest.mdx"
+header = "fibonacci-primarie/2023-prima-fase/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1, 2, 3, 4, 5]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[fibonacci-primarie-2023-seconda-fase]
+secret = ""
+entry = "fibonacci-primarie/2023-seconda-fase/contest/contest.mdx"
+header = "fibonacci-primarie/2023-seconda-fase/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[fibonacci-primarie-2023-seconda-fase-demo]
+secret = ""
+entry = "fibonacci-primarie/2023-seconda-fase-demo/contest/contest.mdx"
+header = "fibonacci-primarie/2023-seconda-fase-demo/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[fibonacci-primarie-2024-prima-fase]
+secret = ""
+entry = "fibonacci-primarie/2024-prima-fase/contest/contest.mdx"
+header = "fibonacci-primarie/2024-prima-fase/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1, 2, 3, 4, 5]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[fibonacci-primarie-2024-seconda-fase]
+secret = ""
+entry = "fibonacci-primarie/2024-seconda-fase/contest/contest.mdx"
+header = "fibonacci-primarie/2024-seconda-fase/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[fibonacci-primarie-2025-prima-fase]
+secret = ""
+entry = "fibonacci-primarie/2025-prima-fase/contest/contest.mdx"
+header = "fibonacci-primarie/2025-prima-fase/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[fibonacci-primarie-2025-seconda-fase]
+secret = ""
+entry = "fibonacci-primarie/2025-seconda-fase/contest/contest.mdx"
+header = "fibonacci-primarie/2025-seconda-fase/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[fibonacci-secondarie-2022-prima-fase]
+secret = ""
+entry = "fibonacci-secondarie/2022-prima-fase/contest/contest.mdx"
+header = "fibonacci-secondarie/2022-prima-fase/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[fibonacci-secondarie-2023-prima-fase]
+secret = ""
+entry = "fibonacci-secondarie/2023-prima-fase/contest/contest.mdx"
+header = "fibonacci-secondarie/2023-prima-fase/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1, 2, 3, 4, 5]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[fibonacci-secondarie-2023-seconda-fase]
+secret = ""
+entry = "fibonacci-secondarie/2023-seconda-fase/contest/contest.mdx"
+header = "fibonacci-secondarie/2023-seconda-fase/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[fibonacci-secondarie-2023-seconda-fase-demo]
+secret = ""
+entry = "fibonacci-secondarie/2023-seconda-fase-demo/contest/contest.mdx"
+header = "fibonacci-secondarie/2023-seconda-fase-demo/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[fibonacci-secondarie-2023-terza-fase]
+secret = ""
+entry = "fibonacci-secondarie/2023-terza-fase/contest/contest.mdx"
+header = "fibonacci-secondarie/2023-terza-fase/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[fibonacci-secondarie-2024-prima-fase]
+secret = ""
+entry = "fibonacci-secondarie/2024-prima-fase/contest/contest.mdx"
+header = "fibonacci-secondarie/2024-prima-fase/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1, 2, 3, 4, 5]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[fibonacci-secondarie-2024-seconda-fase]
+secret = ""
+entry = "fibonacci-secondarie/2024-seconda-fase/contest/contest.mdx"
+header = "fibonacci-secondarie/2024-seconda-fase/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[fibonacci-secondarie-2024-terza-fase]
+secret = ""
+entry = "fibonacci-secondarie/2024-terza-fase/contest/contest.mdx"
+header = "fibonacci-secondarie/2024-terza-fase/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[fibonacci-secondarie-2025-prima-fase]
+secret = ""
+entry = "fibonacci-secondarie/2025-prima-fase/contest/contest.mdx"
+header = "fibonacci-secondarie/2025-prima-fase/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[fibonacci-secondarie-2025-seconda-fase]
+secret = ""
+entry = "fibonacci-secondarie/2025-seconda-fase/contest/contest.mdx"
+header = "fibonacci-secondarie/2025-seconda-fase/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[scolastiche-2019]
+secret = ""
+entry = "scolastiche/2019/contest/contest.mdx"
+shuffle_problems = true
+shuffle_answers = true
+variant_ids = [1, 2, 3, 4, 5]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[scolastiche-2020]
+secret = ""
+entry = "scolastiche/2020/contest/contest.mdx"
+shuffle_problems = true
+shuffle_answers = true
+variant_ids = [1, 2, 3, 4, 5]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[scolastiche-2021]
+secret = ""
+entry = "scolastiche/2021/contest/contest.mdx"
+shuffle_problems = true
+shuffle_answers = true
+variant_ids = [1, 2, 3, 4, 5]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[scolastiche-2022]
+secret = ""
+entry = "scolastiche/2022/contest/contest.mdx"
+header = "scolastiche/2022/header.md"
+shuffle_problems = true
+shuffle_answers = true
+variant_ids = [1, 2, 3, 4, 5]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[scolastiche-2022-demo]
+secret = ""
+entry = "scolastiche/2022-demo/contest/contest.mdx"
+header = "scolastiche/2022-demo/header.md"
+shuffle_problems = true
+shuffle_answers = true
+variant_ids = [1]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[scolastiche-2023]
+secret = ""
+entry = "scolastiche/2023/contest/contest.mdx"
+header = "scolastiche/2023/header.md"
+shuffle_problems = true
+shuffle_answers = true
+variant_ids = [1, 2, 3, 4, 5]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[scolastiche-2024]
+secret = ""
+entry = "scolastiche/2024/contest/contest.mdx"
+header = "scolastiche/2024/header.md"
+shuffle_problems = true
+shuffle_answers = true
+variant_ids = [1, 2, 3, 4, 5]
+pdf_variant_ids = []
+pdf_per_school = 1
+
+[scolastiche-2025]
+secret = ""
+entry = "scolastiche/2025/contest/contest.mdx"
+header = "scolastiche/2025/header.md"
+shuffle_problems = true
+shuffle_answers = true
+variant_ids = [1, 2, 3, 4, 5]
+pdf_variant_ids = []
+pdf_per_school = 1

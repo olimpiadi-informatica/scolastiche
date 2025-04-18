@@ -11,11 +11,15 @@ end function
 
 Chiamando `say_hello(2022)`, quante volte viene stampata in output la stringa `"Hello"`?
 
+:::answers{.multipleChoice}
+
 - [x] $2^{2022}$
 - [ ] $2022 \cdot 2021 \cdots 2 \cdot 1$
 - [ ] $2022$
 - [ ] $2022^2$
 - [ ] $2022 + 2021 + \cdots + 2 + 1$
+
+:::
 
 > La risposta è $2^{2022}$.
 >

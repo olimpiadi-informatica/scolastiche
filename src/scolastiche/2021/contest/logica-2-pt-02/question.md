@@ -15,7 +15,11 @@ Quattro amici giocano da sempre insieme a calcetto, ma solo uno dice la verità.
 
 Chi è il più forte di tutti?
 
+:::answers{.multipleChoice}
+
 - [ ] {amici[0]}
 - [ ] {amici[1]}
 - [ ] {amici[2]}
 - [x] {amici[3]}
+
+:::

@@ -9,11 +9,15 @@ Qual è il numero minimo di operazioni che devono fare per rendere il numero par
 
 ![Lavagna](lavagna1.asy?v=variants.py)
 
+:::answers{.multipleChoice}
+
 - [x] $\js{ans1}$
 - [ ] $\js{wrong1[0]}$
 - [ ] $\js{wrong1[1]}$
 - [ ] $\js{wrong1[2]}$
 - [ ] $\js{wrong1[3]}$
+
+:::
 
 > Per la proprietà commutativa, l'ordine delle sottrazioni non importa, quindi possiamo ipotizzare di fare prima le operazioni di sottrarre $\js{b1}$, e poi le operazioni per diminuire le cifre di $1$.
 > Proviamo a sottrarre $\js{b1}$ un po' di volte ($0, 1, 2, \ldots$), e il numero di mosse rimanenti è la somma delle cifre del numero sulla lavagna.
@@ -32,11 +36,15 @@ Qual è il numero minimo di operazioni che devono fare per rendere il numero par
 
 ![Lavagna](lavagna2.asy?v=variants.py)
 
+:::answers{.multipleChoice}
+
 - [x] $\js{ans2}$
 - [ ] $\js{wrong2[0]}$
 - [ ] $\js{wrong2[1]}$
 - [ ] $\js{wrong2[2]}$
 - [ ] $\js{wrong2[3]}$
+
+:::
 
 > Qui $\js{a2}$ è grande, quindi provare a sottrarre $\js{b2}$ finché il numero sulla lavagna non è negativo è troppo lungo.
 > Ma possiamo notare che, se troviamo una sequenza con risposta $\js{ans2}$, non ha senso sottrarre $\js{b2}$ più di $\js{ans2}$ volte, e questo accorcia i conti.

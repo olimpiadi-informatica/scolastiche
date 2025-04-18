@@ -10,11 +10,15 @@ I cinque coniglietti si sono disposti sul campo del campionato e sono pronti ad 
 
 ![Stanza degli specchi](fig2.asy?h=450)
 
+:::answers{.multipleChoice}
+
 - [ ] Amy
 - [ ] Bunny
 - [x] Carol
 - [ ] Dippy
 - [ ] Ester
+
+:::
 
 > Il laser di Carol riesce a colpire la carota, come si vede nella figura seguente.
 >

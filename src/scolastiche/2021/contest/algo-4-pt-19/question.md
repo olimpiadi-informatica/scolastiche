@@ -28,4 +28,8 @@ Quanto vale la somma dei tre nodi della figura di destra che corrispondono ai no
 
 Ad esempio, se pensi che i nodi A, B ed F di sinistra corrispondano, rispettivamente, ai nodi $1$, $6$ e $9$ della figura di destra, la tua risposta dovrà essere $1+6+9=16$.
 
+:::answers{.open}
+
 ?> {sol}
+
+:::
