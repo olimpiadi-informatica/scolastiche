@@ -86,6 +86,7 @@ export default function Visualizer({ variables, state }) {
           return (
             <Rectangle
               key={`lbl${i}`}
+              color="trasparent"
               height={1}
               width={3}
               x={width * (i + 2) - 1.5}
