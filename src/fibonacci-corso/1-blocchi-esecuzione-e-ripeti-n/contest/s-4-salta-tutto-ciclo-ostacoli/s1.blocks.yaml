@@ -1,0 +1,63 @@
+- type: start
+  message0: inizia qui
+  nextStatement: null
+  colour: 20
+  tooltip: L'esecuzione inizia da qui
+  helpUrl: ""
+  maxInstances: 1
+  js: ""
+
+- type: M
+  message0: M
+  output: Number
+  colour: 20
+  tooltip: numero di ostacoli prima della bandierina
+  helpUrl: ""
+  js: state.M
+
+- type: avanza
+  message0: avanza
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: avanza alla roccia successiva
+  helpUrl: ""
+  js: |
+    if (state.rocks[state.pos+1] === 0)
+      state.pos += 1;
+    else {
+      state.pos += 0.2;
+      pause();
+      state.pos -= 0.2;
+    }
+    if (state.pos >= state.rocks.length)
+      exit(false, "hai superato la fine del percorso");
+
+- type: salta
+  message0: salta
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: salta oltre alla prossima roccia
+  helpUrl: ""
+  js: |
+    if (state.rocks[state.pos+2] === 1)
+      exit(false, "non puoi saltare su un ostacolo");
+    state.pos += 1;
+    state.flight = 1;
+    pause();
+    state.pos += 1;
+    state.flight = 0;
+    if (state.pos >= state.rocks.length)
+      exit(false, "hai superato la fine del percorso");
+
+- type: termina
+  message0: termina
+  previousStatement: null
+  colour: 20
+  tooltip: finisci la gara
+  helpUrl: ""
+  js: |
+    if (state.pos < state.N)
+      exit(false, "non hai raggiunto la bandierina");
+    exit(true, "hai superato la bandierina, complimenti!");
