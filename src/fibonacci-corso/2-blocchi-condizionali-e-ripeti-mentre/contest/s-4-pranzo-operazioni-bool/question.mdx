@@ -1,0 +1,41 @@
+import { toolbox } from "./toolbox.ts";
+import initialBlocks from "./initial-blocks.json";
+import customBlocks from "./s1.blocks.yaml";
+import testcases from "./testcases.py";
+import Visualizer from "./visualizer.jsx";
+import { Hint } from "~/utils/hint";
+
+Anche Carol è ora a pranzo e ha allineato $N$ cibi. Come Bunny, anche lei mangia di tutto e preferisce mangiare la frutta cruda.
+Tuttavia non cuoce tutte le verdure: cuoce solo quelle che non sono gialle!
+Hai a disposizione gli stessi blocchi di prima:
+
+- `N`: il numero di cibi che Carol ha allineato.
+- `prossimo cibo`: il prossimo cibo che Carol non ha ancora mangiato.
+- $x$ `è una verdura`: vero se il cibo $x$ è una verdura.
+- $x$ `è giallo`: vero se il cibo $x$ è giallo.
+- `cuoci` $x$: cuoci il cibo $x$.
+- `mangia` $x$: mangia il cibo $x$.
+- `butta` $x$: butta via il cibo $x$.
+- `termina`: smetti di mangiare.
+
+Scrivi un programma che consenta a Carol di pranzare come più preferisce!
+
+Stavolta nella sezione _"Logica"_ ci sono due nuovi blocchi esagonali: il blocco "non" che restituisce l'opposto di quello che gli viene inserito dentro (falso se vero, e vero se falso),
+e il blocco "e/o" che combina due valori vero/falso (se scegli "e" il risultato finale sarà vero solo se i valori inseriti sono entrambi veri; se scegli "o" sarà falso solo se sono entrambi falsi).
+
+<Blockly
+  toolbox={toolbox}
+  customBlocks={customBlocks}
+  initialBlocks={initialBlocks}
+  testcases={testcases}
+  visualizer={Visualizer}
+/>
+
+> Un possibile programma corretto è il seguente:
+>
+> ![soluzione](sol.png)
+>
+> Secondo questo programma, per ognuno degli $N$ cibi che Carol vuole mangiare, il protagonista
+> controlla se il prossimo cibo è una verdura, e in caso affermativo la cuoce prima di mangiarla.
+> A questo punto mangia il prossimo cibo (che sia verdura o frutta), che sarà di suo gradimento:
+> verdura cotta o frutta cruda.
