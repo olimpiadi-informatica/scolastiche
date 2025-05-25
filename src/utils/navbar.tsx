@@ -25,6 +25,9 @@ export function Navbar() {
           <Link href="~/fibonacci-secondarie/">Fibonacci - Secondarie</Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
+          <Link href="~/fibonacci-corso/">Corso di Programmazione</Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
           <Link href="~/scolastiche/">OII - Scolastiche</Link>
         </NavbarMenuItem>
       </NavbarMenu>

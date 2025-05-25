@@ -46,6 +46,9 @@ export default function App() {
                   <Link href="/fibonacci-secondarie/" className="btn btn-accent">
                     Scuole Secondarie
                   </Link>
+                  <Link href="/fibonacci-corso/" className="btn btn-accent">
+                    Corso di Programmazione
+                  </Link>
                 </CardActions>
               </CardBody>
             </Card>
