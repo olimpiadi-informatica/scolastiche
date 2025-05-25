@@ -313,6 +313,14 @@ SOFTWARE.
 
 ---
 
+Name: @olinfo/react-components
+Version: 0.12.0
+License: MIT
+Private: false
+Author: Alessandro Bortolin <bortolin.alessandro@outlook.it>
+
+---
+
 Name: lodash-es
 Version: 4.17.21
 License: MIT
@@ -374,14 +382,6 @@ Files located in the node_modules and vendor directories are externally
 maintained libraries used by this software which have their own
 licenses; we recommend you read them, as their terms may differ from the
 terms above.
-
----
-
-Name: @olinfo/react-components
-Version: 0.12.0
-License: MIT
-Private: false
-Author: Alessandro Bortolin <bortolin.alessandro@outlook.it>
 
 ---
 
