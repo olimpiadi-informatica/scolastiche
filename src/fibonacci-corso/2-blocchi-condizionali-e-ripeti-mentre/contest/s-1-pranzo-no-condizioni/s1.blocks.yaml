@@ -1,0 +1,81 @@
+- type: start
+  message0: inizia qui
+  nextStatement: null
+  colour: 20
+  tooltip: L'esecuzione inizia da qui
+  helpUrl: ""
+  maxInstances: 1
+  js: ""
+
+- type: N
+  message0: N
+  output: Number
+  colour: 20
+  tooltip: numero di cibi in fila
+  helpUrl: ""
+  js: state.N
+
+- type: prossimo cibo
+  message0: prossimo cibo
+  output: String
+  colour: 20
+  tooltip: il prossimo cibo in fila
+  helpUrl: ""
+  js: |
+    state.pos < state.N ? state.queue[state.pos] : exit(false, "il cibo è finito")
+
+- type: cuoci
+  message0: cuoci %1
+  args0:
+    - type: input_value
+      check: String
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: cuoci il cibo dato
+  helpUrl: ""
+  js: |
+    (function(x) {
+      if (state.pos >= state.N)
+        exit(false, "hai finito il cibo");
+      if (state.queue[state.pos] !== x)
+        exit(false, "questo non è il prossimo cibo");
+      if (state.queue[state.pos].split(" ").length > 1)
+        exit(false, "stai cuocendo un cibo già cotto");
+      state.queue[state.pos] += " cotta";
+    })(%1);
+
+- type: mangia
+  message0: mangia %1
+  args0:
+    - type: input_value
+      check: String
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: mangia il cibo dato
+  helpUrl: ""
+  js: |
+    (function(x) {
+      if (state.pos >= state.N)
+        exit(false, "hai finito il cibo");
+      if (state.queue[state.pos] !== x)
+        exit(false, "questo non è il prossimo cibo");
+      food = state.queue[state.pos].split(" ");
+      if (!(food[0] in state.food_types))
+        exit(false, "non conosco il cibo " + food[0]);
+      state.pos += 1;
+      if (food.length == 1)
+        exit(false, "Tip-Tap non mangia il cibo crudo");
+    })(%1);
+
+- type: termina
+  message0: termina
+  previousStatement: null
+  colour: 20
+  tooltip: smetti di mangiare
+  helpUrl: ""
+  js: |
+    if (state.pos < state.N)
+      exit(false, "non hai finito il cibo");
+    exit(true, "hai finito tutto il cibo, complimenti!");

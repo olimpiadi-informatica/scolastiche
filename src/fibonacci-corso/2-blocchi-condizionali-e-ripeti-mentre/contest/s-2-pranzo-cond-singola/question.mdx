@@ -1,0 +1,44 @@
+import { toolbox } from "./toolbox.ts";
+import initialBlocks from "./initial-blocks.json";
+import customBlocks from "./s1.blocks.yaml";
+import testcases from "./testcases.py";
+import Visualizer from "./visualizer.jsx";
+import { Hint } from "~/utils/hint";
+
+Anche Bunny è ora a pranzo e ha allineato $N$ cibi. Come Tip-Tap, anche lui cuoce le verdure; tuttavia, non gli piace la frutta cotta.
+Hai a disposizione gli stessi blocchi di prima, più uno per capire se un cibo è frutta o verdura:
+
+- `N`: il numero di cibi che Bunny ha allineato.
+- `prossimo cibo`: il prossimo cibo che Bunny non ha ancora mangiato.
+- $x$ `è una verdura`: vero se il cibo $x$ è una verdura **(nuovo!)**.
+- `cuoci` $x$: cuoci il cibo $x$.
+- `mangia` $x$: mangia il cibo $x$.
+- `termina`: smetti di mangiare.
+
+Scrivi un programma che consenta a Bunny di pranzare come più preferisce!
+
+Nota che il blocco che controlla se un cibo è una verdura, che si trova sempre nella sezione _"Esecuzione"_, ha una forma diversa del solito, ad esagono allungato.
+Nella programmazione a blocchi, questa è la forma dei blocchi che producono un valore vero/falso!
+Le altre forme che abbiamo già visto sono:
+
+- **rettangolare**, usata per le istruzioni che compiono una qualche azione;
+- **stondata**, usata per i blocchi che calcolano un valore di tipo numerico.
+
+Puoi inserire i blocchi esagonali come condizioni nei blocchi **condizionali**, che trovi nella sezione _"Logica"_, tramite cui scegliere quali istruzioni eseguire.
+
+<Blockly
+  toolbox={toolbox}
+  customBlocks={customBlocks}
+  initialBlocks={initialBlocks}
+  testcases={testcases}
+  visualizer={Visualizer}
+/>
+
+> Un possibile programma corretto è il seguente:
+>
+> ![soluzione](sol.png)
+>
+> Secondo questo programma, per ognuno degli $N$ cibi che Bunny vuole mangiare, il protagonista
+> controlla se il prossimo cibo è una verdura, e in caso affermativo la cuoce prima di mangiarla.
+> A questo punto mangia il prossimo cibo (che sia verdura o frutta), che sarà di suo gradimento:
+> verdura cotta o frutta cruda.

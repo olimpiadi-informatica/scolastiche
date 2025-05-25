@@ -1,0 +1,36 @@
+import { toolbox } from "./toolbox.ts";
+import initialBlocks from "./initial-blocks.json";
+import customBlocks from "./s1.blocks.yaml";
+import testcases from "./testcases.py";
+import Visualizer from "./visualizer.jsx";
+import { Hint } from "~/utils/hint";
+
+Tip-Tap deve preparare il pranzo ed ha allineato $N$ cibi che vuole mangiare dopo averli cotti.
+Hai a disposizione questi blocchi:
+
+- `N`: il numero di cibi che Tip-Tap ha allineato.
+- `prossimo cibo`: il prossimo cibo che Tip-Tap non ha ancora mangiato.
+- `cuoci` $x$: cuoci il cibo $x$.
+- `mangia` $x$: mangia il cibo $x$.
+- `termina`: smetti di mangiare.
+
+Scrivi un programma che consenta a Tip-Tap di pranzare come più preferisce!
+
+Ti basterà usare i tipi di blocchi (_"Esecuzione"_ e _"Cicli"_) visti nella sezione precedente.
+Attenzione che alcuni blocchi _"Esecuzione"_ questa volta contengono uno spazio in cui puoi inserire un altro blocco di tipo numerico (tondo),
+in maniera simile a come si inserisce un blocco numerico nei cicli per indicare quante volte ripetere.
+
+<Blockly
+  toolbox={toolbox}
+  customBlocks={customBlocks}
+  initialBlocks={initialBlocks}
+  testcases={testcases}
+  visualizer={Visualizer}
+/>
+
+> Un possibile programma corretto è il seguente:
+>
+> ![soluzione](sol.png)
+>
+> Secondo questo programma, per ognuno degli $N$ cibi che Tip-Tap vuole mangiare, il protagonista
+> lo cuoce e poi lo mangia.
