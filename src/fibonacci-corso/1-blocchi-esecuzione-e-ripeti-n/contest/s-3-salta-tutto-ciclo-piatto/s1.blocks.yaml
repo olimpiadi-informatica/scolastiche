@@ -23,7 +23,7 @@
   tooltip: avanza alla roccia successiva
   helpUrl: ""
   js: |
-    if (state.rocks[state.pos+1] === 0)
+    if (state.pos+1 == state.rocks.length || state.rocks[state.pos+1] === 0)
       state.pos += 1;
     else {
       state.pos += 0.2;
@@ -41,10 +41,11 @@
   tooltip: salta oltre alla prossima roccia
   helpUrl: ""
   js: |
-    if (state.rocks[state.pos+2] === 1)
-      exit(false, "non puoi saltare su un ostacolo");
     state.pos += 1;
     state.flight = 1;
+    if (state.rocks[state.pos+1] === 1) {
+      exit(false, "non puoi saltare su un ostacolo");
+    }
     pause();
     state.pos += 1;
     state.flight = 0;

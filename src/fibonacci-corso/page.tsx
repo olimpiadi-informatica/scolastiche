@@ -11,7 +11,10 @@ export const metadata = {
     "Corso di programmazione a blocchi, preparatorio per la seconda e terza fase dei Giochi di Fibonacci per le scuole primarie e secondarie",
 };
 
-const editions = ["1 - Blocchi Esecuzione e Ripeti N"];
+const editions = [
+  "1 - Blocchi Esecuzione e Ripeti N",
+  "2 - Blocchi Condizionali e Ripeti Mentre",
+];
 
 export default function App() {
   return (
