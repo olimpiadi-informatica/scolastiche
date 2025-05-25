@@ -3,6 +3,7 @@ import initialBlocks from "./initial-blocks.json";
 import customBlocks from "./s1.blocks.yaml";
 import testcases from "./testcases.py";
 import Visualizer from "./visualizer.jsx";
+import { Hint } from "~/utils/hint";
 
 Siamo sempre alla corsa ad ostacoli di Carol, e hai a disposizione gli stessi blocchi di prima per risolvere più livelli:
 
@@ -11,6 +12,11 @@ Siamo sempre alla corsa ad ostacoli di Carol, e hai a disposizione gli stessi bl
 - `termina`: finisci la gara.
 
 Ora però ci sono alcuni ostacoli prima della bandierina! Hai a disposizione il numero $M$ che ti dice quanti **ostacoli** ti separano dalla bandierina, e ti servirà di nuovo sfruttare i cicli.
+Se ti senti in difficoltà, prova anche a leggere questo suggerimento:
+
+<Hint>
+  Guarda bene tutti i livelli: prima di ogni salto, quante volte al minimo devi avanzare per assicurarti di arrivare all'ostacolo? Quante volte bisogna avanzare dopo aver saltato tutti gli ostacoli?
+</Hint>
 
 <Blockly
   toolbox={toolbox}
