@@ -1,0 +1,1 @@
+._pre_165zj_1 code{counter-reset:line;counter-increment:line 0}._pre_165zj_1 code .line:before{content:counter(line);counter-increment:line;margin-right:1.5rem;display:inline-block;width:1.5rem;text-align:right;color:var(--fallback-bc,oklch(var(--bc)/.6))}
