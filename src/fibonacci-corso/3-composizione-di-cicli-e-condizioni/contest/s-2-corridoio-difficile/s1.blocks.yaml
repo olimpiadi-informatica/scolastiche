@@ -11,9 +11,17 @@
   message0: N
   output: Number
   colour: 20
-  tooltip: numero di stanze
+  tooltip: numero di stanze nella fattoria
   helpUrl: ""
   js: state.N
+
+- type: M
+  message0: M
+  output: Number
+  colour: 20
+  tooltip: numero di coniglietti da recuperare
+  helpUrl: ""
+  js: state.M
 
 - type: sono nel prato
   message0: sono nel prato
@@ -105,6 +113,50 @@
         exit(false, "non c'è un coniglietto a cui prendere la mano nella stanza corrente");
       state.hand = found;
       state.rescue[found] = 0;
+    })(parseInt(%1));
+
+- type: lampadina accesa
+  message0: lampadina a %1 accesa
+  args0:
+    - type: field_dropdown
+      options:
+        - [destra, "1"]
+        - [sinistra, "-1"]
+  output: Boolean
+  colour: 20
+  tooltip: vero se la lampadina nella stanza a destra/sinistra è accesa
+  helpUrl: ""
+  js: |
+    (function(i) {
+      state.dir = i;
+      if (state.pos+i > state.N)
+        exit(false, "non c'è una stanza a destra");
+      if (state.pos+i < 1)
+        exit(false, "non c'è una stanza a sinistra");
+      return state.light[state.pos+i-1] === 1;
+    })(parseInt(%1))
+
+- type: interruttore
+  message0: interruttore a %1
+  args0:
+    - type: field_dropdown
+      options:
+        - [destra, "1"]
+        - [sinistra, "-1"]
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: premi l'interruttore che comanda la stanza a destra/sinistra
+  helpUrl: ""
+  js: |
+    (function(i) {
+      state.dir = i;
+      if (state.pos+i > state.N)
+        exit(false, "non c'è una stanza a destra");
+      if (state.pos+i < 1)
+        exit(false, "non c'è una stanza a sinistra");
+      state.switch[2*state.pos-1+Math.max(i,0)] ^= 1;
+      state.light[state.pos+i-1] ^= 1;
     })(parseInt(%1));
 
 - type: termina
