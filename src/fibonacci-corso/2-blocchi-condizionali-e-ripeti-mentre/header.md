@@ -2,12 +2,14 @@
 
 ## Lezione 2 - Blocchi Condizionali e Ripeti Mentre
 
-Benvenuto nel corso di programmazione a blocchi per la preparazione ai Giochi di Fibonacci!
+Bentornato nel corso di programmazione a blocchi per la preparazione ai Giochi di Fibonacci!
 
 Questa è la seconda lezione, in cui ti faremo vedere:
 
 - i blocchi di tipo "logica";
 - il blocco "ripeti mentre/fino a che".
+
+Se non l'avessi ancora fatto, ti invitiamo a completare la prima lezione prima di iniziare questa (anche se pensi di conoscere già quegli argomenti!).
 
 ## Punteggio e struttura delle lezioni
 
