@@ -5,23 +5,29 @@ import testcases from "./testcases.py";
 import Visualizer from "./visualizer.jsx";
 import { Hint } from "~/utils/hint";
 
-Anche Carol è ora a pranzo e ha allineato $N$ cibi. Come Bunny, anche lei mangia di tutto e preferisce mangiare la frutta cruda.
-Tuttavia non cuoce tutte le verdure: cuoce solo quelle che non sono gialle!
+Anche **Carol** è ora a pranzo e ha allineato alcuni cibi. Come Bunny, anche lei mangia di tutto e preferisce mangiare la frutta cruda.
+Tuttavia non cuoce tutte le verdure: **cuoce solo le verdure che non sono gialle!**
 Hai a disposizione gli stessi blocchi di prima:
 
-- `N`: il numero di cibi che Carol ha allineato.
-- `prossimo cibo`: il prossimo cibo che Carol non ha ancora mangiato.
+- `N`: il numero totale di cibi allineati.
+- `prossimo cibo`: il prossimo cibo in fila da mangiare.
 - $x$ `è una verdura`: vero se il cibo $x$ è una verdura.
 - $x$ `è giallo`: vero se il cibo $x$ è giallo.
 - `cuoci` $x$: cuoci il cibo $x$.
 - `mangia` $x$: mangia il cibo $x$.
 - `butta` $x$: butta via il cibo $x$.
-- `termina`: smetti di mangiare.
+- `termina`: smetti di mangiare e vai via dal pranzo.
 
 Scrivi un programma che consenta a Carol di pranzare come più preferisce!
 
-Stavolta nella sezione _"Logica"_ ci sono due nuovi blocchi esagonali: il blocco "non" che restituisce l'opposto di quello che gli viene inserito dentro (falso se vero, e vero se falso),
-e il blocco "e/o" che combina due valori vero/falso (se scegli "e" il risultato finale sarà vero solo se i valori inseriti sono entrambi veri; se scegli "o" sarà falso solo se sono entrambi falsi).
+Ora nella sezione _"Logica"_ ci sono due nuovi blocchi verità (esagonali) con spazi esagonali: "e/o" (che inizialmente è "e" ma puoi trasformare in "o") e "non".
+Questi blocchi sono detti _operazioni logiche_ sui valori di verità inseriti negli spazi (che chiamiamo _argomenti_), e producono come valore di verità:
+
+- per il blocco "non", l'opposto dell'unico argomento (quindi produce falso se l'argomento è vero, e vero se l'argomento è falso);
+- per il blocco "e", produce vero solo se entrambi gli argomenti sono veri, e falso in tutti gli altri casi;
+- per il blocco "o", produce falso solo se entrambi gli argomenti sono falsi, e vero in tutti gli altri casi.
+
+Se ci pensi, questo è lo stesso significato che hanno le congiunzioni "e", "o" e "non" in italiano!
 
 <Blockly
   toolbox={toolbox}
