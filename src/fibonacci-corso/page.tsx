@@ -14,6 +14,7 @@ export const metadata = {
 const editions = [
   "1 - Blocchi Esecuzione e Ripeti N",
   "2 - Blocchi Condizionali e Ripeti Mentre",
+  "3 - Composizione di Cicli e Condizioni",
 ];
 
 export default function App() {
