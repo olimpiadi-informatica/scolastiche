@@ -4,16 +4,21 @@ import customBlocks from "./s1.blocks.yaml";
 import testcases from "./testcases.py";
 import Visualizer from "./visualizer.jsx";
 
-Siamo sempre alla corsa ad ostacoli di Carol, e hai a disposizione gli stessi blocchi di prima per risolvere più livelli:
+Siamo sempre alla corsa ad ostacoli di Carol, anche se questa volta **non ci sono ostacoli!**
+Sempre nella sezione _"Esecuzione"_, hai a disposizione gli stessi blocchi di prima per risolvere quattro livelli, **più uno nuovo:**
 
+- `N`: il numero di rocce che ti separano dalla bandierina **(nuovo!)**.
 - `avanza`: avanza alla roccia successiva se possibile (sta ferma se ha davanti un ostacolo).
 - `salta`: salta oltre alla prossima roccia, atterrando su quella dopo.
 - `termina`: finisci la gara.
 
-Questa volta, però, non ci sono ostacoli prima della bandierina e hai a disposizione anche il numero $N$ che ti dice quante rocce ti separano dalla bandierina (lo trovi sempre nella sezione _"Esecuzione"_).
+Puoi notare che il nuovo blocco `N` ha una forma stondata, diversa dagli altri: questo perché non è un'istruzione (un blocco che _fa qualcosa_), ma un blocco che _produce un valore_
+(in questo caso il numero di rocce che ti separano dalla bandierina). Non si può quindi attaccare sotto a _"Inizia qui"_, ma deve invece essere inserito dentro ad altri blocchi istruzione
+che contengano un spazio di simile forma stondata.
 
-Per riuscire a risolvere il livello, avrai bisogno di usare il tuo primo ciclo _"ripeti N volte"_ (lo trovi nella sezione _"Cicli"_). Questo blocco ti consente di specificare quante volte vuoi ripetere l'operazione,
-mettendo il blocco numerico (tondo) che vuoi al posto del numero standard di ripetizioni (10). Potrai quindi indicare quali operazioni vuoi ripetere, mettendole nello spazio rettangolare che sta in mezzo al blocco.
+Noterai anche che è comparsa una nuova sezione _"Cicli"_! Infatti, per riuscire a risolvere il livello, avrai bisogno di usare il tuo primo ciclo _"ripeti N volte"_.
+Questo blocco ti consente di specificare quante volte vuoi ripetere alcune operazioni, mettendo un blocco stondato che vuoi al posto del numero standard di ripetizioni (10).
+Puoi anche indicare quali sono le operazioni vuoi ripetere, mettendole nello spazio rettangolare che sta in mezzo al blocco.
 
 <Blockly
   toolbox={toolbox}

@@ -7,6 +7,14 @@
   maxInstances: 1
   js: ""
 
+- type: N
+  message0: N
+  output: Number
+  colour: 20
+  tooltip: numero di rocce prima della bandierina
+  helpUrl: ""
+  js: state.N
+
 - type: M
   message0: M
   output: Number
