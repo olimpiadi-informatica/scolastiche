@@ -1,0 +1,96 @@
+- type: start
+  message0: inizia qui
+  nextStatement: null
+  colour: 20
+  tooltip: L'esecuzione inizia da qui
+  helpUrl: ""
+  maxInstances: 1
+  js: |
+    function end(i) {
+      return state.data[i].taketot === state.data[i].H.length
+    }
+    function advance(i) {
+      state.data[i].take2 += 1;
+      do {
+        state.data[i].take2 -= 1;
+        state.data[i].pos += 1;
+        if (state.data[i].pos == state.data[i].H.length) {
+          state.data[i].pos = 0;
+          state.data[i].take2 = state.data[i].taketot;
+        }
+      } while (state.data[i].taken[state.data[i].pos] > 0);
+    }
+
+- type: lunghezza della fila
+  message0: lunghezza della fila %1
+  args0:
+    - type: field_dropdown
+      options:
+        - [Fibonacci, "0"]
+        - [Turing, "1"]
+  output: Number
+  colour: 20
+  tooltip: numero di conigli nella fila
+  helpUrl: ""
+  js: state.data[%1].H.length
+
+- type: riaccoda nella fila
+  message0: riaccoda nella fila %1
+  args0:
+    - type: field_dropdown
+      options:
+        - [Fibonacci, "0"]
+        - [Turing, "1"]
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: manda il prossimo coniglio della fila in fondo alla sua fila
+  helpUrl: ""
+  js: |
+    if (state.data[%1].taketot  === state.data[%1].H.length)
+      exit(false, "la fila " + (%1 === 0 ? "Fibonacci" : "Turing") + " è finita");
+    advance(%1);
+
+- type: primo Fibonacci più alto del primo Turing
+  message0: primo Fibonacci più alto del primo Turing
+  output: Boolean
+  colour: 20
+  tooltip: il primo coniglio nella fila Fibonacci è più alto del primo coniglio nella fila Turing?
+  helpUrl: ""
+  js: |
+    state.data[0].taketot < state.data[0].H.length &&
+      state.data[1].taketot < state.data[1].H.length &&
+      state.data[0].H[state.data[0].pos] > state.data[1].H[state.data[1].pos]
+
+- type: primo Fibonacci marca il primo Turing
+  message0: primo Fibonacci marca il primo Turing
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: metti in squadra il primo coniglio della fila Fibonacci a marcare il primo coniglio della fila Turing
+  helpUrl: ""
+  js: |
+    if (state.data[0].taketot === state.data[0].H.length)
+      exit(false, "la fila Fibonacci è finita");
+    if (state.data[1].taketot === state.data[1].H.length)
+      exit(false, "la fila Turing è finita");
+    var fail = false;
+    if (state.data[0].H[state.data[0].pos] <= state.data[1].H[state.data[1].pos]) fail = true;
+    state.data[0].taketot += 1;
+    state.data[0].taken[state.data[0].pos] = state.data[0].taketot;
+    if (!end(0)) advance(0);
+    state.data[1].taketot += 1;
+    state.data[1].taken[state.data[1].pos] = state.data[1].taketot;
+    if (!end(1)) advance(1);
+    if (fail) exit(false, "il primo coniglio della fila Fibonacci non è più alto del primo coniglio della fila Turing");
+
+- type: termina
+  message0: termina
+  previousStatement: null
+  colour: 20
+  tooltip: termina il procedimento
+  helpUrl: ""
+  js: |
+    if (state.data[1].taketot !== state.data[1].H.length)
+      exit(false, "non hai marcato tutti i conigli della fila Turing");
+    exit(true, "hai scelto bene le squadre, complimenti!");

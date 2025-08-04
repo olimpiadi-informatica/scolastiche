@@ -211,7 +211,12 @@ export function Variables({ variables }: { variables: Record<string, any> }) {
         <Fragment key={name}>
           <div className="rounded-l-2xl">{name}</div>
           <div className="rounded-r-2xl">
-            <div className="rounded-lg bg-white px-2">{Number.isFinite(value) ? value : "-"}</div>
+            <div className="rounded-lg bg-white px-2">{
+              (typeof value) == "number" ? (Number.isFinite(value) ? value : "-") :
+              (typeof value) == "boolean" ? (value ? "vero" : "falso") :
+              (typeof value) == "string" ? (value ? value : "-") :
+              (typeof value) == "object" ? (value ? JSON.stringify(value) : "-") : "-"
+            }</div>
           </div>
         </Fragment>
       ))}

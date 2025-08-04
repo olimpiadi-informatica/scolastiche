@@ -4,7 +4,8 @@
 
 Bentornato nel corso di programmazione a blocchi per la preparazione ai Giochi di Fibonacci!
 
-Questa è la terza lezione, nella quale non introdurremo blocchi nuovi. Invece, vedremo degli esempi di programmi più articolati che si possono fare con i blocchi che hai già imparato!
+Questa è la terza lezione, nella quale non introdurremo blocchi nuovi. Invece, imparerai a combinare i
+blocchi che già conosci in programmi più articolati, annidando più cicli e blocchi condizionali!
 
 Se non l'avessi ancora fatto, ti invitiamo a completare le prime due lezioni prima di iniziare questa (anche se pensi di conoscere già quegli argomenti!).
 
