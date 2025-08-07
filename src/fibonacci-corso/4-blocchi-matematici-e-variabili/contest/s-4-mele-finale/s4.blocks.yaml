@@ -1,0 +1,95 @@
+- type: start
+  message0: inizia qui
+  nextStatement: null
+  colour: 20
+  tooltip: L'esecuzione inizia da qui
+  helpUrl: ""
+  maxInstances: 1
+  js: ""
+
+- type: N
+  message0: N
+  output: Number
+  colour: 20
+  tooltip: numero di alberi di mele
+  helpUrl: ""
+  js: state.N
+
+- type: mele albero
+  message0: mele albero %1
+  args0:
+    - type: input_value
+      check: Integer
+      min: "1"
+  output: Number
+  colour: 20
+  tooltip: numero di mele nell'albero i-esimo
+  helpUrl: ""
+  js: |
+    state.N < %1 ? exit(false, "non esiste l'albero numero " + %1) : state.M[%1-1]
+
+- type: K
+  message0: K
+  output: Number
+  colour: 20
+  tooltip: numero di cestini che ha Tip-Tap
+  helpUrl: ""
+  js: state.K
+
+- type: capienza cestino
+  message0: capienza cestino
+  output: Number
+  colour: 20
+  tooltip: il numero massimo di mele che può contenere il cestino corrente
+  helpUrl: ""
+  js: |
+    state.basket == state.K ? exit(false, "hai finito i cestini") : state.C[state.basket]
+
+- type: prossimo cestino
+  message0: prossimo cestino
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: passa al prossimo cestino
+  helpUrl: ""
+  js: |
+    if (state.basket == state.K) exit(false, "hai finito i cestini");
+    state.basket += 1;
+
+- type: raccogli mele
+  message0: raccogli %1 mele
+  args0:
+    - type: input_value
+      check: Integer
+      min: "0"
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: raccogli alcune mele dagli alberi, mettendole nel cestino
+  helpUrl: ""
+  js: |
+    if (state.basket == state.K) exit(false, "hai finito i cestini");
+    var acc = 0;
+    for (var i = 0; i <= state.pos; i++) acc += state.M[i];
+    for (var i = 0; i < %1; i++) {
+      if (state.res == state.tot) exit(false, "non ci sono così tante mele sugli alberi!");
+      state.res += 1;
+      state.apples[state.basket] += 1;
+      if (state.apples[state.basket] > state.C[state.basket]) exit(false, "hai raccolto troppe mele e sfondato il cestino!");
+      pause();
+      if (state.res === acc) {
+        state.pos += 1;
+        acc += state.M[state.pos];
+        pause();
+      }
+    }
+
+- type: termina
+  message0: termina
+  previousStatement: null
+  colour: 20
+  tooltip: riporta il cestino a casa
+  helpUrl: ""
+  js: |
+    if (state.res < state.sol) exit(false, "potevi raccogliere più mele!");
+    exit(true, "hai raccolto più mele possibile, complimenti!");

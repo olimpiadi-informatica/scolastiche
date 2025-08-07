@@ -15,6 +15,7 @@ const editions = [
   "1 - Blocchi Esecuzione e Ripeti N",
   "2 - Blocchi Condizionali e Ripeti Mentre",
   "3 - Composizione di Cicli e Condizioni",
+  "4 - Blocchi Matematici e Variabili",
 ];
 
 export default function App() {
