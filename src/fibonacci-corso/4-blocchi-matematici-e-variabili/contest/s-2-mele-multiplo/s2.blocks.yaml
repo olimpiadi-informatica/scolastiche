@@ -24,8 +24,8 @@
   js: |
     state.pos == state.N ? exit(false, "non ci sono alberi di fronte a Tip-Tap") : state.M[state.pos]
 
-- type: passa albero successivo
-  message0: passa all'albero successivo
+- type: avanza
+  message0: avanza
   previousStatement: null
   nextStatement: null
   colour: 20

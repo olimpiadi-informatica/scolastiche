@@ -10,7 +10,7 @@ Hai a disposizione questi blocchi:
 
 - `N`: il numero di alberi di mele.
 - `mele prossimo albero`: il numero di mele nell'albero di fronte a Tip-Tap **(nuovo!)**.
-- `passa all'albero successivo`: Tip-Tap avanza all'albero successivo **(nuovo!)**.
+- `avanza`: Tip-Tap avanza superando l'albero che ha ora di fronte **(nuovo!)**.
 - `C`: il numero massimo di mele che può contenere il cestino.
 - `raccogli` $x$ `mele`: raccogli $x$ mele dagli alberi, mettendole nel cestino.
 - `termina`: riporta il cestino a casa.
@@ -29,10 +29,25 @@ Una volta creata una variabile, vedrai comparire alcuni blocchi nella sezione _"
 - il blocco istruzione **cambia _variabile_ di _valore_**, con cui puoi sommare un valore al contenuto attuale della variabile;
 - un blocco numerico con il nome della variabile, per leggerne il suo contenuto.
 
-<Hint>
+Quando crei una variabile, ricordati di darle un valore iniziale prima di usarla nel tuo programma!
+Se non sai che valore darle, considera che il numero zero è un buon valore iniziale se prevedi di
+poi modificarla con il blocco "cambia _variabile_ di _valore_".
+
+Inoltre, quando imposti un nuovo valore ad una variabile, puoi anche usare il suo vecchio valore
+per decidere il nuovo valore da darle. In effetti, il blocco **cambia _variabile_ di _valore_**
+è equivalente ai blocchi:
+
+![cambia](cambia.png)
+
+<Hint label="suggerimento 1">
   Nella scorsa domanda il numero totale di mele era $N \times M$.
   Con una variabile e un ciclo, riesci a calcolare quante mele ci sono in totale ora,
   per poi sfruttare la soluzione della domanda precedente?
+</Hint>
+
+<Hint label="suggerimento 2">
+  Se inserisci un blocco _"cambia variabile"_ in un ciclo, la variabile verrà cambiata a ogni
+  ripetizione del ciclo, a partire dall'ultimo valore registrato. Come puoi sfruttare questa cosa?
 </Hint>
 
 <Blockly
