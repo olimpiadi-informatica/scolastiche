@@ -1,15 +1,16 @@
 # Corso di Programmazione a Blocchi
 
-## Lezione 2 - Blocchi Condizionali e Ripeti Mentre
+## Lezione 5 - Algoritmi Greedy
 
 Bentornato nel corso di programmazione a blocchi per la preparazione ai Giochi di Fibonacci!
 
-Questa è la seconda lezione, in cui ti faremo vedere:
+Questa è la quinta lezione, nella quale non introdurremo blocchi nuovi. Invece, vedremo alcuni esempi
+di _soluzioni greedy_ a problemi in cui bisogna fare una serie di scelte. La soluzione greedy (che in
+italiano si può tradurre come _"soluzione golosa"_) sceglierà sempre quello che le sembra meglio in quel
+momento, senza pensare troppo al futuro!
 
-- i blocchi di tipo "logica";
-- il blocco "ripeti mentre/fino a che".
-
-Se non l'avessi ancora fatto, ti invitiamo a completare la prima lezione prima di iniziare questa (anche se pensi di conoscere già quegli argomenti!).
+Se non l'avessi ancora fatto, ti invitiamo a completare le lezioni precedenti prima di iniziare questa (anche se pensi di conoscere già quegli argomenti!).
+**Attenzione: questa lezione è un po' più lunga delle prime quattro!**
 
 ## Punteggio e struttura delle lezioni
 

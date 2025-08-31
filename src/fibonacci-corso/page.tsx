@@ -16,6 +16,7 @@ const editions = [
   "2 - Blocchi Condizionali e Ripeti Mentre",
   "3 - Composizione di Cicli e Condizioni",
   "4 - Blocchi Matematici e Variabili",
+  "5 - Algoritmi Greedy",
 ];
 
 export default function App() {

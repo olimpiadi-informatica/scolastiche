@@ -1,0 +1,97 @@
+- type: start
+  message0: inizia qui
+  nextStatement: null
+  colour: 20
+  tooltip: L'esecuzione inizia da qui
+  helpUrl: ""
+  maxInstances: 1
+  js: ""
+
+- type: altezza della scatola
+  message0: altezza della scatola %1
+  args0:
+    - type: input_value
+      check: Integer
+      min: "1"
+      max: state.N
+  output: Number
+  colour: 20
+  tooltip: Altezza della scatola i-esima
+  helpUrl: ""
+  js: |
+    (function(i) {
+      state.pos = i-1;
+      return state.rot[i-1] ? state.larghezze[i-1] : state.altezze[i-1];
+    })(%1)
+
+- type: larghezza della scatola
+  message0: larghezza della scatola %1
+  args0:
+    - type: input_value
+      check: Integer
+      min: "1"
+      max: state.N
+  output: Number
+  colour: 20
+  tooltip: Larghezza della scatola i-esima
+  helpUrl: ""
+  js: |
+    (function(i) {
+      state.pos = i-1;
+      return state.rot[i-1] ? state.altezze[i-1] : state.larghezze[i-1];
+    })(%1)
+
+- type: ruota la scatola
+  message0: ruota la scatola %1
+  args0:
+    - type: input_value
+      check: Integer
+      min: "1"
+      max: state.N
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: Ruota la scatola i-esima
+  helpUrl: ""
+  js: |
+    (function(i) {
+      state.rot[i-1] = !state.rot[i-1];
+      state.pos = i-1;
+    })(%1);
+
+- type: N
+  message0: N
+  output: Number
+  colour: 20
+  tooltip: Numero di scatole
+  helpUrl: ""
+  js: state.N
+
+- type: riporta altezza e larghezza
+  message0: riporta altezza %1 e larghezza %2
+  args0:
+    - type: input_value
+      check: Number
+    - type: input_value
+      check: Number
+  previousStatement: null
+  colour: 20
+  tooltip: Riporta l'altezza e larghezza della torre e termina
+  helpUrl: ""
+  js: |
+    (function(h, w) {
+      var H = 0, W = 10;
+      for (var i = 0; i < state.N; i++) {
+        H += state.rot[i] ? state.larghezze[i] : state.altezze[i];
+        W = Math.min(W, state.rot[i] ? state.altezze[i] : state.larghezze[i]);
+      }
+      if (H !== h)
+        exit(false, "hai sbagliato a riportare l'altezza");
+      if (W !== w)
+        exit(false, "hai sbagliato a riportare la larghezza");
+      if (state.W !== w)
+        exit(false, "potevi allargare di più la torre");
+      if (state.H !== h)
+        exit(false, "potevi alzare di più la torre mantenendone la larghezza");
+      exit(true, "hai alzato e allargato al massimo la torre, bravo!");
+    })(%1, %2);

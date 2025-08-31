@@ -16,3 +16,7 @@ Le lezioni di questo corso contengono alcuni problemi di programmazione a blocch
 I problemi richiedono di scrivere un **singolo** programma a blocchi, che viene valutato **contemporaneamente** su più livelli.
 Quindi attenzione che non puoi scrivere programmi diversi per i diversi livelli, ma uno solo!
 Per ciascun livello correttamente risolto di ciascun problema, otterrai _5 punti_.
+
+Quando termini la lezione, ti consigliamo di **leggere tutte le soluzioni spiegate**, anche dei problemi che avevi
+già risolto correttamente: potresti scoprire modi diversi di risolvere quegli stessi problemi, e dei suggerimenti
+che ti potrebbero tornare utili per altri problemi simili che troverai in futuro!
