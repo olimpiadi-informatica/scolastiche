@@ -1,0 +1,113 @@
+- type: start
+  message0: inizia qui
+  nextStatement: null
+  colour: 20
+  tooltip: L'esecuzione inizia da qui
+  helpUrl: ""
+  maxInstances: 1
+  js: ""
+
+- type: N
+  message0: N
+  output: Number
+  colour: 20
+  tooltip: il numero di ostacoli
+  helpUrl: ""
+  js: state.N
+
+- type: pedana
+  message0: pedana %1 %2
+  args0:
+    - type: field_dropdown
+      options:
+        - [alta, A]
+        - [bassa, B]
+    - type: input_value
+      check: Integer
+      min: "1"
+      max: state.N
+  output: Number
+  colour: 20
+  tooltip: l'altezza dell'ostacolo dato
+  helpUrl: ""
+  js: state.%1[(%2) - 1]
+
+- type: differenza assoluta
+  message0: differenza assoluta tra %1 e %2
+  args0:
+    - type: input_value
+      check: Number
+    - type: input_value
+      check: Number
+  output: Number
+  colour: 20
+  tooltip: la differenza assoluta tra x e y
+  helpUrl: ""
+  js: Math.abs((%1) - (%2))
+
+- type: minimo
+  message0: minimo tra %1 e %2
+  args0:
+    - type: input_value
+      check: Number
+    - type: input_value
+      check: Number
+  output: Number
+  colour: 20
+  tooltip: il valore minimo tra x e y
+  helpUrl: ""
+  js: Math.min(%1, %2)
+
+- type: termina
+  message0: termina in %1 tempo
+  args0:
+    - type: input_value
+      check: Integer
+      min: "0"
+  previousStatement: null
+  colour: 20
+  tooltip: termina in x tempo
+  helpUrl: ""
+  js: |
+    (function(i) {
+      if (i > state.sol) exit(false, "potevi metterci meno di " + i + " tempo");
+      if (i < state.sol) exit(false, "non si può finire il livello in " + i + " tempo");
+      exit(true, i + " è il tempo minimo per finire il livello, complimenti!");
+    })(%1);
+
+- type: valore pedana
+  message0: valore pedana %1 %2
+  args0:
+    - type: field_dropdown
+      options:
+        - [alta, VA]
+        - [bassa, VB]
+    - type: input_value
+      check: Integer
+      min: "1"
+      max: state.N
+  output: Number
+  colour: 20
+  tooltip: valore salvato dell'ostacolo dato
+  helpUrl: ""
+  js: state.%1[(%2) - 1]
+
+- type: imposta valore pedana
+  message0: imposta valore pedana %1 %2 a %3
+  args0:
+    - type: field_dropdown
+      options:
+        - [alta, VA]
+        - [bassa, VB]
+    - type: input_value
+      check: Integer
+      min: "1"
+      max: state.N
+    - type: input_value
+      check: Number
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: salva un valore dell'ostacolo dato
+  helpUrl: ""
+  js: state.%1[(%2) - 1] = %3;

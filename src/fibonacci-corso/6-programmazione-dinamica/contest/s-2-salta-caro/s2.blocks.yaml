@@ -1,0 +1,150 @@
+- type: start
+  message0: inizia qui
+  nextStatement: null
+  colour: 20
+  tooltip: L'esecuzione inizia da qui
+  helpUrl: ""
+  maxInstances: 1
+  js: ""
+
+- type: N
+  message0: N
+  output: Number
+  colour: 20
+  tooltip: numero di rocce del percorso
+  helpUrl: ""
+  js: state.N
+
+- type: posizione di Carol
+  message0: posizione Carol
+  output: Number
+  colour: 20
+  tooltip: la posizione corrente di Carol
+  helpUrl: ""
+  js: state.pos+1
+
+- type: costo roccia
+  message0: costo roccia %1
+  args0:
+    - type: input_value
+      check: Integer
+      min: "1"
+  output: Number
+  colour: 20
+  tooltip: costo in carote per atterrare sulla i-esima roccia del percorso
+  helpUrl: ""
+  js: |
+    (function(i) {
+      if (i < 1 || i > state.N)
+        exit(false, "la roccia " + i + " non esiste");
+      return state.cost[i-1];
+    })(%1)
+
+- type: scrivi sulla lavagna
+  message0: scrivi %1 sulla lavagna %2
+  args0:
+    - type: input_value
+      check: Integer
+      min: "0"
+    - type: input_value
+      check: Integer
+      min: "1"
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: Carol scrive la preferenza x sulla lavagna i-esima prima di cominciare la corsa
+  helpUrl: ""
+  js: |
+    (function(x,i) {
+      if (i < 1 || i > state.N)
+        exit(false, "la lavagna " + i + " non esiste");
+      if (state.start == 1)
+        exit(false, "hai già cominciato la gara");
+      state.value[i-1] = x;
+      state.pos = i-1;
+    })(%1, %2);
+
+- type: preferenza
+  message0: preferenza %1
+  args0:
+    - type: input_value
+      check: Integer
+      min: "1"
+  output: Number
+  colour: 20
+  tooltip: numero che Carol ha scritto sulla lavagna i-esima
+  helpUrl: ""
+  js: |
+    (function(i) {
+      if (i < 1 || i > state.N) return 0;
+      return state.value[i-1];
+    })(%1)
+
+- type: comincia
+  message0: comincia la corsa
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: comincia la corsa dalla posizione di partenza
+  helpUrl: ""
+  js: |
+    if (state.start == 1)
+      exit(false, "hai già cominciato la gara");
+    if (state.pos > -1) {
+      state.pos = -1;
+      pause();
+    }
+    state.start = -1;
+    pause();
+    state.start = 1;
+
+- type: avanza
+  message0: avanza
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: avanza alla roccia successiva
+  helpUrl: ""
+  js: |
+    if (state.start == 0)
+      exit(false, "devi prima cominciare la corsa");
+    state.pos += 1;
+    if (state.pos > state.N+1)
+      exit(false, "hai superato troppo la fine del percorso");
+    if (state.pos < state.N)
+      state.count += state.cost[state.pos];
+
+- type: salta
+  message0: salta
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: salta oltre alla prossima roccia
+  helpUrl: ""
+  js: |
+    if (state.start == 0)
+      exit(false, "devi prima cominciare la corsa");
+    state.pos += 1;
+    state.flight = 1;
+    pause();
+    state.pos += 1;
+    state.flight = 0;
+    if (state.pos > state.N+1)
+      exit(false, "hai superato troppo la fine del percorso");
+    if (state.pos < state.N)
+      state.count += state.cost[state.pos];
+
+- type: termina
+  message0: termina
+  previousStatement: null
+  colour: 20
+  tooltip: finisci la corsa e vai a pagare le penalità
+  helpUrl: ""
+  js: |
+    if (state.start == 0)
+      exit(false, "non hai neanche cominciato la corsa");
+    if (state.pos < state.N-1)
+      exit(false, "non hai raggiunto la bandierina");
+    if (state.count > state.sol)
+      exit(false, "potevi spendere meno carote");
+    exit(true, "hai finito la corsa spendendo poco, complimenti!");
