@@ -2,10 +2,7 @@ import { type ReactNode, useRef } from "react";
 
 import { Button, Modal } from "@olinfo/react-components";
 
-export function Hint({
-  label = "suggerimento",
-  children,
-}: { label: string; children: ReactNode }) {
+export function Hint({ label = "suggerimento", children }: { label: string; children: ReactNode }) {
   const ref = useRef<HTMLDialogElement>(null);
 
   return (

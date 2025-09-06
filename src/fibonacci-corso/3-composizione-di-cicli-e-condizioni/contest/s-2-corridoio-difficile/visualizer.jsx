@@ -2,15 +2,14 @@
 
 import { Fragment } from "react";
 
-import clsx from "clsx";
 import { range } from "lodash-es";
 
 import { Canvas, Rectangle, Sprite, Variables } from "~/utils/visualizer";
 
 import bulbOff from "./asy/bulb-off.asy?w=30";
 import bulbOn from "./asy/bulb-on.asy?w=30";
-import bunnyLittle from "./asy/bunny-little.asy?w=50";
 import bunnyLeft from "./asy/bunny-left.asy?w=66";
+import bunnyLittle from "./asy/bunny-little.asy?w=50";
 import bunnyRight from "./asy/bunny-right.asy?w=66";
 import closedDoor from "./asy/closed-door.asy?w=55";
 import openedDoor from "./asy/opened-door.asy?w=100";
@@ -20,7 +19,6 @@ import switchOnOff from "./asy/switch-on-off.asy?w=30";
 import switchOnOn from "./asy/switch-on-on.asy?w=30";
 
 export default function Visualizer({ variables, state }) {
-
   const height = 24;
   const width = 18;
 
@@ -84,7 +82,12 @@ export default function Visualizer({ variables, state }) {
             key={`bunny-${i}`}
             src={bunnyLittle}
             alt="Little Bunny"
-            x={width * ((state.hand == i ? (state.pos + state.dir*0.2 + 0.05) : state.rescue[i] - 0.1) + 0.5) - 3.5}
+            x={
+              width *
+                ((state.hand === i ? state.pos + state.dir * 0.2 + 0.05 : state.rescue[i] - 0.1) +
+                  0.5) -
+              3.5
+            }
             y={4}
           />
         ))}

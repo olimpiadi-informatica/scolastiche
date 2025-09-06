@@ -24,12 +24,12 @@ export default function Visualizer({ variables, state }) {
           let offsetFila = offset + 10 + 5 * (H.length - pos - take2);
           return range(H.length).map((k) => {
             let x;
-            let y = [30, 7][i];
+            const y = [30, 7][i];
 
             if (taken[k] > 0) {
               x = (taken[k] - 1) * 5;
             } else {
-              if (k == pos) offsetFila = offset + 10;
+              if (k === pos) offsetFila = offset + 10;
               x = offsetFila;
               offsetFila += 5;
             }

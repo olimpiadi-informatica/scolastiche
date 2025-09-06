@@ -1,7 +1,8 @@
 "use client";
 
-import { curveBumpX, line } from "d3-shape";
 import { Fragment } from "react";
+
+import { curveBumpX, line } from "d3-shape";
 
 import { Canvas, Rectangle, Sprite, Variables } from "~/utils/visualizer";
 
@@ -49,7 +50,7 @@ export default function Visualizer({ variables, state }) {
             <title>I conigli attraversano la montagna</title>
             <path d={mountains} className="fill-amber-800/80" />
             {H.map((h, i) => {
-              if (h < H[i - 1] || h < H[i + 1]) return;
+              if (h < H[i - 1] || h < H[i + 1]) return null;
               return (
                 <Fragment key={i}>
                   <ellipse cx={i + 0.7} cy={p(h)} rx=".6" ry="0.6" fill="white" />

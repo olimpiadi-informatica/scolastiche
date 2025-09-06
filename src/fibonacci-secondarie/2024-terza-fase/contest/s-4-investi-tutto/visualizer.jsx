@@ -1,7 +1,9 @@
 "use client";
 
 import { range } from "lodash-es";
+
 import { Canvas, Rectangle, Sprite, Variables } from "~/utils/visualizer";
+
 import arrow from "./asy/arrow.asy?w=120";
 import bunny from "./asy/bunny.asy?w=66";
 import carrot from "./asy/carrot.asy?w=30";

@@ -17,7 +17,7 @@ export default function Visualizer({ variables, state }) {
   return (
     <>
       <link
-        href="https://fonts.googleapis.com/css?family=Orbitron"
+        href="https://fonts.googleapis.com/css?family=Orbitron&display=swap"
         rel="stylesheet"
         type="text/css"
       />

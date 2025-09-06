@@ -35,7 +35,7 @@ export default function Visualizer({ variables, state }) {
         <Sprite src={bunny} alt="Tip-Tap" x={state.pos + 0.2} y={0.8 - state.flight} follow />
         <Sprite src={flag} alt="Bandierina" x={state.N - 0.6} y={0.9} />
       </Canvas>
-      <Variables variables={{ ...variables, "N (num. rocce)" : state.N }} />
+      <Variables variables={{ ...variables, "N (num. rocce)": state.N }} />
     </>
   );
 }

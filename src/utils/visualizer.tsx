@@ -2,9 +2,9 @@
 
 import {
   type CSSProperties,
+  createContext,
   Fragment,
   type ReactNode,
-  createContext,
   useCallback,
   useContext,
   useEffect,
@@ -15,6 +15,7 @@ import {
 } from "react";
 
 import clsx from "clsx";
+import { isBoolean, isNumber, isObject, isString } from "lodash-es";
 
 type BoundingBox = {
   x: number;
@@ -211,12 +212,12 @@ export function Variables({ variables }: { variables: Record<string, any> }) {
         <Fragment key={name}>
           <div className="rounded-l-2xl">{name}</div>
           <div className="rounded-r-2xl">
-            <div className="rounded-lg bg-white px-2">{
-              (typeof value) == "number" ? (Number.isFinite(value) ? value : "-") :
-              (typeof value) == "boolean" ? (value ? "vero" : "falso") :
-              (typeof value) == "string" ? (value ? value : "-") :
-              (typeof value) == "object" ? (value ? JSON.stringify(value) : "-") : "-"
-            }</div>
+            <div className="rounded-lg bg-white px-2">
+              {isNumber(value) && Number.isFinite(value) ? value : "-"}
+              {isBoolean(value) && value ? "vero" : "falso"}
+              {isString(value) && value ? value : "-"}
+              {isObject(value) && value ? JSON.stringify(value) : "-"}
+            </div>
           </div>
         </Fragment>
       ))}

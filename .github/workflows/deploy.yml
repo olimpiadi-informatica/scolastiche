@@ -11,6 +11,12 @@ jobs:
         with:
           submodules: 'recursive'
 
+      - name: Setup Biome
+        uses: biomejs/setup-biome@v2
+
+      - name: Run biome
+        run: biome ci
+
       - name: Build
         run: docker run -v .:/scolastiche node:20 /scolastiche/tools/build.sh
 

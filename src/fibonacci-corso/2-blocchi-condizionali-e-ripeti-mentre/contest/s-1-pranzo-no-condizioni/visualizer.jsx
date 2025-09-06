@@ -4,10 +4,10 @@ import { range } from "lodash-es";
 
 import { Canvas, Sprite, Variables } from "~/utils/visualizer";
 
-import bunny from "./asy/tiptap.asy?w=66";
 import stoveOn from "./asy/fornello-acceso.asy?w=120";
 import stoveBack from "./asy/fornello-retro.asy?w=120";
 import stoveOff from "./asy/fornello-spento.asy?w=120";
+import bunny from "./asy/tiptap.asy?w=66";
 
 const foods = import.meta.glob("./asy/cibo-*.asy", {
   eager: true,

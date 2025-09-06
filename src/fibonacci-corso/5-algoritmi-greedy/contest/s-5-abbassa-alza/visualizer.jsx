@@ -28,7 +28,7 @@ export default function Visualizer({ variables, state }) {
       <Canvas gravity="bottom" scale={10}>
         {range(state.N).map((i) => (
           <Sprite
-            src={state.N - i - 1 == state.allie ? crateplus : crate}
+            src={state.N - i - 1 === state.allie ? crateplus : crate}
             alt="box"
             x={cellWidth * 1.15}
             y={cellHeight * (i + 0.5) - 3}
@@ -49,7 +49,7 @@ export default function Visualizer({ variables, state }) {
                 ? "underline text-red-500"
                 : "text-black",
             )}>
-            {state.N - i - 1 == state.allie ? state.K : state.C}
+            {state.N - i - 1 === state.allie ? state.K : state.C}
           </Rectangle>
         ))}
         {range(state.N).map((i) => (
@@ -90,7 +90,7 @@ export default function Visualizer({ variables, state }) {
                 x={cellWidth * 0.1 + delta[0]}
                 y={cellHeight * i + delta[1]}>
                 <Rectangle
-                  color={state.P[state.N - i - 1][2] == "Allie Muschio" ? "lightcoral" : "white"}
+                  color={state.P[state.N - i - 1][2] === "Allie Muschio" ? "lightcoral" : "white"}
                   width={cellWidth * 0.6 - cellPadding}
                   height={cellHeight - 2 * cellPadding}
                   x={cellPadding}
@@ -99,7 +99,7 @@ export default function Visualizer({ variables, state }) {
                   {state.P[state.N - i - 1][2]}
                 </Rectangle>
                 <Rectangle
-                  color={state.P[state.N - i - 1][2] == "Allie Muschio" ? "lightcoral" : "white"}
+                  color={state.P[state.N - i - 1][2] === "Allie Muschio" ? "lightcoral" : "white"}
                   width={cellWidth * 0.4 - cellPadding}
                   height={cellHeight - 2 * cellPadding}
                   x={cellWidth * 0.6}
@@ -113,7 +113,12 @@ export default function Visualizer({ variables, state }) {
         <Sprite src={bunny} alt="Carol" x={73} y={(state.N - state.pos) * cellHeight} />
       </Canvas>
       <Variables
-        variables={{ ...variables, "N (num. giocatori)": state.N, "posizione di Allie": state.allie+1, "carote spese": state.count }}
+        variables={{
+          ...variables,
+          "N (num. giocatori)": state.N,
+          "posizione di Allie": state.allie + 1,
+          "carote spese": state.count,
+        }}
       />
     </>
   );

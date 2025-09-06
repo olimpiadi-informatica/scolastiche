@@ -2,7 +2,9 @@
 
 import clsx from "clsx";
 import { range } from "lodash-es";
+
 import { Canvas, Rectangle, Sprite, Variables } from "~/utils/visualizer";
+
 import bunny from "./asy/bunny.asy?w=66";
 
 class Random {
