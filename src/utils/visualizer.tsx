@@ -213,10 +213,10 @@ export function Variables({ variables }: { variables: Record<string, any> }) {
           <div className="rounded-l-2xl">{name}</div>
           <div className="rounded-r-2xl">
             <div className="rounded-lg bg-white px-2">
-              {isNumber(value) && Number.isFinite(value) ? value : "-"}
-              {isBoolean(value) && value ? "vero" : "falso"}
-              {isString(value) && value ? value : "-"}
-              {isObject(value) && value ? JSON.stringify(value) : "-"}
+              {isNumber(value) && (Number.isFinite(value) ? value : "-")}
+              {isBoolean(value) && (value ? "vero" : "falso")}
+              {isString(value) && (value ? value : "-")}
+              {isObject(value) && (value ? JSON.stringify(value) : "-")}
             </div>
           </div>
         </Fragment>
