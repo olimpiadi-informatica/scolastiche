@@ -36,14 +36,19 @@ Quanti percorsi interni (cerchi bianchi) devi bloccare al minimo di modo che nes
 - [ ] $\js{wrong2[3]}$
 
 > Definiamo _radice_ dell'albero il nodo più in alto tra tutti.
-> Possiamo risolvere il problema tramite il seguente algoritmo. Consideriamo
-> tutti i conigli uno ad uno. Per ogni coniglio, proviamo a "risalire" l'albero
-> e ci fermiamo nei seguenti casi:
-> - Abbiamo incontrato un lucchetto.
-> - Siamo nella radice dell'albero e non possiamo più risalire.
-> - Dal nodo in cui siamo è possibile raggiungere una carota senza risalire 
-> l'albero (in altre parole, c'è una carota raggiungibile nel sottoalbero). In tal caso, 
-> mettiamo un lucchetto.
+> Possiamo risolvere il problema tramite il seguente algoritmo. Facciamo
+> una [_visita_](https://it.wikipedia.org/wiki/Ricerca_in_profondit%C3%A0)
+> dell'albero dal basso verso l'alto (prima di visitare un nodo, visitiamo
+> tutti i suoi figli). Mentre che visitiamo i nodi faremo due cose:
+> assegnare i lucchetti, ma anche segnarci come **_stato_** del nodo ciò che si
+> può raggiungere scendendo da quel nodo (niente, conigli o carote).
+>
+> Quando visitiamo un nodo, innanzitutto raccogliamo lo **_stato_** di tutti i
+> suoi _figli_ (nodi direttamente collegati e più in basso), e facciamo l'unione di tutti questi
+> stati. Il risultato che ne consegue, che chiamiamo **_totale_**, può essere:
+>
+> - _conigli e carote_: in tal caso mettiamo un lucchetto nel nodo corrente, e ne assegnamo lo **_stato_** a _niente_ (il lucchetto impedisce di visitare altro!).
+> - _niente_, solo _conigli_ o solo _carote_: in tal caso non mettiamo un lucchetto e assegnamo lo **_stato_** del nodo corrente a **_totale_**.
 >
 > Questa procedura ci fornisce la risposta ottimale, che è $\js{ans2}$.
 > Un possibile piazzamento è rappresentato in figura:
