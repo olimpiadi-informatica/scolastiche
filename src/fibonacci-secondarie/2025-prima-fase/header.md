@@ -1,10 +1,10 @@
 # Giochi di Fibonacci 2025/2026
 
-## Fase I - Scuole primarie
+## Fase I - Scuole secondarie
 
 Questa prova contiene _6 problemi_ da risolvere in _50 minuti_, ed è divisa in due parti:
-- quattro problemi di **pensiero logico-algoritmico**, e
-- due problemi di interpretazione di **procedimenti procedurali** come programmi a blocchi.
+- tre problemi di **pensiero logico-algoritmico**, e
+- tre problemi di interpretazione di **procedimenti procedurali** come programmi a blocchi.
 
 In tutte e due le parti i problemi sono ordinati per difficoltà crescente.
 **Fai attenzione, la difficoltà è soggettiva:** se stai passando tanto tempo cercando di risolvere un problema, prova a passare ad altri problemi e altre categorie.
