@@ -10,7 +10,7 @@ export const metadata = {
   description: "Raccolta delle prove delle selezioni scolastiche delle Olimpiadi di Informatica",
 };
 
-const editions = ["2024", "2023", "2022", "2022 - Demo", "2021", "2020", "2019"];
+const editions = ["2025", "2024", "2023", "2022", "2022 - Demo", "2021", "2020", "2019"];
 
 export default function App() {
   return (
