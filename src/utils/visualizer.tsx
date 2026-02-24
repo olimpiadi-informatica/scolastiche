@@ -157,6 +157,7 @@ type RectangleProps = {
   x?: number;
   y?: number;
   rotation?: number;
+  thickness?: number;
   className?: string;
   style?: CSSProperties;
   children?: ReactNode;
@@ -170,6 +171,7 @@ export function Rectangle({
   x = 0,
   y = 0,
   rotation = 0,
+  thickness = 2,
   className = "",
   children,
 }: RectangleProps) {
@@ -191,7 +193,7 @@ export function Rectangle({
       style={
         {
           backgroundColor: color,
-          border: `2px solid ${borderColor}`,
+          border: `${thickness}px solid ${borderColor}`,
           height: `${height * scale}px`,
           width: `${width * scale}px`,
           [gravity]: `${y * scale}px`,

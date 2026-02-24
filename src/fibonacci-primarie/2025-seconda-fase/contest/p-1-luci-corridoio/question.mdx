@@ -1,0 +1,71 @@
+import variants from "./variants.py";
+import { Hint } from "~/utils/hint";
+
+Tip-Tap trova spesso alcune luci dimenticate accese nella fattoria, e sospetta sia colpa del nuovo robot 
+tuttofare.
+
+La fattoria è composta da una fila di {n} stanze una dopo l'altra, separate da porte. L'ultima porta conduce all'esterno della fattoria.
+In ogni stanza si trova un interruttore, che regola la luce di **quella** stanza.
+Tip-Tap mette il robot nella stanza 1, spegne tutte le luci e lascia le porte in questo stato _(le porte chiuse sono 
+quelle verticali che sbarrano la strada al robot, impedendogli di avanzare)_:
+
+![fig](fig1.asy?v=variants.py)
+
+Leggendo il libretto delle istruzioni, sai che il robot si muove seguendo questo codice:
+
+![code](code.asy)
+
+Quante luci in totale lascerà accese il robot dopo aver attraversato tutte le stanze ed essere uscito dalla fattoria?
+
+<Hint label="descrizione figure per ipovedenti">
+    Il corridoio è composto da $\js{n}$ stanze.
+    Tutte le luci sono spente.
+    Le porte sono in questo stato: {desc}.
+
+    Il procedimento è il seguente:
+```srs
+if porta_chiusa() then
+    apri_porta()
+else
+    premi_interruttore()
+end if
+avanza()
+```
+</Hint>
+
+- [x] $\js{correct1}$
+- [ ] $\js{wrong1[0]}$
+- [ ] $\js{wrong1[1]}$
+- [ ] $\js{wrong1[2]}$
+- [ ] $\js{wrong1[3]}$
+
+> Il robot accende la luce ogni volta che incontra una porta già aperta. Visto che ci sono $\js{correct1}$ porte aperte,
+> il robot accenderà $\js{correct1}$ delle luci che inizialmente sono tutte spente.
+> La risposta è quindi $\js{correct1}$.
+
+---
+
+Per assicurarsi di aver trovato il vero colpevole, Tip-Tap decide di fare una seconda prova. Rimette il robot nella stanza 1, e lascia porte e luci in questo stato:
+
+![fig](fig2.asy?v=variants.py) 
+
+Quante luci lascerà accese questa volta dopo aver attraversato tutte le stanze ed essere uscito dalla fattoria?
+
+<Hint label="descrizione figure per ipovedenti">
+    Il corridoio è composto come prima da $\js{n}$ stanze, e il procedimento è lo stesso.
+
+    Le luci sono in questo stato: {desc3}.
+
+    Le porte sono in questo stato: {desc2}.
+</Hint>
+
+- [x] $\js{correct2}$
+- [ ] $\js{wrong2[0]}$
+- [ ] $\js{wrong2[1]}$
+- [ ] $\js{wrong2[2]}$
+- [ ] $\js{wrong2[3]}$
+
+> Come prima, il robot cambia lo stato delle luci che si trovano in stanze con la porta aperta, lasciando come sono le stanze con la porta chiusa.
+> Tra le $\js{n-open}$ stanze con la porta chiusa, ce ne sono $\js{closelight}$ con la luce accesa, che rimarranno come sono.
+> Tra le $\js{open}$ stanze con la porta aperta, ce ne sono invece $\js{correct2-closelight}$ con la luce spenta, che diventeranno accese.
+> Alla fine del procedimento ce ne saranno quindi in totale $\js{closelight} + \js{correct2-closelight} = \js{correct2}$ luci accese.

@@ -1,0 +1,52 @@
+import variants from "./variants.py";
+import { Hint } from "~/utils/hint";
+
+Dopo una lunga camminata, Bunny si ferma alla fattoria Fibonacci per fare uno spuntino. La fattoria ha a disposizione $\js{q_carrots1}$ carote e $\js{q_potatoes1}$ patate. Bunny mangia le verdure seguendo questa procedura:
+
+![code](code.asy)
+
+Quando Bunny finisce lo spuntino, quante carote sono rimaste?
+
+<Hint label="descrizione figure per ipovedenti">
+    Il procedimento è il seguente:
+```srs
+while (carote_rimaste() >= 5) and (patate_rimaste() >= 2) do
+    if carote_rimaste() > patate_rimaste() then
+        mangia_carote(5)
+    else
+        mangia_patate(2)
+    end if
+end while
+```
+</Hint>
+
+- [x] $\js{ans1}$
+- [ ] $\js{wrong1[0]}$
+- [ ] $\js{wrong1[1]}$
+- [ ] $\js{wrong1[2]}$
+- [ ] $\js{wrong1[3]}$
+
+> Le "tappe" dello spuntino di Bunny sono le seguenti:
+>
+> {explanation1}
+>
+> Alla fine, quindi, rimangono $\js{ans1}$ carote.
+
+---
+
+Questa volta alla fattoria Fibonacci ci sono $\js{q_carrots2}$ carote e $\js{q_potatoes2}$ patate. 
+
+Bunny vuole che, al termine del suo spuntino, rimangano esattamente 0 carote **oppure** esattamente 0 patate. Per farlo, può regalare alcune verdure alla sua amica Allie prima di iniziare a mangiare.
+
+Qual è il numero minimo di verdure che Bunny deve dare ad Allie per raggiungere il suo obiettivo?
+
+- [x] $\js{ans2}$
+- [ ] $\js{wrong2[0]}$
+- [ ] $\js{wrong2[1]}$
+- [ ] $\js{wrong2[2]}$
+- [ ] $\js{wrong2[3]}$
+
+> Per risolvere questo quesito servono un paio di osservazioni.
+> Le patate non possono finire perché Bunny le mangia solo quando sono almeno quante le carote ($P > C$). Dato che il ciclo richiede almeno 5 carote ($C \ge 5$) per continuare, quando Bunny mangia le patate ne ha per forza almeno $5$. Sottraendo $2$ a un numero che è almeno $5$, ne rimangono almeno $3$, valore che è superiore alla soglia di arresto ($2$). Le patate rimarranno quindi sempre sopra lo zero.
+>
+> Il problema si riduce quindi a capire come far finire le carote. Dato che Bunny le consuma sempre a blocchi di $5$, per arrivare esattamente a zero è necessario che il numero iniziale sia un multiplo di $5$. Il numero minimo di verdure che Allie deve mangiare è quindi il resto della divisione tra il numero iniziale di carote e $5$. Nel nostro caso, $\js{q_carrots2} : 5 = \js{abs_carrots2}$ resto $\js{ans2}$, quindi la risposta è $\js{ans2}$.
