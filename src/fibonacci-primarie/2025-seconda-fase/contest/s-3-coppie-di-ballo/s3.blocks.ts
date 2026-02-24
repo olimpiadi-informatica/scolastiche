@@ -39,8 +39,7 @@ export default [
     colour: 20,
     tooltip: "se il prossimo coniglio in fila è della fattoria Fibonacci/Turing",
     fn: (_ctx: Context, _state: State, dir: "Fibonacci" | "Turing"): boolean => {
-      if (_state.queue.length === 0)
-        _ctx.exit(false, "non ci sono più conigli in fila");
+      if (_state.queue.length === 0) _ctx.exit(false, "non ci sono più conigli in fila");
       return _state.queue[0].farm === dir;
     },
   },
@@ -52,8 +51,7 @@ export default [
     colour: 20,
     tooltip: "metti il prossimo coniglio in fila nella prossima coppia che si deve sfidare",
     fn: async (_ctx: Context, _state: State) => {
-      if (_state.queue.length === 0)
-        _ctx.exit(false, "non ci sono più conigli in fila");
+      if (_state.queue.length === 0) _ctx.exit(false, "non ci sono più conigli in fila");
       if (_state.pairs.length === 0 || _state.pairs[_state.pairs.length - 1].length === 2) {
         _state.pairs.push([]);
         await _ctx.pause();
@@ -73,8 +71,7 @@ export default [
     colour: 20,
     tooltip: "prendi il prossimo coniglio in fila e portalo al fondo della fila",
     fn: async (_ctx: Context, _state: State) => {
-      if (_state.queue.length === 0)
-        _ctx.exit(false, "non ci sono più conigli in fila");
+      if (_state.queue.length === 0) _ctx.exit(false, "non ci sono più conigli in fila");
       _state.offset = 0;
       await _ctx.pause();
       _state.queue.push(_state.queue.shift()!);
@@ -90,8 +87,7 @@ export default [
     colour: 20,
     tooltip: "smetti di formare le coppie e fai iniziare il torneo",
     fn: (ctx: Context, _state: State) => {
-      if (_state.queue.length !== 0)
-        ctx.exit(false, "non hai finito di formare le coppie");
+      if (_state.queue.length !== 0) ctx.exit(false, "non hai finito di formare le coppie");
       ctx.exit(true, "hai formato tutte le coppie, complimenti!");
     },
   },

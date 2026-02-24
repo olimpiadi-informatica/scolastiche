@@ -1,7 +1,6 @@
 "use client";
 
 import type { VisualizerProps } from "@olinfo/quizms-mdx/blockly-types";
-
 import clsx from "clsx";
 import { range } from "lodash-es";
 
@@ -12,7 +11,6 @@ import bulbOn from "./asy/bulb-on.asy?w=30";
 import bunnyLeft from "./asy/bunny-left.asy?w=66";
 import bunnyRight from "./asy/bunny-right.asy?w=66";
 import carrot from "./asy/carrot.asy?w=40";
-
 import type { State } from "./s2.blocks";
 
 export default function Visualizer({ variables, state }: VisualizerProps<State>) {
@@ -31,9 +29,8 @@ export default function Visualizer({ variables, state }: VisualizerProps<State>)
               color={grays[light]}
               height={height}
               width={width}
-              x={width * (i)}
-              y={6}
-            >
+              x={width * i}
+              y={6}>
               <div
                 className={clsx(
                   "absolute mt-1 size-full origin-bottom text-center text-2xl underline",
@@ -61,15 +58,12 @@ export default function Visualizer({ variables, state }: VisualizerProps<State>)
           y={20}
           follow
         />
-        {range(state.N).map((i) => ( state.carrot[i] &&
-          <Sprite
-            key={`carrot${i}`}
-            src={carrot}
-            alt=""
-            x={width * (i + 0.4)}
-            y={27}
-          />
-        ))}
+        {range(state.N).map(
+          (i) =>
+            state.carrot[i] && (
+              <Sprite key={`carrot${i}`} src={carrot} alt="" x={width * (i + 0.4)} y={27} />
+            ),
+        )}
       </Canvas>
       <Variables variables={{ ...variables, "N (num. stanze)": state.N }} />
     </>

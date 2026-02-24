@@ -37,7 +37,12 @@ export default [
     colour: 20,
     tooltip: "se si è di fronte al recinto",
     fn: (_ctx: Context, _state: State): boolean => {
-      return _state.x+_state.dx < 0 || _state.x+_state.dx > _state.N || _state.y+_state.dy < 0 || _state.y+_state.dy > _state.N;
+      return (
+        _state.x + _state.dx < 0 ||
+        _state.x + _state.dx > _state.N ||
+        _state.y + _state.dy < 0 ||
+        _state.y + _state.dy > _state.N
+      );
     },
   },
   {
@@ -48,7 +53,12 @@ export default [
     colour: 20,
     tooltip: "avanza al prossimo passo della griglia",
     fn: (_ctx: Context, _state: State) => {
-      if (_state.x+_state.dx < 0 || _state.x+_state.dx > _state.N || _state.y+_state.dy < 0 || _state.y+_state.dy > _state.N) {
+      if (
+        _state.x + _state.dx < 0 ||
+        _state.x + _state.dx > _state.N ||
+        _state.y + _state.dy < 0 ||
+        _state.y + _state.dy > _state.N
+      ) {
         _state.x += _state.dx * 0.3;
         _state.y += _state.dy * 0.3;
         _ctx.exit(false, "ti sei scontrato con il recinto");
@@ -67,7 +77,7 @@ export default [
     fn: (_ctx: Context, _state: State, dir: "destra" | "sinistra") => {
       [_state.dx, _state.dy] = dir === "destra" ? [_state.dy, -_state.dx] : [-_state.dy, _state.dx];
       _state.a += dir === "destra" ? 0.25 : -0.25;
-    }
+    },
   },
   {
     type: "mangia",

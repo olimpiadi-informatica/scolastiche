@@ -48,9 +48,8 @@ export default [
     fn: (_ctx: Context, _state: State, dir: "destra" | "sinistra") => {
       _state.dir = dir === "destra" ? 1 : -1;
       _state.pos += _state.dir;
-      if (!_state.light[_state.pos])
-        _ctx.exit(false, "sei entrato in una stanza buia");
-    }
+      if (!_state.light[_state.pos]) _ctx.exit(false, "sei entrato in una stanza buia");
+    },
   },
   {
     type: "carota",
@@ -84,11 +83,10 @@ export default [
     fn: (ctx: Context, _state: State) => {
       var low = _state.pos;
       var high = _state.pos;
-      while (low > 0 && _state.light[low-1]) low--;
-      while (high < _state.N-1 && _state.light[high+1]) high++;
+      while (low > 0 && _state.light[low - 1]) low--;
+      while (high < _state.N - 1 && _state.light[high + 1]) high++;
       for (let i = low; i <= high; i++)
-        if (_state.carrot[i])
-          ctx.exit(false, "non hai raccolto la carota nella stanza " + (i+1));
+        if (_state.carrot[i]) ctx.exit(false, `non hai raccolto la carota nella stanza ${i + 1}`);
       ctx.exit(true, "hai finito, complimenti!");
     },
   },

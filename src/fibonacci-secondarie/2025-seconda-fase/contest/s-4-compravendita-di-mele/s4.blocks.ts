@@ -47,12 +47,11 @@ export default [
     tooltip: "procedi al prossimo coniglio",
     fn: (_ctx: Context, _state: State) => {
       _state.pos += 1;
-      if (_state.mela_trasportata !== -1)
-        _state.pos_mela[_state.mela_trasportata] = _state.pos;
+      if (_state.mela_trasportata !== -1) _state.pos_mela[_state.mela_trasportata] = _state.pos;
       if (_state.pos > _state.N) {
-         _ctx.exit(false, "sei andato troppo oltre la fine dei conigli");
+        _ctx.exit(false, "sei andato troppo oltre la fine dei conigli");
       }
-    }
+    },
   },
   {
     type: "compra",
@@ -63,8 +62,8 @@ export default [
     tooltip: "compra una mela dal coniglio corrente",
     fn: (_ctx: Context, _state: State) => {
       if (_state.pos >= _state.N) {
-         _ctx.exit(false, "non puoi comprare mele dopo aver superato i conigli");
-         return;
+        _ctx.exit(false, "non puoi comprare mele dopo aver superato i conigli");
+        return;
       }
       if (_state.mela_trasportata !== -1) {
         _ctx.exit(false, "hai già una mela, non puoi comprarne un'altra");
@@ -87,8 +86,8 @@ export default [
     tooltip: "vendi una mela al coniglio corrente",
     fn: (_ctx: Context, _state: State) => {
       if (_state.pos >= _state.N) {
-         _ctx.exit(false, "non puoi vendere mele dopo aver superato i conigli");
-         return;
+        _ctx.exit(false, "non puoi vendere mele dopo aver superato i conigli");
+        return;
       }
       if (_state.mela_trasportata === -1) {
         _ctx.exit(false, "non hai nessuna mela da vendere");
@@ -146,8 +145,8 @@ export default [
     fn: (ctx: Context, _state: State) => {
       var guadagnoMax = 0;
       for (let i = 0; i < _state.N - 1; i++) {
-        if (_state.prezzo[i] < _state.prezzo[i+1]) {
-          guadagnoMax += _state.prezzo[i+1] - _state.prezzo[i];
+        if (_state.prezzo[i] < _state.prezzo[i + 1]) {
+          guadagnoMax += _state.prezzo[i + 1] - _state.prezzo[i];
         }
       }
       if (_state.guadagno !== guadagnoMax) {
