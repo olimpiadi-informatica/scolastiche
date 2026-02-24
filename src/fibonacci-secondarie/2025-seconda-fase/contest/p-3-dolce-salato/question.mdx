@@ -1,0 +1,63 @@
+import variants from "./variants.py";
+import { Hint } from "~/utils/hint";
+
+Carol è affamata e oltre alle carote ama molto anche il cioccolato. Purtroppo però il cioccolato non è molto adatto ai conigli, per cui non può mangiarne troppo. 
+Ha quindi messo in una fila ordinata alcuni cioccolatini e carote, come in figura:
+
+![cibo](fig.asy?v=variants.py)
+
+Carol li mangerà seguendo il seguente procedimento:
+
+![codice](codice.asy)
+
+Quante cose mangerà in totale, contando sia carote che cioccolatini?
+
+<Hint label="descrizione figure per ipovedenti">
+  Nella fila sono presenti: {desc}.
+
+  Il procedimento è il seguente:
+```srs
+cattivo <- 0
+totale <- 0
+while cattivo == 0 do
+    if prossimo() == carota then
+        totale <- totale + 1
+    else
+        totale <- totale - 1
+    end if
+    if totale < 0 then
+        cattivo <- 1
+    end if
+    mangia_prossimo()
+end while
+```
+</Hint>
+
+- [x] $\js{correct1[0]}$
+- [ ] $\js{wrong1[0]}$
+- [ ] $\js{wrong1[1]}$
+- [ ] $\js{wrong1[2]}$
+- [ ] $\js{wrong1[3]}$
+
+> Nel procedimento sopra, la variabile `totale` aumenta per ogni carota e diminuisce per ogni cioccolatino.
+> Questa variabile arriva quindi ad essere minore di zero solo quando si sono mangiati più cioccolatini che carote.
+>
+> Fino ai primi $\js{correct1[0]-1}$ cibi, questo non succede.
+> Nei primi $\js{correct1[0]}$ cibi ci sono invece $\js{correct1[0]-carrots1}$ cioccolatini e $\js{carrots1}$ carote,
+> quindi `totale` diventa minore di zero da cui `cattivo` diventa pari a $1$ e il ciclo termina.
+> Quindi Carol si ferma dopo aver mangiato $\js{correct1[0]}$ cibi.
+
+---
+
+Carol, ripensandoci, vorrebbe mangiare tutta la fila che ha preparato prima. Per poterlo fare, quante carote dovrebbe aggiungere **al minimo** all’inizio?
+
+- [ ] $\js{wrong2[0]}$
+- [ ] $\js{wrong2[1]}$
+- [ ] $\js{wrong2[2]}$
+- [x] $\js{correct2[0]}$
+- [ ] $\js{wrong2[3]}$
+
+> Perché Carol non si fermi, devono esserci sempre più carote che cioccolatini man mano che si procede nella sequenza, tranne al massimo l'ultimo cibo.
+> Possiamo quindi scorrere la sequenza, segnandoci di quanto il numero di cioccolatini supera quello di carote.
+> Si può verificare che in ogni punto (a parte l'ultimo) i cioccolatini sono al massimo $\js{correct2[0]}$ in più delle carote. 
+> La risposta è quindi che basta aggiungere $\js{correct2[0]}$ carote all'inizio per mangiare tutto.
