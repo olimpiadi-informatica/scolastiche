@@ -11,6 +11,7 @@ export const metadata = {
 };
 
 const editions = [
+  "2025 - Seconda fase",
   "2025 - Prima fase",
   "2024 - Terza fase",
   "2024 - Seconda fase",
