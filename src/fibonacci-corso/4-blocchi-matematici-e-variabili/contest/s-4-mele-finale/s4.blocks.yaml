@@ -69,17 +69,17 @@
   helpUrl: ""
   js: |
     if (state.basket == state.K) exit(false, "hai finito i cestini");
-    var acc = 0;
-    for (var i = 0; i <= state.pos; i++) acc += state.M[i];
-    for (var i = 0; i < %1; i++) {
+    var __acc__ = 0;
+    for (var __i__ = 0; __i__ <= state.pos; __i__++) __acc__ += state.M[__i__];
+    for (var __i__ = 0; __i__ < %1; __i__++) {
       if (state.res == state.tot) exit(false, "non ci sono così tante mele sugli alberi!");
       state.res += 1;
       state.apples[state.basket] += 1;
       if (state.apples[state.basket] > state.C[state.basket]) exit(false, "hai raccolto troppe mele e sfondato il cestino!");
       pause();
-      if (state.res === acc) {
+      if (state.res === __acc__) {
         state.pos += 1;
-        acc += state.M[state.pos];
+        __acc__ += state.M[state.pos];
         pause();
       }
     }

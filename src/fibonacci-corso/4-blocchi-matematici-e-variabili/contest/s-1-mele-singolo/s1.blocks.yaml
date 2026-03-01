@@ -43,7 +43,7 @@
   tooltip: raccogli alcune mele dagli alberi, mettendole nel cestino
   helpUrl: ""
   js: |
-    for (var i = 0; i < %1; i++) {
+    for (var __i__ = 0; __i__ < %1; __i__++) {
       if (state.res == state.N * state.M) exit(false, "non ci sono così tante mele sugli alberi!");
       state.res += 1;
       if (state.res > state.C) exit(false, "hai raccolto troppe mele e sfondato il cestino!");
