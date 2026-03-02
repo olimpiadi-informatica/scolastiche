@@ -11,7 +11,7 @@ import json
 def gen(N, MaxG, type):
     while True:
         if type == 0:
-            G = [random.randint(0, 2+(MaxG-2)*i//(N-1)) for i in range(N)]
+            G = [random.randint(1, 2+(MaxG-2)*i//(N-1)) for i in range(N)]
             V = [random.randint(0, 9+2*i+(MaxG-2)*i*i//(2*N)) for i in range(N)]
             G[0] = max(G[0], 1)
             V[0] = max(V[0], random.randint(0, 5))
@@ -30,10 +30,10 @@ def gen(N, MaxG, type):
             G = [0] * N
             V = [0] * N
             V[-1] = random.randint(0, 10*N)
-            G[-1] = random.randint(0, MaxG)
+            G[-1] = random.randint(1, MaxG)
             for i in range(N-2,-1,-1):
                 x = random.randint(i+1, N-1)
-                G[i] = random.randint(0, G[x]-1) if G[x] > 0 else random.randint(0, MaxG)
+                G[i] = random.randint(1, G[x]-1) if G[x] > 1 else random.randint(1, MaxG)
                 a, b = 1 + (i-x)*G[i], (N-x)*G[x] - 1 + (i-N)*G[i]
                 V[i] = V[x] + random.randint(a, b) if 0 <= a <= b else random.randint(0, 10*N)
         if solve(N,V,G) > V[0] + N*G[0]:
@@ -60,9 +60,9 @@ def solve2(N,V,G):
 random.seed(42)
 testcases = []
 
-type = [1, 2, 3, 0, 0, 1, 2, 3, 0, 0]
-M = [10, 10, 10, 10, 10, 100, 100, 100, 100, 100]
-N = [4, 5, 6, 8, 10, 15, 20, 30, 40, 50]
+type = [0, 2, 3, 0]
+M = [10, 10, 10, 10]
+N = [6, 8, 9, 10]
 for t,n,g in zip(type,N,M):
     V, G = gen(n,g,t)
     sol = solve(n,V,G)

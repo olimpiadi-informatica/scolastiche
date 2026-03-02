@@ -17,7 +17,7 @@ def gen(N, MaxG, type):
             V[0] = max(V[0], random.randint(0, 5))
         elif type == 1:
             V = [10] * N
-            G = [random.randint(0, MaxG) for _ in range(N)]
+            G = [random.randint(1, MaxG) for _ in range(N)]
             G[0] = 1
         elif type == 2:
             a = random.randint(1, MaxG//2)
