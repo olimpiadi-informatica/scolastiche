@@ -1,0 +1,66 @@
+import { toolbox } from "./toolbox.ts";
+import initialBlocks from "./initial-blocks.json";
+import customBlocks from "./s1.blocks.yaml";
+import testcases from "./testcases.py";
+import Visualizer from "./visualizer.jsx";
+import { Hint } from "~/utils/hint";
+
+Siamo sempre alla corsa ad ostacoli di Carol, e hai a disposizione gli stessi blocchi di prima:
+
+- `avanza`: avanza alla roccia successiva **se possibile** (sta ferma se ha davanti un ostacolo).
+- `salta`: salta oltre alla prossima roccia, atterrando su quella dopo.
+- `termina`: finisci la gara.
+
+Questa volta, però, Carol deve riuscire a superare **due diversi livelli, con un solo programma!**
+
+Quando provi la tua soluzione, premendo sul pulsante _"Correggi la soluzione"_, vedrai in un colpo solo quali livelli di questa domanda hai risolto correttamente.
+I livelli sono indicati in alto a sinistra, dopo la scritta **Livello**, e per ciascuno vedrai una _"V"_ verde se l'hai superato, oppure una _"X"_ rossa se non l'hai superato.
+Cliccando su uno di questi simboli, potrai scegliere il livello su cui poi provare la tua soluzione con _"Esegui/pausa"_.
+
+Attenzione che questa domanda è piuttosto difficile... se ti senti in difficoltà, prova a leggere alcuni di questi suggerimenti:
+
+<Hint label="suggerimento 1">
+  Guarda bene entrambi i livelli. Quante volte dovrai saltare?
+</Hint>
+
+<Hint label="suggerimento 2">
+  Quando fai l'azione _"avanza"_, il personaggio sta fermo se ha davanti un ostacolo. Come puoi sfruttare questa cosa?
+</Hint>
+
+<Hint label="suggerimento 3">
+  Prima di ogni salto, quante volte devi avanzare per assicurarti di arrivare all'ostacolo in entrambi i livelli?
+</Hint>
+
+<Blockly
+  toolbox={toolbox}
+  customBlocks={customBlocks}
+  initialBlocks={initialBlocks}
+  testcases={testcases}
+  visualizer={Visualizer}
+/>
+
+> Un possibile programma corretto è il seguente:
+>
+> ![soluzione](sol.png)
+>
+> Per capire come impostare un programma, dobbiamo vedere entrambi i livelli.
+> Prima di tutto per capire quante volte dobbiamo saltare:
+> - per superare il primo livello dobbiamo saltare almeno due volte;
+> - per superare il secondo livello basta saltare almeno una volta.
+> Per superarli entrambi con le stesse azioni, dovremo quindi saltare almeno due volte.
+>
+> Prima del primo salto:
+> - per superare il primo livello, non abbiamo bisogno di avanzare;
+> - per superare il secondo livello, dobbiamo avanzare almeno una volta.
+> Per superarli entrambi con le stesse azioni, dovremo quindi avanzare almeno una volta.
+>
+> Prima del secondo salto, che è necessario solo nel primo livello, non abbiamo bisogno di avanzare.
+>
+> Dato che la pista non è molto lunga, ci conviene fare meno azioni possibile.
+> Faremo quindi esattamente due salti, avanzando una volta prima del primo salto.
+> Con queste azioni, nel primo livello non raggiungiamo la bandierina:
+> dobbiamo quindi fare un'ultima azione per avanzare.
+
+Prima di passare alla prossima domanda, assicurati di aver risolto **tutti i livelli** di questa!
+
+Se l'hai risolta, dovresti vedere due _"V"_ verdi in alto a sinistra dopo la scritta **Livello**.

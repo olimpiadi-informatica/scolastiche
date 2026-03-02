@@ -1,8 +1,9 @@
 import { toolbox } from "./toolbox.ts";
 import initialBlocks from "./initial-blocks.json";
-import customBlocks from "./s1.blocks.yaml";
+import customBlocks from "./s0.blocks.yaml";
 import testcases from "./testcases.py";
 import Visualizer from "./visualizer.jsx";
+import { Hint } from "~/utils/hint";
 
 Carol si è iscritta ad una gara di corsa ad ostacoli!
 Il percorso si svolge su una sequenza di rocce, piatte o alte: si può stare solo sulle rocce piatte, mentre le rocce alte sono gli ostacoli.
@@ -18,7 +19,17 @@ Nell'editor a blocchi qui sotto a destra, scrivi un programma che consenta ad Ca
 
 Potrai trovare tutti i blocchi che ti servono cliccando sulla sezione _"Esecuzione"_, e trascinandoli nella finestra attaccandoli sotto al blocco _"Inizia qui"_ potrai comporre il tuo programma.
 Per provare la tua soluzione, premi sul pulsante _"Correggi la soluzione"_ verde con l'aeroplanino di carta: vedrai se è corretta, e potrai verificare il comportamento del programma tramite i
-tasti blu _"Esegui/pausa"_, _"Esegui un blocco"_, _"Ricomincia da capo"_.
+tasti blu _"Esegui/pausa"_, _"Esegui un blocco"_, _"Esegui da capo"_.
+
+Se ti senti in difficoltà, prova anche a leggere questo suggerimento:
+
+<Hint>
+  Guarda dove si trova il coniglio: con che operazione devi iniziare?
+  Ti serve avanzare o saltare? Una volta capito con quale delle due operazioni
+  vuoi iniziare, cercala nella sezione _"Esecuzione"_ e trascinala sotto al blocco _"Inizia qui"_.
+  Guarda dove arriva in questo modo il coniglio (puoi eseguire la tua soluzione!),
+  e continua così per capire quali altre azioni devi fare dopo.
+</Hint>
 
 <Blockly
   toolbox={toolbox}
@@ -36,4 +47,6 @@ tasti blu _"Esegui/pausa"_, _"Esegui un blocco"_, _"Ricomincia da capo"_.
 > avanza alla roccia successiva, salta il secondo ostacolo, e avanza ancora
 > una volta per raggiungere la bandierina.
 
-Prima di passare alla prossima domanda, assicurati di aver risolto questa! Se l'hai risolta, dovresti vedere una _"V"_ verde in alto a sinistra, sopra la rappresentazione del livello, dopo la scritta **Livello**.
+Prima di passare alla prossima domanda, assicurati di aver risolto questa!
+
+Se l'hai risolta, dovresti vedere una _"V"_ verde in alto a sinistra, sopra la rappresentazione del livello, dopo la scritta **Livello**.

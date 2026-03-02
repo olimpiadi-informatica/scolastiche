@@ -3,6 +3,7 @@ import initialBlocks from "./initial-blocks.json";
 import customBlocks from "./s1.blocks.yaml";
 import testcases from "./testcases.py";
 import Visualizer from "./visualizer.jsx";
+import { Hint } from "~/utils/hint";
 
 Siamo sempre alla corsa ad ostacoli di Carol, anche se questa volta **non ci sono ostacoli!**
 Sempre nella sezione _"Esecuzione"_, hai a disposizione gli stessi blocchi di prima per risolvere quattro livelli, **più uno nuovo:**
@@ -20,6 +21,16 @@ Noterai anche che è comparsa una nuova sezione _"Cicli"_! Infatti, per riuscire
 Questo blocco ti consente di specificare quante volte vuoi ripetere alcune operazioni, mettendo un blocco valore che vuoi al posto del numero standard di ripetizioni (10).
 Puoi anche indicare quali sono i blocchi istruzione che vuoi ripetere, mettendoli nello spazio rettangolare che sta in mezzo al blocco.
 
+Se ti senti in difficoltà, prova anche a leggere questo suggerimento:
+
+<Hint>
+  Per poter risolvere tutti i livelli, dovrai fare un ciclo.
+
+  Quale operazione devi mettere dentro al ciclo?
+
+  Quante volte devi ripeterla?
+</Hint>
+
 <Blockly
   toolbox={toolbox}
   customBlocks={customBlocks}
@@ -34,4 +45,6 @@ Puoi anche indicare quali sono i blocchi istruzione che vuoi ripetere, mettendol
 >
 > Secondo questo programma, il protagonista avanzerà $N$ volte, superando esattamente l'ostacolo.
 
-Prima di passare alla prossima domanda, assicurati di aver risolto **tutti i livelli** di questa! Se l'hai risolta, dovresti vedere quattro _"V"_ verdi in alto a sinistra dopo la scritta **Livello**.
+Prima di passare alla prossima domanda, assicurati di aver risolto **tutti i livelli** di questa!
+
+Se l'hai risolta, dovresti vedere quattro _"V"_ verdi in alto a sinistra dopo la scritta **Livello**.
