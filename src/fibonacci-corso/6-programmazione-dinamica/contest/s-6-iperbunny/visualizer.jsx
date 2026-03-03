@@ -33,18 +33,27 @@ export default function Visualizer({ variables, state }) {
         {B.map((b, i) => (
           <Sprite key={`bassa-${i}`} src={platform} alt="Pedana" x={i + 1.1} y={-p(b)} />
         ))}
-        <Rectangle key="ground" color="brown" borderColor="#D35A1E" height={0.3} width={N + 1.5} x={0.3} />
-        <Rectangle 
+        <Rectangle
+          key="ground"
+          color="brown"
+          borderColor="#D35A1E"
+          height={0.3}
+          width={N + 1.5}
+          x={0.3}
+        />
+        <Rectangle
           key="ground-start"
-          color="brown" borderColor="#D35A1E"
+          color="brown"
+          borderColor="#D35A1E"
           height={p(H)}
           width={0.5}
           x={-1 + 1.1 + 0.2}
           y={-p(H)}
         />
-        <Rectangle 
+        <Rectangle
           key="ground-end"
-          color="brown" borderColor="#D35A1E"
+          color="brown"
+          borderColor="#D35A1E"
           height={p(H)}
           width={0.5}
           x={N + 1.1 + 0.2}
@@ -108,7 +117,7 @@ export default function Visualizer({ variables, state }) {
             x={i + 1.7}
             y={-p(A[i]) - 0.35}
             className="text-3xl text-gray-400 [text-shadow:0_0_2px_#fff]">
-            {v == 0 ? "" : v == 1 ? "↑" : "↓"}
+            {v === 0 ? "" : v === 1 ? "↑" : "↓"}
           </Rectangle>
         ))}
         {DB.map((v, i) => (
@@ -121,7 +130,7 @@ export default function Visualizer({ variables, state }) {
             x={i + 1.7}
             y={-p(B[i]) + 0.08}
             className="text-3xl text-gray-400 [text-shadow:0_0_2px_#fff]">
-            {v == 0 ? "" : v == 1 ? "↑" : "↓"}
+            {v === 0 ? "" : v === 1 ? "↑" : "↓"}
           </Rectangle>
         ))}
         <Rectangle
@@ -133,7 +142,7 @@ export default function Visualizer({ variables, state }) {
           x={-1 + 1.6}
           y={-p(H) - 0.37}
           className="text-3xl text-gray-400 [text-shadow:0_0_2px_#fff]">
-          {D[0] == 0 ? "" : D[0] == 1 ? "↑" : "↓"}
+          {D[0] === 0 ? "" : D[0] === 1 ? "↑" : "↓"}
         </Rectangle>
         <Rectangle
           key="dir-end"
@@ -144,11 +153,11 @@ export default function Visualizer({ variables, state }) {
           x={N + 1.6}
           y={-p(H) - 0.37}
           className="text-3xl text-gray-400 [text-shadow:0_0_2px_#fff]">
-          {D[1] == 0 ? "" : D[1] == 1 ? "↑" : "↓"}
+          {D[1] === 0 ? "" : D[1] === 1 ? "↑" : "↓"}
         </Rectangle>
-        <Sprite key="bunny" src={bunny} alt="Bunny" x={posx+0.3} y={-p(posy)-0.8} />
+        <Sprite key="bunny" src={bunny} alt="Bunny" x={posx + 0.3} y={-p(posy) - 0.8} />
       </Canvas>
-      <Variables variables={{...variables, "N (num. pedane)": N, "tempo trascorso": time}} />
+      <Variables variables={{ ...variables, "N (num. pedane)": N, "tempo trascorso": time }} />
     </>
   );
 }
