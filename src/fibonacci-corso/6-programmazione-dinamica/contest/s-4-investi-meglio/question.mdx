@@ -21,10 +21,10 @@ Hai a disposizione questi blocchi per ispezionare la situazione:
 - `guadagno del titolo` $i$: il guadagno $G_i$ che avrà il titolo $i$-esimo in ogni giorno successivo.
 - `valore del titolo` $i$ `al giorno` $d$: il valore $T_i$ del titolo proposto nel giorno $i$, incrementato di $G_i$ al giorno fino al giorno $d$ ($T_i + (d-i) \cdot G_i$) **(nuovo!)**.
 
-Inoltre, hai a disposizione questi blocchi per annotarti informazioni di supporto:
+Inoltre, hai a disposizione questi nuovi blocchi per annotare informazioni di supporto:
 
-- `annota preferenza` $x$ `per il titolo` $i$: annota un numero $x$ a tua scelta sul titolo $i$-esimo **(nuovo!)**.
-- `leggi preferenza per il titolo` $i$: leggi il numero che hai annotato sul titolo $i$-esimo **(nuovo!)**.
+- `scrivi` $x$ `sul titolo` $i$: scrivi un numero $x$ a tua scelta sul titolo $i$-esimo **(nuovo!)**.
+- `preferenza per il titolo` $i$: leggi il numero che hai scritto sul titolo $i$-esimo **(nuovo!)**.
 
 Infine, hai a disposizione gli stessi blocchi di prima per riportare un piano finanziario:
 
@@ -47,7 +47,7 @@ Se hai dei dubbi, prova a sperimentare il funzionamento della pianificazione tit
 </Hint>
 
 <Hint label="suggerimento 3">
-  In un solo ciclo contatore, puoi annotare il valore di preferenza del titolo $i$-esimo
+  In un solo ciclo contatore, puoi scrivere il valore di preferenza del titolo $i$-esimo
   e scegliere cosa prendere dopo il titolo $i$-esimo. Considera sempre la possibilità
   che quel titolo sia l'ultimo. Poi, per capire se puoi fare di meglio, dovrai esaminare
   tutti i titoli che potresti prendere dopo di lui, e decidere quale sarebbe il migliore.
@@ -61,19 +61,30 @@ Se hai dei dubbi, prova a sperimentare il funzionamento della pianificazione tit
   visualizer={Visualizer}
 />
 
-> L'idea principale che serve a risolvere il problema è capire cosa annotare sui titoli. Supponiamo
-> di annotare su ogni titolo un numero che rappresenta **quanto al massimo potremmo avere all'ultimo giorno**,
+> Se siamo abituati a pensare in modo greedy, una cosa che ci può venire in mente di fare è questa:
+> ogni giorno, se possiamo scambiare il titolo che abbiamo con quello del giorno, e quello del giorno
+> ci può dare una rendita migliore alla fine, facciamo lo scambio.
+>
+> ![sbagliata](wrong.png)
+>
+> Questo procedimento, però, non sempre ci porta al risultato migliore: a volte conviene evitare uno
+> scambio potenzialmente conveniente, che però ci fa perdere valore subito, per poterne fare uno ancora
+> più conveniente poco dopo. Non possiamo scegliere sul momento senza preoccuparci delle conseguenze:
+> dobbiamo sfruttare i nuovi blocchi!
+>
+> L'idea principale che serve a risolvere il problema è quindi capire cosa scrivere sui titoli. Supponiamo
+> di scrivere su ogni titolo un numero che rappresenta **quanto al massimo potremmo avere all'ultimo giorno**,
 > **se prenderemo questo titolo e poi faremo le scelte migliori possibili**.
 > Con questa idea, un possibile programma corretto è il seguente:
 >
 > ![soluzione](sol.png)
 >
 > Secondo questo programma, scandiamo i titoli dall'ultimo all'indietro dall'ultimo fino al primo, per capire
-> cosa possiamo annotarci sopra (e quale "freccia" mettere). Per l'ultimo ci sono poche scelte: dovremo per
-> forza tenerlo, quindi non mettiamo frecce e annotiamo il valore che acquisisce all'ultimo giorno.
+> cosa possiamo scriverci sopra (e quale "freccia" mettere). Per l'ultimo ci sono poche scelte: dovremo per
+> forza tenerlo, quindi non mettiamo frecce e scriviamo il valore che acquisisce all'ultimo giorno.
 >
 > Per gli altri titoli $i$, iniziamo comunque allo stesso modo, considerando cosa possiamo ottenere se li tenessimo
-> fino alla fine, quindi annotando il valore che acquisirebbero all'ultimo giorno. Poi, però, dobbiamo consideriare
+> fino alla fine, quindi scrivendo il valore che acquisirebbero all'ultimo giorno. Poi, però, dobbiamo consideriare
 > se ad un certo punto ci potrebbe convenire scambiarli con un altro titolo!
 >
 > Iteriamo quindi sui titoli $j$ successivi, verificando prima se lo scambio ci verrebbe accettato dall'intermediario,
@@ -85,5 +96,3 @@ Se hai dei dubbi, prova a sperimentare il funzionamento della pianificazione tit
 > Ripetendo questo procedimento per tutti i titoli, andiamo a costruire il piano di investimento migliore!
 
 Prima di passare alla prossima domanda, assicurati di aver risolto **tutti i livelli** di questa!
-
-**(lezione in costruzione, continua...)**

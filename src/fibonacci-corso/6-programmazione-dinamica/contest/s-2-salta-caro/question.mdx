@@ -9,13 +9,20 @@ Carol vuole partecipare ad una nuova _corsa a pagamento_. Dato che con la prima 
 hanno guadagnato poco, hanno deciso che ora metteranno **solamente rocce a pagamento**!
 In compenso, hanno messo una lavagna ad ogni posizione del percorso, su cui i partecipanti possono
 annotare una loro **preferenza numerica** per ciascuna posizione **prima di cominciare la corsa**.
-Hai a disposizione gli stessi blocchi di prima, più due nuovi per leggere e scrivere sulle lavagne:
+
+Hai a disposizione gli stessi blocchi di prima per ispezionare la situazione:
 
 - `N`: il numero di rocce del percorso.
 - `posizione Carol`: la posizione corrente di Carol.
 - `costo roccia` $i$: il costo $P_i$ in carote per atterrare sulla $i$-esima roccia del percorso (zero per le rocce gratis).
+
+In aggiunta, hai due blocchi nuovi per leggere e scrivere sulle lavagne:
+
 - `scrivi` $x$ `sulla lavagna` $i$: Carol scrive la preferenza $x$ sulla lavagna $i$-esima prima di cominciare la corsa **(nuovo!)**.
 - `preferenza` $i$: il numero che Carol ha scritto sulla lavagna $i$-esima, <u>oppure zero se la lavagna </u>$i$<u>-esima non esiste</u> **(nuovo!)**.
+
+Hai anche gli stessi blocchi di prima per fare la corsa:
+
 - `comincia la corsa`: comincia la corsa dalla posizione di partenza.
 - `avanza`: avanza alla roccia successiva.
 - `salta`: salta oltre alla prossima roccia, atterrando su quella dopo.
@@ -49,13 +56,23 @@ scritto sulle lavagne.
   visualizer={Visualizer}
 />
 
-> Un possibile programma corretto è il seguente:
+> Se siamo abituati a pensare in modo greedy, una cosa che ci può venire in mente di fare è di concludere
+> la corsa facendo solo salti, per toccare meno pietre a pagamento possibile.
+>
+> ![sbagliata](wrong.png)
+>
+> Questo procedimento, però, non sempre ci porta al risultato migliore: a volte conviene avanzare su
+> una roccia davanti a sé, per poter saltare quella dopo molto più cara. Non possiamo scegliere sul
+> momento senza preoccuparci delle conseguenze: dobbiamo sfruttare i nuovi blocchi!
+>
+> L'idea principale che serve a risolvere il problema è quindi capire cosa annotare sulle lavagne. Supponiamo
+> di scrivere su ogni lavagna un numero che rappresenta **quanto ci costa finire il percorso da quel punto in poi**.
+> Con questa idea, un possibile programma corretto è il seguente:
 >
 > ![soluzione](sol.png)
 >
-> Secondo questo programma, prima di cominciare la corsa, scandiamo tutte le rocce dall'ultima tornando
-> indietro verso la prima. Per ciascuna di essere, annotiamo un valore di preferenza sulla lavagna, che
-> corrisponde a **quanto ci costa finire il percorso da quel punto in poi**. Ci viene anche in aiuto che
+> Secondo questo programma, per scrivere sulle lavagne, le scandiamo dall'ultima tornando indietro verso la prima.
+> Per ciascuna di esse dobbiamo scrivere quanto ci costa finire il percorso da lì. Ci viene anche in aiuto che
 > il blocco `preferenza` $i$ restituisce zero per tutte le posizioni $i$ dopo la fine del percorso, che è
 > proprio pari al costo (zero) che abbiamo da quel punto in poi (visto che lì abbiamo già finito).
 >

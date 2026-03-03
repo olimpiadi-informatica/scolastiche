@@ -5,38 +5,53 @@ import testcases from "./testcases.py";
 import Visualizer from "./visualizer.jsx";
 import { Hint } from "~/utils/hint";
 
-Il nuovissimo videogioco _SuperBunny_ è finalmente in commercio! Bunny, il protagonista del videogioco, in ogni livello deve superare $N$ ostacoli numerati da $1$ ad $N$.
-Su ogni ostacolo ci sono $2$ pedane (ad altezze diverse) su cui Bunny può saltare: l'ostacolo numero $i$ è fatto da una pedana più in alto che si trova ad una altezza di $A_i$ metri, e da una pedana più in basso ad un'altezza di $B_i$ metri.
+Dopo il grande successo di _SuperBunny_ è stato rilasciato un sequel: _IperBunny_!
+Questo videogioco è quasi uguale, tranne che c'è un unico grande fossato. In questo fossato sono disposti $N$ pali con due pedane (alta e bassa)
+uno dopo l'altro. Bunny deve quindi saltare da una pedana ad una successiva, senza passare dall'altezza del terreno.
+Come prima, Bunny può scegliere su quale pedana di un palo saltare, e il tempo richiesto per un salto è dato dalla distanza tra le due pedane.
+Il tempo totale impiegato per completare un livello è la somma dei tempi impiegati in ogni salto.
 
-Bunny parte da terra ad altezza $0$ e deve per prima cosa saltare sull'ostacolo numero $1$ scegliendo una delle due pedane. Una volta raggiunto l'ostacolo $1$, sceglierà una delle due pedane dell'ostacolo successivo, il $2$, e ci salterà sopra.
-L'obiettivo del gioco è superare in ordine tutti gli ostacoli fino all'ostacolo numero $N$. Anche se Bunny può scegliere ogni volta su quale pedana di un ostacolo saltare, non tutti i salti sono uguali!
-Infatti, più il salto è grande e più tempo ci vuole per farlo. Per saltare da pedana ad altezza $h$ fino ad una pedana sull'ostacolo successivo ad altezza $k$, Bunny ci metterà una quantità di secondi pari alla _differenza assoluta_ tra $h$ e $k$.
+Hai a disposizione gli stessi blocchi di prima per ispezionare la situazione:
 
-_**Nota:** la differenza assoluta tra $h$ e $k$, in formule $|h - k|$, indica il valore della differenza tra $h$ e $k$ ignorando il segno: quindi $h - k$ se $h > k$ o $k - h$ se $k > h$._
+- `N`: il numero $N$ di fossati.
+- `terreno`: l'altezza di tutti i tratti di terreno.
+- `pedana alta/bassa i`: l'altezza $A_i$ (risp. $B_i$) della $i$-esima pedana alta (risp. in bassa).
+- `distanza tra x e y`: la distanza tra due numeri $x$ e $y$.
 
-Il tempo totale impiegato per completare un livello è la somma dei tempi impiegati in ogni salto. Quanti secondi servono a Bunny per completare il livello?
-Puoi usare questi blocchi:
+In aggiunta, hai questi nuovi blocchi per scrivere e leggere informazioni sulle pedane:
 
-- `N`: il numero $N$ di ostacoli.
-- `pedana alta i`: l'altezza $A_i$ della $i$-esima pedana più in alto.
-- `pedana bassa i`: l'altezza $B_i$ della $i$-esima pedana più in basso.
-- `differenza assoluta tra x e y`: la differenza assoluta $|x - y|$ tra $x$ e $y$.
-- `minimo tra x e y`: il valore minimo tra due numeri $x$ e $y$.
-- `termina in x tempo`: riporta che è possibile raggiungere l'$N$-esimo ostacolo in $x$ tempo.
+- `preferenza pedana alta/bassa i`: il valore scritto sulla pedana alta/bassa $i$-esima **(nuovo!)**.
+- `scrivi x su pedana alta/bassa i`: scrivi sulla pedana alta/bassa $i$-esima il valore $x$ **(nuovo!)**.
+- `direzione pedana corrente è in alto/basso`: vero se la la direzione decisa per la pedana corrente è in alto/basso **(nuovo!)**.
+- `dopo pedana alta/bassa i vai in alto/basso`: decidi una direzione in alto/basso da prendere dopo la pedana alta/bassa $i$-esima **(nuovo!)**.
 
-Inoltre, se ti serve, avrai la possibilità di annotarti un valore a tua scelta su ogni piattaforma, che verrà anche mostrato nella figura, con questi blocchi:
+Infine, hai a disposizione gli stessi blocchi di prima per muoverti nel livello:
 
-- `valore pedana alta i`: il valore scritto sulla pedana alta $i$-esima.
-- `valore pedana bassa i`: il valore scritto sulla pedana bassa $i$-esima.
-- `imposta valore pedana alta i a x`: scrivi sulla pedana alta $i$-esima il valore $x$.
-- `imposta valore pedana bassa i a x`: scrivi sulla pedana bassa $i$-esima il valore $x$.
+- `salta in alto/basso`: salta sulla prossima pedana in alto/basso.
+- `salta sul terreno`: salta da una pedana sul prossimo tratto di terreno.
+- `termina`: concludi il livello.
 
-_**Attenzione:** non ti viene richiesto di ricostruire i salti da fare, basta che calcoli il tempo necessario!_
+Aiuta a Bunny a completare il livello in meno tempo possibile!
 
-_**Avvertimento:** incastrare un blocco grosso in un altro blocco può non essere semplice. Cerca di mettere la **punta sinistra** del blocco grosso nello spazio in cui vuoi inserirlo, per non avere difficoltà!_
+**Attenzione:** per comodità, tutti i blocchi riguardo alle pedane possono essere usati anche sul tratto di terreno iniziale (come se fosse la pedana zero)
+e sul tratto di terreno finale (come se fosse la pedana $N+1$).
 
 <Hint label="suggerimento 1">
-  TODO
+  Il valore di preferenza che scriveremo dovrà servire a guidarci nelle scelte, per cui potremo guardare
+  la preferenza già calcolata per altre pedane per capire cosa conviene fare. Cosa dovrà quindi
+  rappresentare questo valore di preferenza?
+</Hint>
+
+<Hint label="suggerimento 2">
+  Per calcolare i valori di preferenza bisognerà utilizzare un ciclo contatore per scandire tutte le pedane.
+  Conviene scandirle dall'inizio o dalla fine? Ti ricordiamo che per scandire in avanti nel ciclo contatore
+  basta impostare che il ciclo proceda "per 1", mentre per scandire all'indietro bisogna indicare "per -1".
+</Hint>
+
+<Hint label="suggerimento 3">
+  In un solo ciclo contatore, puoi annotare il valore di preferenza delle pedane alta e bassa $i$-esime,
+  e scegliere anche la direzione per le stesse pedane. La direzione potrai poi usarla per seguire la
+  strategia migliore alla fine!
 </Hint>
 
 <Blockly
@@ -47,17 +62,32 @@ _**Avvertimento:** incastrare un blocco grosso in un altro blocco può non esser
   visualizer={Visualizer}
 />
 
-> Un possibile programma corretto è il seguente:
+> Se siamo abituati a pensare in modo greedy, una cosa che ci può venire in mente di fare è questa:
+> per ogni punto in cui ci troviamo, decidiamo di saltare in alto se la pedana in alto è più vicina
+> della pedana in basso, altrimenti saltiamo in basso.
+>
+> ![sbagliata](wrong.png)
+>
+> Questo procedimento, però, non sempre ci porta al risultato migliore: a volte conviene fare un salto
+> più lungo, che però ci consente di fare un percorso più veloce in seguito. Non possiamo scegliere sul
+> momento senza preoccuparci delle conseguenze: dobbiamo sfruttare i nuovi blocchi!
+>
+> L'idea principale che serve a risolvere il problema è quindi capire cosa scrivere sulle pedane. Supponiamo
+> di scrivere su ogni pedana un numero che rappresenta **in quanto tempo possiamo finire il livello da lì**.
+> Con questa idea, un possibile programma corretto è il seguente:
 >
 > ![soluzione](sol.png)
 >
-> In questo programma, segnamo come valore su ciascuna pedana il **tempo minimo per raggiungerla**.
-> Per le pedane sul primo ostacolo, il tempo per raggiungerle è pari alla loro altezza.
-> Per ogni pedana successiva (alta o bassa), il tempo minimo per raggiungerla è pari al minimo tra due cose:
+> In questo programma, iteriamo sulle pedane dall'ultima verso la prima. Sfruttiamo anche che sul terreno
+> finale abbiamo già scritto zero, che è in effetti il tempo che manca da lì. Per le altre pedane (alte
+> o basse), consideriamo prima l'ipotesi di saltare in alto. Salviamo quindi nella variabile `ipotesi`
+> la durata del salto che dovremmo fare, incrementata del valore scritto sulla pedana su cui arriveremmo.
+> Sulla pedana ci segnamo il valore finale ottenuto per l'ipotesi, e la direzione che stiamo considerando (in alto).
+> A questo punto, consideriamo anche l'ipotesi di saltare in basso. Come prima, salviamo nella variabile
+> `ipotesi` la durata del salto che dovremmo fare incrementata del valore scritto sulla pedana su cui arriveremmo.
+> Ora confrontiamo la nuova ipotesi (di saltare in basso) con quella già scritta sulla pedana (di saltare in alto):
+> se la nuova ipotesi ci fa risparmiare tempo, cambiamo la scritta sulla pedana con la nuova ipotesi e ci
+> segnamo di proseguire poi in basso.
 >
-> - se decidiamo di arrivarci dalla pedana alta precedente, allora è pari al tempo minimo (valore) della pedana alta precedente, più la differenza assoluta tra la pedana che stiamo considerando e la pedana alta precedente;
-> - se decidiamo di arrivarci dalla pedana bassa precedente, allora si può calcolare analogamente ma considerando il valore e la differenza assoluta con la pedana bassa precedente.
->
-> Una volta scritti tutti questi valori, il migliore tempo per chiudere il livello sarà il minore
-> tra il tempo minimo (valore) per raggiungere l'ultima pedana alta, e il tempo minimo (valore)
-> per raggiungere l'ultima pedana bassa.
+> Una volta che abbiamo finito di segnarci tutto, per fare la strada migliore
+> basterà seguire le direzioni che ci siamo segnati fino alla fine del percorso!

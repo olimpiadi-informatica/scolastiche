@@ -11,9 +11,17 @@
   message0: N
   output: Number
   colour: 20
-  tooltip: il numero di ostacoli
+  tooltip: il numero di coppie di pedane
   helpUrl: ""
   js: state.N
+
+- type: terreno
+  message0: terreno
+  output: Number
+  colour: 20
+  tooltip: l'altezza di tutti i tratti di terreno
+  helpUrl: ""
+  js: state.H
 
 - type: pedana
   message0: pedana %1 %2
@@ -24,90 +32,162 @@
         - [bassa, B]
     - type: input_value
       check: Integer
-      min: "1"
-      max: state.N
   output: Number
   colour: 20
-  tooltip: l'altezza dell'ostacolo dato
+  tooltip: l'altezza della pedana data
   helpUrl: ""
-  js: state.%1[(%2) - 1]
+  js: |
+    (function(V, i){
+      if (i < 0 || i > state.N+1) exit(false, "non c'è una pedana " + i);
+      if (i === 0 || i === state.N+1) return state.H;
+      return V[i-1];
+    })(state.%1, %2)
 
 - type: differenza assoluta
-  message0: differenza assoluta tra %1 e %2
+  message0: "distanza tra %1\ne %2"
   args0:
     - type: input_value
-      check: Number
+      check: Integer
     - type: input_value
-      check: Number
+      check: Integer
   output: Number
   colour: 20
-  tooltip: la differenza assoluta tra x e y
+  tooltip: la distanza tra due numeri
   helpUrl: ""
   js: Math.abs((%1) - (%2))
 
-- type: minimo
-  message0: minimo tra %1 e %2
+- type: preferenza pedana
+  message0: "preferenza pedana %1 %2"
   args0:
-    - type: input_value
-      check: Number
-    - type: input_value
-      check: Number
-  output: Number
-  colour: 20
-  tooltip: il valore minimo tra x e y
-  helpUrl: ""
-  js: Math.min(%1, %2)
-
-- type: termina
-  message0: termina in %1 tempo
-  args0:
+    - type: field_dropdown
+      options:
+        - [alta, VA]
+        - [bassa, VB]
     - type: input_value
       check: Integer
-      min: "0"
-  previousStatement: null
+  output: Number
   colour: 20
-  tooltip: termina in x tempo
+  tooltip: la preferenza scritta nella pedana data
   helpUrl: ""
   js: |
-    (function(i) {
-      if (i > state.sol) exit(false, "potevi metterci meno di " + i + " tempo");
-      if (i < state.sol) exit(false, "non si può finire il livello in " + i + " tempo");
-      exit(true, i + " è il tempo minimo per finire il livello, complimenti!");
-    })(%1);
+    (function (V, i){
+      if (i < 0 || i > state.N+1) exit(false, "non c'è una pedana " + i);
+      if (i === 0 || i === state.N+1) return state.V[i === 0 ? 0 : 1];
+      return V[i-1];
+    })(state.%1, %2)
 
-- type: valore pedana
-  message0: valore pedana %1 %2
+- type: scrivi preferenza pedana
+  message0: "scrivi %1 su pedana %2 %3"
   args0:
+    - type: input_value
+      check: Integer
     - type: field_dropdown
       options:
         - [alta, VA]
         - [bassa, VB]
     - type: input_value
       check: Integer
-      min: "1"
-      max: state.N
-  output: Number
-  colour: 20
-  tooltip: valore salvato dell'ostacolo dato
-  helpUrl: ""
-  js: state.%1[(%2) - 1]
-
-- type: imposta valore pedana
-  message0: imposta valore pedana %1 %2 a %3
-  args0:
-    - type: field_dropdown
-      options:
-        - [alta, VA]
-        - [bassa, VB]
-    - type: input_value
-      check: Integer
-      min: "1"
-      max: state.N
-    - type: input_value
-      check: Number
   previousStatement: null
   nextStatement: null
   colour: 20
-  tooltip: salva un valore dell'ostacolo dato
+  tooltip: scrivi una preferenza per la pedana data
   helpUrl: ""
-  js: state.%1[(%2) - 1] = %3;
+  js: |
+    (function (V, i, x){
+      if (i < 0 || i > state.N+1) exit(false, "non c'è una pedana " + i);
+      if (i === 0 || i === state.N+1) state.V[i === 0 ? 0 : 1] = x;
+      else V[i-1] = x;
+    })(state.%2, %3, %1);
+
+- type: direzione pedana
+  message0: "direzione pedana corrente è %1"
+  args0:
+    - type: field_dropdown
+      options:
+        - ["in alto", "1"]
+        - ["in basso", "-1"]
+  output: Boolean
+  colour: 20
+  tooltip: se la direzione decisa per la pedana corrente è quella data
+  helpUrl: ""
+  js: |
+    (function (x){
+      if (state.posx === 0 || state.posx === state.N+1) return state.D[state.posx === 0 ? 0 : 1] === x;
+      if (state.posy === state.A[state.posx - 1]) return state.DA[state.posx - 1] === x;
+      else return state.DB[state.posx - 1] === x;
+    })(%1)
+
+- type: scrivi direzione pedana
+  message0: "dopo pedana %1 %2 vai %3"
+  args0:
+    - type: field_dropdown
+      options:
+        - [alta, DA]
+        - [bassa, DB]
+    - type: input_value
+      check: Integer
+    - type: field_dropdown
+      options:
+        - ["in alto", "1"]
+        - ["in basso", "-1"]
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: decidi una direzione da prendere dopo la pedana data
+  helpUrl: ""
+  js: |
+    (function (V, i, x){
+      if (i < 0 || i > state.N+1) exit(false, "non c'è una pedana " + i);
+      if (i === 0 || i === state.N+1) state.D[i === 0 ? 0 : 1] = x;
+      else V[i-1] = x;
+    })(state.%1, %2, parseInt(%3, 10));
+
+- type: salta
+  message0: salta in %1
+  args0:
+    - type: field_dropdown
+      options:
+        - [alto, A]
+        - [basso, B]
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: salta sulla prossima pedana in alto o in basso
+  helpUrl: ""
+  js: |
+    (function(V) {
+      if (state.posx >= state.N) exit(false, "non hai una pedana davanti a te");
+      state.time += Math.abs(state.posy - V[state.posx]);
+      state.posy = V[state.posx];
+      ++state.posx;
+    })(state.%1);
+
+- type: saltaterreno
+  message0: salta sul terreno
+  previousStatement: null
+  nextStatement: null
+  colour: 20
+  tooltip: salta da una pedana sul prossimo tratto di terreno
+  helpUrl: ""
+  js: |
+    (function() {
+      if (state.posx < state.N) exit(false, "non hai un tratto di terreno davanti a te");
+      if (state.posx > state.N) exit(false, "non puoi saltare oltre la fine");
+      state.time += Math.abs(state.posy - state.H);
+      state.posy = state.H;
+      ++state.posx;
+    })();
+
+- type: termina
+  message0: termina
+  previousStatement: null
+  colour: 20
+  tooltip: concludi il livello
+  helpUrl: ""
+  js: |
+    (function() {
+      if (state.posx < state.N+1) exit(false, "non hai finito il livello");
+      if (state.time > state.sol) exit(false, "potevi metterci meno di " + state.time + " tempo");
+      if (state.time < state.sol) exit(false, "PROBLEMA TECNICO");
+      exit(true, "hai finito il livello nel tempo minimo, complimenti!");
+    })();

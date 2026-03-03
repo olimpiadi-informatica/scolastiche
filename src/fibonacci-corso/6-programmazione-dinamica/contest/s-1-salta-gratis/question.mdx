@@ -14,11 +14,14 @@ fine della corsa!
 Il percorso è composto da $N$ rocce, numerate da $1$ a $N$, e la roccia $i$-esima ha un costo di $P_i$.
 Carol comincia subito prima della prima roccia, e deve raggiungere o superare la bandierina finale
 (sull'ultima roccia). In questa prima corsa, gli organizzatori sono stati attenti ad assicurarsi che
-**non ci siano mai due rocce a pagamento di seguito**. Hai a disposizione questi blocchi:
+**non ci siano mai due rocce a pagamento di seguito**. Hai a disposizione questi blocchi per ispezionare la situazione:
 
 - `N`: il numero di rocce del percorso.
 - `posizione Carol`: la posizione corrente di Carol.
 - `costo roccia` $i$: il costo $P_i$ in carote per atterrare sulla $i$-esima roccia del percorso (zero per le rocce gratis).
+
+Inoltre, hai a disposizione questi blocchi per fare la corsa:
+
 - `comincia la corsa`: comincia la corsa dalla posizione di partenza.
 - `avanza`: avanza alla roccia successiva.
 - `salta`: salta oltre alla prossima roccia, atterrando su quella dopo.
