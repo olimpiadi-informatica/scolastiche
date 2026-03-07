@@ -8,8 +8,8 @@ import { Hint } from "~/utils/hint";
 Carol, nota per la sua passione per la corsa ad ostacoli, sta iniziando un nuovo tipo di competizione:
 la **corsa a pagamento**! Il funzionamento è simile a quello della corsa ad ostacoli, solo che invece
 degli ostacoli (su cui non si può mai atterrare) ci sono alcune rocce marroni che sono _a pagamento_.
-Carol può atterrare sulle rocce a pagamento, ma se lo fa dovrà pagare alcune carote di penalità alla
-fine della corsa!
+Carol può atterrare o avanzare sulle rocce a pagamento, ma se lo fa dovrà pagare alcune carote di
+penalità alla fine della corsa! Per non pagare il costo di una roccia marrone, l'unico modo è saltarla.
 
 Il percorso è composto da $N$ rocce, numerate da $1$ a $N$, e la roccia $i$-esima ha un costo di $P_i$.
 Carol comincia subito prima della prima roccia, e deve raggiungere o superare la bandierina finale
@@ -18,7 +18,7 @@ Carol comincia subito prima della prima roccia, e deve raggiungere o superare la
 
 - `N`: il numero di rocce del percorso.
 - `posizione Carol`: la posizione corrente di Carol.
-- `costo roccia` $i$: il costo $P_i$ in carote per atterrare sulla $i$-esima roccia del percorso (zero per le rocce gratis).
+- `costo roccia` $i$: il costo $P_i$ in carote per atterrare o avanzare sulla $i$-esima roccia del percorso (zero per le rocce gratis).
 
 Inoltre, hai a disposizione questi blocchi per fare la corsa:
 
