@@ -1,0 +1,3 @@
+/*! For licenses information, see LICENSES.txt */
+import{g as n}from"../v/1411cde0-commonjs-helper.js";import{a as f}from"../s/cb4f2a9b-react-dom.js";function i(r,s){for(var o=0;o<s.length;o++){const e=s[o];if(typeof e!="string"&&!Array.isArray(e)){for(const t in e)if(t!=="default"&&!(t in r)){const a=Object.getOwnPropertyDescriptor(e,t);a&&Object.defineProperty(r,t,a.get?a:{enumerable:!0,get:()=>e[t]})}}}return Object.freeze(Object.defineProperty(r,Symbol.toStringTag,{value:"Module"}))}var c=f();const p=n(c),l=i({__proto__:null,default:p},[c]);export{p as R,l as a,c as r};
+//# sourceMappingURL=61653262-_virtual_quizms-assets-react.js.map
