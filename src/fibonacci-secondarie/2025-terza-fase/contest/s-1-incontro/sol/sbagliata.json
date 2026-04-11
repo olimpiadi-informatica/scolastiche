@@ -1,0 +1,111 @@
+{
+  "blocks": {
+    "languageVersion": 0,
+    "blocks": [
+      {
+        "type": "start",
+        "id": "y=zq)Uya2A/{vyOtN[i6",
+        "x": -82,
+        "y": 16,
+        "next": {
+          "block": {
+            "type": "controls_whileUntil",
+            "id": "]ziKkMeMpv-r76@(BCI(",
+            "fields": {
+              "MODE": "WHILE"
+            },
+            "inputs": {
+              "BOOL": {
+                "block": {
+                  "type": "logic_compare",
+                  "id": "S:V2PdSQ3c~OwJIW9{`{",
+                  "fields": {
+                    "OP": "LT"
+                  },
+                  "inputs": {
+                    "A": {
+                      "block": {
+                        "type": "posizione",
+                        "id": ",8yz;),NWL+RAkHa$=Lh",
+                        "fields": {
+                          "ARG0": "\"Allie\""
+                        }
+                      }
+                    },
+                    "B": {
+                      "block": {
+                        "type": "N",
+                        "id": "stFS#$|Hn!Xzv+hpl-iZ"
+                      }
+                    }
+                  }
+                }
+              },
+              "DO": {
+                "block": {
+                  "type": "lascia_passare",
+                  "id": "FNorA1AzZ)m[+3D}n|bU",
+                  "fields": {
+                    "ARG0": "\"Allie\""
+                  }
+                }
+              }
+            },
+            "next": {
+              "block": {
+                "type": "controls_whileUntil",
+                "id": "S~-0Ws00,e5HdOk+5W?W",
+                "fields": {
+                  "MODE": "WHILE"
+                },
+                "inputs": {
+                  "BOOL": {
+                    "block": {
+                      "type": "logic_compare",
+                      "id": "DIEo4HPKew?l,=!Q-f)G",
+                      "fields": {
+                        "OP": "LT"
+                      },
+                      "inputs": {
+                        "A": {
+                          "block": {
+                            "type": "posizione",
+                            "id": "XCP6#Cs(,t!CP{d=}iS!",
+                            "fields": {
+                              "ARG0": "\"Carol\""
+                            }
+                          }
+                        },
+                        "B": {
+                          "block": {
+                            "type": "N",
+                            "id": "Bt`sHqxYq@,U$S=;z|D{"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "DO": {
+                    "block": {
+                      "type": "lascia_passare",
+                      "id": "e:+^AWquQ,Pk;Zg+TE]`",
+                      "fields": {
+                        "ARG0": "\"Carol\""
+                      }
+                    }
+                  }
+                },
+                "next": {
+                  "block": {
+                    "type": "termina",
+                    "id": "o}zK_/Qm50});;5dOr4!"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

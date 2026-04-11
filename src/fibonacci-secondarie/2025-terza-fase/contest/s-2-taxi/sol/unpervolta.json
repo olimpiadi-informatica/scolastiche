@@ -1,0 +1,45 @@
+{
+  "blocks": {
+    "languageVersion": 0,
+    "blocks": [
+      {
+        "type": "start",
+        "id": "y=zq)Uya2A/{vyOtN[i6",
+        "x": 40,
+        "y": 20,
+        "next": {
+          "block": {
+            "type": "controls_repeat_ext",
+            "id": "bE3|q*N*6ZYm|$sGS*.x",
+            "inputs": {
+              "TIMES": {
+                "block": {
+                  "type": "N",
+                  "id": "Il$r!xbU;AD~+=Ik3m6="
+                }
+              },
+              "DO": {
+                "block": {
+                  "type": "far_salire",
+                  "id": "7RfTTKCyq4pd(UrgXycV",
+                  "next": {
+                    "block": {
+                      "type": "far_partire",
+                      "id": "59XR1=0i02@Q92]sO2w("
+                    }
+                  }
+                }
+              }
+            },
+            "next": {
+              "block": {
+                "type": "termina",
+                "id": "X?BLwC.L(,yCx/ttj;;y"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

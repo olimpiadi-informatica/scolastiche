@@ -574,6 +574,30 @@ allow_answer_edit = false
 score_visibility = "finalized"
 matching_rules = []
 
+[fibonacci-secondarie-2025-terza-fase]
+name = "Edizione 2025/26 - Terza fase"
+long_name = "Giochi di Fibonacci 2025/2026 - Fase finale"
+problem_ids = []
+user_data = [
+    { name = "surname", label = "Cognome", type = "text" },
+    { name = "name", label = "Nome", type = "text" },
+]
+has_variants = true
+online_settings = {
+    contest_window = {
+        start = 2000-01-01T00:00:00,
+        end = 2099-12-31T23:59:59,
+    },
+    duration = 180,
+    allow_restart = true,
+}
+has_offline = false
+allow_student_import = false
+allow_student_edit = false
+allow_answer_edit = false
+score_visibility = "finalized"
+matching_rules = []
+
 [scolastiche-2019]
 name = "Edizione 2019"
 long_name = "Olimpiadi Italiane di Informatica 2019/2020 - Selezione scolastica"

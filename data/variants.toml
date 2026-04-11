@@ -238,6 +238,16 @@ variant_ids = [1]
 pdf_variant_ids = []
 pdf_per_school = 1
 
+[fibonacci-secondarie-2025-terza-fase]
+secret = ""
+entry = "fibonacci-secondarie/2025-terza-fase/contest/contest.mdx"
+header = "fibonacci-secondarie/2025-terza-fase/header.md"
+shuffle_problems = false
+shuffle_answers = true
+variant_ids = [1]
+pdf_variant_ids = []
+pdf_per_school = 1
+
 [scolastiche-2019]
 secret = ""
 entry = "scolastiche/2019/contest/contest.mdx"

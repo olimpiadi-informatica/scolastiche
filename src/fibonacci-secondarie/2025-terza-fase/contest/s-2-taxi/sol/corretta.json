@@ -1,0 +1,100 @@
+{
+  "blocks": {
+    "languageVersion": 0,
+    "blocks": [
+      {
+        "type": "start",
+        "id": "y=zq)Uya2A/{vyOtN[i6",
+        "x": 40,
+        "y": 20,
+        "next": {
+          "block": {
+            "type": "controls_repeat_ext",
+            "id": "!C;Fn3+1XOrh#9pZ2CNT",
+            "inputs": {
+              "TIMES": {
+                "block": {
+                  "type": "math_arithmetic",
+                  "id": "}@3(M2+Of!zz,=YncYn?",
+                  "fields": {
+                    "OP": "MINUS"
+                  },
+                  "inputs": {
+                    "A": {
+                      "block": {
+                        "type": "N",
+                        "id": "fIPu}FPpsNuIR-/S*k,B"
+                      }
+                    },
+                    "B": {
+                      "block": {
+                        "type": "math_number",
+                        "id": "7x$]07SjYu84}!THk!eJ",
+                        "fields": {
+                          "NUM": 1
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "DO": {
+                "block": {
+                  "type": "controls_if",
+                  "id": "]2yxwK/ZyY8FLhaj.ic,",
+                  "extraState": {
+                    "hasElse": true
+                  },
+                  "inputs": {
+                    "IF0": {
+                      "block": {
+                        "type": "colori_uguali",
+                        "id": "Gg)IFa[0Zhcn$GCid*vu"
+                      }
+                    },
+                    "DO0": {
+                      "block": {
+                        "type": "far_salire",
+                        "id": "J5wUMe|^r!I+[J4xkX*L"
+                      }
+                    },
+                    "ELSE": {
+                      "block": {
+                        "type": "far_salire",
+                        "id": "h/W2I$P-]:PjHyIb95@D",
+                        "next": {
+                          "block": {
+                            "type": "far_partire",
+                            "id": "b#8R|tD,1u`)PiLEiApG"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "next": {
+              "block": {
+                "type": "far_salire",
+                "id": ")iVNgQRjCQUaw+g%#~-.",
+                "next": {
+                  "block": {
+                    "type": "far_partire",
+                    "id": "6kzjUVZ-W*]gULNE$%,I",
+                    "next": {
+                      "block": {
+                        "type": "termina",
+                        "id": "Wnei.lVM;#/f$0HsesIR"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

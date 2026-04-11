@@ -1,0 +1,353 @@
+{
+  "blocks": {
+    "languageVersion": 0,
+    "blocks": [
+      {
+        "type": "start",
+        "id": "y=zq)Uya2A/{vyOtN[i6",
+        "x": 106,
+        "y": -17,
+        "next": {
+          "block": {
+            "type": "variables_set",
+            "id": "rBP;6[YqJ9=xXjeBbqrk",
+            "fields": {
+              "VAR": {
+                "id": "14,A@B;B+A^0e$r@jNIg"
+              }
+            },
+            "inputs": {
+              "VALUE": {
+                "block": {
+                  "type": "math_number",
+                  "id": ")zXs~kOY/])JGcm|h::H",
+                  "fields": {
+                    "NUM": 1
+                  }
+                }
+              }
+            },
+            "next": {
+              "block": {
+                "type": "variables_set",
+                "id": "~wDE06E4nHAb)6n3;H$3",
+                "fields": {
+                  "VAR": {
+                    "id": "?qrB;67|9KNdUR%XVP*-"
+                  }
+                },
+                "inputs": {
+                  "VALUE": {
+                    "block": {
+                      "type": "math_number",
+                      "id": "9iT/V;sI3#}~cW5X)rYG",
+                      "fields": {
+                        "NUM": 0
+                      }
+                    }
+                  }
+                },
+                "next": {
+                  "block": {
+                    "type": "controls_whileUntil",
+                    "id": "SNv^]Ox;09$c-]h;D8-k",
+                    "fields": {
+                      "MODE": "WHILE"
+                    },
+                    "inputs": {
+                      "BOOL": {
+                        "block": {
+                          "type": "logic_compare",
+                          "id": "YH~z.XJ[%{t@,@n;W1((",
+                          "fields": {
+                            "OP": "LTE"
+                          },
+                          "inputs": {
+                            "A": {
+                              "block": {
+                                "type": "variables_get",
+                                "id": "ko2`r0x:pEm7]E:wRfa;",
+                                "fields": {
+                                  "VAR": {
+                                    "id": "14,A@B;B+A^0e$r@jNIg"
+                                  }
+                                }
+                              }
+                            },
+                            "B": {
+                              "block": {
+                                "type": "N",
+                                "id": "B93~q{g-:Fl[-mo:s0FX"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "DO": {
+                        "block": {
+                          "type": "controls_whileUntil",
+                          "id": ",#o(s!qHu:/9#w:K;0Ll",
+                          "fields": {
+                            "MODE": "WHILE"
+                          },
+                          "inputs": {
+                            "BOOL": {
+                              "block": {
+                                "type": "logic_operation",
+                                "id": "b3.lx}QOn^)$xj,5KU,?",
+                                "fields": {
+                                  "OP": "AND"
+                                },
+                                "inputs": {
+                                  "A": {
+                                    "block": {
+                                      "type": "logic_compare",
+                                      "id": "5MLROhy{S:OnaFh8^TCe",
+                                      "fields": {
+                                        "OP": "LTE"
+                                      },
+                                      "inputs": {
+                                        "A": {
+                                          "block": {
+                                            "type": "variables_get",
+                                            "id": "!x.g{R?tg5WF8_:On-O9",
+                                            "fields": {
+                                              "VAR": {
+                                                "id": "14,A@B;B+A^0e$r@jNIg"
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "B": {
+                                          "block": {
+                                            "type": "N",
+                                            "id": "}r)z1/gFHDolB+*n{^HU"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "B": {
+                                    "block": {
+                                      "type": "logic_compare",
+                                      "id": "mt7bDNF[$_8v3*;qd2qP",
+                                      "fields": {
+                                        "OP": "LTE"
+                                      },
+                                      "inputs": {
+                                        "A": {
+                                          "block": {
+                                            "type": "costo_chiosco",
+                                            "id": "UEf7ZlCbm(YTZ2w[J}kM",
+                                            "inputs": {
+                                              "ARG0": {
+                                                "block": {
+                                                  "type": "posizione",
+                                                  "id": "%?RcNSLb5^OWQYt[7WuQ"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "B": {
+                                          "block": {
+                                            "type": "costo_chiosco",
+                                            "id": "u8$KSaF?`vGI=ag*?#Z_",
+                                            "inputs": {
+                                              "ARG0": {
+                                                "block": {
+                                                  "type": "variables_get",
+                                                  "id": "[iK^YY~~ZkHX)@*TAeWz",
+                                                  "fields": {
+                                                    "VAR": {
+                                                      "id": "14,A@B;B+A^0e$r@jNIg"
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "DO": {
+                              "block": {
+                                "type": "math_change",
+                                "id": "4ltfR1/-mP0:,x{TVT7|",
+                                "fields": {
+                                  "VAR": {
+                                    "id": "?qrB;67|9KNdUR%XVP*-"
+                                  }
+                                },
+                                "inputs": {
+                                  "DELTA": {
+                                    "shadow": {
+                                      "type": "math_number",
+                                      "id": ",BUayqPSY#f49zM/aD*@",
+                                      "fields": {
+                                        "NUM": 1
+                                      }
+                                    },
+                                    "block": {
+                                      "type": "lunghezza_tratto",
+                                      "id": "gU*XkZm!on`;}W(k7Qt[",
+                                      "inputs": {
+                                        "ARG0": {
+                                          "block": {
+                                            "type": "variables_get",
+                                            "id": "o2k:v{7v(WnTU*yoOJ5[",
+                                            "fields": {
+                                              "VAR": {
+                                                "id": "14,A@B;B+A^0e$r@jNIg"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "math_change",
+                                    "id": "{uA5ONdU$~gJ:y:1sNmu",
+                                    "fields": {
+                                      "VAR": {
+                                        "id": "14,A@B;B+A^0e$r@jNIg"
+                                      }
+                                    },
+                                    "inputs": {
+                                      "DELTA": {
+                                        "shadow": {
+                                          "type": "math_number",
+                                          "id": "/={z74/FuYG,GHG]yvWu",
+                                          "fields": {
+                                            "NUM": 1
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "compra_carote",
+                              "id": "ug0wy7_J]=kSn2hcxZ=:",
+                              "inputs": {
+                                "ARG0": {
+                                  "block": {
+                                    "type": "variables_get",
+                                    "id": "%:T)@YfDA7IYn$RsoEwm",
+                                    "fields": {
+                                      "VAR": {
+                                        "id": "?qrB;67|9KNdUR%XVP*-"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "variables_set",
+                                  "id": "l)qUdAFJ7fnZZr7o7AQH",
+                                  "fields": {
+                                    "VAR": {
+                                      "id": "?qrB;67|9KNdUR%XVP*-"
+                                    }
+                                  },
+                                  "inputs": {
+                                    "VALUE": {
+                                      "block": {
+                                        "type": "math_number",
+                                        "id": "Z$yHI%VrHEgvlLEt$d*6",
+                                        "fields": {
+                                          "NUM": 0
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "controls_whileUntil",
+                                      "id": "Q#PFFz_:eqc+b}A,U|@G",
+                                      "fields": {
+                                        "MODE": "WHILE"
+                                      },
+                                      "inputs": {
+                                        "BOOL": {
+                                          "block": {
+                                            "type": "logic_compare",
+                                            "id": "7P%$6u;g$yFCud~5Dr/l",
+                                            "fields": {
+                                              "OP": "LT"
+                                            },
+                                            "inputs": {
+                                              "A": {
+                                                "block": {
+                                                  "type": "posizione",
+                                                  "id": "/o)TNrD,cQ;Uuf0i=0Yp"
+                                                }
+                                              },
+                                              "B": {
+                                                "block": {
+                                                  "type": "variables_get",
+                                                  "id": "LfgnaYi6XHnJ)QzuEnQU",
+                                                  "fields": {
+                                                    "VAR": {
+                                                      "id": "14,A@B;B+A^0e$r@jNIg"
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "DO": {
+                                          "block": {
+                                            "type": "avanza_mangia",
+                                            "id": "ZIOJ0=)=y1{Nvx#=lRAo"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "next": {
+                      "block": {
+                        "type": "termina",
+                        "id": "zSsRVJG?,hcj$9d%mZ7C"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "variables": [
+    {
+      "name": "next_pos",
+      "id": "14,A@B;B+A^0e$r@jNIg"
+    },
+    {
+      "name": "totale_car",
+      "id": "?qrB;67|9KNdUR%XVP*-"
+    }
+  ]
+}

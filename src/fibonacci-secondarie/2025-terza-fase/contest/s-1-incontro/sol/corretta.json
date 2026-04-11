@@ -1,0 +1,94 @@
+{
+  "blocks": {
+    "languageVersion": 0,
+    "blocks": [
+      {
+        "type": "start",
+        "id": "y=zq)Uya2A/{vyOtN[i6",
+        "x": 40,
+        "y": 20,
+        "next": {
+          "block": {
+            "type": "controls_whileUntil",
+            "id": "WMbQukQXQ0YH6m=O@:~,",
+            "fields": {
+              "MODE": "UNTIL"
+            },
+            "inputs": {
+              "BOOL": {
+                "block": {
+                  "type": "vicine",
+                  "id": "0KrJP(`@u@gbqnw{9qAY"
+                }
+              },
+              "DO": {
+                "block": {
+                  "type": "controls_if",
+                  "id": "rhL/eOg+{L7i^4dwiO-W",
+                  "extraState": {
+                    "hasElse": true
+                  },
+                  "inputs": {
+                    "IF0": {
+                      "block": {
+                        "type": "logic_compare",
+                        "id": "pO^woH9(NJnllH#_Nc#E",
+                        "fields": {
+                          "OP": "LT"
+                        },
+                        "inputs": {
+                          "A": {
+                            "block": {
+                              "type": "posizione",
+                              "id": "]x|s4gnNPY4`Ez~3-`S@",
+                              "fields": {
+                                "ARG0": "\"Allie\""
+                              }
+                            }
+                          },
+                          "B": {
+                            "block": {
+                              "type": "posizione",
+                              "id": "$r-ra{lQj6s?[wTeIyf4",
+                              "fields": {
+                                "ARG0": "\"Carol\""
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "DO0": {
+                      "block": {
+                        "type": "lascia_passare",
+                        "id": "GQbUw__;(|Q]Ly6[=Tiw",
+                        "fields": {
+                          "ARG0": "\"Allie\""
+                        }
+                      }
+                    },
+                    "ELSE": {
+                      "block": {
+                        "type": "lascia_passare",
+                        "id": "@4oC]2(h^kOo[.~UyBsm",
+                        "fields": {
+                          "ARG0": "\"Carol\""
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "next": {
+              "block": {
+                "type": "termina",
+                "id": "s@$M/@dpC{H;Xt/zYpdq"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

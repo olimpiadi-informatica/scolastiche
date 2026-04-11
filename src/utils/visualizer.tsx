@@ -39,10 +39,16 @@ const VisualizerContext = createContext<ContextProps>({
 type CanvasProps = {
   gravity?: "top" | "bottom";
   scale?: number;
+  bbox?: (number | undefined)[];
   children: ReactNode;
 };
 
-export function Canvas({ gravity = "top", scale = 1, children }: CanvasProps) {
+export function Canvas({
+  gravity = "top",
+  scale = 1,
+  bbox = [undefined, undefined, undefined, undefined],
+  children,
+}: CanvasProps) {
   const [objects, setObjects] = useState<Record<string, BoundingBox>>({});
 
   const setBoundingBox = useCallback((id: string, box: BoundingBox) => {
@@ -64,9 +70,13 @@ export function Canvas({ gravity = "top", scale = 1, children }: CanvasProps) {
     if (gravity === "bottom") {
       [hMin, hMax] = [-hMax, -hMin];
     }
+    if (bbox[0] != null) wMin = bbox[0] * scale;
+    if (bbox[2] != null) wMax = bbox[2] * scale;
+    if (bbox[1] != null) hMin = bbox[1] * scale;
+    if (bbox[3] != null) hMax = bbox[3] * scale;
 
     return { wMin, wMax, hMin, hMax };
-  }, [objects, gravity]);
+  }, [objects, gravity, bbox, scale]);
 
   return (
     <VisualizerContext.Provider value={{ gravity, scale, setBoundingBox }}>
