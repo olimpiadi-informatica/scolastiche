@@ -61,42 +61,51 @@ _**Nota**: il furgone frigorifero può dover fare viaggi anche dopo il minuto $N
 />
 
 > Per risolvere questo problema dobbiamo usare una tecnica chiamata [_programmazione dinamica_](https://training.olinfo.it/quizms/fibonacci-corso-6-programmazione-dinamica).
-> Infatti, anche se in questo problema dobbiamo prendere una serie di decisioni (se far partire o far aspettare il furgone),
-> non possiamo prendere le decisioni in modo [_greedy_](https://training.olinfo.it/quizms/fibonacci-corso-5-algoritmi-greedy) come nei problemi precedenti,
-> cioè senza pensare alle conseguenze future. Infatti, decidere se partire o meno ci può far pagare penali diverse sulle casse che arriveranno dopo!
+> Infatti, anche se dobbiamo prendere una serie di decisioni (quando far partire il furgone),
+> non possiamo farlo in modo [_greedy_](https://training.olinfo.it/quizms/fibonacci-corso-5-algoritmi-greedy)
+> (cioè senza considerare le conseguenze future) come nei problemi precedenti: ogni scelta può influenzare le penali delle casse che arriveranno dopo!
 >
-> Nella programmazione dinamica, per guidare le nostre scelte vogliamo prima annotare delle preferenze sulle lavagne che ci guidino nelle nostre decisioni.
-> Come preferenza per il minuto $i$, ci segnamo **quanto dovremmo pagare al minimo dal minuto $i$ in poi**, assumendo che si faccia partire furgone proprio in quel minuto.
-> Mentre che segnamo queste preferenze, possiamo pianificare quale dovrebbe essere il viaggio successivo a quello che potremmo fare al minuto $i$,
-> che è quello che ci consente di pagare quel minimo che abbiamo segnato come preferenza.
+> Nella programmazione dinamica, prima di fare le nostre scelte annotiamo delle informazioni (le preferenze sulle lavagne) che ci guidano nelle decisioni.
+> Per ogni minuto $i$, definiamo la preferenza come **il costo minimo totale da pagare dal minuto $i$ in poi**, assumendo che il furgone parta in quel minuto.
+> Mentre calcoleremo queste preferenze, potremo anche pianificare i viaggi basandoci sulle preferenze calcolate.
 > 
 > Un possibile programma corretto è quindi il seguente:
 > 
 > ![soluzione](./sol.png)
 > 
-> Notiamo che la preferenza del minuto $N$ sarebbe **quanto dovremmo pagare al minimo dal minuto $N$ in poi**, assumendo che il furgone parta in quel minuto,
-> che in realtà è pari a zero carote. Visto che tutte le lavagne partono da zero, non abbiamo bisogno di segnarci questa preferenza.
+> Osserviamo che la preferenza del minuto $N$ è pari a zero: se partiamo all’ultimo minuto, non restano più casse da trasportare e quindi tasse o penali da pagare. 
+> Dato che le lavagne partono tutte dal valore zero, non serve scriverla (né pianificare ulteriori viaggi dopo quel minuto). 
 > 
-> Per segnarci le preferenze, partiamo quindi dal penultimo minuto andando a ritroso fino al primo.
-> Per ogni minuto $i$, scriviamo inizialmente sulla lavagna un valore molto alto (99999) come segnaposto, che poi andremo ad abbassare.
-> Impostiamo quindi una variabile `tasse` che include sia la penale della cassa $i+1$ che dovrà aspettare, che le tasse di stazionamento che pagheremo fino alla prossima partenza.
-> Proviamo quindi diverse possibilità su quanto tempo $j$ aspettare prima di far partire il furgone successivo, a partire da un minimo di $2$ minuti fino ad un massimo di $10$.
-> Per ogni tentativo, aggiorniamo le `tasse` aggiungendo una tassa di una carota per ognuna delle $j-1$ casse che stiamo facendo aspettare in quel minuto.
-> Calcoliamo quindi il costo totale sommando le tasse attuali al valore della preferenza del minuto $i+j$ a cui faremmo il prossimo viaggio,
-> che ci dice quanto spenderemo da quel punto in poi. Se questo totale è è minore di quello già presente sulla lavagna $i$,
-> possiamo aggiornare la lavagna con il nuovo valore e pianificare un viaggio al minuto $i+j$ come successivo di quello al minuto $i$.
+> Calcoliamo quindi le altre preferenze a ritroso, dal minuto $N-1$ fino al minuto $1$. Per ogni minuto $i$, la scelta che dobbiamo prendere è _dopo quanto tempo
+> far partire il viaggio successivo_. Supponiamo di aspettare $j$ minuti prima di far partire il prossimo viaggio al minuto $i+j$. Durante questi $j$ minuti:
 >
-> A questo punto, abbiamo calcolato le preferenze per tutti i minuti dal primo in poi, ma ci manca da decidere quando fare il primo viaggio.
-> Facciamo questa scelta in modo simile, salvando la preferenza relativa sul minuto $0$, con la sola differenza che possiamo partire già dopo un minuto
-> e non dobbiamo considerare nessuna penale per il primo viaggio.
+> - dovremo pagare ogni minuto una tassa di stazionamento sempre più alta ($1, 2, \ldots, j-1$ carote), man mano che si accumulano le casse in attesa;
+> - la cassa che arriva al primo di questi minuti (e quindi al minuto $i+1$) dovrà pagare anche la penale.
+>
+> Dobbiamo quindi calcolare il costo totale di questa scelta come la penale e tasse di stazionamento accumulate durante l’attesa,
+> più la preferenza del minuto $i+j$, e cioè il costo minimo che dobbiamo pagare da quel momento in poi.
+>
+> Iniziamo quindi impostando la preferenza del minuto $i$ ad un valore molto alto (99999), che rappresenta il costo di un'attesa molto lunga.
+> Questo è un valore iniziale che poi abbasseremo man mano che proveremo le varie scelte per l'attesa $j$.
+> Impostiamo anche una variabile `tasse` al valore della penale della cassa $i+1$ che dovrà aspettare al caldo, e a cui poi aggiungeremo le tasse di stazionamento.
+>
+> Proviamo quindi tutti i valori ragionevoli di attesa $j$ (da $2$ a $10$ minuti), cercando quello che minimizza il costo totale.
+> Per ogni tentativo, aggiorniamo le `tasse` aggiungendo la tassa di stazionamento che dovremo pagare in quel minuto,
+> che è pari ad una carota per ognuna delle $j-1$ casse che stiamo facendo aspettare in quel minuto.
+> Calcoliamo quindi il costo totale della scelta corrente, sommando le tasse attuali al valore della preferenza del minuto $i+j$ in cui faremmo il prossimo viaggio,
+> (cioè quanto spenderemmo da quel momento in poi). Se questo totale è minore di quello già presente sulla lavagna $i$, vuol dire che abbiamo trovato una scelta migliore.
+> In questo caso, aggiorniamo la lavagna del minuto $i$ e pianifichiamo il viaggio al minuto $i+j$ come successivo a quello al minuto $i$.
+>
+> A questo punto abbiamo calcolato tutte le preferenze dal minuto $1$ in poi, ma dobbiamo ancora decidere quando far partire il primo viaggio.
+> Possiamo farlo allo stesso modo, salvando la preferenza relativa sul minuto $0$, con la differenza che possiamo partire già dopo un minuto
+> (e quindi $j$ va da $1$ a $10$ minuti) e non ci sono penali da includere nelle `tasse` (all'inizio nessuna cassa deve aspettare al caldo).
 > 
-> **_Nota:_** Il motivo per il quale è sufficiente scegliere il prossimo viaggio fino al massimo a 10 minuti dopo da quello corrente,
-> è legato alla velocità con cui cresce la tassa di stazionamento.
+> **_Nota:_** Il motivo per cui è sufficiente considerare al massimo $10$ minuti di attesa è legato alla veloce crescita della tassa di stazionamento.
 > Dato che ad ogni minuto arriva una cassa e bisogna pagare la tassa per lei e per tutte quelle già presenti,
 > dopo $1$ minuto paghiamo $1$, dopo $2$ minuti paghiamo $1+2$, dopo 3 minuti paghiamo $1+2+3$, e così via.
 > Se il prossimo viaggio fosse pianificato dopo $11$ minuti, dovremmo quindi pagare tasse dal primo al decimo minuto,
-> per un totale di $10+9+\ldots+2+1$ $=$ $\frac{10 \times 11}{2} = 55$.
+> per un totale di $1+2+\ldots+9+10$ $=$ $\frac{10 \times 11}{2} = 55$.
 > Dato che in tutti i livelli la massima penale $M$ per una cassa non supera mai $30$, aspettare così tanto non è mai conveniente!
-> Infatti, piuttosto che aspettare $11$ minuti e pagare $55$ di stazionamento, tanto vale aspettarne $5$ pagando $10$ di stazionamento,
+> Infatti, piuttosto che aspettare $11$ minuti e pagare $55$ di stazionamento, conviene aspettarne $5$ pagando $10$ di stazionamento,
 > poi aspettare gli altri $6$ pagando $15$ di stazionamento, anche pagando una penale in più del costo massimo $M = 30$.
 > Infatti $10 + 15 + 30 = 55$, lo stesso che se non avessimo fatto il viaggio in più!
