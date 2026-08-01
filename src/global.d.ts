@@ -1498,12 +1498,14 @@ declare module "*.asy?h=990" {
 
 declare module "*.md" {
   import type { ComponentType } from "react";
+
   const content: ComponentType<any>;
   export default content;
 }
 
 declare module "*.mdx" {
   import type { ComponentType } from "react";
+
   const content: ComponentType<any>;
   export default content;
 }

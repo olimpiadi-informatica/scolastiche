@@ -1,6 +1,7 @@
-ignoredBuiltDependencies:
-  - '@swc/core'
-  - esbuild
+allowBuilds:
+  '@swc/core': false
+  esbuild: false
+  sharp: true
 
-onlyBuiltDependencies:
-  - sharp
+minimumReleaseAgeExclude:
+  - '@olinfo/*'
