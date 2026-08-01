@@ -1,5 +1,5 @@
 Name: zod
-Version: 4.3.6
+Version: 4.4.3
 License: MIT
 Private: false
 Description: TypeScript-first schema declaration and validation library with static type inference
@@ -34,11 +34,11 @@ SOFTWARE.
 ---
 
 Name: react
-Version: 19.2.5
+Version: 19.2.8
 License: MIT
 Private: false
 Description: React is a JavaScript library for building user interfaces.
-Repository: https://github.com/facebook/react.git
+Repository: https://github.com/react/react.git
 Homepage: https://react.dev/
 License Text:
 ===
@@ -68,11 +68,11 @@ SOFTWARE.
 ---
 
 Name: react-dom
-Version: 19.2.5
+Version: 19.2.8
 License: MIT
 Private: false
 Description: React package for working with the DOM.
-Repository: https://github.com/facebook/react.git
+Repository: https://github.com/react/react.git
 Homepage: https://react.dev/
 License Text:
 ===
@@ -136,7 +136,7 @@ SOFTWARE.
 ---
 
 Name: katex
-Version: 0.16.45
+Version: 0.16.47
 License: MIT
 Private: false
 Description: Fast math typesetting for the web.
@@ -170,7 +170,7 @@ SOFTWARE.
 ---
 
 Name: @shikijs/engine-oniguruma
-Version: 4.0.2
+Version: 4.4.1
 License: MIT
 Private: false
 Description: Engine for Shiki using Oniguruma RegExp engine in WebAssembly
@@ -206,7 +206,7 @@ SOFTWARE.
 ---
 
 Name: @shikijs/langs
-Version: 4.0.2
+Version: 4.4.1
 License: MIT
 Private: false
 Description: TextMate grammars for Shiki in ESM
@@ -242,7 +242,7 @@ SOFTWARE.
 ---
 
 Name: @shikijs/themes
-Version: 4.0.2
+Version: 4.4.1
 License: MIT
 Private: false
 Description: TextMate themes for Shiki in ESM
@@ -278,7 +278,7 @@ SOFTWARE.
 ---
 
 Name: @olinfo/quizms
-Version: 5.0.3
+Version: 5.0.4
 License: MIT
 Private: false
 Author: Alessandro Bortolin <bortolin.alessandro@outlook.it>
@@ -310,7 +310,7 @@ SOFTWARE.
 ---
 
 Name: date-fns
-Version: 4.1.0
+Version: 4.4.0
 License: MIT
 Private: false
 Description: Modern JavaScript date utility library
@@ -346,7 +346,7 @@ SOFTWARE.
 ---
 
 Name: @ag-grid-community/locale
-Version: 35.2.1
+Version: 35.3.1
 License: MIT
 Private: false
 Description: Localisation Module for AG Grid, providing translations in 31 languages.
@@ -357,7 +357,7 @@ Author: AG Grid <info@ag-grid.com>
 ---
 
 Name: ag-grid-community
-Version: 35.2.1
+Version: 35.3.1
 License: MIT
 Private: false
 Description: Advanced Data Grid / Data Table supporting Javascript / Typescript / React / Angular / Vue
@@ -368,7 +368,7 @@ Author: Sean Landsman <sean@thelandsmans.com>
 ---
 
 Name: ag-grid-react
-Version: 35.2.1
+Version: 35.3.1
 License: MIT
 Private: false
 Description: AG Grid React Component
@@ -531,8 +531,188 @@ SOFTWARE.
 
 ---
 
+Name: @noble/hashes
+Version: 2.2.0
+License: MIT
+Private: false
+Description: Audited & minimal 0-dependency JS implementation of SHA, RIPEMD, BLAKE, HMAC, HKDF, PBKDF & Scrypt
+Repository: git+https://github.com/paulmillr/noble-hashes.git
+Homepage: https://paulmillr.com/noble/
+Author: Paul Miller (https://paulmillr.com)
+License Text:
+===
+
+The MIT License (MIT)
+
+Copyright (c) 2022 Paul Miller (https://paulmillr.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+---
+
+Name: regexparam
+Version: 3.0.0
+License: MIT
+Private: false
+Description: A tiny (399B) utility that converts route patterns into RegExp. Limited alternative to `path-to-regexp` 🙇‍
+Repository: undefined
+Author: Luke Edwards <luke.edwards05@gmail.com> (https://lukeed.com)
+License Text:
+===
+
+The MIT License (MIT)
+
+Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+---
+
+Name: wouter
+Version: 3.10.0
+License: Unlicense
+Private: false
+Description: Minimalist-friendly ~1.5KB router for React
+Repository: git+https://github.com/molefrog/wouter.git
+Author: Alexey Taktarov <molefrog@gmail.com>
+
+---
+
+Name: use-sync-external-store
+Version: 1.6.0
+License: MIT
+Private: false
+Description: Backwards compatible shim for React's useSyncExternalStore. Works with any React that supports hooks.
+Repository: https://github.com/facebook/react.git
+License Text:
+===
+
+MIT License
+
+Copyright (c) Meta Platforms, Inc. and affiliates.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+Name: swr
+Version: 2.4.2
+License: MIT
+Private: false
+Description: React Hooks library for remote data fetching
+Repository: undefined
+Homepage: https://swr.vercel.app
+License Text:
+===
+
+MIT License
+
+Copyright (c) 2023 Vercel, Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+Name: dequal
+Version: 2.0.3
+License: MIT
+Private: false
+Description: A tiny (304B to 489B) utility for check for deep equality
+Repository: undefined
+Author: Luke Edwards <luke.edwards05@gmail.com> (https://lukeed.com)
+License Text:
+===
+
+The MIT License (MIT)
+
+Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+---
+
 Name: ua-parser-js
-Version: 2.0.9
+Version: 2.0.10
 License: AGPL-3.0-or-later
 Private: false
 Description: Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent & Client Hints data. Supports browser & node.js environment
@@ -540,8 +720,10 @@ Repository: https://github.com/faisalman/ua-parser-js.git
 Homepage: https://uaparser.dev
 Author: Faisal Salman <f@faisalman.com> (http://faisalman.com)
 Contributors:
+  23tux <hubert.hoelzl@atalanda.com>
   Aamir Poonawalla <aamir@urx.com>
   Admas <mollases@users.noreply.github.com>
+  Aidan Nulman <anulman@gmail.com>
   Aiyush <aiyushdhar85@gmail.com>
   algenon <m@antonz.ru>
   Alvin Portillo <alvin@8thwall.com>
@@ -556,8 +738,11 @@ Contributors:
   Bendeguz <symunona@gmail.com>
   Benjamin Bertrand <bertrand.design@gmail.com>
   Benjamin Urban <benjamin.urban@sueddeutsche.de>
+  Benxamin <bertrand.design@gmail.com>
   boneyao <admin@boneyao.com>
+  carel155 <carelmartten@gmail.com>
   Carl C Von Lewin <carlchristianlewin@gmail.com>
+  Casey Grimes <courtney.grimes@gmail.com>
   CESAR RAMOS <c@imagenproactiva.com>
   Chad Killingsworth <ckillingsworth@jackhenry.com>
   chenhui9279 <chenhui9279@autohome.com.cn>
@@ -592,14 +777,17 @@ Contributors:
   Garrit Franke <garrit@slashdev.space>
   Gerald Host <me@jacobford.co.uk>
   Germán M. Bravo <german.mb@gmail.com>
+  giantyo26 <72968195+giantyo26@users.noreply.github.com>
   Grigory Dmitrenko <grigory@snsk.ru>
   gulpin <gulping.gulpin@gmail.com>
   Hans Ott <hansott@hotmail.be>
   Harald Reingruber <74898239+haraldreingruber-dedalus@users.noreply.github.com>
+  Harlan Brawer <hbbrawer@twitch.tv>
   Hendrik Helwich <h.helwich@iplabs.de>
   Hermann Ebert <ebbmo@HE.local>
   hr6r <hedian@gmail.com>
   Hyewon Kang <gpffps369@gmail.com>
+  Hyper-Z11 <114817308+hyperz111@users.noreply.github.com>
   Hyunbin <47051820+hyunbinseo@users.noreply.github.com>
   Igor Topal <i.topal@smartweb.com.ua>
   Ildar Kamalov <i.kamalov@adguard.com>
@@ -629,6 +817,7 @@ Contributors:
   Loris Guignard <loris.guignard@gmail.com>
   Lukas Drgon <lukas.drgon@gmail.com>
   Lukas Eipert <leipert@users.noreply.github.com>
+  Maksim Otto <maks.otto06@mail.ru>
   Malash <i@malash.me>
   Martynas <martynas@firmfirm.co>
   Masahiko Sato <masasato@yahoo-corp.jp>
@@ -672,6 +861,7 @@ Contributors:
   Runar Heggset <rukki093@gmail.com>
   Ryohei Shima <shima01dev@gmail.com>
   Sandro Sonntag <sandro.sonntag@adorsys.de>
+  Sébastien Règne <regseb@gmail.com>
   sgautrea <shanegautreau@gmail.com>
   shaharmor <shahar@peer5.com>
   Shane Gautreau <sgautrea@opentext.com>
@@ -682,12 +872,15 @@ Contributors:
   Stiekel <histkc@gmail.com>
   sunny-mwx <30586210+sunny-mwx@users.noreply.github.com>
   sUP <dani3l@gmail.com>
+  Suryaansh Chawla <suryaanshchawla@tutamail.com>
   Sylvain Gizard <sylvain.gizard@gmail.com>
   szchenghuang <szchenghuang@gmail.com>
   Tanguy Krotoff <tkrotoff@gmail.com>
   Tony Tomarchio <tony@tomarchio.cc>
   Ulrich Schmidt <u.schmidt@velian.de>
+  undefined <i@undefined.moe>
   Vadim Kurachevsky <vadim@hmvs.org>
+  Valentina <102604205+Pek5892@users.noreply.github.com>
   Varun Sharma <varunsh@stepsecurity.io>
   XhmikosR <xhmikosr@gmail.com>
   Yılmaz <yilmazdemir36@gmail.com>
@@ -1317,186 +1510,6 @@ END OF TERMS AND CONDITIONS
 
 ---
 
-Name: use-sync-external-store
-Version: 1.6.0
-License: MIT
-Private: false
-Description: Backwards compatible shim for React's useSyncExternalStore. Works with any React that supports hooks.
-Repository: https://github.com/facebook/react.git
-License Text:
-===
-
-MIT License
-
-Copyright (c) Meta Platforms, Inc. and affiliates.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
----
-
-Name: swr
-Version: 2.4.1
-License: MIT
-Private: false
-Description: React Hooks library for remote data fetching
-Repository: undefined
-Homepage: https://swr.vercel.app
-License Text:
-===
-
-MIT License
-
-Copyright (c) 2023 Vercel, Inc.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
----
-
-Name: dequal
-Version: 2.0.3
-License: MIT
-Private: false
-Description: A tiny (304B to 489B) utility for check for deep equality
-Repository: undefined
-Author: Luke Edwards <luke.edwards05@gmail.com> (https://lukeed.com)
-License Text:
-===
-
-The MIT License (MIT)
-
-Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
----
-
-Name: @noble/hashes
-Version: 2.0.1
-License: MIT
-Private: false
-Description: Audited & minimal 0-dependency JS implementation of SHA, RIPEMD, BLAKE, HMAC, HKDF, PBKDF & Scrypt
-Repository: git+https://github.com/paulmillr/noble-hashes.git
-Homepage: https://paulmillr.com/noble/
-Author: Paul Miller (https://paulmillr.com)
-License Text:
-===
-
-The MIT License (MIT)
-
-Copyright (c) 2022 Paul Miller (https://paulmillr.com)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the “Software”), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
----
-
-Name: regexparam
-Version: 3.0.0
-License: MIT
-Private: false
-Description: A tiny (399B) utility that converts route patterns into RegExp. Limited alternative to `path-to-regexp` 🙇‍
-Repository: undefined
-Author: Luke Edwards <luke.edwards05@gmail.com> (https://lukeed.com)
-License Text:
-===
-
-The MIT License (MIT)
-
-Copyright (c) Luke Edwards <luke.edwards05@gmail.com> (lukeed.com)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
----
-
-Name: wouter
-Version: 3.9.0
-License: Unlicense
-Private: false
-Description: Minimalist-friendly ~1.5KB router for React
-Repository: git+https://github.com/molefrog/wouter.git
-Author: Alexey Taktarov <molefrog@gmail.com>
-
----
-
 Name: pure-rand
 Version: 7.0.1
 License: MIT
@@ -1533,7 +1546,7 @@ SOFTWARE.
 ---
 
 Name: @olinfo/quizms-training
-Version: 5.0.0
+Version: 5.0.2
 License: MIT
 Private: false
 Author: Alessandro Bortolin <bortolin.alessandro@outlook.it>
@@ -1791,7 +1804,7 @@ License Text:
 ---
 
 Name: @olinfo/quizms-mdx
-Version: 5.0.2
+Version: 5.0.3
 License: MIT
 Private: false
 Author: Alessandro Bortolin <bortolin.alessandro@outlook.it>
@@ -1823,7 +1836,7 @@ SOFTWARE.
 ---
 
 Name: js-interpreter
-Version: 6.0.1
+Version: 6.0.2
 License: Apache-2.0
 Private: false
 Description: NPM package for https://github.com/NeilFraser/JS-Interpreter
@@ -2038,7 +2051,7 @@ Apache License
 ---
 
 Name: shiki
-Version: 4.0.2
+Version: 4.4.1
 License: MIT
 Private: false
 Description: A beautiful Syntax Highlighter.
@@ -2074,7 +2087,7 @@ SOFTWARE.
 ---
 
 Name: @shikijs/types
-Version: 4.0.2
+Version: 4.4.1
 License: MIT
 Private: false
 Description: Type definitions for Shiki
@@ -2144,7 +2157,7 @@ SOFTWARE.
 ---
 
 Name: @shikijs/primitive
-Version: 4.0.2
+Version: 4.4.1
 License: MIT
 Private: false
 Description: Tokenizer primitives of Shiki
@@ -2217,7 +2230,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ---
 
 Name: property-information
-Version: 7.1.0
+Version: 7.2.0
 License: MIT
 Private: false
 Description: Info on the properties and attributes of the web platform
@@ -2589,7 +2602,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ---
 
 Name: @shikijs/core
-Version: 4.0.2
+Version: 4.4.1
 License: MIT
 Private: false
 Description: Core of Shiki
@@ -2603,212 +2616,6 @@ MIT License
 
 Copyright (c) 2021 Pine Wu
 Copyright (c) 2023 Anthony Fu <https://github.com/antfu>
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
----
-
-Name: @shikijs/engine-javascript
-Version: 4.0.2
-License: MIT
-Private: false
-Description: Engine for Shiki using JavaScript's native RegExp
-Repository: git+https://github.com/shikijs/shiki.git
-Homepage: https://github.com/shikijs/shiki#readme
-Author: Anthony Fu <anthonyfu117@hotmail.com>
-License Text:
-===
-
-MIT License
-
-Copyright (c) 2021 Pine Wu
-Copyright (c) 2023 Anthony Fu <https://github.com/antfu>
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
----
-
-Name: oniguruma-parser
-Version: 0.12.1
-License: MIT
-Private: false
-Description: Parse, validate, traverse, transform, and optimize Oniguruma regular expressions
-Repository: git+https://github.com/slevithan/oniguruma-parser.git
-Author: Steven Levithan
-License Text:
-===
-
-MIT License
-
-Copyright (c) 2025 Steven Levithan
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
----
-
-Name: regex
-Version: 6.1.0
-License: MIT
-Private: false
-Description: Regex template tag with extended syntax, context-aware interpolation, and always-on best practices
-Repository: git+https://github.com/slevithan/regex.git
-Author: Steven Levithan
-License Text:
-===
-
-MIT License
-
-Copyright (c) 2025 Steven Levithan
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
----
-
-Name: regex-utilities
-Version: 2.3.0
-License: MIT
-Private: false
-Description: Tiny helpers for processing regex syntax
-Repository: git+https://github.com/slevithan/regex-utilities.git
-Author: Steven Levithan
-License Text:
-===
-
-MIT License
-
-Copyright (c) 2024 Steven Levithan
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
----
-
-Name: regex-recursion
-Version: 6.0.2
-License: MIT
-Private: false
-Description: Recursive matching plugin for Regex+
-Repository: git+https://github.com/slevithan/regex-recursion.git
-Author: Steven Levithan
-License Text:
-===
-
-MIT License
-
-Copyright (c) 2025 Steven Levithan
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
----
-
-Name: oniguruma-to-es
-Version: 4.3.5
-License: MIT
-Private: false
-Description: Convert Oniguruma patterns to native JavaScript RegExp
-Repository: git+https://github.com/slevithan/oniguruma-to-es.git
-Author: Steven Levithan
-License Text:
-===
-
-MIT License
-
-Copyright (c) 2024-2026 Steven Levithan
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -2863,11 +2670,11 @@ SOFTWARE.
 ---
 
 Name: react-server-dom-webpack
-Version: 19.2.5
+Version: 19.2.8
 License: MIT
 Private: false
 Description: React Server Components bindings for DOM using Webpack. This is intended to be integrated into meta-frameworks. It is not intended to be imported directly.
-Repository: https://github.com/facebook/react.git
+Repository: https://github.com/react/react.git
 Homepage: https://react.dev/
 License Text:
 ===
