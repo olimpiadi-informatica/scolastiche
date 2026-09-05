@@ -1548,7 +1548,7 @@ SOFTWARE.
 ---
 
 Name: @olinfo/quizms-training
-Version: 5.0.4
+Version: 5.0.5
 License: MIT
 Private: false
 Repository: git+https://github.com/olimpiadi-informatica/quizms.git
