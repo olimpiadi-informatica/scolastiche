@@ -11,7 +11,7 @@
   "dependencies": {
     "@olinfo/quizms": "^5.0.5",
     "@olinfo/quizms-mdx": "^5.0.4",
-    "@olinfo/quizms-training": "^5.0.4",
+    "@olinfo/quizms-training": "^5.0.5",
     "@olinfo/react-components": "^0.12.3",
     "@olinfo/tailwind": "^0.1.0",
     "@types/d3-shape": "^3.1.8",
