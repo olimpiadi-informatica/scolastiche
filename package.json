@@ -9,9 +9,9 @@
     "build": "quizms build"
   },
   "dependencies": {
-    "@olinfo/quizms": "^5.0.4",
-    "@olinfo/quizms-mdx": "^5.0.3",
-    "@olinfo/quizms-training": "^5.0.2",
+    "@olinfo/quizms": "^5.0.5",
+    "@olinfo/quizms-mdx": "^5.0.4",
+    "@olinfo/quizms-training": "^5.0.4",
     "@olinfo/react-components": "^0.12.3",
     "@olinfo/tailwind": "^0.1.0",
     "@types/d3-shape": "^3.1.8",
@@ -21,6 +21,8 @@
     "clsx": "^2.1.1",
     "d3-shape": "^3.2.0",
     "lodash-es": "^4.18.1",
+    "node-addon-api": "^8.9.2",
+    "node-gyp": "^13.0.2",
     "postcss": "^8.5.25",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",

@@ -2,6 +2,7 @@
 set -xe
 
 export DEBIAN_FRONTEND=noninteractive
+export BASE_PATH="/quizms/"
 
 cd scolastiche
 apt-get update
