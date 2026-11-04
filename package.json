@@ -6,6 +6,7 @@
     "dev": "quizms dev",
     "lint": "biome check --write && tsc --noEmit",
     "prebuild": "biome check",
+    "variants": "QUIZMS_SHOW_SOLUTIONS=true quizms variants",
     "build": "quizms build"
   },
   "dependencies": {

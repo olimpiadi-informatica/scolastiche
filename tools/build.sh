@@ -11,7 +11,7 @@ corepack enable
 corepack prepare pnpm@latest --activate
 
 pnpm install --frozen-lockfile
-pnpm quizms variants
+pnpm variants
 pnpm build
 
 cp .quizms/hosting-build/index.html .quizms/hosting-build/404.html
