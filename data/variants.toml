@@ -1,4 +1,5 @@
 [fibonacci-corso-1-blocchi-esecuzione-e-ripeti-n]
+languages = ["it", "en"]
 secret = ""
 entry = "fibonacci-corso/1-blocchi-esecuzione-e-ripeti-n/contest/contest.mdx"
 header = "fibonacci-corso/1-blocchi-esecuzione-e-ripeti-n/header.md"
@@ -9,6 +10,7 @@ pdf_variant_ids = []
 pdf_per_school = 1
 
 [fibonacci-corso-2-blocchi-condizionali-e-ripeti-mentre]
+languages = ["it", "en"]
 secret = ""
 entry = "fibonacci-corso/2-blocchi-condizionali-e-ripeti-mentre/contest/contest.mdx"
 header = "fibonacci-corso/2-blocchi-condizionali-e-ripeti-mentre/header.md"
@@ -19,6 +21,7 @@ pdf_variant_ids = []
 pdf_per_school = 1
 
 [fibonacci-corso-3-composizione-di-cicli-e-condizioni]
+languages = ["it", "en"]
 secret = ""
 entry = "fibonacci-corso/3-composizione-di-cicli-e-condizioni/contest/contest.mdx"
 header = "fibonacci-corso/3-composizione-di-cicli-e-condizioni/header.md"
@@ -29,6 +32,7 @@ pdf_variant_ids = []
 pdf_per_school = 1
 
 [fibonacci-corso-4-blocchi-matematici-e-variabili]
+languages = ["it", "en"]
 secret = ""
 entry = "fibonacci-corso/4-blocchi-matematici-e-variabili/contest/contest.mdx"
 header = "fibonacci-corso/4-blocchi-matematici-e-variabili/header.md"
@@ -39,6 +43,7 @@ pdf_variant_ids = []
 pdf_per_school = 1
 
 [fibonacci-corso-5-algoritmi-greedy]
+languages = ["it", "en"]
 secret = ""
 entry = "fibonacci-corso/5-algoritmi-greedy/contest/contest.mdx"
 header = "fibonacci-corso/5-algoritmi-greedy/header.md"
@@ -49,6 +54,7 @@ pdf_variant_ids = []
 pdf_per_school = 1
 
 [fibonacci-corso-6-programmazione-dinamica]
+languages = ["it", "en"]
 secret = ""
 entry = "fibonacci-corso/6-programmazione-dinamica/contest/contest.mdx"
 header = "fibonacci-corso/6-programmazione-dinamica/header.md"

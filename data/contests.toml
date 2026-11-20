@@ -1,4 +1,5 @@
 [fibonacci-corso-1-blocchi-esecuzione-e-ripeti-n]
+languages = ["it", "en"]
 name = "1 - Blocchi esecuzione e ripeti n"
 long_name = "Corso Fibonacci - 1. Blocchi esecuzione e ripeti n"
 problem_ids = []
@@ -23,6 +24,7 @@ score_visibility = "finalized"
 matching_rules = []
 
 [fibonacci-corso-2-blocchi-condizionali-e-ripeti-mentre]
+languages = ["it", "en"]
 name = "2 - Blocchi condizionali e ripeti mentre"
 long_name = "Corso Fibonacci - 2. Blocchi condizionali e ripeti mentre"
 problem_ids = []
@@ -47,6 +49,7 @@ score_visibility = "finalized"
 matching_rules = []
 
 [fibonacci-corso-3-composizione-di-cicli-e-condizioni]
+languages = ["it", "en"]
 name = "3 - Composizione di cicli e condizioni"
 long_name = "Corso Fibonacci - 3. Composizione di cicli e condizioni"
 problem_ids = []
@@ -71,6 +74,7 @@ score_visibility = "finalized"
 matching_rules = []
 
 [fibonacci-corso-4-blocchi-matematici-e-variabili]
+languages = ["it", "en"]
 name = "4 - Blocchi matematici e variabili"
 long_name = "Corso Fibonacci - 4. Blocchi matematici e variabili"
 problem_ids = []
@@ -95,6 +99,7 @@ score_visibility = "finalized"
 matching_rules = []
 
 [fibonacci-corso-5-algoritmi-greedy]
+languages = ["it", "en"]
 name = "5 - Algoritmi greedy"
 long_name = "Corso Fibonacci - 5. Algoritmi greedy"
 problem_ids = []
@@ -119,6 +124,7 @@ score_visibility = "finalized"
 matching_rules = []
 
 [fibonacci-corso-6-programmazione-dinamica]
+languages = ["it", "en"]
 name = "6 - Programmazione dinamica"
 long_name = "Corso Fibonacci - 6. Programmazione dinamica"
 problem_ids = []

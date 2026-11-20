@@ -55,3 +55,55 @@ export default function Visualizer({ variables, state }: VisualizerProps<State>)
     </>
   );
 }
+
+export function VisualizerEnRenderer({ variables, state }: VisualizerProps<State>) {
+  const { N, A, B, H, posx, posy, time } = state;
+  const maxH = Math.max(...A);
+
+  const p = (y: number) => (3 * y) / maxH;
+  const sep = 1.6;
+
+  return (
+    <>
+      <Canvas scale={100}>
+        {A.map((a: number, i: number) => (
+          <Rectangle
+            key={i}
+            color="#d1d5db"
+            borderColor="#6b7280"
+            x={i * sep + 1.48}
+            y={-p(a) - 0.1}
+            height={p(a) + 0.3}
+            width={0.15}
+            className="rounded-md"
+          />
+        ))}
+        {A.map((a: number, i: number) => (
+          <Sprite key={i} src={platform} alt="Platform" x={i * sep + 1.1} y={-p(a)} />
+        ))}
+        {B.map((b: number, i: number) => (
+          <Sprite key={i} src={platform} alt="Platform" x={i * sep + 1.1} y={-p(b)} />
+        ))}
+        <Rectangle color="brown" borderColor="#D35A1E" height={0.3} width={N * sep + 0.5} x={0.5} />
+        {range(N + 1).map((i: number) => (
+          <Rectangle
+            key={`ground-${i}`}
+            color="brown"
+            borderColor="#D35A1E"
+            height={p(H)}
+            width={0.5}
+            x={(i - 0.5) * sep + 1.1 + 0.2}
+            y={-p(H)}
+          />
+        ))}
+        <Sprite src={bunny} alt="Bunny" x={(posx * sep) / 2 + 0.5} y={-p(posy) - 0.8} />
+      </Canvas>
+      <Variables variables={{ ...variables, "N (number of moats)": N, "elapsed time": time }} />
+    </>
+  );
+}
+
+// English visualizer wrapper; the Italian default visualizer remains unchanged.
+export function VisualizerEn(props: VisualizerProps<State>) {
+  return <VisualizerEnRenderer {...props} />;
+}

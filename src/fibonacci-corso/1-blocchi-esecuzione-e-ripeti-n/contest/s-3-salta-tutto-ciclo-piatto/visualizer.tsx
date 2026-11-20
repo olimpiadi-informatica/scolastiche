@@ -41,3 +41,39 @@ export default function Visualizer({ variables, state }: VisualizerProps<State>)
     </>
   );
 }
+
+export function VisualizerEnRenderer({ variables, state }: VisualizerProps<State>) {
+  if (state.N > 50) {
+    return (
+      <div className="text-slate-800 p-4">
+        Visualization is available only for the first 5 levels.
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <Canvas scale={130}>
+        {range(state.rocks.length).map((i) => {
+          return (
+            <Sprite
+              key={i}
+              src={state.rocks[i] ? rock : flatRock}
+              alt={state.rocks[i] ? "obstacle" : "course"}
+              x={i}
+              y={state.rocks[i] ? 0.9 : 1.5}
+            />
+          );
+        })}
+        <Sprite src={bunny} alt="Tip-Tap" x={state.pos + 0.2} y={0.8 - state.flight} follow />
+        <Sprite src={flag} alt="Flag" x={state.N - 0.6} y={0.9} />
+      </Canvas>
+      <Variables variables={{ ...variables, "N (number of rocks)": state.N }} />
+    </>
+  );
+}
+
+// English visualizer wrapper; the Italian default visualizer remains unchanged.
+export function VisualizerEn(props: VisualizerProps<State>) {
+  return <VisualizerEnRenderer {...props} />;
+}

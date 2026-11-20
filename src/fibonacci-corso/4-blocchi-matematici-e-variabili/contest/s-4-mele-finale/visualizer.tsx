@@ -106,3 +106,104 @@ export default function Visualizer({ variables, state }: VisualizerProps<State>)
     </>
   );
 }
+
+export function VisualizerEnRenderer({ variables, state }: VisualizerProps<State>) {
+  let bcount = 0;
+  let bcurr = 0;
+  let count = 0;
+  const offs = state.pos * 25 + 7;
+
+  function getBucketX(i: number) {
+    if (i === state.basket) {
+      return offs + 3;
+    }
+    if (i < state.basket) {
+      return 8 + 6 * i;
+    }
+    return 6 - 4.5 * (i - state.basket);
+  }
+  function getBucketY(i: number) {
+    const base = state.C[i] * 0.3 - 0.7;
+    if (i === state.basket) {
+      return base;
+    }
+    if (i < state.basket) {
+      return base - 4;
+    }
+    return base + 4;
+  }
+
+  return (
+    <>
+      <Canvas gravity="bottom" scale={10}>
+        {range(state.N).flatMap((i) => {
+          return (
+            <Sprite
+              key={`albero${i}`}
+              src={tree}
+              alt="Tree"
+              x={i * 25 + 10}
+              y={0}
+              className="origin-bottom"
+            />
+          );
+        })}
+        <Sprite key="tiptap" src={tiptapRight} alt="Tip-Tap" x={offs} y={4} follow />
+        {range(state.N).flatMap((i) => {
+          return range(state.M[i]).map((k) => {
+            count += 1;
+            if (count > bcount + state.apples[bcurr]) {
+              bcount += state.apples[bcurr];
+              bcurr += 1;
+            }
+            return (
+              <Sprite
+                key={`mela${i}-${k}`}
+                src={apple}
+                alt="Apple"
+                x={
+                  count <= state.res
+                    ? getBucketX(bcurr) + ((count - bcount - 1) % 3) + 0.4
+                    : i * 25 + 12 + (22 * k) / state.M[i]
+                }
+                y={
+                  count <= state.res
+                    ? 2.3 +
+                      Math.floor((count - bcount - 1) / 3) * 1.5 -
+                      (bcurr < state.basket ? 4 : 0)
+                    : 17 + ((5 * k + i) % 7)
+                }
+                className="origin-bottom"
+              />
+            );
+          });
+        })}
+        {range(state.K).flatMap((i) => {
+          return (
+            <Sprite
+              key={`cestino-${i}`}
+              src={bucket}
+              alt="Basket"
+              x={getBucketX(i)}
+              y={getBucketY(i)}
+              scaleY={(state.C[i] + 1) * 0.1}
+            />
+          );
+        })}
+      </Canvas>
+      <Variables
+        variables={{
+          ...variables,
+          "N (number of trees)": state.N,
+          "K (number of baskets)": state.K,
+          "Apples collected": state.res,
+        }}
+      />
+    </>
+  );
+}
+
+// English visualizer wrapper; the Italian default visualizer remains unchanged.
+export function VisualizerEn(props: VisualizerProps<State>) {
+  return <VisualizerEnRenderer {...props} />;
+}

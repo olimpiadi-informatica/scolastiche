@@ -60,3 +60,58 @@ export default function Visualizer({ variables, state }: VisualizerProps<State>)
     </>
   );
 }
+
+export function VisualizerEnRenderer({ variables, state }: VisualizerProps<State>) {
+  const teams = [fibonacci, turing];
+
+  const offset = Math.max(...state.data.map((d: { taketot: number }) => d.taketot)) * 5;
+
+  return (
+    <>
+      <Canvas gravity="bottom" scale={10}>
+        <Sprite src={bunny} alt="Bunny" x={0 + offset} y={19.5} follow />
+        <Sprite src={ball} alt="Ball" x={3.5 + offset} y={20.5} />
+        {range(2).flatMap((i) => {
+          const { H, taken, pos, take2 } = state.data[i];
+          let offsetFila = offset + 10 + 5 * (H.length - pos - take2);
+          return range(H.length).map((k) => {
+            let x: number;
+            const y = [30, 7][i];
+
+            if (taken[k] > 0) {
+              x = (taken[k] - 1) * 5;
+            } else {
+              if (k === pos) offsetFila = offset + 10;
+              x = offsetFila;
+              offsetFila += 5;
+            }
+
+            return (
+              <Sprite
+                key={`${i}-${k}`}
+                src={teams[i]}
+                alt="Player"
+                x={x}
+                y={y}
+                scaleY={H[k] / 28}
+                className="origin-bottom"
+              />
+            );
+          });
+        })}
+      </Canvas>
+      <Variables
+        variables={{
+          ...variables,
+          "Fibonacci team": state.data[0].H.length - state.data[0].taketot,
+          "Turing team": state.data[1].H.length - state.data[1].taketot,
+        }}
+      />
+    </>
+  );
+}
+
+// English visualizer wrapper; the Italian default visualizer remains unchanged.
+export function VisualizerEn(props: VisualizerProps<State>) {
+  return <VisualizerEnRenderer {...props} />;
+}

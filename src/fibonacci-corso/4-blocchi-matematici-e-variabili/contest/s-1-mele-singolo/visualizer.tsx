@@ -75,3 +75,73 @@ export default function Visualizer({ variables, state }: VisualizerProps<State>)
     </>
   );
 }
+
+export function VisualizerEnRenderer({ variables, state }: VisualizerProps<State>) {
+  let count = 0;
+  const offs = Math.floor(state.res / state.M) * 25 + 7;
+
+  return (
+    <>
+      <Canvas gravity="bottom" scale={10}>
+        {range(state.N).flatMap((i) => {
+          return (
+            <Sprite
+              key={`albero${i}`}
+              src={tree}
+              alt="Tree"
+              x={i * 25 + 10}
+              y={0}
+              className="origin-bottom"
+            />
+          );
+        })}
+        <Sprite key="tiptap" src={tiptapRight} alt="Tip-Tap" x={offs} y={4} follow />
+        {range(state.N).flatMap((i) => {
+          return range(state.M).map((k) => {
+            count += 1;
+            return (
+              <Sprite
+                key={`mela${i}-${k}`}
+                src={apple}
+                alt="Apple"
+                x={
+                  count <= state.res
+                    ? 3.4 + ((count - 1) % 3) + offs
+                    : i * 25 + 12 + (22 * k) / state.M
+                }
+                y={
+                  count <= state.res
+                    ? 2.3 + Math.floor((count - 1) / 3) * 1.5
+                    : 17 + ((5 * k + i) % 7)
+                }
+                className="origin-bottom"
+              />
+            );
+          });
+        })}
+        <Sprite
+          key="cestino"
+          src={bucket}
+          alt="Basket"
+          x={offs + 3}
+          y={state.C * 0.3 - 0.7}
+          scaleY={(state.C + 1) * 0.1}
+        />
+      </Canvas>
+      <Variables
+        variables={{
+          ...variables,
+          "N (number of trees)": state.N,
+          "M (apples per tree)": state.M,
+          "C (basket maximum)": state.C,
+          "Apples collected": state.res,
+        }}
+      />
+    </>
+  );
+}
+
+// English visualizer wrapper; the Italian default visualizer remains unchanged.
+export function VisualizerEn(props: VisualizerProps<State>) {
+  return <VisualizerEnRenderer {...props} />;
+}
