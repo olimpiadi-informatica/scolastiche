@@ -1,5 +1,5 @@
 Name: zod
-Version: 4.5.4
+Version: 4.6.7
 License: MIT
 Private: false
 Description: TypeScript-first schema declaration and validation library with static type inference
@@ -34,7 +34,7 @@ SOFTWARE.
 ---
 
 Name: react
-Version: 19.2.8
+Version: 19.3.1
 License: MIT
 Private: false
 Description: React is a JavaScript library for building user interfaces.
@@ -68,7 +68,7 @@ SOFTWARE.
 ---
 
 Name: react-dom
-Version: 19.2.8
+Version: 19.3.1
 License: MIT
 Private: false
 Description: React package for working with the DOM.
@@ -102,11 +102,11 @@ SOFTWARE.
 ---
 
 Name: scheduler
-Version: 0.27.0
+Version: 0.28.0
 License: MIT
 Private: false
 Description: Cooperative scheduler for the browser environment.
-Repository: https://github.com/facebook/react.git
+Repository: https://github.com/react/react.git
 Homepage: https://react.dev/
 License Text:
 ===
@@ -170,7 +170,75 @@ SOFTWARE.
 ---
 
 Name: @olinfo/quizms
-Version: 5.1.0
+Version: 5.2.0
+License: MIT
+Private: false
+Repository: git+https://github.com/olimpiadi-informatica/quizms.git
+Homepage: https://quizms.olinfo.it
+Author: Alessandro Bortolin <bortolin.alessandro@outlook.it>
+License Text:
+===
+
+MIT License
+
+Copyright (c) 2022 Alessandro Bortolin
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+Name: @olinfo/quizms-mdx
+Version: 5.2.0
+License: MIT
+Private: false
+Repository: git+https://github.com/olimpiadi-informatica/quizms.git
+Homepage: https://quizms.olinfo.it
+Author: Alessandro Bortolin <bortolin.alessandro@outlook.it>
+License Text:
+===
+
+MIT License
+
+Copyright (c) 2022 Alessandro Bortolin
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+Name: @olinfo/quizms-training
+Version: 5.2.0
 License: MIT
 Private: false
 Repository: git+https://github.com/olimpiadi-informatica/quizms.git
@@ -204,7 +272,7 @@ SOFTWARE.
 ---
 
 Name: @shikijs/engine-oniguruma
-Version: 4.4.1
+Version: 4.6.0
 License: MIT
 Private: false
 Description: Engine for Shiki using Oniguruma RegExp engine in WebAssembly
@@ -240,7 +308,7 @@ SOFTWARE.
 ---
 
 Name: @shikijs/langs
-Version: 4.4.1
+Version: 4.6.0
 License: MIT
 Private: false
 Description: TextMate grammars for Shiki in ESM
@@ -276,7 +344,7 @@ SOFTWARE.
 ---
 
 Name: @shikijs/themes
-Version: 4.4.1
+Version: 4.6.0
 License: MIT
 Private: false
 Description: TextMate themes for Shiki in ESM
@@ -380,6 +448,41 @@ Author: Niall Crosby <niall.crosby@ag-grid.com>
 
 ---
 
+Name: @lingui/core
+Version: 6.12.0
+License: MIT
+Private: false
+Description: The Lingui i18n runtime: loads compiled message catalogs, tracks the active locale and formats ICU MessageFormat messages
+Repository: git+https://github.com/lingui/js-lingui.git
+Homepage: https://lingui.dev
+Author: Tomáš Ehrlich <tomas.ehrlich@gmail.com>
+License Text:
+===
+
+The MIT License (MIT)
+
+Copyright (c) 2017-2022 Tomáš Ehrlich, (c) 2022-2023 Crowdin.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+---
+
 Name: lodash-es
 Version: 4.18.1
 License: MIT
@@ -441,39 +544,6 @@ Files located in the node_modules and vendor directories are externally
 maintained libraries used by this software which have their own
 licenses; we recommend you read them, as their terms may differ from the
 terms above.
-
----
-
-Name: use-sync-external-store
-Version: 1.6.0
-License: MIT
-Private: false
-Description: Backwards compatible shim for React's useSyncExternalStore. Works with any React that supports hooks.
-Repository: https://github.com/facebook/react.git
-License Text:
-===
-
-MIT License
-
-Copyright (c) Meta Platforms, Inc. and affiliates.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
 
 ---
 
@@ -1503,7 +1573,7 @@ THE SOFTWARE.
 ---
 
 Name: wouter
-Version: 3.10.0
+Version: 3.13.0
 License: Unlicense
 Private: false
 Description: Minimalist-friendly ~1.5KB router for React
@@ -1526,40 +1596,6 @@ License Text:
 MIT License
 
 Copyright (c) 2018 Nicolas DUBIEN
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
----
-
-Name: @olinfo/quizms-training
-Version: 5.1.0
-License: MIT
-Private: false
-Repository: git+https://github.com/olimpiadi-informatica/quizms.git
-Homepage: https://quizms.olinfo.it
-Author: Alessandro Bortolin <bortolin.alessandro@outlook.it>
-License Text:
-===
-
-MIT License
-
-Copyright (c) 2022 Alessandro Bortolin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -1807,40 +1843,6 @@ License Text:
 
 ---
 
-Name: @olinfo/quizms-mdx
-Version: 5.1.0
-License: MIT
-Private: false
-Repository: git+https://github.com/olimpiadi-informatica/quizms.git
-Homepage: https://quizms.olinfo.it
-Author: Alessandro Bortolin <bortolin.alessandro@outlook.it>
-License Text:
-===
-
-MIT License
-
-Copyright (c) 2022 Alessandro Bortolin
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
----
-
 Name: js-interpreter
 Version: 6.0.2
 License: Apache-2.0
@@ -2057,7 +2059,7 @@ Apache License
 ---
 
 Name: shiki
-Version: 4.4.1
+Version: 4.6.0
 License: MIT
 Private: false
 Description: A beautiful Syntax Highlighter.
@@ -2093,7 +2095,7 @@ SOFTWARE.
 ---
 
 Name: @shikijs/types
-Version: 4.4.1
+Version: 4.6.0
 License: MIT
 Private: false
 Description: Type definitions for Shiki
@@ -2129,7 +2131,7 @@ SOFTWARE.
 ---
 
 Name: @shikijs/vscode-textmate
-Version: 10.0.2
+Version: 10.1.0
 License: MIT
 Private: false
 Description: Shiki's fork of `vscode-textmate`
@@ -2163,7 +2165,7 @@ SOFTWARE.
 ---
 
 Name: @shikijs/primitive
-Version: 4.4.1
+Version: 4.6.0
 License: MIT
 Private: false
 Description: Tokenizer primitives of Shiki
@@ -2312,7 +2314,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ---
 
 Name: stringify-entities
-Version: 4.0.4
+Version: 4.0.5
 License: MIT
 Private: false
 Description: Serialize (encode) HTML character references
@@ -2325,7 +2327,7 @@ License Text:
 
 (The MIT License)
 
-Copyright (c) 2015 Titus Wormer <mailto:tituswormer@gmail.com>
+Copyright (c) Titus Wormer <mailto:tituswormer@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
@@ -2423,7 +2425,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ---
 
 Name: hast-util-to-html
-Version: 9.0.5
+Version: 9.0.7
 License: MIT
 Private: false
 Description: hast utility to serialize to HTML
@@ -2608,7 +2610,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ---
 
 Name: @shikijs/core
-Version: 4.4.1
+Version: 4.6.0
 License: MIT
 Private: false
 Description: Core of Shiki
@@ -2675,8 +2677,76 @@ SOFTWARE.
 
 ---
 
+Name: use-sync-external-store
+Version: 1.7.0
+License: MIT
+Private: false
+Description: Backwards compatible shim for React's useSyncExternalStore. Works with any React that supports hooks.
+Repository: https://github.com/react/react.git
+License Text:
+===
+
+MIT License
+
+Copyright (c) Meta Platforms, Inc. and affiliates.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+Name: @lingui/react
+Version: 6.12.0
+License: MIT
+Private: false
+Description: React bindings for Lingui i18n: I18nProvider, Trans and useLingui, with compile-time macros and React Server Components support
+Repository: git+https://github.com/lingui/js-lingui.git
+Homepage: https://lingui.dev
+Author: Tomáš Ehrlich <tomas.ehrlich@gmail.com>
+License Text:
+===
+
+The MIT License (MIT)
+
+Copyright (c) 2017-2022 Tomáš Ehrlich, (c) 2022-2023 Crowdin.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+---
+
 Name: react-server-dom-webpack
-Version: 19.2.8
+Version: 19.3.1
 License: MIT
 Private: false
 Description: React Server Components bindings for DOM using Webpack. This is intended to be integrated into meta-frameworks. It is not intended to be imported directly.
